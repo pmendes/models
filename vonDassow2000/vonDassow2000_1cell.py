@@ -10,6 +10,8 @@ if '../..' not in sys.path:
 
 from basico import *
 import numpy as np
+import time
+from datetime import date
 #import matplotlib.pyplot as plt
 #%matplotlib inline
 
@@ -304,6 +306,8 @@ add_plot('Proteins', curves=[{'name': 'IWG', 'color': '#ff8800','line_width': 1.
                          {'name': 'HH1', 'color': '#7051a7','line_width': 1.5,'channels':['Time', '[HH1]']},
                          {'name': 'PH1', 'color': '#00bef0','line_width': 1.5,'channels':['Time', '[PH1]']}])
 
+# METADATA
+set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }],                    references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
 
 # save the model
 save_model("vonDassow2000_1cell.cps", overwrite=True)
