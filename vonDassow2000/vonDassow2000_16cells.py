@@ -104,15 +104,15 @@ add_function(name='first order w/ activator', type='irreversible',
 
 # we create an array of hexagonal cells 8x2 which has toric shape (all cell edges are connected)
 #
-# 1,1     1,3     1,5     1,7
-#     1,2     1,4     1,6     1,8
-# 2,1     2,3     2,5     2,7
-#     2,2     2,4     2,6     2,8
+# 0,0     0,2     0,4     0,6
+#     0,1     0,3     0,5     0,7
+# 1,0     1,2     1,4     1,6
+#     1,1     1,3     1,5     1,7
 
-# STEP 1 set up all cells
+# STEP 1 set up all cells and their internal species and reactions
 
-for i in range(1, 3):
-    for j in range(1, 9):
+for i in range(0, 2):
+    for j in range(0, 8):
         # new cell
         compname='cell[{},{}]'.format(i,j)
         app='_{},{}'.format(i,j)
@@ -149,7 +149,8 @@ for i in range(1, 3):
         add_species(f'PH{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
-        # sums of species
+        # sums of species within a cell
+        # TODO: these may not be needed; needs to be revisited
         add_species(f'EWG_T{app}', compartment_name=compname, status='assignment', expression=f'[EWG1{app}] + [EWG2{app}] + [EWG3{app}] + [EWG4{app}] + [EWG5{app}] + [EWG6{app}]')
         add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
 
@@ -292,6 +293,31 @@ for i in range(1, 3):
         add_reaction(name=f'R30_4{app}', scheme=f'PH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
         add_reaction(name=f'R30_5{app}', scheme=f'PH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
         add_reaction(name=f'R30_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+
+# STEP 2 set up intercell interactions
+#
+# 1,1     1,3     1,5     1,7
+#     1,2     1,4     1,6     1,8
+# 2,1     2,3     2,5     2,7
+#     2,2     2,4     2,6     2,8
+
+
+#for i in range(1, 3):
+#    for j in range(1, 9):
+#        # for each cell i, j
+#        app='_{},{}'.format(i,j)
+#        compname='cell[{},{}]'.format(i,j)
+#        sumstr = ""
+#        # cell below position 1
+#        ngb='_{},{}'.format(i+1,j)
+#        for k in range(1, 6):
+#            # for each neighbor of the i,j cell (side k)
+#            ngb='_{},{}'.format(i,j)
+#            sumstr+
+#        add_species(f'EWG_T{app}', compartment_name=compname, status='assignment', expression=f'[EWG1{app}] + [EWG2{app}] + [EWG3{app}] + [EWG4{app}] + [EWG5{app}] + [EWG6{app}]')
+
+
+ #       add_compartment(name=compname)
 
 #PLOTS
 # time course of all mRNAs
