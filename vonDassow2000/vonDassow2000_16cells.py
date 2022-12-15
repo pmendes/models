@@ -13,11 +13,11 @@ import numpy as np
 #import matplotlib.pyplot as plt
 #%matplotlib inline
 
-# Comments for the whole model
-model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model  in one cell</h1><p>This is an implementation of the  model in von Dassow et al (2000) for a single cell. Note that the original paper describes an arrangement of several hexagonal cells. This model was created as a building block but may also be useful as a way to analyze the original network without cell-cell communication.</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, which is implemented (in the original and here) by transfer reactions between a pool and the two neighboring pools. The sides of the hexagon are labelled 1-6, with 1 at the base, and numbered clockwise (this is more important in the multicellular version of this model).</p><p>In the multicellular model, the reactions below include components from neighboring cells. Here we set those components to be the ones in this cell:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) should be from all 6 neighboring cells, here it is <i>EWG</i> in this cell.</li> <li>The complex <i>PH</i> should be composed by <i>PTC</i> in this cell and <i>HH</i> from one neighboring cell (reactions <i>R29_i</i>). Here we use <i>HH</i> from this cell.</li> <li><i>EWG</i> could exchange with the neighboring cells, that reaction is ommitted here</li></ul> </p><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassowModelSingleCell.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p></body>'
-
 # Let's start by creating a single cell Segment Polarity Network
 new_model(name='Segment Polarity Network model in ', time_unit='1', quantity_unit='1', length_unit='1',area_unit='1', volume_unit='1', notes=model_notes)
+
+# Comments for the whole model
+model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model  in one cell</h1><p>This is an implementation of the  model in von Dassow et al (2000) for a single cell. Note that the original paper describes an arrangement of several hexagonal cells. This model was created as a building block but may also be useful as a way to analyze the original network without cell-cell communication.</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, which is implemented (in the original and here) by transfer reactions between a pool and the two neighboring pools. The sides of the hexagon are labelled 1-6, with 1 at the base, and numbered clockwise (this is more important in the multicellular version of this model).</p><p>In the multicellular model, the reactions below include components from neighboring cells. Here we set those components to be the ones in this cell:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) should be from all 6 neighboring cells, here it is <i>EWG</i> in this cell.</li> <li>The complex <i>PH</i> should be composed by <i>PTC</i> in this cell and <i>HH</i> from one neighboring cell (reactions <i>R29_i</i>). Here we use <i>HH</i> from this cell.</li> <li><i>EWG</i> could exchange with the neighboring cells, that reaction is ommitted here</li></ul> </p><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassowModelSingleCell.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p></body>'
 
 # GLOBAL QUANTITIES (mostly constants, some assignments)
 # these are the same for all cells
@@ -107,6 +107,8 @@ add_function(name='first order w/ activator', type='irreversible',
 # 2,1     2,3     2,5     2,7
 #     2,2     2,4     2,6     2,8
 
+# STEP 1 set up all cells
+
 for i in range(1, 3):
     for j in range(1, 9):
         # new cell
@@ -150,289 +152,144 @@ for i in range(1, 3):
         add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
 
         # REACTIONS
-        add_reaction(f'R01{app}',f'-> en{app}')
-        add_reaction(f'R02{app}',f'en{app} ->')
-        add_reaction(f'R03{app}',f'-> EN{app}')
-        add_reaction(f'R04{app}',f'EN{app} ->')
-        add_reaction(f'R05{app}',f'-> ci{app}')
-        add_reaction(f'R06{app}',f'ci{app} ->')
-        add_reaction(f'R07{app}',f'-> CI{app}')
-        add_reaction(f'R08{app}',f'CI{app} ->')
-        add_reaction(f'R09{app}',f'CI{app} -> CN{app}')
-        add_reaction(f'R10{app}',f'CN{app} ->')
-        add_reaction(f'R11{app}',f'-> hh{app}')
-        add_reaction(f'R12{app}',f'hh{app} ->')
-        add_reaction(f'R13_1{app}',f'-> HH1{app}')
-        add_reaction(f'R13_2{app}',f'-> HH2{app}')
-        add_reaction(f'R13_3{app}',f'-> HH3{app}')
-        add_reaction(f'R13_4{app}',f'-> HH4{app}')
-        add_reaction(f'R13_5{app}',f'-> HH5{app}')
-        add_reaction(f'R13_6{app}',f'-> HH6{app}')
-        add_reaction(f'R14_1{app}',f'HH1{app} ->')
-        add_reaction(f'R14_2{app}',f'HH2{app} ->')
-        add_reaction(f'R14_3{app}',f'HH3{app} ->')
-        add_reaction(f'R14_4{app}',f'HH4{app} ->')
-        add_reaction(f'R14_5{app}',f'HH5{app} ->')
-        add_reaction(f'R14_6{app}',f'HH6{app} ->')
-        add_reaction(f'R15{app}',f'-> ptc{app}')
-        add_reaction(f'R16{app}',f'ptc{app} ->')
-        add_reaction(f'R17_1{app}',f'-> PTC1{app}')
-        add_reaction(f'R17_2{app}',f'-> PTC2{app}')
-        add_reaction(f'R17_3{app}',f'-> PTC3{app}')
-        add_reaction(f'R17_4{app}',f'-> PTC4{app}')
-        add_reaction(f'R17_5{app}',f'-> PTC5{app}')
-        add_reaction(f'R17_6{app}',f'-> PTC6{app}')
-        add_reaction(f'R18_1{app}',f'PTC1{app} ->')
-        add_reaction(f'R18_2{app}',f'PTC2{app} ->')
-        add_reaction(f'R18_3{app}',f'PTC3{app} ->')
-        add_reaction(f'R18_4{app}',f'PTC4{app} ->')
-        add_reaction(f'R18_5{app}',f'PTC5{app} ->')
-        add_reaction(f'R18_6{app}',f'PTC6{app} ->')
-        add_reaction(f'R19{app}',f'-> wg{app}')
-        add_reaction(f'R20{app}',f'wg{app} ->')
-        add_reaction(f'R21{app}',f'-> IWG{app}')
-        add_reaction(f'R22{app}',f'IWG{app} ->')
-        add_reaction(f'R23_1{app}',f'IWG{app} -> EWG1{app}')
-        add_reaction(f'R23_2{app}',f'IWG{app} -> EWG2{app}')
-        add_reaction(f'R23_3{app}',f'IWG{app} -> EWG3{app}')
-        add_reaction(f'R23_4{app}',f'IWG{app} -> EWG4{app}')
-        add_reaction(f'R23_5{app}',f'IWG{app} -> EWG5{app}')
-        add_reaction(f'R23_6{app}',f'IWG{app} -> EWG6{app}')
-        add_reaction(f'R24_1{app}',f'EWG1{app} -> IWG{app}')
-        add_reaction(f'R24_2{app}',f'EWG2{app} -> IWG{app}')
-        add_reaction(f'R24_3{app}',f'EWG3{app} -> IWG{app}')
-        add_reaction(f'R24_4{app}',f'EWG4{app} -> IWG{app}')
-        add_reaction(f'R24_5{app}',f'EWG5{app} -> IWG{app}')
-        add_reaction(f'R24_6{app}',f'EWG6{app} -> IWG{app}')
-        add_reaction(f'R25_1{app}',f'EWG1{app} ->')
-        add_reaction(f'R25_2{app}',f'EWG2{app} ->')
-        add_reaction(f'R25_3{app}',f'EWG3{app} ->')
-        add_reaction(f'R25_4{app}',f'EWG4{app} ->')
-        add_reaction(f'R25_5{app}',f'EWG5{app} ->')
-        add_reaction(f'R25_6{app}',f'EWG6{app} ->')
-        # lateral "diffusion" of molecules from each side of the hexagon
-        add_reaction(f'R26_16{app}',f'EWG1{app} -> EWG6{app}')
-        add_reaction(f'R26_61{app}',f'EWG6{app} -> EWG1{app}')
-        add_reaction(f'R26_12{app}',f'EWG1{app} -> EWG2{app}')
-        add_reaction(f'R26_21{app}',f'EWG2{app} -> EWG1{app}')
-        add_reaction(f'R26_23{app}',f'EWG2{app} -> EWG3{app}')
-        add_reaction(f'R26_32{app}',f'EWG3{app} -> EWG2{app}')
-        add_reaction(f'R26_34{app}',f'EWG3{app} -> EWG4{app}')
-        add_reaction(f'R26_43{app}',f'EWG4{app} -> EWG3{app}')
-        add_reaction(f'R26_45{app}',f'EWG4{app} -> EWG5{app}')
-        add_reaction(f'R26_54{app}',f'EWG5{app} -> EWG4{app}')
-        add_reaction(f'R26_56{app}',f'EWG5{app} -> EWG6{app}')
-        add_reaction(f'R26_65{app}',f'EWG6{app} -> EWG5{app}')
+        add_reaction(name=f'R01{app}', scheme=f'-> en{app}; EWG_T{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EWG_T{app}', 'M2': f'CN{app}', 'V': 'T0/H_en', 'k1': 'kappa_WGen', 'h1': 'nu_WGen', 'k2': 'kappa_CNen', 'h2': 'nu_CNen'})
 
-        add_reaction(f'R27_16{app}',f'PTC1{app} -> PTC6{app}')
-        add_reaction(f'R27_61{app}',f'PTC6{app} -> PTC1{app}')
-        add_reaction(f'R27_12{app}',f'PTC1{app} -> PTC2{app}')
-        add_reaction(f'R27_21{app}',f'PTC2{app} -> PTC1{app}')
-        add_reaction(f'R27_23{app}',f'PTC2{app} -> PTC3{app}')
-        add_reaction(f'R27_32{app}',f'PTC3{app} -> PTC2{app}')
-        add_reaction(f'R27_34{app}',f'PTC3{app} -> PTC4{app}')
-        add_reaction(f'R27_43{app}',f'PTC4{app} -> PTC3{app}')
-        add_reaction(f'R27_45{app}',f'PTC4{app} -> PTC5{app}')
-        add_reaction(f'R27_54{app}',f'PTC5{app} -> PTC4{app}')
-        add_reaction(f'R27_56{app}',f'PTC5{app} -> PTC6{app}')
-        add_reaction(f'R27_65{app}',f'PTC6{app} -> PTC5{app}')
+        add_reaction(name=f'R02{app}', scheme=f'en{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_en'})
 
-        add_reaction(f'R28_16{app}',f'HH1{app} -> HH6{app}')
-        add_reaction(f'R28_61{app}',f'HH6{app} -> HH1{app}')
-        add_reaction(f'R28_12{app}',f'HH1{app} -> HH2{app}')
-        add_reaction(f'R28_21{app}',f'HH2{app} -> HH1{app}')
-        add_reaction(f'R28_23{app}',f'HH2{app} -> HH3{app}')
-        add_reaction(f'R28_32{app}',f'HH3{app} -> HH2{app}')
-        add_reaction(f'R28_34{app}',f'HH3{app} -> HH4{app}')
-        add_reaction(f'R28_43{app}',f'HH4{app} -> HH3{app}')
-        add_reaction(f'R28_45{app}',f'HH4{app} -> HH5{app}')
-        add_reaction(f'R28_54{app}',f'HH5{app} -> HH4{app}')
-        add_reaction(f'R28_56{app}',f'HH5{app} -> HH6{app}')
-        add_reaction(f'R28_65{app}',f'HH6{app} -> HH5{app}')
+        add_reaction(name=f'R03{app}', scheme=f'-> EN{app}; en{app}', function='translation', mapping={'k': 'T0/H_EN', 'mRNA': f'en{app}'})
 
-        # R29 TODO: in the multicell model HH here should be from opposite cell!
-        add_reaction(f'R29_1{app}',f'PTC1{app} + HH1{app} -> PH1{app}')
-        add_reaction(f'R29_2{app}',f'PTC2{app} + HH2{app} -> PH2{app}')
-        add_reaction(f'R29_3{app}',f'PTC3{app} + HH3{app} -> PH3{app}')
-        add_reaction(f'R29_4{app}',f'PTC4{app} + HH4{app} -> PH4{app}')
-        add_reaction(f'R29_5{app}',f'PTC5{app} + HH5{app} -> PH5{app}')
-        add_reaction(f'R29_6{app}',f'PTC6{app} + HH6{app} -> PH6{app}')
+        add_reaction(name=f'R04{app}', scheme=f'EN{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EN'})
 
-        add_reaction(f'R30_1{app}',f'PH1{app} ->')
-        add_reaction(f'R30_2{app}',f'PH2{app} ->')
-        add_reaction(f'R30_3{app}',f'PH3{app} ->')
-        add_reaction(f'R30_4{app}',f'PH4{app} ->')
-        add_reaction(f'R30_5{app}',f'PH5{app} ->')
-        add_reaction(f'R30_6{app}',f'PH6{app} ->')
+        add_reaction(name=f'R05{app}', scheme=f'-> ci{app}; B{app} EN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'B{app}', 'M2': f'EN{app}', 'V': 'T0/H_ci', 'k1': 'kappa_Bci', 'h1': 'nu_Bci', 'k2': 'kappa_ENci', 'h2': 'nu_ENci'})
 
+        add_reaction(name=f'R06{app}', scheme=f'ci{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_ci'})
 
-        # R01 kinetics
-        set_reaction(name=f'R01{app}', scheme=f'-> en{app}; EWG_T{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EWG_T{app}', 'M2': f'CN{app}', 'V': 'T0/H_en', 'k1': 'kappa_WGen', 'h1': 'nu_WGen', 'k2': 'kappa_CNen', 'h2': 'nu_CNen'})
+        add_reaction(name=f'R07{app}', scheme=f'-> CI{app}; ci{app}', function='translation', mapping={'k': 'T0/H_CI', 'mRNA': f'ci{app}'})
 
-        # R02 kinetics
-        set_reaction_parameters(f'(R02{app}).k1', mapped_to='T0/H_en' )
+        add_reaction(name=f'R08{app}', scheme=f'CI{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_CI'})
 
-        # R03 kinetics
-        set_reaction(name=f'R03{app}', scheme=f'-> EN{app}; en{app}', function='translation', mapping={'k': 'T0/H_EN', 'mRNA': f'en{app}'})
+        add_reaction(name=f'R09{app}', scheme=f'CI{app} -> CN{app}; PTC_T{app}', function='first order w/ activator', mapping={'M': f'PTC_T{app}', 'V': 'T0.C_CI', 'k': 'kappa_PTCCI', 'h': 'nu_PTCCI'})
 
-        # R04 kinetics
-        set_reaction_parameters(f'(R04{app}).k1', mapped_to='T0/H_EN' )
+        add_reaction(name=f'R10{app}', scheme=f'CN{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_CI'})
 
-        # R05 kinetics
-        set_reaction(name=f'R05{app}', scheme=f'-> ci{app}; B{app} EN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'B{app}', 'M2': f'EN{app}', 'V': 'T0/H_ci', 'k1': 'kappa_Bci', 'h1': 'nu_Bci', 'k2': 'kappa_ENci', 'h2': 'nu_ENci'})
+        add_reaction(name=f'R11{app}', scheme=f'-> hh{app}; EN{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EN{app}', 'M2': f'CN{app}', 'V': 'T0/H_hh', 'k1': 'kappa_ENhh', 'h1': 'nu_ENhh', 'k2': 'kappa_CNhh', 'h2': 'nu_CNhh'})
 
-        # R06 kinetics
-        set_reaction_parameters(f'(R06{app}).k1', mapped_to='T0/H_ci' )
+        add_reaction(name=f'R12{app}', scheme=f'hh{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_hh'})
 
-        # R07 kinetics
-        set_reaction(name=f'R07{app}', scheme=f'-> CI{app}; ci{app}', function='translation', mapping={'k': 'T0/H_CI', 'mRNA': f'ci{app}'})
+        add_reaction(name=f'R13_1{app}', scheme=f'-> HH1{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})        add_reaction(f'R13_1{app}',f'-> HH1{app}')
+        add_reaction(name=f'R13_2{app}', scheme=f'-> HH2{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
+        add_reaction(name=f'R13_3{app}', scheme=f'-> HH3{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
+        add_reaction(name=f'R13_4{app}', scheme=f'-> HH4{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
+        add_reaction(name=f'R13_5{app}', scheme=f'-> HH5{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
+        add_reaction(name=f'R13_6{app}', scheme=f'-> HH6{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
 
-        # R08 kinetics
-        set_reaction_parameters(f'(R08{app}).k1', mapped_to='T0/H_CI' )
+        add_reaction(name=f'R14_1{app}', scheme=f'HH1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
+        add_reaction(name=f'R14_2{app}', scheme=f'HH2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
+        add_reaction(name=f'R14_3{app}', scheme=f'HH3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
+        add_reaction(name=f'R14_4{app}', scheme=f'HH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
+        add_reaction(name=f'R14_5{app}', scheme=f'HH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
+        add_reaction(name=f'R14_6{app}', scheme=f'HH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
 
-        # R09 kinetics
-        set_reaction(name=f'R09{app}', scheme=f'CI{app} -> CN{app}; PTC_T{app}', function='first order w/ activator', mapping={'M': f'PTC_T{app}', 'V': 'T0.C_CI', 'k': 'kappa_PTCCI', 'h': 'nu_PTCCI'})
+        add_reaction(name=f'R15{app}', scheme=f'-> ptc{app}; CI{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'V': 'T0/H_ptc', 'k1': 'kappa_CIptc', 'h1': 'nu_CIptc', 'k2': 'kappa_CNptc', 'h2': 'nu_CNptc'})
 
-        # R10 kinetics
-        set_reaction_parameters(f'(R10{app}).k1', mapped_to='T0/H_CI' )
+        add_reaction(name=f'R16{app}', scheme=f'ptc{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_ptc'})
 
-        # R11 kinetics
-        set_reaction(name=f'R11{app}', scheme=f'-> hh{app}; EN{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EN{app}', 'M2': f'CN{app}', 'V': 'T0/H_hh', 'k1': 'kappa_ENhh', 'h1': 'nu_ENhh', 'k2': 'kappa_CNhh', 'h2': 'nu_CNhh'})
+        add_reaction(name=f'R17_1{app}', scheme=f'-> PTC1{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
+        add_reaction(name=f'R17_2{app}', scheme=f'-> PTC2{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
+        add_reaction(name=f'R17_3{app}', scheme=f'-> PTC3{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
+        add_reaction(name=f'R17_4{app}', scheme=f'-> PTC4{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
+        add_reaction(name=f'R17_5{app}', scheme=f'-> PTC5{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
+        add_reaction(name=f'R17_6{app}', scheme=f'-> PTC6{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
 
-        # R12 kinetics
-        set_reaction_parameters(f'(R12{app}).k1', mapped_to='T0/H_hh' )
+        add_reaction(name=f'R18_1{app}', scheme=f'PTC1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
+        add_reaction(name=f'R18_2{app}', scheme=f'PTC2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
+        add_reaction(name=f'R18_3{app}', scheme=f'PTC3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
+        add_reaction(name=f'R18_4{app}', scheme=f'PTC4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
+        add_reaction(name=f'R18_5{app}', scheme=f'PTC5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
+        add_reaction(name=f'R18_6{app}', scheme=f'PTC6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
 
-        # R13 kinetics
-        set_reaction(name=f'R13_1{app}', scheme=f'-> HH1{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
-        set_reaction(name=f'R13_2{app}', scheme=f'-> HH2{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
-        set_reaction(name=f'R13_3{app}', scheme=f'-> HH3{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
-        set_reaction(name=f'R13_4{app}', scheme=f'-> HH4{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
-        set_reaction(name=f'R13_5{app}', scheme=f'-> HH5{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
-        set_reaction(name=f'R13_6{app}', scheme=f'-> HH6{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
+        add_reaction(name=f'R19{app}', scheme=f'-> wg{app}; CI{app} CN{app} IWG{app}', function='transcription inducer-repressor pair + inducer', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'M3': f'IWG{app}', 'V': 'T0/H_wg', 'alpha1': 'alpha_CIwg', 'alpha3': 'alpha_WGwg',  'k1': 'kappa_CIwg', 'h1': 'nu_CIwg', 'k2': 'kappa_CNwg', 'h2': 'nu_CNwg', 'k3': 'kappa_WGwg', 'h3': 'nu_WGwg' })
 
-        # R14 kinetics
-        set_reaction_parameters(f'(R14_1{app}).k1', mapped_to='T0/H_HH' )
-        set_reaction_parameters(f'(R14_2{app}).k1', mapped_to='T0/H_HH' )
-        set_reaction_parameters(f'(R14_3{app}).k1', mapped_to='T0/H_HH' )
-        set_reaction_parameters(f'(R14_4{app}).k1', mapped_to='T0/H_HH' )
-        set_reaction_parameters(f'(R14_5{app}).k1', mapped_to='T0/H_HH' )
-        set_reaction_parameters(f'(R14_6{app}).k1', mapped_to='T0/H_HH' )
+        add_reaction(name=f'R20{app}', scheme=f'wg{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_wg'})
 
-        # R15 kinetics
-        set_reaction(name=f'R15{app}', scheme=f'-> ptc{app}; CI{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'V': 'T0/H_ptc', 'k1': 'kappa_CIptc', 'h1': 'nu_CIptc', 'k2': 'kappa_CNptc', 'h2': 'nu_CNptc'})
+        add_reaction(name=f'R21{app}', scheme=f'-> IWG{app}; wg{app}', function='translation', mapping={'k': 'T0/H_IWG', 'mRNA': f'wg{app}'})
 
-        # R16 kinetics
-        set_reaction_parameters(f'(R16{app}).k1', mapped_to='T0/H_ptc' )
-
-        # R17 kinetics
-        set_reaction(name=f'R17_1{app}', scheme=f'-> PTC1{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
-        set_reaction(name=f'R17_2{app}', scheme=f'-> PTC2{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
-        set_reaction(name=f'R17_3{app}', scheme=f'-> PTC3{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
-        set_reaction(name=f'R17_4{app}', scheme=f'-> PTC4{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
-        set_reaction(name=f'R17_5{app}', scheme=f'-> PTC5{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
-        set_reaction(name=f'R17_6{app}', scheme=f'-> PTC6{app}; ptc{app}', function='translation', mapping={'k': 'T0/6H_PTC', 'mRNA': f'ptc{app}'})
-
-        # R18 kinetics
-        set_reaction_parameters(f'(R18_1{app}).k1', mapped_to='T0/H_PTC' )
-        set_reaction_parameters(f'(R18_2{app}).k1', mapped_to='T0/H_PTC' )
-        set_reaction_parameters(f'(R18_3{app}).k1', mapped_to='T0/H_PTC' )
-        set_reaction_parameters(f'(R18_4{app}).k1', mapped_to='T0/H_PTC' )
-        set_reaction_parameters(f'(R18_5{app}).k1', mapped_to='T0/H_PTC' )
-        set_reaction_parameters(f'(R18_6{app}).k1', mapped_to='T0/H_PTC' )
-
-        # R19 kinetics
-        set_reaction(name=f'R19{app}', scheme=f'-> wg{app}; CI{app} CN{app} IWG{app}', function='transcription inducer-repressor pair + inducer', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'M3': f'IWG{app}', 'V': 'T0/H_wg', 'alpha1': 'alpha_CIwg', 'alpha3': 'alpha_WGwg',  'k1': 'kappa_CIwg', 'h1': 'nu_CIwg', 'k2': 'kappa_CNwg', 'h2': 'nu_CNwg', 'k3': 'kappa_WGwg', 'h3': 'nu_WGwg' })
-
-        # R20 kinetics
-        set_reaction_parameters(f'(R20{app}).k1', mapped_to='T0/H_wg' )
-
-        # R21 kinetics
-        set_reaction(name=f'R21{app}', scheme=f'-> IWG{app}; wg{app}', function='translation', mapping={'k': 'T0/H_IWG', 'mRNA': f'wg{app}'})
-
-        # R22 kinetics
-        set_reaction_parameters(f'(R22{app}).k1', mapped_to='T0/H_IWG' )
+        add_reaction(name=f'R22{app}',scheme=f'IWG{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
 
         # R23 kinetics
-        set_reaction_parameters(f'(R23_1{app}).k1', mapped_to='T0.r_ExoWG/6' )
-        set_reaction_parameters(f'(R23_2{app}).k1', mapped_to='T0.r_ExoWG/6' )
-        set_reaction_parameters(f'(R23_3{app}).k1', mapped_to='T0.r_ExoWG/6' )
-        set_reaction_parameters(f'(R23_4{app}).k1', mapped_to='T0.r_ExoWG/6' )
-        set_reaction_parameters(f'(R23_5{app}).k1', mapped_to='T0.r_ExoWG/6' )
-        set_reaction_parameters(f'(R23_6{app}).k1', mapped_to='T0.r_ExoWG/6' )
+        add_reaction(name=f'R23_1{app}', scheme=f'IWG{app} -> EWG1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_ExoWG/6'})
+        add_reaction(name=f'R23_2{app}', scheme=f'IWG{app} -> EWG2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_ExoWG/6'})
+        add_reaction(name=f'R23_3{app}', scheme=f'IWG{app} -> EWG3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_ExoWG/6'})
+        add_reaction(name=f'R23_4{app}', scheme=f'IWG{app} -> EWG4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_ExoWG/6'})
+        add_reaction(name=f'R23_5{app}', scheme=f'IWG{app} -> EWG5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_ExoWG/6'})
+        add_reaction(name=f'R23_6{app}', scheme=f'IWG{app} -> EWG6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_ExoWG/6'})
 
-        # R24 kinetics
-        set_reaction_parameters(f'(R24_1{app}).k1', mapped_to='T0.r_EndoWG' )
-        set_reaction_parameters(f'(R24_2{app}).k1', mapped_to='T0.r_EndoWG' )
-        set_reaction_parameters(f'(R24_3{app}).k1', mapped_to='T0.r_EndoWG' )
-        set_reaction_parameters(f'(R24_4{app}).k1', mapped_to='T0.r_EndoWG' )
-        set_reaction_parameters(f'(R24_5{app}).k1', mapped_to='T0.r_EndoWG' )
-        set_reaction_parameters(f'(R24_6{app}).k1', mapped_to='T0.r_EndoWG' )
+        add_reaction(name=f'R24_1{app}', scheme=f'EWG1{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
+        add_reaction(name=f'R24_2{app}', scheme=f'EWG2{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
+        add_reaction(name=f'R24_3{app}', scheme=f'EWG3{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
+        add_reaction(name=f'R24_4{app}', scheme=f'EWG4{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
+        add_reaction(name=f'R24_5{app}', scheme=f'EWG5{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
+        add_reaction(name=f'R24_6{app}', scheme=f'EWG6{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
 
-        # R25 kinetics
-        set_reaction_parameters(f'(R25_1{app}).k1', mapped_to='T0/H_IWG' )
-        set_reaction_parameters(f'(R25_2{app}).k1', mapped_to='T0/H_IWG' )
-        set_reaction_parameters(f'(R25_3{app}).k1', mapped_to='T0/H_IWG' )
-        set_reaction_parameters(f'(R25_4{app}).k1', mapped_to='T0/H_IWG' )
-        set_reaction_parameters(f'(R25_5{app}).k1', mapped_to='T0/H_IWG' )
-        set_reaction_parameters(f'(R25_6{app}).k1', mapped_to='T0/H_IWG' )
+        add_reaction(name=f'R25_1{app}', scheme=f'EWG1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
+        add_reaction(name=f'R25_2{app}', scheme=f'EWG2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
+        add_reaction(name=f'R25_3{app}', scheme=f'EWG3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
+        add_reaction(name=f'R25_4{app}', scheme=f'EWG4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
+        add_reaction(name=f'R25_5{app}', scheme=f'EWG5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
+        add_reaction(name=f'R25_6{app}', scheme=f'EWG6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
 
-        # R26 kinetics
-        set_reaction_parameters(f'(R26_16{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_61{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_12{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_21{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_23{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_32{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_34{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_43{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_45{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_54{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_56{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R26_65{app}).k1', mapped_to='T0.r_LMxferWG')
+        add_reaction(name=f'R26_16{app}', scheme=f'EWG1{app} -> EWG6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_61{app}', scheme=f'EWG6{app} -> EWG1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_12{app}', scheme=f'EWG1{app} -> EWG2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_21{app}', scheme=f'EWG2{app} -> EWG1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_23{app}', scheme=f'EWG2{app} -> EWG3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_32{app}', scheme=f'EWG3{app} -> EWG2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_34{app}', scheme=f'EWG3{app} -> EWG4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_43{app}', scheme=f'EWG4{app} -> EWG3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_45{app}', scheme=f'EWG4{app} -> EWG5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_54{app}', scheme=f'EWG5{app} -> EWG4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_56{app}', scheme=f'EWG5{app} -> EWG6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R26_65{app}', scheme=f'EWG6{app} -> EWG5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
 
-        # R27 kinetics
-        set_reaction_parameters(f'(R27_16{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_61{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_12{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_21{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_23{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_32{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_34{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_43{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_45{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_54{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_56{app}).k1', mapped_to='T0.r_LMxferWG')
-        set_reaction_parameters(f'(R27_65{app}).k1', mapped_to='T0.r_LMxferWG')
+        add_reaction(name=f'R27_16{app}', scheme=f'PTC1{app} -> PTC6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_61{app}', scheme=f'PTC6{app} -> PTC1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_12{app}', scheme=f'PTC1{app} -> PTC2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_21{app}', scheme=f'PTC2{app} -> PTC1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_23{app}', scheme=f'PTC2{app} -> PTC3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_32{app}', scheme=f'PTC3{app} -> PTC2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_34{app}', scheme=f'PTC3{app} -> PTC4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_43{app}', scheme=f'PTC4{app} -> PTC3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_45{app}', scheme=f'PTC4{app} -> PTC5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_54{app}', scheme=f'PTC5{app} -> PTC4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_56{app}', scheme=f'PTC5{app} -> PTC6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R27_65{app}', scheme=f'PTC6{app} -> PTC5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
 
-        # R28 kinetics
-        set_reaction_parameters(f'(R28_16{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_61{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_12{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_21{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_23{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_32{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_34{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_43{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_45{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_54{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_56{app}).k1', mapped_to='T0.r_LMxferHH')
-        set_reaction_parameters(f'(R28_65{app}).k1', mapped_to='T0.r_LMxferHH')
+        add_reaction(name=f'R28_16{app}', scheme=f'HH1{app} -> HH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_61{app}', scheme=f'HH6{app} -> HH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_12{app}', scheme=f'HH1{app} -> HH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_21{app}', scheme=f'HH2{app} -> HH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_23{app}', scheme=f'HH2{app} -> HH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_32{app}', scheme=f'HH3{app} -> HH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_34{app}', scheme=f'HH3{app} -> HH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_43{app}', scheme=f'HH4{app} -> HH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_45{app}', scheme=f'HH4{app} -> HH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_54{app}', scheme=f'HH5{app} -> HH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_56{app}', scheme=f'HH5{app} -> HH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
+        add_reaction(name=f'R28_65{app}', scheme=f'HH6{app} -> HH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
 
-        # R29 kinetics
-        set_reaction_parameters(f'(R29_1{app}).k1', mapped_to='T0.kappa_PTCHH.HH_0')
-        set_reaction_parameters(f'(R29_2{app}).k1', mapped_to='T0.kappa_PTCHH.HH_0')
-        set_reaction_parameters(f'(R29_3{app}).k1', mapped_to='T0.kappa_PTCHH.HH_0')
-        set_reaction_parameters(f'(R29_4{app}).k1', mapped_to='T0.kappa_PTCHH.HH_0')
-        set_reaction_parameters(f'(R29_5{app}).k1', mapped_to='T0.kappa_PTCHH.HH_0')
-        set_reaction_parameters(f'(R29_6{app}).k1', mapped_to='T0.kappa_PTCHH.HH_0')
+        add_reaction(name=f'R29_1{app}', scheme=f'PTC1{app} + HH1{app} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R29_2{app}', scheme=f'PTC2{app} + HH2{app} -> PH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R29_3{app}', scheme=f'PTC3{app} + HH3{app} -> PH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R29_4{app}', scheme=f'PTC4{app} + HH4{app} -> PH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R29_5{app}', scheme=f'PTC5{app} + HH5{app} -> PH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R29_6{app}', scheme=f'PTC6{app} + HH6{app} -> PH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
 
-        # R30 kinetics
-        set_reaction_parameters(f'(R30_1{app}).k1', mapped_to='T0/H_PH' )
-        set_reaction_parameters(f'(R30_2{app}).k1', mapped_to='T0/H_PH' )
-        set_reaction_parameters(f'(R30_3{app}).k1', mapped_to='T0/H_PH' )
-        set_reaction_parameters(f'(R30_4{app}).k1', mapped_to='T0/H_PH' )
-        set_reaction_parameters(f'(R30_5{app}).k1', mapped_to='T0/H_PH' )
-        set_reaction_parameters(f'(R30_6{app}).k1', mapped_to='T0/H_PH' )
+        add_reaction(name=f'R30_1{app}', scheme=f'PH1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R30_2{app}', scheme=f'PH2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R30_3{app}', scheme=f'PH3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R30_4{app}', scheme=f'PH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R30_5{app}', scheme=f'PH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R30_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
 
 #PLOTS
 # time course of all mRNAs
@@ -451,6 +308,8 @@ add_plot('Proteins', curves=[{'name': 'IWG', 'color': '#ff8800','line_width': 1.
                          {'name': 'HH1', 'color': '#7051a7','line_width': 1.5,'channels':['Time', '[HH1]']},
                          {'name': 'PH1', 'color': '#00bef0','line_width': 1.5,'channels':['Time', '[PH1]']}])
 
+# METADATA
+set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }],                    references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
 
 # save the model
 save_model("vonDassow2000_16cells.cps", overwrite=True)
