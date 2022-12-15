@@ -10,6 +10,8 @@ if '../..' not in sys.path:
 
 from basico import *
 import numpy as np
+import time
+from datetime import date
 #import matplotlib.pyplot as plt
 #%matplotlib inline
 
