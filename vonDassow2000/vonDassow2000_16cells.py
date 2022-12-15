@@ -14,10 +14,10 @@ import numpy as np
 #%matplotlib inline
 
 # Let's start by creating a single cell Segment Polarity Network
-new_model(name='Segment Polarity Network model in ', time_unit='1', quantity_unit='1', length_unit='1',area_unit='1', volume_unit='1', notes=model_notes)
+new_model(name='Segment Polarity Network model', time_unit='1', quantity_unit='1', length_unit='1',area_unit='1', volume_unit='1', notes=model_notes)
 
 # Comments for the whole model
-model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model  in one cell</h1><p>This is an implementation of the  model in von Dassow et al (2000) for a single cell. Note that the original paper describes an arrangement of several hexagonal cells. This model was created as a building block but may also be useful as a way to analyze the original network without cell-cell communication.</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, which is implemented (in the original and here) by transfer reactions between a pool and the two neighboring pools. The sides of the hexagon are labelled 1-6, with 1 at the base, and numbered clockwise (this is more important in the multicellular version of this model).</p><p>In the multicellular model, the reactions below include components from neighboring cells. Here we set those components to be the ones in this cell:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) should be from all 6 neighboring cells, here it is <i>EWG</i> in this cell.</li> <li>The complex <i>PH</i> should be composed by <i>PTC</i> in this cell and <i>HH</i> from one neighboring cell (reactions <i>R29_i</i>). Here we use <i>HH</i> from this cell.</li> <li><i>EWG</i> could exchange with the neighboring cells, that reaction is ommitted here</li></ul> </p><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassowModelSingleCell.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p></body>'
+model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model</h1><p>This is an implementation of the  model in von Dassow et al (2000). Note that the original paper describes an arrangement of several hexagonal cells. This model was created as a building block but may also be useful as a way to analyze the original network without cell-cell communication.</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, which is implemented (in the original and here) by transfer reactions between a pool and the two neighboring pools. The sides of the hexagon are labelled 1-6, with 1 at the base, and numbered clockwise (this is more important in the multicellular version of this model).</p><p>In the multicellular model, the reactions below include components from neighboring cells. Here we set those components to be the ones in this cell:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) should be from all 6 neighboring cells, here it is <i>EWG</i> in this cell.</li> <li>The complex <i>PH</i> should be composed by <i>PTC</i> in this cell and <i>HH</i> from one neighboring cell (reactions <i>R29_i</i>). Here we use <i>HH</i> from this cell.</li> <li><i>EWG</i> could exchange with the neighboring cells, that reaction is ommitted here</li></ul> </p><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassowModelSingleCell.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p></body>'
 
 # GLOBAL QUANTITIES (mostly constants, some assignments)
 # these are the same for all cells
@@ -176,7 +176,7 @@ for i in range(1, 3):
 
         add_reaction(name=f'R12{app}', scheme=f'hh{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_hh'})
 
-        add_reaction(name=f'R13_1{app}', scheme=f'-> HH1{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})        add_reaction(f'R13_1{app}',f'-> HH1{app}')
+        add_reaction(name=f'R13_1{app}', scheme=f'-> HH1{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
         add_reaction(name=f'R13_2{app}', scheme=f'-> HH2{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
         add_reaction(name=f'R13_3{app}', scheme=f'-> HH3{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
         add_reaction(name=f'R13_4{app}', scheme=f'-> HH4{app}; hh{app}', function='translation', mapping={'k': 'T0/6H_HH', 'mRNA': f'hh{app}'})
@@ -293,20 +293,20 @@ for i in range(1, 3):
 
 #PLOTS
 # time course of all mRNAs
-add_plot('mRNA', curves=[{'name': 'hh', 'color': '#ff8800','line_width': 1.5,'channels':['Time', '[hh]']},
-                         {'name': 'en', 'color': '#0088ff','line_width': 1.5,'channels':['Time', '[en]']},
-                         {'name': 'wg', 'color': '#008800','line_width': 1.5,'channels':['Time', '[wg]']},
-                         {'name': 'ptc', 'color': '#f000ff','line_width': 1.5,'channels':['Time', '[ptc]']},
-                         {'name': 'ci', 'color': '#ff0000','line_width': 1.5,'channels':['Time', '[ci]']}])
+#add_plot('mRNA', curves=[{'name': 'hh', 'color': '#ff8800','line_width': 1.5,'channels':['Time', '[hh]']},
+#                         {'name': 'en', 'color': '#0088ff','line_width': 1.5,'channels':['Time', '[en]']},
+#                         {'name': 'wg', 'color': '#008800','line_width': 1.5,'channels':['Time', '[wg]']},
+#                         {'name': 'ptc', 'color': '#f000ff','line_width': 1.5,'channels':['Time', '[ptc]']},
+#                         {'name': 'ci', 'color': '#ff0000','line_width': 1.5,'channels':['Time', '[ci]']}])
 
-add_plot('Proteins', curves=[{'name': 'IWG', 'color': '#ff8800','line_width': 1.5,'channels':['Time', '[IWG]']},
-                         {'name': 'EWG_T', 'color': '#0088ff','line_width': 1.5,'channels':['Time', '[EWG_T]']},
-                         {'name': 'PTC_T', 'color': '#008800','line_width': 1.5,'channels':['Time', '[PTC_T]']},
-                         {'name': 'EN', 'color': '#f000ff','line_width': 1.5,'channels':['Time', '[EN]']},
-                         {'name': 'CI', 'color': '#ff0000','line_width': 1.5,'channels':['Time', '[CI]']},
-                         {'name': 'CN', 'color': '#33ff33','line_width': 1.5,'channels':['Time', '[CN]']},
-                         {'name': 'HH1', 'color': '#7051a7','line_width': 1.5,'channels':['Time', '[HH1]']},
-                         {'name': 'PH1', 'color': '#00bef0','line_width': 1.5,'channels':['Time', '[PH1]']}])
+#add_plot('Proteins', curves=[{'name': 'IWG', 'color': '#ff8800','line_width': 1.5,'channels':['Time', '[IWG]']},
+#                         {'name': 'EWG_T', 'color': '#0088ff','line_width': 1.5,'channels':['Time', '[EWG_T]']},
+#                        {'name': 'PTC_T', 'color': '#008800','line_width': 1.5,'channels':['Time', '[PTC_T]']},
+#                         {'name': 'EN', 'color': '#f000ff','line_width': 1.5,'channels':['Time', '[EN]']},
+#                         {'name': 'CI', 'color': '#ff0000','line_width': 1.5,'channels':['Time', '[CI]']},
+#                         {'name': 'CN', 'color': '#33ff33','line_width': 1.5,'channels':['Time', '[CN]']},
+#                         {'name': 'HH1', 'color': '#7051a7','line_width': 1.5,'channels':['Time', '[HH1]']},
+#                         {'name': 'PH1', 'color': '#00bef0','line_width': 1.5,'channels':['Time', '[PH1]']}])
 
 # METADATA
 set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }],                    references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
