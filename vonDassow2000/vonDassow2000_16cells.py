@@ -15,6 +15,38 @@ from datetime import date
 #import matplotlib.pyplot as plt
 #%matplotlib inline
 
+#
+# 0,0     0,2     0,4     0,6
+#     0,1     0,3     0,5     0,7
+# 1,0     1,2     1,4     1,6
+#     1,1     1,3     1,5     1,7
+#
+# 0,0     0,1     0,2     0,3
+#     1,0     1,1     1,2     1,3
+# 2,0     2,1     2,2     2,3
+#     3,0     3,1     3,2     3,3
+
+for i in range(0, 2):
+    for j in range(0, 8):
+        # for each cell i, j
+        app='_{},{}'.format(i,j)
+        compname='cell[{},{}]'.format(i,j)
+        # cell next to position 1 (side 4 on that cell)
+        ngb1='[EWG4_{},{}]'.format((i+1)%2,j)
+        # cell next to position 2 (side 5 on that cell)
+        ngb2=' + [EWG5_{},{}]'.format(i,(j+7)%8)
+        # cell next to position 3 (idx 6 on that side)
+        ngb3=' + [EWG6_{},{}]'.format((i+1)%2,(j+7)%8)
+        # cell next to position 4 (idx 1 on that side)
+        ngb4=' + [EWG1_{},{}]'.format((i+1)%2,j)
+        # cell next to position 5 (idx 2 on that side)
+        ngb5=' + [EWG2_{},{}]'.format((i+1)%2,(j+1)%8)
+        # cell next to position 6 (idx 3 on that side)
+        ngb6=' + [EWG3_{},{}]'.format(i,(j+1)%8)
+        print("EWG_T"+app+" = "+ngb1+ngb2+ngb3+ngb4+ngb5+ngb6)
+
+exit()
+
 # Comments for the whole model
 model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model</h1><p>This is an implementation of the  model in von Dassow et al (2000), where a gene network controls segment polarity in a fly embryo. The paper describes an arrangement of several hexagonal cells with interactions between neighbors. However it never described the dimensions of the grid of cells used in their simulation. Here we adopt a 8x2 grid, where the edges connect with each other (forming a kind of toroidal shape, as indicated in the original publication).</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, implemented by transfer reactions between a pool and the two neighboring pools. The sides of the hexagonal cells are labelled 1-6, with 1 at the base, and numbered clockwise.</p><p>Some reactions include components from neighboring cells:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) is from all 6 neighboring cells.</li> <li>The complex <i>PH</i> is composed by <i>PTC</i> in this cell and <i>HH</i> from the neighboring cell (reactions <i>R29_i</i>).</li> <li><i>EWG</i> can be exchanged with the neighboring cells.</li></ul> </p><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassow2000_16cells.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p><p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>'
 
@@ -296,20 +328,13 @@ for i in range(0, 2):
 
 # STEP 2 set up intercell interactions
 #
-# 1,1     1,3     1,5     1,7
-#     1,2     1,4     1,6     1,8
-# 2,1     2,3     2,5     2,7
-#     2,2     2,4     2,6     2,8
+# 0,0     0,2     0,4     0,6
+#     0,1     0,3     0,5     0,7
+# 1,0     1,2     1,4     1,6
+#     1,1     1,3     1,5     1,7
 
 
-#for i in range(1, 3):
-#    for j in range(1, 9):
-#        # for each cell i, j
-#        app='_{},{}'.format(i,j)
-#        compname='cell[{},{}]'.format(i,j)
-#        sumstr = ""
-#        # cell below position 1
-#        ngb='_{},{}'.format(i+1,j)
+
 #        for k in range(1, 6):
 #            # for each neighbor of the i,j cell (side k)
 #            ngb='_{},{}'.format(i,j)
