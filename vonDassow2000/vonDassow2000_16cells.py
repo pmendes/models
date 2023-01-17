@@ -4,7 +4,7 @@
 # This file builds the von Dassow et al (2000) model of segment
 # polarity network with a hexagonal toroidic grid of 16 cells
 #
-# Written Dec 2022 - Jan 2023 by Pedro Mendes
+# Written Dec 2022 - Jan 2023 by Pedro Mendes <pmendes@uchc.edu>
 # this code is released under the MIT license, the COPASI model
 # produced by this code is released under the Creative Commons
 # CC0 1.0 license
