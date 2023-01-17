@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.38.268 (Source) (http://www.copasi.org) at 2022-12-29T17:18:28Z -->
+<!-- generated with COPASI 4.38.268 (Source) (http://www.copasi.org) at 2023-01-17T17:04:03Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="38" versionDevel="268" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -129,7 +129,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </dcterms:bibliographicCitation>
     <dcterms:created>
       <rdf:Description>
-        <dcterms:W3CDTF>2022-12-29T17:18:25Z</dcterms:W3CDTF>
+        <dcterms:W3CDTF>2023-01-17T17:04:00Z</dcterms:W3CDTF>
       </rdf:Description>
     </dcterms:created>
     <dcterms:creator>
@@ -608,7 +608,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_29" name="EWG_T_0,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_29" name="PTC_T_0,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -618,10 +618,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG4_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG5_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG6_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG1_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG2_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG3_0\,1],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC1_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC2_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC3_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC4_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC5_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC6_0\,0],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_30" name="PTC_T_0,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_30" name="EWG_T_0,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -631,7 +631,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC4_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC5_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC6_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC1_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC2_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC3_0\,1],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG4_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG5_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG6_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG1_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG2_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG3_0\,1],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_31" name="PH1_0,0" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -984,7 +984,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_66" name="EWG_T_0,1" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_66" name="PTC_T_0,1" simulationType="assignment" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -994,10 +994,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG4_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG5_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG6_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG1_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG2_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG3_1\,2],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC1_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC2_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC3_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC4_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC5_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC6_0\,1],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_67" name="PTC_T_0,1" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_67" name="EWG_T_0,1" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1007,7 +1007,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC4_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC5_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC6_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC1_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC2_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC3_1\,2],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG4_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG5_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG6_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG1_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG2_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG3_1\,2],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_68" name="PH1_0,1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -1360,7 +1360,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_103" name="EWG_T_0,2" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_103" name="PTC_T_0,2" simulationType="assignment" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1370,10 +1370,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG4_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG5_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG6_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG1_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG2_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG3_0\,3],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC1_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC2_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC3_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC4_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC5_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC6_0\,2],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_104" name="PTC_T_0,2" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_104" name="EWG_T_0,2" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1383,7 +1383,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC4_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC5_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC6_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC1_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC2_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC3_0\,3],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG4_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG5_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG6_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG1_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG2_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG3_0\,3],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_105" name="PH1_0,2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -1736,7 +1736,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_140" name="EWG_T_0,3" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_140" name="PTC_T_0,3" simulationType="assignment" compartment="Compartment_3" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1746,10 +1746,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG4_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG5_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG6_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG1_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG2_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG3_1\,4],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC1_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC2_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC3_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC4_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC5_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC6_0\,3],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_141" name="PTC_T_0,3" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_141" name="EWG_T_0,3" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1759,7 +1759,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC4_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC5_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC6_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC1_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC2_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC3_1\,4],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG4_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG5_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG6_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG1_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG2_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG3_1\,4],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_142" name="PH1_0,3" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -2112,7 +2112,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_177" name="EWG_T_0,4" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_177" name="PTC_T_0,4" simulationType="assignment" compartment="Compartment_4" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2122,10 +2122,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG4_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG5_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG6_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG1_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG2_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG3_0\,5],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC1_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC2_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC3_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC4_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC5_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC6_0\,4],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_178" name="PTC_T_0,4" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_178" name="EWG_T_0,4" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2135,7 +2135,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC4_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC5_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC6_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC1_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC2_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC3_0\,5],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG4_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG5_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG6_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG1_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG2_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG3_0\,5],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_179" name="PH1_0,4" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -2488,7 +2488,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_214" name="EWG_T_0,5" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_214" name="PTC_T_0,5" simulationType="assignment" compartment="Compartment_5" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2498,10 +2498,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG4_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG5_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG6_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG1_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG2_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG3_1\,6],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC1_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC2_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC3_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC4_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC5_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC6_0\,5],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_215" name="PTC_T_0,5" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_215" name="EWG_T_0,5" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2511,7 +2511,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC4_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC5_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC6_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC1_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC2_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC3_1\,6],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG4_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG5_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG6_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG1_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG2_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG3_1\,6],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_216" name="PH1_0,5" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -2864,7 +2864,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_251" name="EWG_T_0,6" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_251" name="PTC_T_0,6" simulationType="assignment" compartment="Compartment_6" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2874,10 +2874,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG4_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG5_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG6_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG1_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG2_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG3_0\,7],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC1_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC2_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC3_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC4_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC5_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC6_0\,6],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_252" name="PTC_T_0,6" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_252" name="EWG_T_0,6" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2887,7 +2887,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC4_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC5_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC6_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC1_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC2_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC3_0\,7],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG4_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG5_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG6_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG1_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG2_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG3_0\,7],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_253" name="PH1_0,6" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -3240,7 +3240,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_288" name="EWG_T_0,7" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_288" name="PTC_T_0,7" simulationType="assignment" compartment="Compartment_7" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -3250,10 +3250,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG4_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG5_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG6_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG1_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG2_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG3_1\,0],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC1_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC2_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC3_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC4_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC5_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC6_0\,7],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_289" name="PTC_T_0,7" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_289" name="EWG_T_0,7" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -3263,7 +3263,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC4_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC5_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC6_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC1_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC2_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC3_1\,0],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG4_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG5_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG6_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG1_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG2_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG3_1\,0],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_290" name="PH1_0,7" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -3616,7 +3616,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_325" name="EWG_T_1,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_325" name="PTC_T_1,0" simulationType="assignment" compartment="Compartment_8" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -3626,10 +3626,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG4_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG5_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG6_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG1_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG2_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG3_1\,1],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC1_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC2_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC3_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC4_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC5_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC6_1\,0],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_326" name="PTC_T_1,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_326" name="EWG_T_1,0" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -3639,7 +3639,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC4_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC5_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC6_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC1_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC2_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC3_1\,1],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG4_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG5_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG6_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG1_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG2_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG3_1\,1],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_327" name="PH1_1,0" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -3992,7 +3992,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_362" name="EWG_T_1,1" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_362" name="PTC_T_1,1" simulationType="assignment" compartment="Compartment_9" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -4002,10 +4002,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG4_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG5_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG6_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG1_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG2_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG3_0\,2],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC1_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC2_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC3_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC4_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC5_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC6_1\,1],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_363" name="PTC_T_1,1" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_363" name="EWG_T_1,1" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -4015,7 +4015,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC4_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC5_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC6_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC1_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC2_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC3_0\,2],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG4_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG5_0\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG6_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG1_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG2_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG3_0\,2],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_364" name="PH1_1,1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -4368,7 +4368,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_399" name="EWG_T_1,2" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_399" name="PTC_T_1,2" simulationType="assignment" compartment="Compartment_10" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -4378,10 +4378,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG4_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG5_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG6_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG1_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG2_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG3_1\,3],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC1_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC2_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC3_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC4_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC5_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC6_1\,2],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_400" name="PTC_T_1,2" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_400" name="EWG_T_1,2" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -4391,7 +4391,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC4_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC5_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC6_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC1_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC2_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC3_1\,3],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG4_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG5_1\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG6_0\,1],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG1_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG2_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG3_1\,3],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_401" name="PH1_1,2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -4744,7 +4744,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_436" name="EWG_T_1,3" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_436" name="PTC_T_1,3" simulationType="assignment" compartment="Compartment_11" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -4754,10 +4754,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG4_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG5_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG6_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG1_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG2_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG3_0\,4],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC1_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC2_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC3_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC4_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC5_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC6_1\,3],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_437" name="PTC_T_1,3" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_437" name="EWG_T_1,3" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -4767,7 +4767,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC4_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC5_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC6_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC1_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC2_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC3_0\,4],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG4_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG5_0\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG6_1\,2],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG1_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG2_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG3_0\,4],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_438" name="PH1_1,3" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -5120,7 +5120,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_473" name="EWG_T_1,4" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_473" name="PTC_T_1,4" simulationType="assignment" compartment="Compartment_12" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -5130,10 +5130,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG4_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG5_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG6_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG1_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG2_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG3_1\,5],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC1_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC2_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC3_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC4_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC5_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC6_1\,4],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_474" name="PTC_T_1,4" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_474" name="EWG_T_1,4" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -5143,7 +5143,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC4_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC5_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC6_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC1_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC2_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC3_1\,5],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG4_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG5_1\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG6_0\,3],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG1_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG2_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG3_1\,5],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_475" name="PH1_1,4" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -5496,7 +5496,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_510" name="EWG_T_1,5" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_510" name="PTC_T_1,5" simulationType="assignment" compartment="Compartment_13" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -5506,10 +5506,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG4_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG5_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG6_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG1_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG2_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG3_0\,6],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC1_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC2_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC3_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC4_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC5_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC6_1\,5],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_511" name="PTC_T_1,5" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_511" name="EWG_T_1,5" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -5519,7 +5519,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC4_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC5_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC6_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC1_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC2_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC3_0\,6],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG4_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG5_0\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG6_1\,4],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG1_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG2_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG3_0\,6],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_512" name="PH1_1,5" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -5872,7 +5872,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_547" name="EWG_T_1,6" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_547" name="PTC_T_1,6" simulationType="assignment" compartment="Compartment_14" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -5882,10 +5882,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG4_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG5_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG6_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG1_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG2_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG3_1\,7],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC1_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC2_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC3_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC4_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC5_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC6_1\,6],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_548" name="PTC_T_1,6" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_548" name="EWG_T_1,6" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -5895,7 +5895,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC4_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC5_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC6_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC1_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC2_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC3_1\,7],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG4_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG5_1\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG6_0\,5],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG1_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG2_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG3_1\,7],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_549" name="PH1_1,6" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -6248,7 +6248,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_584" name="EWG_T_1,7" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_584" name="PTC_T_1,7" simulationType="assignment" compartment="Compartment_15" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6258,10 +6258,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG4_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG5_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG6_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG1_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG2_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG3_0\,0],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC1_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC2_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC3_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC4_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC5_1\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC6_1\,7],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_585" name="PTC_T_1,7" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_585" name="EWG_T_1,7" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6271,7 +6271,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC4_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC5_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC6_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC1_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC2_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC3_0\,0],Reference=Concentration>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG4_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG5_0\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG6_1\,6],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG1_0\,7],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG2_1\,0],Reference=Concentration>+&lt;CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG3_0\,0],Reference=Concentration>
         </Expression>
       </Metabolite>
       <Metabolite key="Metabolite_586" name="PH1_1,7" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -6796,7 +6796,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_46" name="T0/H_PTC" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_46" name="T0/H_EN" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6806,10 +6806,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_PTC],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_EN],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_47" name="T0/H_IWG" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_47" name="T0/H_ptc" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6819,7 +6819,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_IWG],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_ptc],Reference=Value>
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_48" name="T0/H_hh" simulationType="assignment" addNoise="false">
@@ -6835,7 +6835,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_hh],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_49" name="T0/H_EN" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_49" name="T0/H_ci" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6845,10 +6845,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_EN],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_ci],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_50" name="T0/H_PH" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_50" name="T0/H_wg" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6858,10 +6858,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_PH],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_wg],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_51" name="T0/H_en" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_51" name="T0/H_PTC" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6871,10 +6871,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_en],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_PTC],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_52" name="T0/H_ptc" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_52" name="T0/H_HH" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6884,10 +6884,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_ptc],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_HH],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_53" name="T0/H_CI" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_53" name="T0/H_PH" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6897,10 +6897,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_CI],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_PH],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_54" name="T0/H_wg" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_54" name="T0/H_CI" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6910,10 +6910,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_wg],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_CI],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_55" name="T0/H_ci" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_55" name="T0/H_en" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6923,10 +6923,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_ci],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_en],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_56" name="T0/H_HH" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_56" name="T0/H_IWG" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -6936,7 +6936,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_HH],Reference=Value>
+          &lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[T0],Reference=Value>/&lt;CN=Root,Model=Segment Polarity Network model,Vector=Values[H_IWG],Reference=Value>
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_57" name="T0/6H_HH" simulationType="assignment" addNoise="false">
@@ -7058,7 +7058,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_29" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -7071,10 +7071,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_29"/>
+              <SourceParameter reference="Metabolite_30"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_4"/>
@@ -7112,7 +7112,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_0"/>
@@ -7141,7 +7141,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_0"/>
@@ -7167,7 +7167,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -7201,7 +7201,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_28"/>
@@ -7242,7 +7242,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_2"/>
@@ -7271,7 +7271,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_2"/>
@@ -7297,7 +7297,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -7321,7 +7321,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_29" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_7298" name="V" value="0.1"/>
@@ -7337,7 +7337,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_30"/>
+              <SourceParameter reference="Metabolite_29"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -7366,7 +7366,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_4"/>
@@ -7641,7 +7641,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -7667,7 +7667,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_7"/>
@@ -7693,7 +7693,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_8"/>
@@ -7719,7 +7719,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_9"/>
@@ -7745,7 +7745,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_10"/>
@@ -7771,7 +7771,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -7805,7 +7805,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_3"/>
@@ -7846,7 +7846,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -8046,7 +8046,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_13"/>
@@ -8072,7 +8072,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_14"/>
@@ -8098,7 +8098,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_15"/>
@@ -8124,7 +8124,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_16"/>
@@ -8150,7 +8150,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_17"/>
@@ -8176,7 +8176,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_18"/>
@@ -8215,7 +8215,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -8271,7 +8271,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_19"/>
@@ -8300,7 +8300,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_19"/>
@@ -8326,7 +8326,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_20"/>
@@ -8700,7 +8700,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_21"/>
@@ -8726,7 +8726,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_22"/>
@@ -8752,7 +8752,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_23"/>
@@ -8778,7 +8778,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_24"/>
@@ -8804,7 +8804,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_25"/>
@@ -8830,7 +8830,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_26"/>
@@ -10086,7 +10086,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_31"/>
@@ -10112,7 +10112,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_32"/>
@@ -10138,7 +10138,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_33"/>
@@ -10164,7 +10164,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_34"/>
@@ -10190,7 +10190,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_35"/>
@@ -10216,7 +10216,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_36"/>
@@ -10237,7 +10237,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_37" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_66" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_67" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_41" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -10250,10 +10250,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_66"/>
+              <SourceParameter reference="Metabolite_67"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_41"/>
@@ -10291,7 +10291,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_37"/>
@@ -10320,7 +10320,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_37"/>
@@ -10346,7 +10346,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_38"/>
@@ -10380,7 +10380,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_65"/>
@@ -10421,7 +10421,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_39"/>
@@ -10450,7 +10450,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_39"/>
@@ -10476,7 +10476,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_40"/>
@@ -10500,14 +10500,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_41" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_67" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_66" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_7207" name="V" value="0.1"/>
           <Constant key="Parameter_7196" name="h" value="0.1"/>
           <Constant key="Parameter_7198" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -10516,7 +10516,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_40"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_67"/>
+              <SourceParameter reference="Metabolite_66"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -10545,7 +10545,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_41"/>
@@ -10820,7 +10820,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_43"/>
@@ -10846,7 +10846,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_44"/>
@@ -10872,7 +10872,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_45"/>
@@ -10898,7 +10898,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_46"/>
@@ -10924,7 +10924,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_47"/>
@@ -10950,7 +10950,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_48"/>
@@ -10984,7 +10984,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_40"/>
@@ -11025,7 +11025,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_49"/>
@@ -11225,7 +11225,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_50"/>
@@ -11251,7 +11251,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_51"/>
@@ -11277,7 +11277,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_52"/>
@@ -11303,7 +11303,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_53"/>
@@ -11329,7 +11329,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_54"/>
@@ -11355,7 +11355,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_55"/>
@@ -11394,7 +11394,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -11450,7 +11450,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_56"/>
@@ -11479,7 +11479,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_56"/>
@@ -11505,7 +11505,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_57"/>
@@ -11879,7 +11879,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_58"/>
@@ -11905,7 +11905,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_59"/>
@@ -11931,7 +11931,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_60"/>
@@ -11957,7 +11957,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_61"/>
@@ -11983,7 +11983,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_62"/>
@@ -12009,7 +12009,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_63"/>
@@ -13265,7 +13265,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_68"/>
@@ -13291,7 +13291,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_69"/>
@@ -13317,7 +13317,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_70"/>
@@ -13343,7 +13343,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_71"/>
@@ -13369,7 +13369,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_72"/>
@@ -13395,7 +13395,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_73"/>
@@ -13416,7 +13416,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_74" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_103" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_104" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_78" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -13429,10 +13429,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_103"/>
+              <SourceParameter reference="Metabolite_104"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_78"/>
@@ -13470,7 +13470,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_74"/>
@@ -13499,7 +13499,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_74"/>
@@ -13525,7 +13525,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_75"/>
@@ -13559,7 +13559,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_102"/>
@@ -13600,7 +13600,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_76"/>
@@ -13629,7 +13629,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_76"/>
@@ -13655,7 +13655,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_77"/>
@@ -13679,14 +13679,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_78" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_104" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_103" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_7099" name="V" value="0.1"/>
           <Constant key="Parameter_7088" name="h" value="0.1"/>
           <Constant key="Parameter_7086" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -13695,7 +13695,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_77"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_104"/>
+              <SourceParameter reference="Metabolite_103"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -13724,7 +13724,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_78"/>
@@ -13999,7 +13999,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_80"/>
@@ -14025,7 +14025,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_81"/>
@@ -14051,7 +14051,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_82"/>
@@ -14077,7 +14077,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_83"/>
@@ -14103,7 +14103,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_84"/>
@@ -14129,7 +14129,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_85"/>
@@ -14163,7 +14163,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_77"/>
@@ -14204,7 +14204,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_86"/>
@@ -14404,7 +14404,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_87"/>
@@ -14430,7 +14430,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_88"/>
@@ -14456,7 +14456,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_89"/>
@@ -14482,7 +14482,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_90"/>
@@ -14508,7 +14508,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_91"/>
@@ -14534,7 +14534,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_92"/>
@@ -14573,7 +14573,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -14629,7 +14629,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_93"/>
@@ -14658,7 +14658,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_93"/>
@@ -14684,7 +14684,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_94"/>
@@ -15058,7 +15058,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_95"/>
@@ -15084,7 +15084,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_96"/>
@@ -15110,7 +15110,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_97"/>
@@ -15136,7 +15136,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_98"/>
@@ -15162,7 +15162,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_99"/>
@@ -15188,7 +15188,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_100"/>
@@ -16444,7 +16444,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_105"/>
@@ -16470,7 +16470,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_106"/>
@@ -16496,7 +16496,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_107"/>
@@ -16522,7 +16522,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_108"/>
@@ -16548,7 +16548,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_109"/>
@@ -16574,7 +16574,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_110"/>
@@ -16595,7 +16595,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_111" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_140" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_141" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_115" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -16608,10 +16608,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_140"/>
+              <SourceParameter reference="Metabolite_141"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_115"/>
@@ -16649,7 +16649,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_111"/>
@@ -16678,7 +16678,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_111"/>
@@ -16704,7 +16704,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_112"/>
@@ -16738,7 +16738,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_139"/>
@@ -16779,7 +16779,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_113"/>
@@ -16808,7 +16808,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_113"/>
@@ -16834,7 +16834,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_114"/>
@@ -16858,14 +16858,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_115" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_141" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_140" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6987" name="V" value="0.1"/>
           <Constant key="Parameter_6978" name="h" value="0.1"/>
           <Constant key="Parameter_6980" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -16874,7 +16874,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_114"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_141"/>
+              <SourceParameter reference="Metabolite_140"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -16903,7 +16903,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_115"/>
@@ -17178,7 +17178,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_117"/>
@@ -17204,7 +17204,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_118"/>
@@ -17230,7 +17230,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_119"/>
@@ -17256,7 +17256,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_120"/>
@@ -17282,7 +17282,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_121"/>
@@ -17308,7 +17308,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_122"/>
@@ -17342,7 +17342,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_114"/>
@@ -17383,7 +17383,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_123"/>
@@ -17583,7 +17583,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_124"/>
@@ -17609,7 +17609,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_125"/>
@@ -17635,7 +17635,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_126"/>
@@ -17661,7 +17661,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_127"/>
@@ -17687,7 +17687,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_128"/>
@@ -17713,7 +17713,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_129"/>
@@ -17752,7 +17752,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -17808,7 +17808,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_130"/>
@@ -17837,7 +17837,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_130"/>
@@ -17863,7 +17863,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_131"/>
@@ -18237,7 +18237,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_132"/>
@@ -18263,7 +18263,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_133"/>
@@ -18289,7 +18289,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_134"/>
@@ -18315,7 +18315,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_135"/>
@@ -18341,7 +18341,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_136"/>
@@ -18367,7 +18367,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_137"/>
@@ -19623,7 +19623,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_142"/>
@@ -19649,7 +19649,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_143"/>
@@ -19675,7 +19675,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_144"/>
@@ -19701,7 +19701,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_145"/>
@@ -19727,7 +19727,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_146"/>
@@ -19753,7 +19753,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_147"/>
@@ -19774,7 +19774,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_148" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_177" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_178" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_152" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -19787,10 +19787,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_177"/>
+              <SourceParameter reference="Metabolite_178"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_152"/>
@@ -19828,7 +19828,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_148"/>
@@ -19857,7 +19857,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_148"/>
@@ -19883,7 +19883,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_149"/>
@@ -19917,7 +19917,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_176"/>
@@ -19958,7 +19958,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_150"/>
@@ -19987,7 +19987,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_150"/>
@@ -20013,7 +20013,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_151"/>
@@ -20037,14 +20037,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_152" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_178" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_177" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6888" name="V" value="0.1"/>
           <Constant key="Parameter_8356" name="h" value="0.1"/>
           <Constant key="Parameter_8359" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -20053,7 +20053,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_151"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_178"/>
+              <SourceParameter reference="Metabolite_177"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -20082,7 +20082,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_152"/>
@@ -20357,7 +20357,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_154"/>
@@ -20383,7 +20383,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_155"/>
@@ -20409,7 +20409,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_156"/>
@@ -20435,7 +20435,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_157"/>
@@ -20461,7 +20461,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_158"/>
@@ -20487,7 +20487,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_159"/>
@@ -20521,7 +20521,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_151"/>
@@ -20562,7 +20562,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_160"/>
@@ -20762,7 +20762,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_161"/>
@@ -20788,7 +20788,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_162"/>
@@ -20814,7 +20814,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_163"/>
@@ -20840,7 +20840,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_164"/>
@@ -20866,7 +20866,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_165"/>
@@ -20892,7 +20892,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_166"/>
@@ -20931,7 +20931,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -20987,7 +20987,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_167"/>
@@ -21016,7 +21016,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_167"/>
@@ -21042,7 +21042,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_168"/>
@@ -21416,7 +21416,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_169"/>
@@ -21442,7 +21442,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_170"/>
@@ -21468,7 +21468,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_171"/>
@@ -21494,7 +21494,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_172"/>
@@ -21520,7 +21520,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_173"/>
@@ -21546,7 +21546,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_174"/>
@@ -22802,7 +22802,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_179"/>
@@ -22828,7 +22828,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_180"/>
@@ -22854,7 +22854,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_181"/>
@@ -22880,7 +22880,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_182"/>
@@ -22906,7 +22906,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_183"/>
@@ -22932,7 +22932,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_184"/>
@@ -22953,7 +22953,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_185" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_214" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_215" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_189" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -22966,10 +22966,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_214"/>
+              <SourceParameter reference="Metabolite_215"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_189"/>
@@ -23007,7 +23007,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_185"/>
@@ -23036,7 +23036,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_185"/>
@@ -23062,7 +23062,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_186"/>
@@ -23096,7 +23096,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_213"/>
@@ -23137,7 +23137,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_187"/>
@@ -23166,7 +23166,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_187"/>
@@ -23192,7 +23192,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_188"/>
@@ -23216,14 +23216,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_189" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_215" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_214" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6814" name="V" value="0.1"/>
           <Constant key="Parameter_6801" name="h" value="0.1"/>
           <Constant key="Parameter_6800" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -23232,7 +23232,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_188"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_215"/>
+              <SourceParameter reference="Metabolite_214"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -23261,7 +23261,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_189"/>
@@ -23536,7 +23536,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_191"/>
@@ -23562,7 +23562,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_192"/>
@@ -23588,7 +23588,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_193"/>
@@ -23614,7 +23614,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_194"/>
@@ -23640,7 +23640,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_195"/>
@@ -23666,7 +23666,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_196"/>
@@ -23700,7 +23700,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_188"/>
@@ -23741,7 +23741,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_197"/>
@@ -23941,7 +23941,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_198"/>
@@ -23967,7 +23967,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_199"/>
@@ -23993,7 +23993,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_200"/>
@@ -24019,7 +24019,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_201"/>
@@ -24045,7 +24045,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_202"/>
@@ -24071,7 +24071,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_203"/>
@@ -24110,7 +24110,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -24166,7 +24166,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_204"/>
@@ -24195,7 +24195,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_204"/>
@@ -24221,7 +24221,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_205"/>
@@ -24595,7 +24595,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_206"/>
@@ -24621,7 +24621,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_207"/>
@@ -24647,7 +24647,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_208"/>
@@ -24673,7 +24673,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_209"/>
@@ -24699,7 +24699,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_210"/>
@@ -24725,7 +24725,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_211"/>
@@ -25981,7 +25981,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_216"/>
@@ -26007,7 +26007,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_217"/>
@@ -26033,7 +26033,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_218"/>
@@ -26059,7 +26059,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_219"/>
@@ -26085,7 +26085,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_220"/>
@@ -26111,7 +26111,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_221"/>
@@ -26132,7 +26132,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_222" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_251" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_252" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_226" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -26145,10 +26145,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_251"/>
+              <SourceParameter reference="Metabolite_252"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_226"/>
@@ -26186,7 +26186,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_222"/>
@@ -26215,7 +26215,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_222"/>
@@ -26241,7 +26241,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_223"/>
@@ -26275,7 +26275,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_250"/>
@@ -26316,7 +26316,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_224"/>
@@ -26345,7 +26345,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_224"/>
@@ -26371,7 +26371,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_225"/>
@@ -26395,14 +26395,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_226" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_252" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_251" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6708" name="V" value="0.1"/>
           <Constant key="Parameter_8217" name="h" value="0.1"/>
           <Constant key="Parameter_8218" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -26411,7 +26411,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_225"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_252"/>
+              <SourceParameter reference="Metabolite_251"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -26440,7 +26440,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_226"/>
@@ -26715,7 +26715,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_228"/>
@@ -26741,7 +26741,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_229"/>
@@ -26767,7 +26767,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_230"/>
@@ -26793,7 +26793,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_231"/>
@@ -26819,7 +26819,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_232"/>
@@ -26845,7 +26845,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_233"/>
@@ -26879,7 +26879,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_225"/>
@@ -26920,7 +26920,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_234"/>
@@ -27120,7 +27120,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_235"/>
@@ -27146,7 +27146,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_236"/>
@@ -27172,7 +27172,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_237"/>
@@ -27198,7 +27198,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_238"/>
@@ -27224,7 +27224,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_239"/>
@@ -27250,7 +27250,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_240"/>
@@ -27289,7 +27289,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -27345,7 +27345,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_241"/>
@@ -27374,7 +27374,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_241"/>
@@ -27400,7 +27400,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_242"/>
@@ -27774,7 +27774,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_243"/>
@@ -27800,7 +27800,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_244"/>
@@ -27826,7 +27826,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_245"/>
@@ -27852,7 +27852,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_246"/>
@@ -27878,7 +27878,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_247"/>
@@ -27904,7 +27904,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_248"/>
@@ -29160,7 +29160,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_253"/>
@@ -29186,7 +29186,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_254"/>
@@ -29212,7 +29212,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_255"/>
@@ -29238,7 +29238,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_256"/>
@@ -29264,7 +29264,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_257"/>
@@ -29290,7 +29290,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_258"/>
@@ -29311,7 +29311,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_259" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_288" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_289" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_263" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -29324,10 +29324,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_288"/>
+              <SourceParameter reference="Metabolite_289"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_263"/>
@@ -29365,7 +29365,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_259"/>
@@ -29394,7 +29394,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_259"/>
@@ -29420,7 +29420,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_260"/>
@@ -29454,7 +29454,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_287"/>
@@ -29495,7 +29495,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_261"/>
@@ -29524,7 +29524,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_261"/>
@@ -29550,7 +29550,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_262"/>
@@ -29574,14 +29574,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_263" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_289" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_288" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6604" name="V" value="0.1"/>
           <Constant key="Parameter_6593" name="h" value="0.1"/>
           <Constant key="Parameter_6592" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -29590,7 +29590,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_262"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_289"/>
+              <SourceParameter reference="Metabolite_288"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -29619,7 +29619,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_263"/>
@@ -29894,7 +29894,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_265"/>
@@ -29920,7 +29920,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_266"/>
@@ -29946,7 +29946,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_267"/>
@@ -29972,7 +29972,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_268"/>
@@ -29998,7 +29998,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_269"/>
@@ -30024,7 +30024,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_270"/>
@@ -30058,7 +30058,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_262"/>
@@ -30099,7 +30099,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_271"/>
@@ -30299,7 +30299,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_272"/>
@@ -30325,7 +30325,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_273"/>
@@ -30351,7 +30351,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_274"/>
@@ -30377,7 +30377,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_275"/>
@@ -30403,7 +30403,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_276"/>
@@ -30429,7 +30429,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_277"/>
@@ -30468,7 +30468,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -30524,7 +30524,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_278"/>
@@ -30553,7 +30553,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_278"/>
@@ -30579,7 +30579,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_279"/>
@@ -30953,7 +30953,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_280"/>
@@ -30979,7 +30979,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_281"/>
@@ -31005,7 +31005,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_282"/>
@@ -31031,7 +31031,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_283"/>
@@ -31057,7 +31057,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_284"/>
@@ -31083,7 +31083,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_285"/>
@@ -32339,7 +32339,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_290"/>
@@ -32365,7 +32365,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_291"/>
@@ -32391,7 +32391,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_292"/>
@@ -32417,7 +32417,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_293"/>
@@ -32443,7 +32443,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_294"/>
@@ -32469,7 +32469,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_295"/>
@@ -32490,7 +32490,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_296" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_325" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_326" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_300" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -32503,10 +32503,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_325"/>
+              <SourceParameter reference="Metabolite_326"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_300"/>
@@ -32544,7 +32544,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_296"/>
@@ -32573,7 +32573,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_296"/>
@@ -32599,7 +32599,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_297"/>
@@ -32633,7 +32633,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_324"/>
@@ -32674,7 +32674,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_298"/>
@@ -32703,7 +32703,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_298"/>
@@ -32729,7 +32729,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_299"/>
@@ -32753,14 +32753,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_300" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_326" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_325" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6479" name="V" value="0.1"/>
           <Constant key="Parameter_8040" name="h" value="0.1"/>
           <Constant key="Parameter_8036" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -32769,7 +32769,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_299"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_326"/>
+              <SourceParameter reference="Metabolite_325"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -32798,7 +32798,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_300"/>
@@ -33073,7 +33073,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_302"/>
@@ -33099,7 +33099,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_303"/>
@@ -33125,7 +33125,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_304"/>
@@ -33151,7 +33151,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_305"/>
@@ -33177,7 +33177,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_306"/>
@@ -33203,7 +33203,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_307"/>
@@ -33237,7 +33237,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_299"/>
@@ -33278,7 +33278,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_308"/>
@@ -33478,7 +33478,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_309"/>
@@ -33504,7 +33504,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_310"/>
@@ -33530,7 +33530,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_311"/>
@@ -33556,7 +33556,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_312"/>
@@ -33582,7 +33582,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_313"/>
@@ -33608,7 +33608,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_314"/>
@@ -33647,7 +33647,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -33703,7 +33703,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_315"/>
@@ -33732,7 +33732,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_315"/>
@@ -33758,7 +33758,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_316"/>
@@ -34132,7 +34132,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_317"/>
@@ -34158,7 +34158,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_318"/>
@@ -34184,7 +34184,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_319"/>
@@ -34210,7 +34210,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_320"/>
@@ -34236,7 +34236,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_321"/>
@@ -34262,7 +34262,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_322"/>
@@ -35518,7 +35518,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_327"/>
@@ -35544,7 +35544,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_328"/>
@@ -35570,7 +35570,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_329"/>
@@ -35596,7 +35596,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_330"/>
@@ -35622,7 +35622,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_331"/>
@@ -35648,7 +35648,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_332"/>
@@ -35669,7 +35669,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_333" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_362" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_363" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_337" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -35682,10 +35682,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_362"/>
+              <SourceParameter reference="Metabolite_363"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_337"/>
@@ -35723,7 +35723,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_333"/>
@@ -35752,7 +35752,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_333"/>
@@ -35778,7 +35778,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_334"/>
@@ -35812,7 +35812,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_361"/>
@@ -35853,7 +35853,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_335"/>
@@ -35882,7 +35882,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_335"/>
@@ -35908,7 +35908,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_336"/>
@@ -35932,14 +35932,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_337" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_363" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_362" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_8080" name="V" value="0.1"/>
           <Constant key="Parameter_8271" name="h" value="0.1"/>
           <Constant key="Parameter_8274" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -35948,7 +35948,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_336"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_363"/>
+              <SourceParameter reference="Metabolite_362"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -35977,7 +35977,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_337"/>
@@ -36252,7 +36252,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_339"/>
@@ -36278,7 +36278,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_340"/>
@@ -36304,7 +36304,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_341"/>
@@ -36330,7 +36330,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_342"/>
@@ -36356,7 +36356,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_343"/>
@@ -36382,7 +36382,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_344"/>
@@ -36416,7 +36416,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_336"/>
@@ -36457,7 +36457,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_345"/>
@@ -36657,7 +36657,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_346"/>
@@ -36683,7 +36683,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_347"/>
@@ -36709,7 +36709,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_348"/>
@@ -36735,7 +36735,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_349"/>
@@ -36761,7 +36761,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_350"/>
@@ -36787,7 +36787,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_351"/>
@@ -36826,7 +36826,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -36882,7 +36882,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_352"/>
@@ -36911,7 +36911,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_352"/>
@@ -36937,7 +36937,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_353"/>
@@ -37311,7 +37311,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_354"/>
@@ -37337,7 +37337,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_355"/>
@@ -37363,7 +37363,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_356"/>
@@ -37389,7 +37389,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_357"/>
@@ -37415,7 +37415,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_358"/>
@@ -37441,7 +37441,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_359"/>
@@ -38697,7 +38697,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_364"/>
@@ -38723,7 +38723,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_365"/>
@@ -38749,7 +38749,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_366"/>
@@ -38775,7 +38775,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_367"/>
@@ -38801,7 +38801,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_368"/>
@@ -38827,7 +38827,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_369"/>
@@ -38848,7 +38848,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_370" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_399" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_400" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_374" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -38861,10 +38861,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_399"/>
+              <SourceParameter reference="Metabolite_400"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_374"/>
@@ -38902,7 +38902,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_370"/>
@@ -38931,7 +38931,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_370"/>
@@ -38957,7 +38957,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_371"/>
@@ -38991,7 +38991,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_398"/>
@@ -39032,7 +39032,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_372"/>
@@ -39061,7 +39061,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_372"/>
@@ -39087,7 +39087,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_373"/>
@@ -39111,14 +39111,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_374" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_400" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_399" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_7739" name="V" value="0.1"/>
           <Constant key="Parameter_6281" name="h" value="0.1"/>
           <Constant key="Parameter_6279" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -39127,7 +39127,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_373"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_400"/>
+              <SourceParameter reference="Metabolite_399"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -39156,7 +39156,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_374"/>
@@ -39431,7 +39431,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_376"/>
@@ -39457,7 +39457,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_377"/>
@@ -39483,7 +39483,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_378"/>
@@ -39509,7 +39509,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_379"/>
@@ -39535,7 +39535,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_380"/>
@@ -39561,7 +39561,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_381"/>
@@ -39595,7 +39595,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_373"/>
@@ -39636,7 +39636,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_382"/>
@@ -39836,7 +39836,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_383"/>
@@ -39862,7 +39862,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_384"/>
@@ -39888,7 +39888,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_385"/>
@@ -39914,7 +39914,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_386"/>
@@ -39940,7 +39940,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_387"/>
@@ -39966,7 +39966,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_388"/>
@@ -40005,7 +40005,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -40061,7 +40061,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_389"/>
@@ -40090,7 +40090,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_389"/>
@@ -40116,7 +40116,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_390"/>
@@ -40490,7 +40490,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_391"/>
@@ -40516,7 +40516,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_392"/>
@@ -40542,7 +40542,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_393"/>
@@ -40568,7 +40568,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_394"/>
@@ -40594,7 +40594,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_395"/>
@@ -40620,7 +40620,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_396"/>
@@ -41876,7 +41876,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_401"/>
@@ -41902,7 +41902,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_402"/>
@@ -41928,7 +41928,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_403"/>
@@ -41954,7 +41954,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_404"/>
@@ -41980,7 +41980,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_405"/>
@@ -42006,7 +42006,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_406"/>
@@ -42027,7 +42027,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_407" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_436" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_437" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_411" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -42040,10 +42040,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_436"/>
+              <SourceParameter reference="Metabolite_437"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_411"/>
@@ -42081,7 +42081,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_407"/>
@@ -42110,7 +42110,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_407"/>
@@ -42136,7 +42136,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_408"/>
@@ -42170,7 +42170,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_435"/>
@@ -42211,7 +42211,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_409"/>
@@ -42240,7 +42240,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_409"/>
@@ -42266,7 +42266,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_410"/>
@@ -42290,14 +42290,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_411" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_437" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_436" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6192" name="V" value="0.1"/>
           <Constant key="Parameter_6189" name="h" value="0.1"/>
           <Constant key="Parameter_6186" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -42306,7 +42306,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_410"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_437"/>
+              <SourceParameter reference="Metabolite_436"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -42335,7 +42335,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_411"/>
@@ -42610,7 +42610,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_413"/>
@@ -42636,7 +42636,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_414"/>
@@ -42662,7 +42662,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_415"/>
@@ -42688,7 +42688,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_416"/>
@@ -42714,7 +42714,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_417"/>
@@ -42740,7 +42740,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_418"/>
@@ -42774,7 +42774,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_410"/>
@@ -42815,7 +42815,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_419"/>
@@ -43015,7 +43015,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_420"/>
@@ -43041,7 +43041,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_421"/>
@@ -43067,7 +43067,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_422"/>
@@ -43093,7 +43093,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_423"/>
@@ -43119,7 +43119,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_424"/>
@@ -43145,7 +43145,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_425"/>
@@ -43184,7 +43184,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -43240,7 +43240,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_426"/>
@@ -43269,7 +43269,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_426"/>
@@ -43295,7 +43295,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_427"/>
@@ -43669,7 +43669,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_428"/>
@@ -43695,7 +43695,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_429"/>
@@ -43721,7 +43721,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_430"/>
@@ -43747,7 +43747,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_431"/>
@@ -43773,7 +43773,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_432"/>
@@ -43799,7 +43799,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_433"/>
@@ -45055,7 +45055,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_438"/>
@@ -45081,7 +45081,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_439"/>
@@ -45107,7 +45107,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_440"/>
@@ -45133,7 +45133,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_441"/>
@@ -45159,7 +45159,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_442"/>
@@ -45185,7 +45185,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_443"/>
@@ -45206,7 +45206,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_444" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_473" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_474" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_448" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -45219,10 +45219,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_473"/>
+              <SourceParameter reference="Metabolite_474"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_448"/>
@@ -45260,7 +45260,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_444"/>
@@ -45289,7 +45289,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_444"/>
@@ -45315,7 +45315,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_445"/>
@@ -45349,7 +45349,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_472"/>
@@ -45390,7 +45390,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_446"/>
@@ -45419,7 +45419,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_446"/>
@@ -45445,7 +45445,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_447"/>
@@ -45469,14 +45469,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_448" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_474" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_473" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_6089" name="V" value="0.1"/>
           <Constant key="Parameter_7782" name="h" value="0.1"/>
           <Constant key="Parameter_7783" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -45485,7 +45485,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_447"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_474"/>
+              <SourceParameter reference="Metabolite_473"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -45514,7 +45514,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_448"/>
@@ -45789,7 +45789,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_450"/>
@@ -45815,7 +45815,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_451"/>
@@ -45841,7 +45841,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_452"/>
@@ -45867,7 +45867,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_453"/>
@@ -45893,7 +45893,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_454"/>
@@ -45919,7 +45919,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_455"/>
@@ -45953,7 +45953,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_447"/>
@@ -45994,7 +45994,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_456"/>
@@ -46194,7 +46194,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_457"/>
@@ -46220,7 +46220,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_458"/>
@@ -46246,7 +46246,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_459"/>
@@ -46272,7 +46272,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_460"/>
@@ -46298,7 +46298,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_461"/>
@@ -46324,7 +46324,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_462"/>
@@ -46363,7 +46363,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -46419,7 +46419,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_463"/>
@@ -46448,7 +46448,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_463"/>
@@ -46474,7 +46474,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_464"/>
@@ -46848,7 +46848,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_465"/>
@@ -46874,7 +46874,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_466"/>
@@ -46900,7 +46900,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_467"/>
@@ -46926,7 +46926,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_468"/>
@@ -46952,7 +46952,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_469"/>
@@ -46978,7 +46978,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_470"/>
@@ -48234,7 +48234,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_475"/>
@@ -48260,7 +48260,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_476"/>
@@ -48286,7 +48286,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_477"/>
@@ -48312,7 +48312,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_478"/>
@@ -48338,7 +48338,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_479"/>
@@ -48364,7 +48364,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_480"/>
@@ -48385,7 +48385,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_481" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_510" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_511" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_485" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -48398,10 +48398,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_510"/>
+              <SourceParameter reference="Metabolite_511"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_485"/>
@@ -48439,7 +48439,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_481"/>
@@ -48468,7 +48468,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_481"/>
@@ -48494,7 +48494,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_482"/>
@@ -48528,7 +48528,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_509"/>
@@ -48569,7 +48569,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_483"/>
@@ -48598,7 +48598,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_483"/>
@@ -48624,7 +48624,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_484"/>
@@ -48648,14 +48648,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_485" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_511" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_510" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_7620" name="V" value="0.1"/>
           <Constant key="Parameter_6014" name="h" value="0.1"/>
           <Constant key="Parameter_6012" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -48664,7 +48664,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_484"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_511"/>
+              <SourceParameter reference="Metabolite_510"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -48693,7 +48693,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_485"/>
@@ -48968,7 +48968,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_487"/>
@@ -48994,7 +48994,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_488"/>
@@ -49020,7 +49020,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_489"/>
@@ -49046,7 +49046,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_490"/>
@@ -49072,7 +49072,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_491"/>
@@ -49098,7 +49098,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_492"/>
@@ -49132,7 +49132,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_484"/>
@@ -49173,7 +49173,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_493"/>
@@ -49373,7 +49373,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_494"/>
@@ -49399,7 +49399,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_495"/>
@@ -49425,7 +49425,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_496"/>
@@ -49451,7 +49451,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_497"/>
@@ -49477,7 +49477,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_498"/>
@@ -49503,7 +49503,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_499"/>
@@ -49542,7 +49542,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -49598,7 +49598,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_500"/>
@@ -49627,7 +49627,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_500"/>
@@ -49653,7 +49653,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_501"/>
@@ -50027,7 +50027,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_502"/>
@@ -50053,7 +50053,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_503"/>
@@ -50079,7 +50079,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_504"/>
@@ -50105,7 +50105,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_505"/>
@@ -50131,7 +50131,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_506"/>
@@ -50157,7 +50157,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_507"/>
@@ -51413,7 +51413,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_512"/>
@@ -51439,7 +51439,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_513"/>
@@ -51465,7 +51465,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_514"/>
@@ -51491,7 +51491,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_515"/>
@@ -51517,7 +51517,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_516"/>
@@ -51543,7 +51543,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_517"/>
@@ -51564,7 +51564,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_518" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_547" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_548" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_522" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -51577,10 +51577,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_547"/>
+              <SourceParameter reference="Metabolite_548"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_522"/>
@@ -51618,7 +51618,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_518"/>
@@ -51647,7 +51647,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_518"/>
@@ -51673,7 +51673,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_519"/>
@@ -51707,7 +51707,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_546"/>
@@ -51748,7 +51748,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_520"/>
@@ -51777,7 +51777,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_520"/>
@@ -51803,7 +51803,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_521"/>
@@ -51827,14 +51827,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_522" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_548" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_547" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_7685" name="V" value="0.1"/>
           <Constant key="Parameter_7262" name="h" value="0.1"/>
           <Constant key="Parameter_7260" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -51843,7 +51843,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_521"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_548"/>
+              <SourceParameter reference="Metabolite_547"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -51872,7 +51872,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_522"/>
@@ -52147,7 +52147,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_524"/>
@@ -52173,7 +52173,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_525"/>
@@ -52199,7 +52199,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_526"/>
@@ -52225,7 +52225,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_527"/>
@@ -52251,7 +52251,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_528"/>
@@ -52277,7 +52277,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_529"/>
@@ -52311,7 +52311,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_521"/>
@@ -52352,7 +52352,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_530"/>
@@ -52552,7 +52552,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_531"/>
@@ -52578,7 +52578,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_532"/>
@@ -52604,7 +52604,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_533"/>
@@ -52630,7 +52630,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_534"/>
@@ -52656,7 +52656,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_535"/>
@@ -52682,7 +52682,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_536"/>
@@ -52721,7 +52721,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -52777,7 +52777,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_537"/>
@@ -52806,7 +52806,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_537"/>
@@ -52832,7 +52832,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_538"/>
@@ -53206,7 +53206,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_539"/>
@@ -53232,7 +53232,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_540"/>
@@ -53258,7 +53258,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_541"/>
@@ -53284,7 +53284,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_542"/>
@@ -53310,7 +53310,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_543"/>
@@ -53336,7 +53336,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_544"/>
@@ -54592,7 +54592,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_549"/>
@@ -54618,7 +54618,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_550"/>
@@ -54644,7 +54644,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_551"/>
@@ -54670,7 +54670,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_552"/>
@@ -54696,7 +54696,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_553"/>
@@ -54722,7 +54722,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_554"/>
@@ -54743,7 +54743,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_555" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_584" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_585" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_559" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
@@ -54756,10 +54756,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Metabolite_584"/>
+              <SourceParameter reference="Metabolite_585"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_559"/>
@@ -54797,7 +54797,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_51"/>
+              <SourceParameter reference="ModelValue_55"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_555"/>
@@ -54826,7 +54826,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_555"/>
@@ -54852,7 +54852,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_49"/>
+              <SourceParameter reference="ModelValue_46"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_556"/>
@@ -54886,7 +54886,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_583"/>
@@ -54927,7 +54927,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_55"/>
+              <SourceParameter reference="ModelValue_49"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_557"/>
@@ -54956,7 +54956,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_557"/>
@@ -54982,7 +54982,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_558"/>
@@ -55006,14 +55006,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_559" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_585" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_584" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_5817" name="V" value="0.1"/>
           <Constant key="Parameter_5806" name="h" value="0.1"/>
           <Constant key="Parameter_5808" name="k" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="ModelValue_61"/>
@@ -55022,7 +55022,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_558"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Metabolite_585"/>
+              <SourceParameter reference="Metabolite_584"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="ModelValue_38"/>
@@ -55051,7 +55051,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_53"/>
+              <SourceParameter reference="ModelValue_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_559"/>
@@ -55326,7 +55326,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_561"/>
@@ -55352,7 +55352,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_562"/>
@@ -55378,7 +55378,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_563"/>
@@ -55404,7 +55404,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_564"/>
@@ -55430,7 +55430,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_565"/>
@@ -55456,7 +55456,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_56"/>
+              <SourceParameter reference="ModelValue_52"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_566"/>
@@ -55490,7 +55490,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Metabolite_558"/>
@@ -55531,7 +55531,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_52"/>
+              <SourceParameter reference="ModelValue_47"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_567"/>
@@ -55731,7 +55731,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_568"/>
@@ -55757,7 +55757,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_569"/>
@@ -55783,7 +55783,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_570"/>
@@ -55809,7 +55809,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_571"/>
@@ -55835,7 +55835,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_572"/>
@@ -55861,7 +55861,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_46"/>
+              <SourceParameter reference="ModelValue_51"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_573"/>
@@ -55900,7 +55900,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_271">
               <SourceParameter reference="ModelValue_23"/>
@@ -55956,7 +55956,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_54"/>
+              <SourceParameter reference="ModelValue_50"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_574"/>
@@ -55985,7 +55985,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_39" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_574"/>
@@ -56011,7 +56011,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_575"/>
@@ -56385,7 +56385,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_576"/>
@@ -56411,7 +56411,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_577"/>
@@ -56437,7 +56437,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_578"/>
@@ -56463,7 +56463,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_579"/>
@@ -56489,7 +56489,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_580"/>
@@ -56515,7 +56515,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_47"/>
+              <SourceParameter reference="ModelValue_56"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_581"/>
@@ -57771,7 +57771,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_586"/>
@@ -57797,7 +57797,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_587"/>
@@ -57823,7 +57823,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_588"/>
@@ -57849,7 +57849,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_589"/>
@@ -57875,7 +57875,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_590"/>
@@ -57901,7 +57901,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="ModelValue_50"/>
+              <SourceParameter reference="ModelValue_53"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_591"/>
@@ -57971,8 +57971,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG6_0\,0]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH_0\,0]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[B_0\,0]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,0]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,0]" value="0" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,0]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,0]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,0]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,0]" value="1" type="Species" simulationType="reactions"/>
@@ -58008,8 +58008,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[EWG6_0\,1]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PH_0\,1]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[B_0\,1]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,1\]],Vector=Metabolites[PTC_T_0\,1]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,1]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,1]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,1]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,1]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,1]" value="1" type="Species" simulationType="reactions"/>
@@ -58045,8 +58045,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[EWG6_0\,2]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PH_0\,2]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[B_0\,2]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,2\]],Vector=Metabolites[PTC_T_0\,2]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,2]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,2]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,2]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,2]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,2]" value="1" type="Species" simulationType="reactions"/>
@@ -58082,8 +58082,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[EWG6_0\,3]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PH_0\,3]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[B_0\,3]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,3\]],Vector=Metabolites[PTC_T_0\,3]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,3]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,3]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,3]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,3]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,3]" value="1" type="Species" simulationType="reactions"/>
@@ -58119,8 +58119,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[EWG6_0\,4]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PH_0\,4]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[B_0\,4]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,4\]],Vector=Metabolites[PTC_T_0\,4]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,4]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,4]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,4]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,4]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,4]" value="1" type="Species" simulationType="reactions"/>
@@ -58156,8 +58156,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[EWG6_0\,5]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PH_0\,5]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[B_0\,5]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,5\]],Vector=Metabolites[PTC_T_0\,5]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,5]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,5]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,5]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,5]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,5]" value="1" type="Species" simulationType="reactions"/>
@@ -58193,8 +58193,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[EWG6_0\,6]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PH_0\,6]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[B_0\,6]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,6\]],Vector=Metabolites[PTC_T_0\,6]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,6]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,6]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,6]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,6]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,6]" value="1" type="Species" simulationType="reactions"/>
@@ -58230,8 +58230,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[EWG6_0\,7]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PH_0\,7]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[B_0\,7]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,7\]],Vector=Metabolites[PTC_T_0\,7]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_0\,7]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_0\,7]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_0\,7]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_0\,7]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_0\,7]" value="1" type="Species" simulationType="reactions"/>
@@ -58267,8 +58267,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[EWG6_1\,0]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PH_1\,0]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[B_1\,0]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,0\]],Vector=Metabolites[PTC_T_1\,0]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,0]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,0]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,0]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,0]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,0]" value="1" type="Species" simulationType="reactions"/>
@@ -58304,8 +58304,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[EWG6_1\,1]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PH_1\,1]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[B_1\,1]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,1\]],Vector=Metabolites[PTC_T_1\,1]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,1]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,1]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,1]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,1]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,1]" value="1" type="Species" simulationType="reactions"/>
@@ -58341,8 +58341,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[EWG6_1\,2]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PH_1\,2]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[B_1\,2]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,2\]],Vector=Metabolites[PTC_T_1\,2]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,2]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,2]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,2]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,2]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,2]" value="1" type="Species" simulationType="reactions"/>
@@ -58378,8 +58378,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[EWG6_1\,3]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PH_1\,3]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[B_1\,3]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,3\]],Vector=Metabolites[PTC_T_1\,3]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,3]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,3]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,3]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,3]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,3]" value="1" type="Species" simulationType="reactions"/>
@@ -58415,8 +58415,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[EWG6_1\,4]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PH_1\,4]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[B_1\,4]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,4\]],Vector=Metabolites[PTC_T_1\,4]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,4]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,4]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,4]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,4]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,4]" value="1" type="Species" simulationType="reactions"/>
@@ -58452,8 +58452,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[EWG6_1\,5]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PH_1\,5]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[B_1\,5]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,5\]],Vector=Metabolites[PTC_T_1\,5]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,5]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,5]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,5]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,5]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,5]" value="1" type="Species" simulationType="reactions"/>
@@ -58489,8 +58489,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[EWG6_1\,6]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PH_1\,6]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[B_1\,6]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,6\]],Vector=Metabolites[PTC_T_1\,6]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,6]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,6]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,6]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,6]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,6]" value="1" type="Species" simulationType="reactions"/>
@@ -58526,8 +58526,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[EWG6_1\,7]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PH_1\,7]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[B_1\,7]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[1\,7\]],Vector=Metabolites[PTC_T_1\,7]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[EWG_T_1\,7]" value="0" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PTC_T_1\,7]" value="0" type="Species" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH1_1\,7]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH2_1\,7]" value="1" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Compartments[cell\[0\,0\]],Vector=Metabolites[PH3_1\,7]" value="1" type="Species" simulationType="reactions"/>
@@ -58582,17 +58582,17 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[r_LMxferHH]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[kappa_PTCHH]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[HH_0]" value="1000" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_PTC]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_IWG]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_hh]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_EN]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_PH]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_en]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_ptc]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_CI]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_wg]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_hh]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_ci]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_wg]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_PTC]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_HH]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_PH]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_CI]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_en]" value="0.14285714285714285" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/H_IWG]" value="0.066666666666666666" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/6H_HH]" value="0.011111111111111112" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0/6H_PTC]" value="0.011111111111111112" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Segment Polarity Network model,Vector=Values[T0.r_ExoWG/6]" value="0.016666666666666666" type="ModelValue" simulationType="assignment"/>
@@ -73314,36 +73314,36 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="Metabolite_78"/>
       <StateTemplateVariable objectReference="Metabolite_29"/>
       <StateTemplateVariable objectReference="Metabolite_30"/>
-      <StateTemplateVariable objectReference="Metabolite_66"/>
       <StateTemplateVariable objectReference="Metabolite_67"/>
-      <StateTemplateVariable objectReference="Metabolite_103"/>
       <StateTemplateVariable objectReference="Metabolite_104"/>
-      <StateTemplateVariable objectReference="Metabolite_140"/>
       <StateTemplateVariable objectReference="Metabolite_141"/>
-      <StateTemplateVariable objectReference="Metabolite_177"/>
       <StateTemplateVariable objectReference="Metabolite_178"/>
-      <StateTemplateVariable objectReference="Metabolite_214"/>
       <StateTemplateVariable objectReference="Metabolite_215"/>
-      <StateTemplateVariable objectReference="Metabolite_251"/>
       <StateTemplateVariable objectReference="Metabolite_252"/>
-      <StateTemplateVariable objectReference="Metabolite_288"/>
       <StateTemplateVariable objectReference="Metabolite_289"/>
-      <StateTemplateVariable objectReference="Metabolite_325"/>
       <StateTemplateVariable objectReference="Metabolite_326"/>
-      <StateTemplateVariable objectReference="Metabolite_362"/>
       <StateTemplateVariable objectReference="Metabolite_363"/>
-      <StateTemplateVariable objectReference="Metabolite_399"/>
       <StateTemplateVariable objectReference="Metabolite_400"/>
-      <StateTemplateVariable objectReference="Metabolite_436"/>
       <StateTemplateVariable objectReference="Metabolite_437"/>
-      <StateTemplateVariable objectReference="Metabolite_473"/>
       <StateTemplateVariable objectReference="Metabolite_474"/>
-      <StateTemplateVariable objectReference="Metabolite_510"/>
       <StateTemplateVariable objectReference="Metabolite_511"/>
-      <StateTemplateVariable objectReference="Metabolite_547"/>
       <StateTemplateVariable objectReference="Metabolite_548"/>
-      <StateTemplateVariable objectReference="Metabolite_584"/>
       <StateTemplateVariable objectReference="Metabolite_585"/>
+      <StateTemplateVariable objectReference="Metabolite_66"/>
+      <StateTemplateVariable objectReference="Metabolite_103"/>
+      <StateTemplateVariable objectReference="Metabolite_140"/>
+      <StateTemplateVariable objectReference="Metabolite_177"/>
+      <StateTemplateVariable objectReference="Metabolite_214"/>
+      <StateTemplateVariable objectReference="Metabolite_251"/>
+      <StateTemplateVariable objectReference="Metabolite_288"/>
+      <StateTemplateVariable objectReference="Metabolite_325"/>
+      <StateTemplateVariable objectReference="Metabolite_362"/>
+      <StateTemplateVariable objectReference="Metabolite_399"/>
+      <StateTemplateVariable objectReference="Metabolite_436"/>
+      <StateTemplateVariable objectReference="Metabolite_473"/>
+      <StateTemplateVariable objectReference="Metabolite_510"/>
+      <StateTemplateVariable objectReference="Metabolite_547"/>
+      <StateTemplateVariable objectReference="Metabolite_584"/>
       <StateTemplateVariable objectReference="ModelValue_46"/>
       <StateTemplateVariable objectReference="ModelValue_47"/>
       <StateTemplateVariable objectReference="ModelValue_48"/>
@@ -73459,7 +73459,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_45"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 0 1 1 0 0 1 1 1 0 0 0 0 0 0 1 1 1 0 1 1 0 0 1 0 1 0 1 1 1 0 0 1 1 0 1 0 1 0 0 0 1 1 0 1 1 1 1 0 0 0 1 1 0 1 1 0 0 1 1 1 0 0 1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.066666666666666666 0.066666666666666666 0.14285714285714285 0.066666666666666666 0.066666666666666666 0.14285714285714285 0.14285714285714285 0.066666666666666666 0.14285714285714285 0.14285714285714285 0.066666666666666666 0.011111111111111112 0.011111111111111112 0.016666666666666666 0.001 0.10000000000000001 0.10000000000000001 0.10000000000000001 100 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 15 7 15 7 15 7 15 7 15 15 0.10000000000000001 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 1 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 0.001 0.10000000000000001 0.10000000000000001 0.10000000000000001 0.10000000000000001 1000 
+      0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 0 1 1 0 0 1 1 1 0 0 0 0 0 0 1 1 1 0 1 1 0 0 1 0 1 0 1 1 1 0 0 1 1 0 1 0 1 0 0 0 1 1 0 1 1 1 1 0 0 0 1 1 0 1 1 0 0 1 1 1 0 0 1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.066666666666666666 0.14285714285714285 0.14285714285714285 0.14285714285714285 0.14285714285714285 0.066666666666666666 0.066666666666666666 0.066666666666666666 0.066666666666666666 0.14285714285714285 0.066666666666666666 0.011111111111111112 0.011111111111111112 0.016666666666666666 0.001 0.10000000000000001 0.10000000000000001 0.10000000000000001 100 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0.40000000000000002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 15 7 15 7 15 7 15 7 15 15 0.10000000000000001 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 1 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 1 0.10000000000000001 0.001 0.10000000000000001 0.10000000000000001 0.10000000000000001 0.10000000000000001 1000 
     </InitialState>
   </Model>
   <ListOfTasks>

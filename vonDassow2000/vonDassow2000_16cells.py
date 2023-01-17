@@ -161,6 +161,9 @@ for i in range(0, 2):
         add_species(f'PH{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
+        # add PTC total within each cell
+        add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
+
         # REACTIONS
         add_reaction(name=f'R01{app}', scheme=f'-> en{app}; EWG_T{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EWG_T{app}', 'M2': f'CN{app}', 'V': 'T0/H_en', 'k1': 'kappa_WGen', 'h1': 'nu_WGen', 'k2': 'kappa_CNen', 'h2': 'nu_CNen'})
 
@@ -316,42 +319,30 @@ for i in range(0, 2):
         compname='cell[{},{}]'.format(i,j)
         # cell next to position 1 (side 4 on that cell)
         e1='[EWG4_{},{}]'.format((i+1)%2,j)
-        p1='[PTC4_{},{}]'.format((i+1)%2,j)
         # cell next to position 2 (side 5 on that cell)
         if j&1==1:
             e2=' + [EWG5_{},{}]'.format((i+1)%2,(j+7)%8)
-            p2=' + [PTC5_{},{}]'.format((i+1)%2,(j+7)%8)
         else:
             e2=' + [EWG5_{},{}]'.format(i,(j+7)%8)
-            p2=' + [PTC5_{},{}]'.format(i,(j+7)%8)
         # cell next to position 3 (idx 6 on that side)
         if j&1:
             e3=' + [EWG6_{},{}]'.format(i,(j+7)%8)
-            p3=' + [PTC6_{},{}]'.format(i,(j+7)%8)
         else:
             e3=' + [EWG6_{},{}]'.format((i+1)%2,(j+7)%8)
-            p3=' + [PTC6_{},{}]'.format((i+1)%2,(j+7)%8)
         # cell next to position 4 (idx 1 on that side)
         e4=' + [EWG1_{},{}]'.format((i+1)%2,j)
-        p4=' + [PTC1_{},{}]'.format((i+1)%2,j)
         # cell next to position 5 (idx 2 on that side)
         if j&1:
             e5=' + [EWG2_{},{}]'.format(i,(j+1)%8)
-            p5=' + [PTC2_{},{}]'.format(i,(j+1)%8)
         else:
             e5=' + [EWG2_{},{}]'.format((i+1)%2,(j+1)%8)
-            p5=' + [PTC2_{},{}]'.format((i+1)%2,(j+1)%8)
         # cell next to position 6 (idx 3 on that side)
         if j&1 :
             e6=' + [EWG3_{},{}]'.format((i+1)%2,(j+1)%8)
-            p6=' + [PTC3_{},{}]'.format((i+1)%2,(j+1)%8)
         else:
             e6=' + [EWG3_{},{}]'.format(i,(j+1)%8)
-            p6=' + [PTC3_{},{}]'.format(i,(j+1)%8)
         esides = e1+e2+e3+e4+e5+e6
         set_species(name=f'EWG_T{app}', compartment_name=compname, status='assignment', expression=esides)
-        psides = p1+p2+p3+p4+p5+p6
-        set_species(name=f'PTC_T{app}', compartment_name=compname, status='assignment', expression=psides)
 
 
  #       add_compartment(name=compname)
