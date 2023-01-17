@@ -3,6 +3,12 @@
 # vonDassow2000_1cell.py
 # Creates a COPASI model of the von Dassow et al. (2000) model
 # of segment polarity network for a single cell
+#
+# Written Dec 2022 by Pedro Mendes <pmendes@uchc.edu>
+# this code is released under the MIT license, the COPASI model
+# produced by this code is released under the Creative Commons
+# CC0 1.0 license
+
 
 import sys
 if '../..' not in sys.path:
