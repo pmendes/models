@@ -81,6 +81,7 @@ add_parameter('kappa_PTCCI', initial_value=0.1)
 add_parameter('nu_PTCCI', initial_value=1)
 add_parameter('r_ExoWG', initial_value=0.1)
 add_parameter('r_EndoWG', initial_value=0.001)
+add_parameter('r_MxferWG', initial_value=0.1)
 add_parameter('r_LMxferWG', initial_value=0.1)
 add_parameter('r_LMxferPTC', initial_value=0.1)
 add_parameter('r_LMxferHH', initial_value=0.1)
@@ -98,6 +99,7 @@ add_parameter('T0/6H_PTC', status='assignment', expression="Values[T0] / ( 6 * V
 add_parameter('T0.r_ExoWG/6', status='assignment', expression="Values[T0] * Values[r_ExoWG] / 6")
 add_parameter('T0.r_EndoWG', status='assignment', expression="Values[T0] * Values[r_EndoWG]")
 add_parameter('T0.C_CI', status='assignment', expression="Values[T0] * Values[C_CI]")
+add_parameter('T0.r_MxferWG', status='assignment', expression="Values[T0] * Values[r_MxferWG]")
 add_parameter('T0.r_LMxferWG', status='assignment', expression="Values[T0] * Values[r_LMxferWG]")
 add_parameter('T0.r_LMxferHH', status='assignment', expression="Values[T0] * Values[r_LMxferHH]")
 add_parameter('T0.kappa_PTCHH.HH_0', status='assignment', expression="Values[T0] * Values[kappa_PTCHH] * Values[HH_0]")
@@ -324,7 +326,7 @@ for i in range(0, 2):
         ngb = '_{},{}'.format((i+1)%2,j)
         e1=f'[EWG4{ngb}]'
         add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_MxferWG'})
 
         # cell next to position 2 (side 5 on that cell)
         if j&1==1:
@@ -333,7 +335,7 @@ for i in range(0, 2):
             ngb = '_{},{}'.format(i,(j+7)%8)
         e2=f' + [EWG5{ngb}]'
         add_reaction(name=f'R30_2{app}', scheme=f'PTC2{app} + HH5{ngb} -> PH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_2{app}', scheme=f'EWG2{app} -> EWG5{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R31_2{app}', scheme=f'EWG2{app} -> EWG5{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_MxferWG'})
 
         # cell next to position 3 (idx 6 on that side)
         if j&1:
@@ -342,13 +344,13 @@ for i in range(0, 2):
             ngb = '_{},{}'.format((i+1)%2,(j+7)%8)
         e3=f' + [EWG6{ngb}]'
         add_reaction(name=f'R30_3{app}', scheme=f'PTC3{app} + HH6{ngb} -> PH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_3{app}', scheme=f'EWG3{app} -> EWG6{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R31_3{app}', scheme=f'EWG3{app} -> EWG6{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_MxferWG'})
 
         # cell next to position 4 (idx 1 on that side)
         ngb = '_{},{}'.format((i+1)%2,j)
         e4=f' + [EWG1{ngb}]'
         add_reaction(name=f'R30_4{app}', scheme=f'PTC4{app} + HH1{ngb} -> PH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_4{app}', scheme=f'EWG4{app} -> EWG1{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R31_4{app}', scheme=f'EWG4{app} -> EWG1{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_MxferWG'})
 
         # cell next to position 5 (idx 2 on that side)
         if j&1:
@@ -357,7 +359,7 @@ for i in range(0, 2):
             ngb = '_{},{}'.format((i+1)%2,(j+1)%8)
         e5=f' + [EWG2{ngb}]'
         add_reaction(name=f'R30_5{app}', scheme=f'PTC5{app} + HH2{ngb} -> PH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_5{app}', scheme=f'EWG5{app} -> EWG2{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R31_5{app}', scheme=f'EWG5{app} -> EWG2{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_MxferWG'})
 
         # cell next to position 6 (idx 3 on that side)
         if j&1 :
@@ -366,7 +368,7 @@ for i in range(0, 2):
             ngb = '_{},{}'.format(i,(j+1)%8)
         e6=f' + [EWG3{ngb}]'
         add_reaction(name=f'R30_6{app}', scheme=f'PTC6{app} + HH3{ngb} -> PH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_6{app}', scheme=f'EWG6{app} -> EWG3{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+        add_reaction(name=f'R31_6{app}', scheme=f'EWG6{app} -> EWG3{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_MxferWG'})
 
         # create a species EWG_T that is the sum of the EWGi neighboring sides
         esides = e1+e2+e3+e4+e5+e6
