@@ -295,19 +295,12 @@ for i in range(0, 2):
         add_reaction(name=f'R28_56{app}', scheme=f'HH5{app} -> HH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
         add_reaction(name=f'R28_65{app}', scheme=f'HH6{app} -> HH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferHH'})
 
-        add_reaction(name=f'R29_1{app}', scheme=f'PTC1{app} + HH1{app} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R29_2{app}', scheme=f'PTC2{app} + HH2{app} -> PH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R29_3{app}', scheme=f'PTC3{app} + HH3{app} -> PH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R29_4{app}', scheme=f'PTC4{app} + HH4{app} -> PH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R29_5{app}', scheme=f'PTC5{app} + HH5{app} -> PH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R29_6{app}', scheme=f'PTC6{app} + HH6{app} -> PH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-
-        add_reaction(name=f'R30_1{app}', scheme=f'PH1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
-        add_reaction(name=f'R30_2{app}', scheme=f'PH2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
-        add_reaction(name=f'R30_3{app}', scheme=f'PH3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
-        add_reaction(name=f'R30_4{app}', scheme=f'PH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
-        add_reaction(name=f'R30_5{app}', scheme=f'PH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
-        add_reaction(name=f'R30_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R29_1{app}', scheme=f'PH1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R29_2{app}', scheme=f'PH2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R29_3{app}', scheme=f'PH3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R29_4{app}', scheme=f'PH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R29_5{app}', scheme=f'PH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+        add_reaction(name=f'R29_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
 
 # STEP 2 set up intercell interactions
 #
@@ -316,41 +309,69 @@ for i in range(0, 2):
 # 1,0     1,2     1,4     1,6
 #     1,1     1,3     1,5     1,7
 
-# create species that are sums of the neighboring sides
+# Create species that are sums, add two reactions at the cell-cell interfaces
+# e1 to e6 are components of the expression for a sum of species at neighboring membranes
+# On each side add a reaction for diffusion of WG to the next ones
+# On each side add a reaction between our PTC and the neighbor HH to make PH on our side
 for i in range(0, 2):
     for j in range(0, 8):
         # for each cell i, j
         app='_{},{}'.format(i,j)
+        # in the appropriate compartment (also i,j)
         compname='cell[{},{}]'.format(i,j)
+
         # cell next to position 1 (side 4 on that cell)
-        e1='[EWG4_{},{}]'.format((i+1)%2,j)
+        ngb = '_{},{}'.format((i+1)%2,j)
+        e1=f'[EWG4{ngb}]'
+        add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+
         # cell next to position 2 (side 5 on that cell)
         if j&1==1:
-            e2=' + [EWG5_{},{}]'.format((i+1)%2,(j+7)%8)
+            ngb = '_{},{}'.format((i+1)%2,(j+7)%8)
         else:
-            e2=' + [EWG5_{},{}]'.format(i,(j+7)%8)
+            ngb = '_{},{}'.format(i,(j+7)%8)
+        e2=f' + [EWG5{ngb}]'
+        add_reaction(name=f'R30_2{app}', scheme=f'PTC2{app} + HH5{ngb} -> PH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R31_2{app}', scheme=f'EWG2{app} -> EWG5{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+
         # cell next to position 3 (idx 6 on that side)
         if j&1:
-            e3=' + [EWG6_{},{}]'.format(i,(j+7)%8)
+            ngb = '_{},{}'.format(i,(j+7)%8)
         else:
-            e3=' + [EWG6_{},{}]'.format((i+1)%2,(j+7)%8)
+            ngb = '_{},{}'.format((i+1)%2,(j+7)%8)
+        e3=f' + [EWG6{ngb}]'
+        add_reaction(name=f'R30_3{app}', scheme=f'PTC3{app} + HH6{ngb} -> PH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R31_3{app}', scheme=f'EWG3{app} -> EWG6{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+
         # cell next to position 4 (idx 1 on that side)
-        e4=' + [EWG1_{},{}]'.format((i+1)%2,j)
+        ngb = '_{},{}'.format((i+1)%2,j)
+        e4=f' + [EWG1{ngb}]'
+        add_reaction(name=f'R30_4{app}', scheme=f'PTC4{app} + HH1{ngb} -> PH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R31_4{app}', scheme=f'EWG4{app} -> EWG1{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+
         # cell next to position 5 (idx 2 on that side)
         if j&1:
-            e5=' + [EWG2_{},{}]'.format(i,(j+1)%8)
+            ngb = '_{},{}'.format(i,(j+1)%8)
         else:
-            e5=' + [EWG2_{},{}]'.format((i+1)%2,(j+1)%8)
+            ngb = '_{},{}'.format((i+1)%2,(j+1)%8)
+        e5=f' + [EWG2{ngb}]'
+        add_reaction(name=f'R30_5{app}', scheme=f'PTC5{app} + HH2{ngb} -> PH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R31_5{app}', scheme=f'EWG5{app} -> EWG2{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+
         # cell next to position 6 (idx 3 on that side)
         if j&1 :
-            e6=' + [EWG3_{},{}]'.format((i+1)%2,(j+1)%8)
+            ngb = '_{},{}'.format((i+1)%2,(j+1)%8)
         else:
-            e6=' + [EWG3_{},{}]'.format(i,(j+1)%8)
+            ngb = '_{},{}'.format(i,(j+1)%8)
+        e6=f' + [EWG3{ngb}]'
+        add_reaction(name=f'R30_6{app}', scheme=f'PTC6{app} + HH3{ngb} -> PH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R31_6{app}', scheme=f'EWG6{app} -> EWG3{ngb}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
+
+        # create a species EWG_T that is the sum of the EWGi neighboring sides
         esides = e1+e2+e3+e4+e5+e6
         set_species(name=f'EWG_T{app}', compartment_name=compname, status='assignment', expression=esides)
 
-
- #       add_compartment(name=compname)
 
 #PLOTS
 # time course of all mRNAs
