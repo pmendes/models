@@ -33,7 +33,7 @@ from datetime import date
 
 
 # Comments for the whole model
-model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model</h1><p>This is an implementation of the  model in von Dassow et al (2000), where a gene network controls segment polarity in a fly embryo. The paper describes an arrangement of several hexagonal cells with interactions between neighbors. However it never described the dimensions of the grid of cells used in their simulation. Here we adopt a 8x2 grid, where the edges connect with each other (forming a kind of toroidal shape, as indicated in the original publication).</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, implemented by transfer reactions between a pool and the two neighboring pools. The sides of the hexagonal cells are labelled 1-6, with 1 at the base, and numbered clockwise.</p><p>Some reactions include components from neighboring cells:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) is from all 6 neighboring cells.</li> <li>The complex <i>PH</i> is composed by <i>PTC</i> in this cell and <i>HH</i> from the neighboring cell (reactions <i>R29_i</i>).</li> <li><i>EWG</i> can be exchanged with the neighboring cells.</li></ul> </p><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassow2000_16cells.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p><p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>'
+model_notes='<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model</h1><p>This is an implementation of the  model in von Dassow et al (2000), where a gene network controls segment polarity in a fly embryo. The paper describes an arrangement of several hexagonal cells with interactions between neighbors in a toroidal shape (<i>i.e.</i> the edges of the grid are connected to each other) but it did not explicitly mention the dimensions of the grid used in their simulation. Here we adopt a 6x2 grid, inferred from their Figure 1.</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, implemented by transfer reactions between a pool and the two neighboring pools. The sides of the hexagonal cells are labelled 1-6, with 1 at the base, and numbered clockwise.</p><p>Some reactions include components from neighboring cells:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) is from all 6 neighboring cells.</li> <li>The complex <i>PH</i> is composed by <i>PTC</i> in this cell and <i>HH</i> from the neighboring cell (reactions <i>R30_i</i>).</li> <li><i>EWG</i> is exchanged with the neighboring cells.</li></ul></p><p>Species and reactions are labelled by their cell index and membrane index. Thus, species <i>CI_1,4</i> is the CI protein located in <i>cell[1,4]</i>; species <i>EWG3_0,5</i> is the protein EWG located in the side 3 of <i>cell[0,5]</i>; reaction <i>R2_0,3</i> is reaction number 2 in <i>cell[0,3]</i>; reaction <i>R30_4_0,2</i> is reaction 30 on side 4 of the membrane of <i>cell[0,2]</i>.</p><hr width="70%"/><h2>Reference</h2><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr width="70%" /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassow2000_16cells.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p><hr width="70%" /><p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>'
 
 # Let's start by creating a single cell Segment Polarity Network
 new_model(name='Segment Polarity Network model', time_unit='1', quantity_unit='1', length_unit='1',area_unit='1', volume_unit='1', notes=model_notes)
@@ -125,6 +125,9 @@ add_function(name='Uni-molecular transport', type='irreversible',
              infix='Vol*k1*S',
              mapping={ 'Vol': 'volume', 'k1': 'parameter', 'S': 'substrate'})
 
+add_function(name='Bi-molecular reaction with transport', type='irreversible',
+             infix='k1*Vol1*S1*Vol2*S2',
+             mapping={ 'k1': 'parameter', 'Vol1': 'volume', 'S1': 'substrate', 'Vol2': 'volume', 'S2': 'substrate'})
 
 # we create an array of hexagonal cells 8x2 which has toric shape (all cell edges are connected)
 #
@@ -329,50 +332,61 @@ for i in range(0, 2):
 
         # cell next to position 1 (side 4 on that cell)
         ngb = '_{},{}'.format((i+1)%2,j)
+        compname2='cell[{},{}]'.format((i+1)%2,j)
         e1=f'[EWG4{ngb}]'
-        add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        #add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
         add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 2 (side 5 on that cell)
         if j&1==1:
             ngb = '_{},{}'.format((i+1)%2,(j+7)%8)
+            compname2='cell[{},{}]'.format((i+1)%2,(j+7)%8)
         else:
             ngb = '_{},{}'.format(i,(j+7)%8)
+            compname2='cell[{},{}]'.format(i,(j+7)%8)
         e2=f' + [EWG5{ngb}]'
-        add_reaction(name=f'R30_2{app}', scheme=f'PTC2{app} + HH5{ngb} -> PH2{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R30_2{app}', scheme=f'PTC2{app} + HH5{ngb} -> PH2{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
         add_reaction(name=f'R31_2{app}', scheme=f'EWG2{app} -> EWG5{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 3 (idx 6 on that side)
         if j&1:
             ngb = '_{},{}'.format(i,(j+7)%8)
+            compname2='cell[{},{}]'.format(i,(j+7)%8)
         else:
             ngb = '_{},{}'.format((i+1)%2,(j+7)%8)
+            compname2='cell[{},{}]'.format((i+1)%2,(j+7)%8)
         e3=f' + [EWG6{ngb}]'
-        add_reaction(name=f'R30_3{app}', scheme=f'PTC3{app} + HH6{ngb} -> PH3{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R30_3{app}', scheme=f'PTC3{app} + HH6{ngb} -> PH3{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
         add_reaction(name=f'R31_3{app}', scheme=f'EWG3{app} -> EWG6{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 4 (idx 1 on that side)
         ngb = '_{},{}'.format((i+1)%2,j)
+        compname2='cell[{},{}]'.format((i+1)%2,j)
         e4=f' + [EWG1{ngb}]'
-        add_reaction(name=f'R30_4{app}', scheme=f'PTC4{app} + HH1{ngb} -> PH4{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R30_4{app}', scheme=f'PTC4{app} + HH1{ngb} -> PH4{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
         add_reaction(name=f'R31_4{app}', scheme=f'EWG4{app} -> EWG1{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 5 (idx 2 on that side)
         if j&1:
             ngb = '_{},{}'.format(i,(j+1)%8)
+            compname2='cell[{},{}]'.format(i,(j+1)%8)
         else:
             ngb = '_{},{}'.format((i+1)%2,(j+1)%8)
+            compname2='cell[{},{}]'.format((i+1)%2,(j+1)%8)
         e5=f' + [EWG2{ngb}]'
-        add_reaction(name=f'R30_5{app}', scheme=f'PTC5{app} + HH2{ngb} -> PH5{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R30_5{app}', scheme=f'PTC5{app} + HH2{ngb} -> PH5{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
         add_reaction(name=f'R31_5{app}', scheme=f'EWG5{app} -> EWG2{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 6 (idx 3 on that side)
         if j&1 :
             ngb = '_{},{}'.format((i+1)%2,(j+1)%8)
+            compname2='cell[{},{}]'.format((i+1)%2,(j+1)%8)
         else:
             ngb = '_{},{}'.format(i,(j+1)%8)
+            compname2='cell[{},{}]'.format(i,(j+1)%8)
         e6=f' + [EWG3{ngb}]'
-        add_reaction(name=f'R30_6{app}', scheme=f'PTC6{app} + HH3{ngb} -> PH6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
+        add_reaction(name=f'R30_6{app}', scheme=f'PTC6{app} + HH3{ngb} -> PH6{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
         add_reaction(name=f'R31_6{app}', scheme=f'EWG6{app} -> EWG3{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # create a species EWG_T that is the sum of the EWGi neighboring sides
