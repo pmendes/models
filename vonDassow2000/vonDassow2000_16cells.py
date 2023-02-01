@@ -327,13 +327,13 @@ for i in range(0, 2):
         # in the appropriate compartment (also i,j)
         compname='cell[{},{}]'.format(i,j)
         vol1 = 'Compartments[cell[{},{}]].Volume'.format(i,j)
-        print(vol1)
+        #print(vol1)
 
         # cell next to position 1 (side 4 on that cell)
         ngb = '_{},{}'.format((i+1)%2,j)
         e1=f'[EWG4{ngb}]'
         add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.kappa_PTCHH.HH_0'})
-        add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
+        add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='Uni-molecular transport', mapping={'Vol': vol1, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 2 (side 5 on that cell)
         if j&1==1:
