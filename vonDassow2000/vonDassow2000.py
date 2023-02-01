@@ -3,7 +3,7 @@
 # vonDassow2000.py
 # This file builds the von Dassow et al (2000) model of segment
 # polarity network with a hexagonal toroidal grid. The default
-# grid size is 8x2. To create other sizes pass two numeric
+# grid size is 2x8. To create other sizes pass two numeric
 # arguments on the command line for rows and colums.
 #
 # Written Dec 2022 - Jan 2023 by Pedro Mendes <pmendes@uchc.edu>
@@ -23,8 +23,8 @@ from datetime import date
 #%matplotlib inline
 
 # DEFAULT GRID SIZE
-gridc = 8
 gridr = 2
+gridc = 8
 
 # check if arguments were passed to size the grid
 n = len(sys.argv)
@@ -35,14 +35,18 @@ if(n == 2) or (n > 3):
     print("\nUsage: vonDassow2000.py rows colums\n")
     exit()
 
-if( n<2 ):
-    # using default
-    print("\ncreating a 2x8 grid\n")
-else:
+if( n==3 ):
     # we got two arguments, set rows and columns
-    gridr = int(sys.argv[1])
-    gridc = int(sys.argv[2])
-    print(f"\ncreating a {gridr}x{gridc} grid\n")
+    try:
+        gridr = int(sys.argv[1])
+        gridc = int(sys.argv[2])
+        if( gridr<1) or (gridc<1): raise
+    except:
+        print("\nInvalid arguments, rows and columns must be positive integers.\n")
+        exit()
+
+print(f"\ncreating a {gridr}x{gridc} grid\n")
+
 
 # Example grid 8x2
 #
