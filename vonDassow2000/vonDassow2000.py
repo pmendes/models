@@ -26,16 +26,12 @@ from datetime import date
 gridc = 8
 gridr = 2
 
+# Example grid 8x2
 #
 # 0,0     0,2     0,4     0,6
 #     0,1     0,3     0,5     0,7
 # 1,0     1,2     1,4     1,6
 #     1,1     1,3     1,5     1,7
-#
-# 0,0     0,1     0,2     0,3
-#     1,0     1,1     1,2     1,3
-# 2,0     2,1     2,2     2,3
-#     3,0     3,1     3,2     3,3
 
 
 # Comments for the whole model
@@ -319,11 +315,6 @@ for i in range(0, gridr):
         add_reaction(name=f'R29_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
 
 # STEP 2 set up intercell interactions
-#
-# 0,0     0,2     0,4     0,6
-#     0,1     0,3     0,5     0,7
-# 1,0     1,2     1,4     1,6
-#     1,1     1,3     1,5     1,7
 
 # Create species that are sums, add two reactions at the cell-cell interfaces
 # e1 to e6 are components of the expression for a sum of species at neighboring membranes
