@@ -6,4 +6,4 @@ This contains implementations of the segment polarity network of [von Dassow et.
  - **vonDassow2000_16cells.py** constructs a COPASI model containing a fixed array of 8x2 hexagonal cells
  -  **vonDassow2000.py** constructs a COPASI model with an array of hexagonal cells of any dimensions, controlled by two internal variables (gridr, and gridc)
  - COPASI files are those with the extension **.cps**
- - Files with **.xml** extension are [SBML](https://sbml.org/) L3V1 files
+ - Files with **.xml** extension are [SBML](https://sbml.org/) L4V2 files
