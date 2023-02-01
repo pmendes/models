@@ -40,9 +40,12 @@ if( n==3 ):
     try:
         gridr = int(sys.argv[1])
         gridc = int(sys.argv[2])
+        # check if the numbers are positive
         if( gridr<1) or (gridc<1): raise
+        # check if the numbers are even
+        if( gridr&1 ) or ( gridc&1 ): raise
     except:
-        print("\nInvalid arguments, rows and columns must be positive integers.\n")
+        print("\nInvalid arguments, rows and columns must be positive even integers.\n")
         exit()
 
 print(f"\ncreating a {gridr}x{gridc} grid\n")
