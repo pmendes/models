@@ -40,9 +40,9 @@ if( n==3 ):
     try:
         gridr = int(sys.argv[1])
         gridc = int(sys.argv[2])
-        # check if the numbers are positive
+        # if the numbers are negative raise exception
         if( gridr<1) or (gridc<1): raise
-        # check if the numbers are even
+        # if the numbers are odd raise exception
         if( gridr&1 ) or ( gridc&1 ): raise
     except:
         print("\nInvalid arguments, rows and columns must be positive even integers.\n")
