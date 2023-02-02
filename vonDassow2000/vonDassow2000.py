@@ -451,7 +451,7 @@ assign_report('SS Concentrations', task=T.STEADY_STATE, filename='ssconcs.tsv', 
 
 
 # METADATA
-set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }],                    references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
+set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }], references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
