@@ -433,19 +433,15 @@ rfooter = []
 for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'PTC_T'}:
     for i in range(0, gridr):
         for j in range(0, gridc):
-            rheader.append(f'\"[{pvar}_{i}\,{j}]\"')
-            rheader.append('\t')
+            rheader.append(wrap_copasi_string(f'[{pvar}_{i},{j}]'))
             rfooter.append(f'[{pvar}_{i},{j}]')
-            rfooter.append('\t')
 # add membrane species, those that have 6 pools per cell
 for pvar in {'EWG', 'HH', 'PH', 'PTC'}:
     for s in range(1, 6):
         for i in range(0, gridr):
             for j in range(0, gridc):
-                rheader.append(f'\"[{pvar}{s}_{i}\,{j}]\"')
-                rheader.append('\t')
+                rheader.append(wrap_copasi_string(f'[{pvar}{s}_{i},{j}]'))
                 rfooter.append(f'[{pvar}{s}_{i},{j}]')
-                rfooter.append('\t')
 add_report('SS Concentrations', task=T.STEADY_STATE, header=rheader, footer=rfooter);
 assign_report('SS Concentrations', task=T.STEADY_STATE, filename='ssconcs.tsv', append=True, confirm_overwrite=False)
 
