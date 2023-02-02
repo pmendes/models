@@ -156,7 +156,8 @@ add_function(name='Bi-molecular reaction with transport', type='irreversible',
              infix='k1*Vol1*S1*Vol2*S2',
              mapping={ 'k1': 'parameter', 'Vol1': 'volume', 'S1': 'substrate', 'Vol2': 'volume', 'S2': 'substrate'})
 
-# we create an array of hexagonal cells 8x2 which has toric shape (all cell edges are connected)
+# we create an array of hexagonal cells which has toric shape
+# (all cell edges are connected). Example below for 2x8 grid
 #
 # 0,0     0,2     0,4     0,6
 #     0,1     0,3     0,5     0,7
@@ -416,21 +417,38 @@ for i in range(0, gridr):
 
 
 #PLOTS
-# time course of all mRNAs
-#add_plot('mRNA', curves=[{'name': 'hh', 'color': '#ff8800','line_width': 1.5,'channels':['Time', '[hh]']},
-#                         {'name': 'en', 'color': '#0088ff','line_width': 1.5,'channels':['Time', '[en]']},
-#                         {'name': 'wg', 'color': '#008800','line_width': 1.5,'channels':['Time', '[wg]']},
-#                         {'name': 'ptc', 'color': '#f000ff','line_width': 1.5,'channels':['Time', '[ptc]']},
-#                         {'name': 'ci', 'color': '#ff0000','line_width': 1.5,'channels':['Time', '[ci]']}])
+# time course plots for each mRNA and protein
+for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'PTC_T'}:
+    pcurves = []
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            pcurves.append({'name': f'{i},{j}', 'channels': ['Time', f'[{pvar}_{i},{j}]']})
+    add_plot( f'{pvar}', tasks='Time-Course', curves=pcurves)
 
-#add_plot('Proteins', curves=[{'name': 'IWG', 'color': '#ff8800','line_width': 1.5,'channels':['Time', '[IWG]']},
-#                         {'name': 'EWG_T', 'color': '#0088ff','line_width': 1.5,'channels':['Time', '[EWG_T]']},
-#                        {'name': 'PTC_T', 'color': '#008800','line_width': 1.5,'channels':['Time', '[PTC_T]']},
-#                         {'name': 'EN', 'color': '#f000ff','line_width': 1.5,'channels':['Time', '[EN]']},
-#                         {'name': 'CI', 'color': '#ff0000','line_width': 1.5,'channels':['Time', '[CI]']},
-#                         {'name': 'CN', 'color': '#33ff33','line_width': 1.5,'channels':['Time', '[CN]']},
-#                         {'name': 'HH1', 'color': '#7051a7','line_width': 1.5,'channels':['Time', '[HH1]']},
-#                         {'name': 'PH1', 'color': '#00bef0','line_width': 1.5,'channels':['Time', '[PH1]']}])
+#TODO
+# add a report for all steady state concentrations
+rheader = []
+rfooter = []
+# add simple species (those that are one per cell)
+for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'PTC_T'}:
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            rheader.append(f'\"[{pvar}_{i}\,{j}]\"')
+            rheader.append('\t')
+            rfooter.append(f'[{pvar}_{i},{j}]')
+            rfooter.append('\t')
+# add membrane species, those that have 6 pools per cell
+for pvar in {'EWG', 'HH', 'PH', 'PTC'}:
+    for s in range(1, 6):
+        for i in range(0, gridr):
+            for j in range(0, gridc):
+                rheader.append(f'\"[{pvar}{s}_{i}\,{j}]\"')
+                rheader.append('\t')
+                rfooter.append(f'[{pvar}{s}_{i},{j}]')
+                rfooter.append('\t')
+add_report('SS Concentrations', task=T.STEADY_STATE, header=rheader, footer=rfooter);
+assign_report('SS Concentrations', task=T.STEADY_STATE, filename='ssconcs.tsv', append=True, confirm_overwrite=False)
+
 
 # METADATA
 set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }],                    references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
