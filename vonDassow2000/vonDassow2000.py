@@ -166,6 +166,14 @@ add_function(name='Bi-molecular reaction with transport', type='irreversible',
 
 # STEP 1 set up all cells and their internal species and reactions
 
+# variables for the initial concentrations of wg and en
+# periodicity of the initial condition
+# and the phase of en initial condition relative to wg
+wg0 = 1
+en0 = 1
+wgper=4
+enphase = 1
+
 for i in range(0, gridr):
     for j in range(0, gridc):
         # new cell
@@ -173,9 +181,19 @@ for i in range(0, gridr):
         app='_{},{}'.format(i,j)
         add_compartment(name=compname)
 
+        if j % wgper == 0:
+            wg0 = 1
+        else:
+            wg0 = 0
+
+        if (j-enphase) % wgper == 0:
+            en0 = 1
+        else:
+            en0 = 0
+
         # add species initial concentrations
-        add_species(f'en{app}', compartment_name=compname, initial_concentration=1)
-        add_species(f'EN{app}', compartment_name=compname, initial_concentration=1)
+        add_species(f'en{app}', compartment_name=compname, initial_concentration=en0)
+        add_species(f'EN{app}', compartment_name=compname, initial_concentration=en0)
         add_species(f'ci{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'CI{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'CN{app}', compartment_name=compname, initial_concentration=0)
@@ -193,14 +211,14 @@ for i in range(0, gridr):
         add_species(f'PTC4{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'PTC5{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'PTC6{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'wg{app}', compartment_name=compname, initial_concentration=1)
-        add_species(f'IWG{app}', compartment_name=compname, initial_concentration=1)
-        add_species(f'EWG1{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'EWG2{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'EWG3{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'EWG4{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=0)
+        add_species(f'wg{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'IWG{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'EWG1{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'EWG2{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'EWG3{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'EWG4{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'PH{app}', compartment_name=compname, initial_concentration=0)
         add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
@@ -423,7 +441,7 @@ for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'P
     for i in range(0, gridr):
         for j in range(0, gridc):
             pcurves.append({'name': f'{i},{j}', 'channels': ['Time', f'[{pvar}_{i},{j}]']})
-    add_plot( f'{pvar}', tasks='Time-Course', curves=pcurves)
+    add_plot( f'{pvar}', tasks='Scan, Time-Course', curves=pcurves)
 
 #TODO
 # add a report for all steady state concentrations
