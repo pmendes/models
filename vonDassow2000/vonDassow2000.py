@@ -444,13 +444,13 @@ for i in range(0, gridr):
         esides = e1+e2+e3+e4+e5+e6
         set_species(name=f'EWG_T{app}', compartment_name=compname, status='assignment', expression=esides)
 
-# set up the time course parameters, we need to run to time 1000
-set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 100, 'Duration': 1000.0, }})
+# set up the time course parameters, we need to run to time 1100
+set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 100, 'Duration': 1100.0, }})
 
 # if we have 4 or more columns, create a pattern scoring function
 # because of symetry we only need to check the first 4 colums of the first row
 if gridc > 3:
-    # add observables for genes wg, en and hh
+    # add observables for genes wg, en and hh, time 200
     add_parameter('t200_wg_0', initial_value=0)
     add_parameter('t200_wg_1', initial_value=0)
     add_parameter('t200_wg_2', initial_value=0)
@@ -463,24 +463,60 @@ if gridc > 3:
     add_parameter('t200_hh_1', initial_value=0)
     add_parameter('t200_hh_2', initial_value=0)
     add_parameter('t200_hh_3', initial_value=0)
-    # scoring function for T200
-    add_parameter(name='Eq15num', status='assignment', expression='Values[t200_wg_0] + Values[t200_wg_1] + Values[t200_wg_2] + Values[t200_wg_3] + Values[t200_en_0] + Values[t200_en_1] + Values[t200_en_2] + Values[t200_en_3] + Values[t200_hh_0] + Values[t200_hh_1] + Values[t200_hh_2] + Values[t200_hh_3]')
+    # add observables for genes wg, en and hh, time 200
+    add_parameter('t1000_wg_0', initial_value=0)
+    add_parameter('t1000_wg_1', initial_value=0)
+    add_parameter('t1000_wg_2', initial_value=0)
+    add_parameter('t1000_wg_3', initial_value=0)
+    add_parameter('t1000_en_0', initial_value=0)
+    add_parameter('t1000_en_1', initial_value=0)
+    add_parameter('t1000_en_2', initial_value=0)
+    add_parameter('t1000_en_3', initial_value=0)
+    add_parameter('t1000_hh_0', initial_value=0)
+    add_parameter('t1000_hh_1', initial_value=0)
+    add_parameter('t1000_hh_2', initial_value=0)
+    add_parameter('t1000_hh_3', initial_value=0)
+    # values for T200
+    add_parameter(name='Eq15num200', status='assignment', expression='Values[t200_wg_0] + Values[t200_wg_1] + Values[t200_wg_2] + Values[t200_wg_3] + Values[t200_en_0] + Values[t200_en_1] + Values[t200_en_2] + Values[t200_en_3] + Values[t200_hh_0] + Values[t200_hh_1] + Values[t200_hh_2] + Values[t200_hh_3]')
+    # values for T1000
+    add_parameter(name='Eq15num1000', status='assignment', expression='Values[t1000_wg_0] + Values[t1000_wg_1] + Values[t1000_wg_2] + Values[t1000_wg_3] + Values[t1000_en_0] + Values[t1000_en_1] + Values[t1000_en_2] + Values[t1000_en_3] + Values[t1000_hh_0] + Values[t1000_hh_1] + Values[t1000_hh_2] + Values[t1000_hh_3]')
+    # numerator of Eq 15
+    add_parameter(name='Eq15num', status='assignment', expression='Values[Eq15num200] + Values[Eq15num1000]')
+    # Eq 15 as the sum of scores for T200 and T1000
     add_parameter(name='Eq15', status='assignment', expression='Values[Eq15num] / ( 1 + Values[Eq15num] )')
     # set an event for time = 200 to capture all observables
     evassign = []
-    evassign.append(('Values[t200_wg_0]', '0.5 * ( ( [wg_0,0] / 0.1 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.1 ) ^ 3)') )
-    evassign.append(('Values[t200_wg_1]', '0.5 * ( 1 - ( ( [wg_0,1] / 0.1 ) ^ 3 ) / ( 1 + ( [wg_0,1] /  0.1 ) ^ 3 ) )'))
-    evassign.append(('Values[t200_wg_2]', '0.5 * ( ( [wg_0,2] / 0.1 ) ^ 3 ) / ( 1 + ( [wg_0,2] / 0.1 ) ^ 3 )'))
-    evassign.append(('Values[t200_wg_3]','0.5 * ( ( [wg_0,3] / 0.1 ) ^ 3 ) / ( 1 + ( [wg_0,3] / 0.1 ) ^ 3)'))
-    evassign.append(('Values[t200_en_0]','0.5 * ( ( [en_0,0] / 0.1 ) ^ 3 ) / ( 1 + ( [en_0,0] / 0.1 ) ^ 3 )'))
-    evassign.append(('Values[t200_en_1]','0.5 * ( ( [en_0,1] / 0.1 ) ^ 3 ) / ( 1 + ( [en_0,1] / 0.1 ) ^ 3)'))
-    evassign.append(('Values[t200_en_2]','0.5 * ( 1 - ( ( [en_0,2] / 0.1 ) ^ 3 ) / ( 1 + ( [en_0,2] / 0.1 ) ^ 3 ) )'))
-    evassign.append(('Values[t200_en_3]','0.5 * ( ( [en_0,3] / 0.1 ) ^ 3 ) / ( 1 + ( [en_0,3] / 0.1 ) ^ 3 )'))
-    evassign.append(('Values[t200_hh_0]','0.5 * ( ( [hh_0,0] / 0.1 ) ^ 3 ) / ( 1 + ( [hh_0,0] / 0.1 ) ^ 3 )'))
-    evassign.append(('Values[t200_hh_1]','0.5 * ( ( [hh_0,1] / 0.1 ) ^ 3 ) / ( 1 + ( [hh_0,1] / 0.1 ) ^ 3 )'))
-    evassign.append(('Values[t200_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.1 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.1 ) ^ 3 ))'))
-    evassign.append(('Values[t200_hh_3]','0.5 * ( ( [hh_0,3] / 0.1 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.1 ) ^ 3 )'))
+    evassign.append(('Values[t200_wg_0]', '0.5 * ( ( [wg_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.2 ) ^ 3)') )
+    evassign.append(('Values[t200_wg_1]', '0.5 * ( 1 - ( ( [wg_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,1] /  0.2 ) ^ 3 ) )'))
+    evassign.append(('Values[t200_wg_2]', '0.5 * ( ( [wg_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,2] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t200_wg_3]','0.5 * ( ( [wg_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,3] / 0.2 ) ^ 3)'))
+    evassign.append(('Values[t200_en_0]','0.5 * ( ( [en_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,0] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t200_en_1]','0.5 * ( ( [en_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,1] / 0.2 ) ^ 3)'))
+    evassign.append(('Values[t200_en_2]','0.5 * ( 1 - ( ( [en_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,2] / 0.2 ) ^ 3 ) )'))
+    evassign.append(('Values[t200_en_3]','0.5 * ( ( [en_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,3] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t200_hh_0]','0.5 * ( ( [hh_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,0] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t200_hh_1]','0.5 * ( ( [hh_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,1] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t200_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))'))
+    evassign.append(('Values[t200_hh_3]','0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )'))
+    # add event for time 2000
     add_event('T200', trigger='Time > 200', assignments=evassign )
+
+    # set an event for time = 1000 to capture all observables
+    evassign = []
+    evassign.append(('Values[t1000_wg_0]', '0.5 * ( ( [wg_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.2 ) ^ 3)') )
+    evassign.append(('Values[t1000_wg_1]', '0.5 * ( 1 - ( ( [wg_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,1] /  0.2 ) ^ 3 ) )'))
+    evassign.append(('Values[t1000_wg_2]', '0.5 * ( ( [wg_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,2] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t1000_wg_3]','0.5 * ( ( [wg_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,3] / 0.2 ) ^ 3)'))
+    evassign.append(('Values[t1000_en_0]','0.5 * ( ( [en_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,0] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t1000_en_1]','0.5 * ( ( [en_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,1] / 0.2 ) ^ 3)'))
+    evassign.append(('Values[t1000_en_2]','0.5 * ( 1 - ( ( [en_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,2] / 0.2 ) ^ 3 ) )'))
+    evassign.append(('Values[t1000_en_3]','0.5 * ( ( [en_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,3] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t1000_hh_0]','0.5 * ( ( [hh_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,0] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t1000_hh_1]','0.5 * ( ( [hh_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,1] / 0.2 ) ^ 3 )'))
+    evassign.append(('Values[t1000_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))'))
+    evassign.append(('Values[t1000_hh_3]','0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )'))
+    # set event for time 1000
+    add_event('T1000', trigger='Time > 1000', assignments=evassign )
 else:
     print(f"No scoring function created, need at least 4 columns\n")
 
