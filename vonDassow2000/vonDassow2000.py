@@ -484,6 +484,9 @@ if gridc > 3:
     add_parameter(name='Eq15num', status='assignment', expression='Values[Eq15num200] + Values[Eq15num1000]')
     # Eq 15 as the sum of scores for T200 and T1000
     add_parameter(name='Eq15', status='assignment', expression='Values[Eq15num] / ( 1 + Values[Eq15num] )')
+    # final score; this should be max(Eq15, Eq16)
+    add_parameter(name='Score', status='assignment', expression='Values[Eq15]')
+
     # set an event for time = 200 to capture all observables
     evassign = []
     evassign.append(('Values[t200_wg_0]', '0.5 * ( ( [wg_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.2 ) ^ 3)') )
@@ -521,15 +524,15 @@ else:
     print(f"No scoring function created, need at least 4 columns\n")
 
 #PLOTS
-# time course plots for each mRNA and protein
+# time course plots for each mRNA and protein, keep them inactive so user can activate at will
 for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'PTC_T'}:
     pcurves = []
     for i in range(0, gridr):
         for j in range(0, gridc):
             pcurves.append({'name': f'{i},{j}', 'channels': ['Time', f'[{pvar}_{i},{j}]']})
-    add_plot( f'{pvar}', tasks='Scan, Time-Course', curves=pcurves)
+    add_plot( f'{pvar}', tasks='Scan, Time-Course', curves=pcurves, active=False)
 
-#TODO
+#REPORTS
 # add a report for all steady state concentrations
 rheader = []
 rfooter = []
@@ -548,6 +551,32 @@ for pvar in {'EWG', 'HH', 'PH', 'PTC'}:
                 rfooter.append(f'[{pvar}{s}_{i},{j}]')
 add_report('SS Concentrations', task=T.STEADY_STATE, header=rheader, footer=rfooter);
 assign_report('SS Concentrations', task=T.STEADY_STATE, filename='ssconcs.tsv', append=True, confirm_overwrite=False)
+
+# add a report for all time course scans
+rheader = []
+rbody = []
+# add the scoring function
+rheader.append(wrap_copasi_string('Score'))
+rbody.append('Values[Score]')
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
+    rheader.append(wrap_copasi_string(parm))
+    rbody.append(f'Values[{parm}]')
+for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
+    rheader.append(wrap_copasi_string(parm))
+    rbody.append(f'Values[{parm}]')
+for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
+    rheader.append(wrap_copasi_string(parm))
+    rbody.append(f'Values[{parm}]')
+for parm in {'alpha_CIwg','alpha_WGwg'}:
+    rheader.append(wrap_copasi_string(parm))
+    rbody.append(f'Values[{parm}]')
+for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
+    rheader.append(wrap_copasi_string(parm))
+    rbody.append(f'Values[{parm}]')
+# TODO: STILL MISSING 'C_CI', 'T0', 'HH_0'
+add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
+assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
+
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
