@@ -573,7 +573,9 @@ for parm in {'alpha_CIwg','alpha_WGwg'}:
 for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-# TODO: STILL MISSING 'C_CI', 'T0', 'HH_0'
+rheader.append(wrap_copasi_string('C_CI'))
+rbody.append('Values[C_CI]')
+# TODO: STILL MISSING 'T0', 'HH_0'
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
