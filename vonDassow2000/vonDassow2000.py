@@ -75,6 +75,7 @@ add_parameter('H_en', initial_value=7.0)
 add_parameter('H_EN', initial_value=15.0)
 add_parameter('H_wg', initial_value=7.0)
 add_parameter('H_IWG', initial_value=15.0)
+add_parameter('H_EWG', initial_value=15.0) #note this parameter does not show in the SuppData for the main paper, but it became obvious from other papers that it was a mistake
 add_parameter('H_ptc', initial_value=7.0)
 add_parameter('H_PTC', initial_value=15.0)
 add_parameter('H_ci', initial_value=7.0)
@@ -119,7 +120,7 @@ add_parameter('kappa_PTCHH', initial_value=0.1)
 # NOTE: the original model has both PTC_0 and HH_0, however they cannot be different in this formulation with ODEs based on reactions, so we are restricted to the situation where PTC_0 = HH_0 and thus we only use HH_0
 add_parameter('HH_0', initial_value=1000)
 
-for den in {'H_en','H_EN','H_wg','H_IWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
+for den in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
     pname = "T0/{}".format(den)
     fexpression = "Values[T0] / Values[{}]".format(den)
     add_parameter(name=pname, status='assignment', expression=fexpression)
@@ -316,12 +317,12 @@ for i in range(0, gridr):
         add_reaction(name=f'R24_5{app}', scheme=f'EWG5{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
         add_reaction(name=f'R24_6{app}', scheme=f'EWG6{app} -> IWG{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_EndoWG'})
 
-        add_reaction(name=f'R25_1{app}', scheme=f'EWG1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
-        add_reaction(name=f'R25_2{app}', scheme=f'EWG2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
-        add_reaction(name=f'R25_3{app}', scheme=f'EWG3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
-        add_reaction(name=f'R25_4{app}', scheme=f'EWG4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
-        add_reaction(name=f'R25_5{app}', scheme=f'EWG5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
-        add_reaction(name=f'R25_6{app}', scheme=f'EWG6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_IWG'})
+        add_reaction(name=f'R25_1{app}', scheme=f'EWG1{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EWG'})
+        add_reaction(name=f'R25_2{app}', scheme=f'EWG2{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EWG'})
+        add_reaction(name=f'R25_3{app}', scheme=f'EWG3{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EWG'})
+        add_reaction(name=f'R25_4{app}', scheme=f'EWG4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EWG'})
+        add_reaction(name=f'R25_5{app}', scheme=f'EWG5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EWG'})
+        add_reaction(name=f'R25_6{app}', scheme=f'EWG6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EWG'})
 
         add_reaction(name=f'R26_16{app}', scheme=f'EWG1{app} -> EWG6{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
         add_reaction(name=f'R26_61{app}', scheme=f'EWG6{app} -> EWG1{app}', function='mass action (irreversible)', mapping={'k1': 'T0.r_LMxferWG'})
@@ -558,7 +559,7 @@ rbody = []
 # add the scoring function
 rheader.append(wrap_copasi_string('Score'))
 rbody.append('Values[Score]')
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
@@ -575,7 +576,7 @@ for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxf
     rbody.append(f'Values[{parm}]')
 rheader.append(wrap_copasi_string('C_CI'))
 rbody.append('Values[C_CI]')
-# TODO: STILL MISSING 'T0', 'HH_0'
+# TODO: STILL MISSING 'H_EWG' 'HH_0'
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
