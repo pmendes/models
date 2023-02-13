@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.38 (Build 268) (http://www.copasi.org) at 2022-12-14T14:37:29Z -->
+<!-- generated with COPASI 4.39 (Build 272) (http://www.copasi.org) at 2023-02-13T01:48:29Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
-<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="38" versionDevel="268" copasiSourcesModified="0">
+<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="39" versionDevel="272" copasiSourcesModified="0">
   <ListOfFunctions>
-    <Function key="Function_63" name="Function for R1" type="UserDefined" reversible="true">
+    <Function key="Function_129" name="Function for R1" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_63">
+<rdf:Description rdf:about="#Function_129">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -14,15 +14,15 @@
         (10*X-A)/(1+X+A+B^2)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_1486" name="A" order="0" role="product"/>
-        <ParameterDescription key="FunctionParameter_1487" name="B" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_1488" name="X" order="2" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2059" name="A" order="0" role="product"/>
+        <ParameterDescription key="FunctionParameter_2058" name="B" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_2057" name="X" order="2" role="substrate"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_64" name="Function for R2" type="UserDefined" reversible="true">
+    <Function key="Function_130" name="Function for R2" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_64">
+<rdf:Description rdf:about="#Function_130">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -30,14 +30,14 @@
         (2*A-B)/(1+A+B)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_1491" name="A" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_1490" name="B" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2064" name="A" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2063" name="B" order="1" role="product"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_65" name="Function for R3" type="UserDefined" reversible="true">
+    <Function key="Function_131" name="Function for R3" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_65">
+<rdf:Description rdf:about="#Function_131">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -45,15 +45,15 @@
         (B-C)/(1+B+C+D^2)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_1492" name="B" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_1489" name="C" order="1" role="product"/>
-        <ParameterDescription key="FunctionParameter_1493" name="D" order="2" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_2065" name="B" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2062" name="C" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2066" name="D" order="2" role="modifier"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_66" name="Function for R4" type="UserDefined" reversible="true">
+    <Function key="Function_132" name="Function for R4" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_66">
+<rdf:Description rdf:about="#Function_132">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -61,14 +61,14 @@
         (5*C-D)/(1+C+D)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_1495" name="C" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_1496" name="D" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2054" name="C" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2055" name="D" order="1" role="product"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_67" name="Function for R5" type="UserDefined" reversible="true">
+    <Function key="Function_133" name="Function for R5" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_67">
+<rdf:Description rdf:about="#Function_133">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -76,14 +76,14 @@
         (10*D-Y)/(1+D+Y)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_264" name="D" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_1494" name="Y" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2053" name="D" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2056" name="Y" order="1" role="product"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_68" name="Function for R6" type="UserDefined" reversible="true">
+    <Function key="Function_134" name="Function for R6" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_68">
+<rdf:Description rdf:about="#Function_134">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -91,15 +91,15 @@
         (B-E)/(1+B+E+F^2)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_262" name="B" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_263" name="E" order="1" role="product"/>
-        <ParameterDescription key="FunctionParameter_1485" name="F" order="2" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_2051" name="B" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2052" name="E" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2050" name="F" order="2" role="modifier"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_69" name="Function for R7" type="UserDefined" reversible="true">
+    <Function key="Function_135" name="Function for R7" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_69">
+<rdf:Description rdf:about="#Function_135">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -107,14 +107,14 @@
         (5*E-F)/(1+E+F)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_1482" name="E" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_1483" name="F" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2047" name="E" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2048" name="F" order="1" role="product"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_70" name="Function for R8" type="UserDefined" reversible="true">
+    <Function key="Function_136" name="Function for R8" type="UserDefined" reversible="true">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_70">
+<rdf:Description rdf:about="#Function_136">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -122,8 +122,8 @@
         (10*F-Z)/(1+F+Z)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_1481" name="F" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_1484" name="Z" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_2046" name="F" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_2049" name="Z" order="1" role="product"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
@@ -189,12 +189,12 @@ which makes the volume change between 0.9 and 1.1.</p>
   </body>
     </Comment>
     <ListOfCompartments>
-      <Compartment key="Compartment_1" name="cell" simulationType="assignment" dimensionality="3" addNoise="false">
+      <Compartment key="Compartment_2" name="cell" simulationType="assignment" dimensionality="3" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Compartment_1">
+  <rdf:Description rdf:about="#Compartment_2">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000290"/>
     <CopasiMT:is>
       <rdf:Bag>
@@ -211,82 +211,82 @@ which makes the volume change between 0.9 and 1.1.</p>
       </Compartment>
     </ListOfCompartments>
     <ListOfMetabolites>
-      <Metabolite key="Metabolite_97" name="A" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_25" name="A" simulationType="reactions" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_97">
+  <rdf:Description rdf:about="#Metabolite_25">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_98" name="B" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_26" name="B" simulationType="reactions" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_98">
+  <rdf:Description rdf:about="#Metabolite_26">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_99" name="C" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_24" name="C" simulationType="reactions" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_99">
+  <rdf:Description rdf:about="#Metabolite_24">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_100" name="D" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_23" name="D" simulationType="reactions" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_100">
+  <rdf:Description rdf:about="#Metabolite_23">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_101" name="E" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_29" name="E" simulationType="reactions" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_101">
+  <rdf:Description rdf:about="#Metabolite_29">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_102" name="F" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_30" name="F" simulationType="reactions" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_102">
+  <rdf:Description rdf:about="#Metabolite_30">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_2" name="X" simulationType="fixed" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_31" name="X" simulationType="fixed" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_2">
+  <rdf:Description rdf:about="#Metabolite_31">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_3" name="Y" simulationType="fixed" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_32" name="Y" simulationType="fixed" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_3">
+  <rdf:Description rdf:about="#Metabolite_32">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_96" name="Z" simulationType="fixed" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_33" name="Z" simulationType="fixed" compartment="Compartment_2" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_96">
+  <rdf:Description rdf:about="#Metabolite_33">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000247" />
   </rdf:Description>
 </rdf:RDF>
@@ -294,220 +294,220 @@ which makes the volume change between 0.9 and 1.1.</p>
       </Metabolite>
     </ListOfMetabolites>
     <ListOfReactions>
-      <Reaction key="Reaction_198" name="R1" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_134" name="R1" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_198">
+  <rdf:Description rdf:about="#Reaction_134">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_31" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_97" stoichiometry="1"/>
+          <Product metabolite="Metabolite_25" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_98" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_26" stoichiometry="1"/>
         </ListOfModifiers>
-        <KineticLaw function="Function_63" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_129" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_1486">
-              <SourceParameter reference="Metabolite_97"/>
+            <CallParameter functionParameter="FunctionParameter_2059">
+              <SourceParameter reference="Metabolite_25"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1487">
-              <SourceParameter reference="Metabolite_98"/>
+            <CallParameter functionParameter="FunctionParameter_2058">
+              <SourceParameter reference="Metabolite_26"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1488">
-              <SourceParameter reference="Metabolite_2"/>
+            <CallParameter functionParameter="FunctionParameter_2057">
+              <SourceParameter reference="Metabolite_31"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_199" name="R2" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_133" name="R2" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_199">
+  <rdf:Description rdf:about="#Reaction_133">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_97" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_25" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_98" stoichiometry="1"/>
+          <Product metabolite="Metabolite_26" stoichiometry="1"/>
         </ListOfProducts>
-        <KineticLaw function="Function_64" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_130" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_1491">
-              <SourceParameter reference="Metabolite_97"/>
+            <CallParameter functionParameter="FunctionParameter_2064">
+              <SourceParameter reference="Metabolite_25"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1490">
-              <SourceParameter reference="Metabolite_98"/>
+            <CallParameter functionParameter="FunctionParameter_2063">
+              <SourceParameter reference="Metabolite_26"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_200" name="R3" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_132" name="R3" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_200">
+  <rdf:Description rdf:about="#Reaction_132">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_98" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_26" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_99" stoichiometry="1"/>
+          <Product metabolite="Metabolite_24" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_100" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_23" stoichiometry="1"/>
         </ListOfModifiers>
-        <KineticLaw function="Function_65" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_131" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_1492">
-              <SourceParameter reference="Metabolite_98"/>
+            <CallParameter functionParameter="FunctionParameter_2065">
+              <SourceParameter reference="Metabolite_26"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1489">
-              <SourceParameter reference="Metabolite_99"/>
+            <CallParameter functionParameter="FunctionParameter_2062">
+              <SourceParameter reference="Metabolite_24"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1493">
-              <SourceParameter reference="Metabolite_100"/>
+            <CallParameter functionParameter="FunctionParameter_2066">
+              <SourceParameter reference="Metabolite_23"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_201" name="R4" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_207" name="R4" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_201">
+  <rdf:Description rdf:about="#Reaction_207">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_99" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_24" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_100" stoichiometry="1"/>
+          <Product metabolite="Metabolite_23" stoichiometry="1"/>
         </ListOfProducts>
-        <KineticLaw function="Function_66" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_132" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_1495">
-              <SourceParameter reference="Metabolite_99"/>
+            <CallParameter functionParameter="FunctionParameter_2054">
+              <SourceParameter reference="Metabolite_24"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1496">
-              <SourceParameter reference="Metabolite_100"/>
+            <CallParameter functionParameter="FunctionParameter_2055">
+              <SourceParameter reference="Metabolite_23"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_3" name="R5" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_135" name="R5" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_3">
+  <rdf:Description rdf:about="#Reaction_135">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_100" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_23" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+          <Product metabolite="Metabolite_32" stoichiometry="1"/>
         </ListOfProducts>
-        <KineticLaw function="Function_67" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_133" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Metabolite_100"/>
+            <CallParameter functionParameter="FunctionParameter_2053">
+              <SourceParameter reference="Metabolite_23"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1494">
-              <SourceParameter reference="Metabolite_3"/>
+            <CallParameter functionParameter="FunctionParameter_2056">
+              <SourceParameter reference="Metabolite_32"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_197" name="R6" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_136" name="R6" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_197">
+  <rdf:Description rdf:about="#Reaction_136">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_98" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_26" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_101" stoichiometry="1"/>
+          <Product metabolite="Metabolite_29" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_102" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
         </ListOfModifiers>
-        <KineticLaw function="Function_68" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_134" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_262">
-              <SourceParameter reference="Metabolite_98"/>
+            <CallParameter functionParameter="FunctionParameter_2051">
+              <SourceParameter reference="Metabolite_26"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Metabolite_101"/>
+            <CallParameter functionParameter="FunctionParameter_2052">
+              <SourceParameter reference="Metabolite_29"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1485">
-              <SourceParameter reference="Metabolite_102"/>
+            <CallParameter functionParameter="FunctionParameter_2050">
+              <SourceParameter reference="Metabolite_30"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_196" name="R7" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_137" name="R7" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_196">
+  <rdf:Description rdf:about="#Reaction_137">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_101" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_29" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_102" stoichiometry="1"/>
+          <Product metabolite="Metabolite_30" stoichiometry="1"/>
         </ListOfProducts>
-        <KineticLaw function="Function_69" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_135" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_1482">
-              <SourceParameter reference="Metabolite_101"/>
+            <CallParameter functionParameter="FunctionParameter_2047">
+              <SourceParameter reference="Metabolite_29"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1483">
-              <SourceParameter reference="Metabolite_102"/>
+            <CallParameter functionParameter="FunctionParameter_2048">
+              <SourceParameter reference="Metabolite_30"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_195" name="R8" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_138" name="R8" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_195">
+  <rdf:Description rdf:about="#Reaction_138">
     <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000176" />
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_102" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_30" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_96" stoichiometry="1"/>
+          <Product metabolite="Metabolite_33" stoichiometry="1"/>
         </ListOfProducts>
-        <KineticLaw function="Function_70" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
+        <KineticLaw function="Function_136" unitType="Default" scalingCompartment="CN=Root,Model=variable volume,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_1481">
-              <SourceParameter reference="Metabolite_102"/>
+            <CallParameter functionParameter="FunctionParameter_2046">
+              <SourceParameter reference="Metabolite_30"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_1484">
-              <SourceParameter reference="Metabolite_96"/>
+            <CallParameter functionParameter="FunctionParameter_2049">
+              <SourceParameter reference="Metabolite_33"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -564,24 +564,24 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </ListOfModelParameterSets>
     <StateTemplate>
       <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="Metabolite_98"/>
-      <StateTemplateVariable objectReference="Metabolite_100"/>
-      <StateTemplateVariable objectReference="Metabolite_102"/>
-      <StateTemplateVariable objectReference="Metabolite_97"/>
-      <StateTemplateVariable objectReference="Metabolite_101"/>
-      <StateTemplateVariable objectReference="Metabolite_99"/>
-      <StateTemplateVariable objectReference="Compartment_1"/>
-      <StateTemplateVariable objectReference="Metabolite_2"/>
-      <StateTemplateVariable objectReference="Metabolite_3"/>
-      <StateTemplateVariable objectReference="Metabolite_96"/>
+      <StateTemplateVariable objectReference="Metabolite_26"/>
+      <StateTemplateVariable objectReference="Metabolite_23"/>
+      <StateTemplateVariable objectReference="Metabolite_30"/>
+      <StateTemplateVariable objectReference="Metabolite_25"/>
+      <StateTemplateVariable objectReference="Metabolite_29"/>
+      <StateTemplateVariable objectReference="Metabolite_24"/>
+      <StateTemplateVariable objectReference="Compartment_2"/>
+      <StateTemplateVariable objectReference="Metabolite_31"/>
+      <StateTemplateVariable objectReference="Metabolite_32"/>
+      <StateTemplateVariable objectReference="Metabolite_33"/>
     </StateTemplate>
     <InitialState type="initialState">
       0 0 0 0 0 0 0 1 1.204428152e+21 1.204428152e+21 6.0221407600000002e+20 
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_9" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_14" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
+      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -599,8 +599,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_14" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_0" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="1000"/>
@@ -621,7 +621,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_12" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_9" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -633,15 +633,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_2" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_12" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_0" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_2" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -663,7 +663,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -694,9 +694,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_7" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_9"/>
+        <Parameter name="Steady-State" type="key" value="Task_14"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -705,7 +705,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_6" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -720,7 +720,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -733,7 +733,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_11" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -757,7 +757,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_3" name="Moieties" type="moieties" scheduled="false" updateModel="false">
-      <Report reference="Report_22" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
@@ -800,9 +800,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_1" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_23" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_9"/>
+        <Parameter name="Steady-State" type="key" value="Task_14"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
@@ -834,7 +834,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_8" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_10" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -842,7 +842,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_7" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_9" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -853,7 +853,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_6" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_8" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -861,7 +861,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_5" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_7" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -885,7 +885,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_4" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_6" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -909,7 +909,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Parameter Estimation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_3" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_5" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -921,7 +921,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_2" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -933,7 +933,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_1" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_3" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -945,7 +945,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_0" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_2" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -957,7 +957,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_22" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_1" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -969,7 +969,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_23" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_0" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -983,9 +983,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Report>
   </ListOfReports>
   <ListOfPlots>
-    <PlotSpecification name="Concentrations, Volumes, and Global Quantity Values" type="Plot2D" active="1" taskTypes="">
+    <PlotSpecification name="Time Course" type="Plot2D" active="1" taskTypes="">
       <Parameter name="log X" type="bool" value="0"/>
       <Parameter name="log Y" type="bool" value="0"/>
+      <Parameter name="x axis" type="string" value=""/>
+      <Parameter name="y axis" type="string" value=""/>
+      <Parameter name="z axis" type="string" value=""/>
+      <Parameter name="plot engine" type="string" value="QWT"/>
       <ListOfPlotItems>
         <PlotItem name="[A]" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
@@ -1059,7 +1063,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ChannelSpec cn="CN=Root,Model=variable volume,Vector=Compartments[cell],Vector=Metabolites[F],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
-        <PlotItem name="Compartments[cell].Volume" type="Curve2D">
+        <PlotItem name="cell volume" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
           <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
           <Parameter name="Line width" type="unsignedFloat" value="1"/>
@@ -1077,24 +1081,24 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <GUI>
   </GUI>
   <SBMLReference file="hofmeyer_86.xml">
-    <SBMLMap SBMLid="A" COPASIkey="Metabolite_97"/>
-    <SBMLMap SBMLid="B" COPASIkey="Metabolite_98"/>
-    <SBMLMap SBMLid="C" COPASIkey="Metabolite_99"/>
-    <SBMLMap SBMLid="D" COPASIkey="Metabolite_100"/>
-    <SBMLMap SBMLid="E" COPASIkey="Metabolite_101"/>
-    <SBMLMap SBMLid="F" COPASIkey="Metabolite_102"/>
-    <SBMLMap SBMLid="R1" COPASIkey="Reaction_198"/>
-    <SBMLMap SBMLid="R2" COPASIkey="Reaction_199"/>
-    <SBMLMap SBMLid="R3" COPASIkey="Reaction_200"/>
-    <SBMLMap SBMLid="R4" COPASIkey="Reaction_201"/>
-    <SBMLMap SBMLid="R5" COPASIkey="Reaction_3"/>
-    <SBMLMap SBMLid="R6" COPASIkey="Reaction_197"/>
-    <SBMLMap SBMLid="R7" COPASIkey="Reaction_196"/>
-    <SBMLMap SBMLid="R8" COPASIkey="Reaction_195"/>
-    <SBMLMap SBMLid="X" COPASIkey="Metabolite_2"/>
-    <SBMLMap SBMLid="Y" COPASIkey="Metabolite_3"/>
-    <SBMLMap SBMLid="Z" COPASIkey="Metabolite_96"/>
-    <SBMLMap SBMLid="cell" COPASIkey="Compartment_1"/>
+    <SBMLMap SBMLid="A" COPASIkey="Metabolite_25"/>
+    <SBMLMap SBMLid="B" COPASIkey="Metabolite_26"/>
+    <SBMLMap SBMLid="C" COPASIkey="Metabolite_24"/>
+    <SBMLMap SBMLid="D" COPASIkey="Metabolite_23"/>
+    <SBMLMap SBMLid="E" COPASIkey="Metabolite_29"/>
+    <SBMLMap SBMLid="F" COPASIkey="Metabolite_30"/>
+    <SBMLMap SBMLid="R1" COPASIkey="Reaction_134"/>
+    <SBMLMap SBMLid="R2" COPASIkey="Reaction_133"/>
+    <SBMLMap SBMLid="R3" COPASIkey="Reaction_132"/>
+    <SBMLMap SBMLid="R4" COPASIkey="Reaction_207"/>
+    <SBMLMap SBMLid="R5" COPASIkey="Reaction_135"/>
+    <SBMLMap SBMLid="R6" COPASIkey="Reaction_136"/>
+    <SBMLMap SBMLid="R7" COPASIkey="Reaction_137"/>
+    <SBMLMap SBMLid="R8" COPASIkey="Reaction_138"/>
+    <SBMLMap SBMLid="X" COPASIkey="Metabolite_31"/>
+    <SBMLMap SBMLid="Y" COPASIkey="Metabolite_32"/>
+    <SBMLMap SBMLid="Z" COPASIkey="Metabolite_33"/>
+    <SBMLMap SBMLid="cell" COPASIkey="Compartment_2"/>
   </SBMLReference>
   <ListOfUnitDefinitions>
     <UnitDefinition key="Unit_1" name="meter" symbol="m">
