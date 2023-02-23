@@ -6,7 +6,7 @@
 # grid size is 2x8. To create other sizes pass two numeric
 # arguments on the command line for rows and colums.
 #
-# Written Dec 2022 - Jan 2023 by Pedro Mendes <pmendes@uchc.edu>
+# Written Dec 2022 - Feb 2023 by Pedro Mendes <pmendes@uchc.edu>
 # this code is released under the MIT license, the COPASI model
 # produced by this code is released under the Creative Commons
 # CC0 1.0 license
@@ -117,7 +117,7 @@ add_parameter('r_LMxferWG', initial_value=0.1)
 add_parameter('r_LMxferPTC', initial_value=0.1)
 add_parameter('r_LMxferHH', initial_value=0.1)
 add_parameter('kappa_PTCHH', initial_value=0.1)
-# NOTE: the original model has both PTC_0 and HH_0, however they cannot be different in this formulation with ODEs based on reactions, so we are restricted to the situation where PTC_0 = HH_0 and thus we only use HH_0
+add_parameter('PTC_0', initial_value=1000)
 add_parameter('HH_0', initial_value=1000)
 
 for den in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
@@ -134,6 +134,7 @@ add_parameter('T0.r_MxferWG', status='assignment', expression="Values[T0] * Valu
 add_parameter('T0.r_LMxferWG', status='assignment', expression="Values[T0] * Values[r_LMxferWG]")
 add_parameter('T0.r_LMxferHH', status='assignment', expression="Values[T0] * Values[r_LMxferHH]")
 add_parameter('T0.kappa_PTCHH.HH_0', status='assignment', expression="Values[T0] * Values[kappa_PTCHH] * Values[HH_0]")
+add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', expression="Values[T0] * Values[kappa_PTCHH] * Values[PTC_0]")
 
 # Add kinetic rate laws needed
 add_function(name='translation', type='general',
@@ -156,9 +157,9 @@ add_function(name='Uni-molecular transport', type='irreversible',
              infix='Vol*k1*S',
              mapping={ 'Vol': 'volume', 'k1': 'parameter', 'S': 'substrate'})
 
-add_function(name='Bi-molecular reaction with transport', type='irreversible',
+add_function(name='Pseudo bi-molecular reaction with transport', type='irreversible',
              infix='k1*Vol1*S1*Vol2*S2',
-             mapping={ 'k1': 'parameter', 'Vol1': 'volume', 'S1': 'substrate', 'Vol2': 'volume', 'S2': 'substrate'})
+             mapping={ 'k1': 'parameter', 'Vol1': 'volume', 'S1': 'substrate', 'Vol2': 'volume', 'S2': 'modifier'})
 
 # we create an array of hexagonal cells which has toric shape
 # (all cell edges are connected). Example below for 2x8 grid
@@ -376,6 +377,9 @@ for i in range(0, gridr):
 # e1 to e6 are components of the expression for a sum of species at neighboring membranes
 # On each side add a reaction for diffusion of WG to the next ones
 # On each side add a reaction between our PTC and the neighbor HH to make PH on our side
+#  (note that this reaction has to be added as two separate reactions due to normalization:
+#  Instead of PTC + HH -> PH we do PTC -> PH and HH -> setting the appropriate modifiers
+#  and rate constants)
 for i in range(0, gridr):
     for j in range(0, gridc):
         # for each cell i, j
@@ -387,7 +391,8 @@ for i in range(0, gridr):
         ngb = '_{},{}'.format((i+1)%gridr,j)
         compname2='cell[{},{}]'.format((i+1)%gridr,j)
         e1=f'[EWG4{ngb}]'
-        add_reaction(name=f'R30_1{app}', scheme=f'PTC1{app} + HH4{ngb} -> PH1{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
+        add_reaction(name=f'R30a_1{app}', scheme=f'PTC1{app} -> PH1{app}', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'S2': f'HH4{ngb}', 'Vol2': compname2})
+        add_reaction(name=f'R30b_1{app}', scheme=f'HH4{ngb} -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': compname2, 'S2': f'PTC1{app}', 'Vol2': compname})
         add_reaction(name=f'R31_1{app}', scheme=f'EWG1{app} -> EWG4{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 2 (side 5 on that cell)
@@ -398,7 +403,8 @@ for i in range(0, gridr):
             ngb = '_{},{}'.format(i,(j+(gridc-1))%gridc)
             compname2='cell[{},{}]'.format(i,(j+(gridc-1))%gridc)
         e2=f' + [EWG5{ngb}]'
-        add_reaction(name=f'R30_2{app}', scheme=f'PTC2{app} + HH5{ngb} -> PH2{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
+        add_reaction(name=f'R30a_2{app}', scheme=f'PTC2{app} -> PH2{app}', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'S2': f'HH5{ngb}','Vol2': compname2})
+        add_reaction(name=f'R30b_2{app}', scheme=f'HH5{ngb} -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': compname2, 'S2': f'PTC2{app}', 'Vol2': compname})
         add_reaction(name=f'R31_2{app}', scheme=f'EWG2{app} -> EWG5{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 3 (idx 6 on that side)
@@ -409,14 +415,16 @@ for i in range(0, gridr):
             ngb = '_{},{}'.format((i+1)%gridr,(j+(gridc-1))%gridc)
             compname2='cell[{},{}]'.format((i+1)%gridr,(j+(gridc-1))%gridc)
         e3=f' + [EWG6{ngb}]'
-        add_reaction(name=f'R30_3{app}', scheme=f'PTC3{app} + HH6{ngb} -> PH3{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
+        add_reaction(name=f'R30a_3{app}', scheme=f'PTC3{app} -> PH3{app}', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'S2': f'HH6{ngb}', 'Vol2': compname2})
+        add_reaction(name=f'R30b_3{app}', scheme=f'HH6{ngb} -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': compname2, 'S2': f'PTC3{app}', 'Vol2': compname})
         add_reaction(name=f'R31_3{app}', scheme=f'EWG3{app} -> EWG6{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 4 (idx 1 on that side)
         ngb = '_{},{}'.format((i+1)%gridr,j)
         compname2='cell[{},{}]'.format((i+1)%gridr,j)
         e4=f' + [EWG1{ngb}]'
-        add_reaction(name=f'R30_4{app}', scheme=f'PTC4{app} + HH1{ngb} -> PH4{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
+        add_reaction(name=f'R30a_4{app}', scheme=f'PTC4{app} -> PH4{app}', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'S2': f'HH1{ngb}', 'Vol2': compname2})
+        add_reaction(name=f'R30b_4{app}', scheme=f'HH1{ngb} -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': compname2, 'S2': f'PTC4{app}', 'Vol2': compname})
         add_reaction(name=f'R31_4{app}', scheme=f'EWG4{app} -> EWG1{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 5 (idx 2 on that side)
@@ -427,7 +435,8 @@ for i in range(0, gridr):
             ngb = '_{},{}'.format((i+1)%gridr,(j+1)%gridc)
             compname2='cell[{},{}]'.format((i+1)%gridr,(j+1)%gridc)
         e5=f' + [EWG2{ngb}]'
-        add_reaction(name=f'R30_5{app}', scheme=f'PTC5{app} + HH2{ngb} -> PH5{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
+        add_reaction(name=f'R30a_5{app}', scheme=f'PTC5{app} -> PH5{app}', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'S2': f'HH2{ngb}', 'Vol2': compname2})
+        add_reaction(name=f'R30b_5{app}', scheme=f'HH2{ngb} -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': compname2, 'S2': f'PTC5{app}', 'Vol2': compname})
         add_reaction(name=f'R31_5{app}', scheme=f'EWG5{app} -> EWG2{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # cell next to position 6 (idx 3 on that side)
@@ -438,7 +447,8 @@ for i in range(0, gridr):
             ngb = '_{},{}'.format(i,(j+1)%gridc)
             compname2='cell[{},{}]'.format(i,(j+1)%gridc)
         e6=f' + [EWG3{ngb}]'
-        add_reaction(name=f'R30_6{app}', scheme=f'PTC6{app} + HH3{ngb} -> PH6{app}', function='Bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'Vol2': compname2})
+        add_reaction(name=f'R30a_6{app}', scheme=f'PTC6{app} -> PH6{app}', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': compname, 'S2': f'HH3{ngb}', 'Vol2': compname2})
+        add_reaction(name=f'R30b_6{app}', scheme=f'HH3{ngb} -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': compname2, 'S2': f'PTC6{app}', 'Vol2': compname})
         add_reaction(name=f'R31_6{app}', scheme=f'EWG6{app} -> EWG3{ngb}', function='Uni-molecular transport', mapping={'Vol': compname, 'k1': 'T0.r_MxferWG'})
 
         # create a species EWG_T that is the sum of the EWGi neighboring sides
@@ -559,7 +569,7 @@ rbody = []
 # add the scoring function
 rheader.append(wrap_copasi_string('Score'))
 rbody.append('Values[Score]')
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH', 'PTC _0', 'HH_0'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
@@ -576,7 +586,6 @@ for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxf
     rbody.append(f'Values[{parm}]')
 rheader.append(wrap_copasi_string('C_CI'))
 rbody.append('Values[C_CI]')
-# TODO: STILL MISSING 'H_EWG' 'HH_0'
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
