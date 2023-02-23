@@ -43,9 +43,10 @@ if( n==3 ):
         # if the numbers are negative raise exception
         if( gridr<1) or (gridc<1): raise
         # if the numbers are odd raise exception
-        if( gridr&1 ) or ( gridc&1 ): raise
+#        if( gridr&1 ) or ( gridc&1 ): raise
+        if( gridc&1 ): raise
     except:
-        print("\nInvalid arguments, rows and columns must be positive even integers.\n")
+        print("\nInvalid arguments, rows and columns must be positive integers, columns must be even.\n")
         exit()
 
 print(f"\ncreating a {gridr}x{gridc} grid")
@@ -569,7 +570,7 @@ rbody = []
 # add the scoring function
 rheader.append(wrap_copasi_string('Score'))
 rbody.append('Values[Score]')
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH', 'PTC_0', 'HH_0'}:
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
@@ -584,12 +585,29 @@ for parm in {'alpha_CIwg','alpha_WGwg'}:
 for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-rheader.append(wrap_copasi_string('C_CI'))
-rbody.append('Values[C_CI]')
+for parm in {'C_CI', 'PTC_0', 'HH_0'}:
+    rheader.append(wrap_copasi_string(parm))
+    rbody.append(f'Values[{parm}]')
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
-# TODO: set up the 48 parameter random sampling
+# Setting up a random sampling of the 48 parameters
+set_scan_settings(subtask='Time-Course', output_during_subtask=False, continue_on_error=True )
+# The number of repeats can easily be changed by the user in the COPASI GUI, we set it to 10 here
+add_scan_item(type='repeat', num_steps=10)
+# add the 48 parameters, min/max are per Table S1, except CI, PTC_0 and HH_0 which are not documented there
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH', 'PTC_0', 'HH_0'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=5, max=100)
+for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
+for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
+for parm in {'alpha_CIwg','alpha_WGwg'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
+for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
+for parm in {'C_CI', 'PTC_0', 'HH_0'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
