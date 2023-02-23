@@ -456,7 +456,7 @@ for i in range(0, gridr):
         set_species(name=f'EWG_T{app}', compartment_name=compname, status='assignment', expression=esides)
 
 # set up the time course parameters, we need to run to time 1100
-set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 100, 'Duration': 1100.0, }})
+set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 55, 'Duration': 1100.0, }})
 
 # if we have 4 or more columns, create a pattern scoring function
 # because of symetry we only need to check the first 4 colums of the first row
@@ -569,7 +569,7 @@ rbody = []
 # add the scoring function
 rheader.append(wrap_copasi_string('Score'))
 rbody.append('Values[Score]')
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH', 'PTC _0', 'HH_0'}:
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH', 'PTC_0', 'HH_0'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
@@ -589,6 +589,7 @@ rbody.append('Values[C_CI]')
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
+# TODO: set up the 48 parameter random sampling
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
