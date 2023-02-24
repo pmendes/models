@@ -591,23 +591,35 @@ for parm in {'C_CI', 'PTC_0', 'HH_0'}:
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
-# Setting up a random sampling of the 48 parameters
+# Setting up a random sampling of the 48 parameters and an optimization to find the
+# minimum of Score by varying the same 48 parameters, assign it to random search
 set_scan_settings(subtask='Time-Course', output_during_subtask=False, continue_on_error=True )
 # The number of repeats can easily be changed by the user in the COPASI GUI, we set it to 10 here
 add_scan_item(type='repeat', num_steps=10)
+parml = []
+set_opt_settings({'expression': 'Values[Score]', 'subtask': T.TIME_COURSE, 'problem': {'Maximize': False,
+  'Randomize Start Values': True, 'Calculate Statistics': False}, 'method': {'name': PE.RANDOM_SEARCH}})
+# TODO: set the number of iterations for random search to 1
 # add the 48 parameters, min/max are per Table S1, except CI, PTC_0 and HH_0 which are not documented there
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH', 'PTC_0', 'HH_0'}:
+for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=5, max=100)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':5,'upper':100})
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
 for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
 for parm in {'alpha_CIwg','alpha_WGwg'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
 for parm in {'C_CI', 'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
 for parm in {'PTC_0', 'HH_0'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=10, max=1e4)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':10,'upper':1e4})
+set_opt_parameters( parml )
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
