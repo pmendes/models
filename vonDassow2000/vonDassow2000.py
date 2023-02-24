@@ -185,7 +185,7 @@ wgper=4       # period for wg becoming wg0
 enphase = 1   # phase between en and wg
 ci0 = 0    # initial for all ci
 ptc0 = 0   # initial for all ptc
-
+def_ini = 1e-8 # default initial concentration
 
 
 for i in range(0, gridr):
@@ -209,22 +209,22 @@ for i in range(0, gridr):
         add_species(f'en{app}', compartment_name=compname, initial_concentration=en0)
         add_species(f'EN{app}', compartment_name=compname, initial_concentration=en0)
         add_species(f'ci{app}', compartment_name=compname, initial_concentration=ci0)
-        add_species(f'CI{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'CN{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'hh{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'HH1{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'HH2{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'HH3{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'HH4{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'HH5{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'HH6{app}', compartment_name=compname, initial_concentration=0)
+        add_species(f'CI{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'CN{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'hh{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'HH1{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'HH2{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'HH3{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'HH4{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'HH5{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'HH6{app}', compartment_name=compname, initial_concentration=def_ini)
         add_species(f'ptc{app}', compartment_name=compname, initial_concentration=ptc0)
-        add_species(f'PTC1{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'PTC2{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'PTC3{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'PTC4{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'PTC5{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'PTC6{app}', compartment_name=compname, initial_concentration=0)
+        add_species(f'PTC1{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'PTC2{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'PTC3{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'PTC4{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'PTC5{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'PTC6{app}', compartment_name=compname, initial_concentration=def_ini)
         add_species(f'wg{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'IWG{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG1{app}', compartment_name=compname, initial_concentration=wg0)
@@ -233,8 +233,8 @@ for i in range(0, gridr):
         add_species(f'EWG4{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=wg0)
-        add_species(f'PH{app}', compartment_name=compname, initial_concentration=0)
-        add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
+        add_species(f'PH{app}', compartment_name=compname, initial_concentration=def_ini)
+        add_species(f'B{app}', compartment_name=compname, initial_concentration=def_ini.4, status='fixed')
 
         # add PTC total within each cell
         add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
