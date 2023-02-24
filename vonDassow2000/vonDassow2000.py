@@ -601,13 +601,13 @@ for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI',
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
 for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
 for parm in {'alpha_CIwg','alpha_WGwg'}:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
-for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
+for parm in {'C_CI', 'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
-for parm in {'C_CI', 'PTC_0', 'HH_0'}:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
+for parm in {'PTC_0', 'HH_0'}:
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=10, max=1e4)
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
