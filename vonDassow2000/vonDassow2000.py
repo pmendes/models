@@ -234,7 +234,7 @@ for i in range(0, gridr):
         add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'PH{app}', compartment_name=compname, initial_concentration=def_ini)
-        add_species(f'B{app}', compartment_name=compname, 0.4, status='fixed')
+        add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
         # add PTC total within each cell
         add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
