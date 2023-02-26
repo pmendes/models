@@ -570,6 +570,8 @@ rbody = []
 # add the scoring function
 rheader.append(wrap_copasi_string('Score'))
 rbody.append('Values[Score]')
+rheader.append(wrap_copasi_string('CPUt'))
+rbody.append("CN=Root,Vector=TaskList[Scan],Timer=CPU Time")
 for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
@@ -601,24 +603,26 @@ set_opt_settings({'expression': 'Values[Score]', 'subtask': T.TIME_COURSE, 'prob
   'Randomize Start Values': True, 'Calculate Statistics': False}, 'method': {'name': PE.RANDOM_SEARCH}})
 # TODO: set the number of iterations for random search to 1
 # add the 48 parameters, min/max are per Table S1, except CI, PTC_0 and HH_0 which are not documented there
+# PTC_0 and HH_0 are documented in Kim KJ (2009) Meth. Mol. Biol. 500:169–200 doi:10.1007/978-1-59745-525-1_6
+# als mentioned in this paper that half-lives and Hill coefficients are varied in linear space
 for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=5, max=100)
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=5, max=100)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':5,'upper':100})
 for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
 for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
 for parm in {'alpha_CIwg','alpha_WGwg'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
-for parm in {'C_CI', 'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
+for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH','C_CI'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
 for parm in {'PTC_0', 'HH_0'}:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=10, max=1e4)
-    parml.append({'name': f'Values[{parm}].InitialValue','lower':10,'upper':1e4})
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=1e3)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':1e3})
 set_opt_parameters( parml )
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
