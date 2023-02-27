@@ -9,6 +9,10 @@
 # produced by this code is released under the Creative Commons
 # CC0 1.0 license
 
+# TODO: THIS CODE NEEDS TO BE FINISHED WITH:
+#        1. ADD TASKS AS IN THE MULTICELLULAR MODEL
+#        2. DECIDE WHAT TO DO WITH PH FORMATION
+#        3. TIDY UP COMMENTS, METADATA, ETC.
 
 import sys
 if '../..' not in sys.path:
