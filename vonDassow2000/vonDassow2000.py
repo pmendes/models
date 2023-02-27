@@ -455,6 +455,9 @@ set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 5
 # if we have 4 or more columns, create a pattern scoring function
 # because of symetry we only need to check the first 4 colums of the first row
 if gridc > 3:
+    # the times for the two events
+    add_parameter('tev1', initial_value=200)
+    add_parameter('tev2', initial_value=1000)
     # add observables for genes wg, en and hh, time 200
     add_parameter('t200_wg_0', initial_value=0)
     add_parameter('t200_wg_1', initial_value=0)
@@ -507,7 +510,7 @@ if gridc > 3:
     evassign.append(('Values[t200_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))'))
     evassign.append(('Values[t200_hh_3]','0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )'))
     # add event for time 2000
-    add_event('T200', trigger='Time > 200', assignments=evassign )
+    add_event('Event1', trigger='Time > Values[tev1]', assignments=evassign )
 
     # set an event for time = 1000 to capture all observables
     evassign = []
@@ -524,7 +527,7 @@ if gridc > 3:
     evassign.append(('Values[t1000_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))'))
     evassign.append(('Values[t1000_hh_3]','0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )'))
     # set event for time 1000
-    add_event('T1000', trigger='Time > 1000', assignments=evassign )
+    add_event('Event2', trigger='Time > Values[tev2]', assignments=evassign )
 else:
     print(f"No scoring function created, need at least 4 columns\n")
 
@@ -675,6 +678,8 @@ if(gridc>3):
             set_species(f'EWG6{app}', initial_concentration=wg0)
             set_species(f'PH{app}', initial_concentration=zero_conc)
 
+    # this one measures at 600
+    set_parameters(name='tev1', exact=True, initial_value=600)
     # add this to the saved parameter sets
     add_parameter_set('Degraded (row 2)')
 
