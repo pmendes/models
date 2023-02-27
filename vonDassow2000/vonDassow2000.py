@@ -597,7 +597,7 @@ add_scan_item(type='repeat', num_steps=10)
 parml = []
 set_opt_settings({'expression': 'Values[Score]', 'subtask': T.TIME_COURSE, 'problem': {'Maximize': False,
   'Randomize Start Values': True, 'Calculate Statistics': False}, 'method': {'name': PE.RANDOM_SEARCH}})
-# TODO: set the number of iterations for random search to 1
+# TODO: it would be nice to set the number of iterations for random search to 1
 # add the 48 parameters, min/max are per Table S1, except CI, PTC_0 and HH_0 which are not documented there
 # PTC_0 and HH_0 are documented in Kim KJ (2009) Meth. Mol. Biol. 500:169–200 doi:10.1007/978-1-59745-525-1_6
 # als mentioned in this paper that half-lives and Hill coefficients are varied in linear space
@@ -623,18 +623,19 @@ set_opt_parameters( parml )
 
 
 # OTHER INITIAL CONDITIONS
-# store the first parameter set
-add_parameter_set('Crisp (row 1)')
+# first store the original initial conditions (for any topology)
+add_parameter_set('row 1 - Crisp')
 
-# we can only do this if there are more than 3 columns
+#TODO: is this IF really needed???
+# we add the other initial conditions if there are more than 3 columns
 if(gridc>3):
 
     # set up degraded initial condition
+    ci0 = 0.05
     for i in range(0, gridr):
         for j in range(0, gridc):
             # the cell coordinates
             app='_{},{}'.format(i,j)
-            ci0 = 0.05
             jmod4 = j % 4
             if jmod4==0:
                 en0 = 0.25
@@ -681,7 +682,299 @@ if(gridc>3):
     # this one measures at 600
     set_parameters(name='tev1', exact=True, initial_value=600)
     # add this to the saved parameter sets
-    add_parameter_set('Degraded (row 2)')
+    add_parameter_set('row 2 - Degraded')
+
+    # set up Crisp, plus ubiquitous low level ci and ptc
+    ci0 = 0.15
+    ptc0 = 0.15
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            # the cell coordinates
+            app='_{},{}'.format(i,j)
+            if (j-1) % 4 == 0:
+                wg0 = 1
+            else:
+                wg0 = zero_conc
+            if (j-1-1) % 4 == 0:
+                en0 = 1
+            else:
+                en0 = zero_conc
+
+            set_species(f'en{app}', initial_concentration=en0)
+            set_species(f'EN{app}', initial_concentration=en0)
+            set_species(f'ci{app}', initial_concentration=ci0)
+            set_species(f'CI{app}', initial_concentration=zero_conc)
+            set_species(f'CN{app}', initial_concentration=zero_conc)
+            set_species(f'hh{app}', initial_concentration=zero_conc)
+            set_species(f'HH1{app}', initial_concentration=zero_conc)
+            set_species(f'HH2{app}', initial_concentration=zero_conc)
+            set_species(f'HH3{app}', initial_concentration=zero_conc)
+            set_species(f'HH4{app}', initial_concentration=zero_conc)
+            set_species(f'HH5{app}', initial_concentration=zero_conc)
+            set_species(f'HH6{app}', initial_concentration=zero_conc)
+            set_species(f'ptc{app}', initial_concentration=ptc0)
+            set_species(f'PTC1{app}', initial_concentration=zero_conc)
+            set_species(f'PTC2{app}', initial_concentration=zero_conc)
+            set_species(f'PTC3{app}', initial_concentration=zero_conc)
+            set_species(f'PTC4{app}', initial_concentration=zero_conc)
+            set_species(f'PTC5{app}', initial_concentration=zero_conc)
+            set_species(f'PTC6{app}', initial_concentration=zero_conc)
+            set_species(f'wg{app}', initial_concentration=wg0)
+            set_species(f'IWG{app}', initial_concentration=wg0)
+            set_species(f'EWG1{app}', initial_concentration=wg0)
+            set_species(f'EWG2{app}', initial_concentration=wg0)
+            set_species(f'EWG3{app}', initial_concentration=wg0)
+            set_species(f'EWG4{app}', initial_concentration=wg0)
+            set_species(f'EWG5{app}', initial_concentration=wg0)
+            set_species(f'EWG6{app}', initial_concentration=wg0)
+            set_species(f'PH{app}', initial_concentration=zero_conc)
+
+    # this one measures at 200
+    set_parameters(name='tev1', exact=True, initial_value=200)
+    # add this to the saved parameter sets
+    add_parameter_set('row 3 - Crisp, plus ubiquitous ci and ptc')
+
+    # set up Three-cell band of ci, stripe of wg on posterior margin
+    ptc0 = zero_conc
+    en0 = zero_conc
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            # the cell coordinates
+            app='_{},{}'.format(i,j)
+            jmod4 = j % 4
+            if jmod4==0:
+                ci0 = 0.45
+                wg0 = zero_conc
+            elif jmod4==1:
+                ci0 = 0.45
+                wg0 = 0.9
+            elif jmod4==2:
+                ci0 = zero_conc
+                wg0 = zero_conc
+            elif jmod4==3:
+                ci0 = 0.45
+                wg0 = zero_conc
+
+            set_species(f'en{app}', initial_concentration=en0)
+            set_species(f'EN{app}', initial_concentration=en0)
+            set_species(f'ci{app}', initial_concentration=ci0)
+            set_species(f'CI{app}', initial_concentration=zero_conc)
+            set_species(f'CN{app}', initial_concentration=zero_conc)
+            set_species(f'hh{app}', initial_concentration=zero_conc)
+            set_species(f'HH1{app}', initial_concentration=zero_conc)
+            set_species(f'HH2{app}', initial_concentration=zero_conc)
+            set_species(f'HH3{app}', initial_concentration=zero_conc)
+            set_species(f'HH4{app}', initial_concentration=zero_conc)
+            set_species(f'HH5{app}', initial_concentration=zero_conc)
+            set_species(f'HH6{app}', initial_concentration=zero_conc)
+            set_species(f'ptc{app}', initial_concentration=ptc0)
+            set_species(f'PTC1{app}', initial_concentration=zero_conc)
+            set_species(f'PTC2{app}', initial_concentration=zero_conc)
+            set_species(f'PTC3{app}', initial_concentration=zero_conc)
+            set_species(f'PTC4{app}', initial_concentration=zero_conc)
+            set_species(f'PTC5{app}', initial_concentration=zero_conc)
+            set_species(f'PTC6{app}', initial_concentration=zero_conc)
+            set_species(f'wg{app}', initial_concentration=wg0)
+            set_species(f'IWG{app}', initial_concentration=wg0)
+            set_species(f'EWG1{app}', initial_concentration=wg0)
+            set_species(f'EWG2{app}', initial_concentration=wg0)
+            set_species(f'EWG3{app}', initial_concentration=wg0)
+            set_species(f'EWG4{app}', initial_concentration=wg0)
+            set_species(f'EWG5{app}', initial_concentration=wg0)
+            set_species(f'EWG6{app}', initial_concentration=wg0)
+            set_species(f'PH{app}', initial_concentration=zero_conc)
+
+    # this one measures at 600
+    set_parameters(name='tev1', exact=True, initial_value=600)
+    # add this to the saved parameter sets
+    add_parameter_set('row 4 - Three-cell band of ci, stripe of wg on posterior margin')
+
+    # set up Three-cell band of ptc, stripe of en on anterior margin
+    ci0 = zero_conc
+    wg0 = zero_conc
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            # the cell coordinates
+            app='_{},{}'.format(i,j)
+            jmod4 = j % 4
+            if jmod4==0:
+                ptc0 = 0.45
+                en0 = zero_conc
+            elif jmod4==1:
+                ptc0 = zero_conc
+                en0 = zero_conc
+            elif jmod4==2:
+                ptc0 = 0.45
+                en0 = 0.9
+            elif jmod4==3:
+                ptc0 = 0.45
+                en0 = zero_conc
+
+            set_species(f'en{app}', initial_concentration=en0)
+            set_species(f'EN{app}', initial_concentration=en0)
+            set_species(f'ci{app}', initial_concentration=ci0)
+            set_species(f'CI{app}', initial_concentration=zero_conc)
+            set_species(f'CN{app}', initial_concentration=zero_conc)
+            set_species(f'hh{app}', initial_concentration=zero_conc)
+            set_species(f'HH1{app}', initial_concentration=zero_conc)
+            set_species(f'HH2{app}', initial_concentration=zero_conc)
+            set_species(f'HH3{app}', initial_concentration=zero_conc)
+            set_species(f'HH4{app}', initial_concentration=zero_conc)
+            set_species(f'HH5{app}', initial_concentration=zero_conc)
+            set_species(f'HH6{app}', initial_concentration=zero_conc)
+            set_species(f'ptc{app}', initial_concentration=ptc0)
+            set_species(f'PTC1{app}', initial_concentration=zero_conc)
+            set_species(f'PTC2{app}', initial_concentration=zero_conc)
+            set_species(f'PTC3{app}', initial_concentration=zero_conc)
+            set_species(f'PTC4{app}', initial_concentration=zero_conc)
+            set_species(f'PTC5{app}', initial_concentration=zero_conc)
+            set_species(f'PTC6{app}', initial_concentration=zero_conc)
+            set_species(f'wg{app}', initial_concentration=wg0)
+            set_species(f'IWG{app}', initial_concentration=wg0)
+            set_species(f'EWG1{app}', initial_concentration=wg0)
+            set_species(f'EWG2{app}', initial_concentration=wg0)
+            set_species(f'EWG3{app}', initial_concentration=wg0)
+            set_species(f'EWG4{app}', initial_concentration=wg0)
+            set_species(f'EWG5{app}', initial_concentration=wg0)
+            set_species(f'EWG6{app}', initial_concentration=wg0)
+            set_species(f'PH{app}', initial_concentration=zero_conc)
+
+    # this one measures at 600
+    set_parameters(name='tev1', exact=True, initial_value=600)
+    # add this to the saved parameter sets
+    add_parameter_set('row 5 - Three-cell band of ptc, stripe of en on anterior margin')
+
+    # set up Three-cell band of ptc, out of phase three-cell band of ci
+    en0 = zero_conc
+    wg0 = zero_conc
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            # the cell coordinates
+            app='_{},{}'.format(i,j)
+            jmod4 = j % 4
+            if jmod4==0:
+                ptc0 = 0.9
+                ci0 = 0.9
+            elif jmod4==1:
+                ptc0 = zero_conc
+                ci0 = 0.9
+            elif jmod4==2:
+                ptc0 = 0.9
+                ci0 = zero_conc
+            elif jmod4==3:
+                ptc0 = 0.9
+                ci0 = 0.9
+
+            set_species(f'en{app}', initial_concentration=en0)
+            set_species(f'EN{app}', initial_concentration=en0)
+            set_species(f'ci{app}', initial_concentration=ci0)
+            set_species(f'CI{app}', initial_concentration=zero_conc)
+            set_species(f'CN{app}', initial_concentration=zero_conc)
+            set_species(f'hh{app}', initial_concentration=zero_conc)
+            set_species(f'HH1{app}', initial_concentration=zero_conc)
+            set_species(f'HH2{app}', initial_concentration=zero_conc)
+            set_species(f'HH3{app}', initial_concentration=zero_conc)
+            set_species(f'HH4{app}', initial_concentration=zero_conc)
+            set_species(f'HH5{app}', initial_concentration=zero_conc)
+            set_species(f'HH6{app}', initial_concentration=zero_conc)
+            set_species(f'ptc{app}', initial_concentration=ptc0)
+            set_species(f'PTC1{app}', initial_concentration=zero_conc)
+            set_species(f'PTC2{app}', initial_concentration=zero_conc)
+            set_species(f'PTC3{app}', initial_concentration=zero_conc)
+            set_species(f'PTC4{app}', initial_concentration=zero_conc)
+            set_species(f'PTC5{app}', initial_concentration=zero_conc)
+            set_species(f'PTC6{app}', initial_concentration=zero_conc)
+            set_species(f'wg{app}', initial_concentration=wg0)
+            set_species(f'IWG{app}', initial_concentration=wg0)
+            set_species(f'EWG1{app}', initial_concentration=wg0)
+            set_species(f'EWG2{app}', initial_concentration=wg0)
+            set_species(f'EWG3{app}', initial_concentration=wg0)
+            set_species(f'EWG4{app}', initial_concentration=wg0)
+            set_species(f'EWG5{app}', initial_concentration=wg0)
+            set_species(f'EWG6{app}', initial_concentration=wg0)
+            set_species(f'PH{app}', initial_concentration=zero_conc)
+
+    # this one measures at 600
+    set_parameters(name='tev1', exact=True, initial_value=600)
+    # add this to the saved parameter sets
+    add_parameter_set('row 6 - Three-cell band of ptc, out of phase three-cell band of ci')
+
+    # set up Close to targe pattern
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            # the cell coordinates
+            app='_{},{}'.format(i,j)
+            jmod4 = j % 4
+            if jmod4==0:
+                ptc0 = 0.1
+                PTC0 = 0.1
+                ci0 = 0.45
+                CI0 = 0.1
+                CN0 = 0.45
+                en0 = zero_conc
+                wg0 = zero_conc
+                hh0 = zero_conc
+            elif jmod4==1:
+                ptc0 = 0.45
+                PTC0 = zero_conc
+                ci0 = 0.45
+                CI0 = 0.45
+                CN0 = 0.1
+                en0 = zero_conc
+                wg0 = 0.9
+                hh0 = zero_conc
+            elif jmod4==2:
+                ptc0 = zero_conc
+                PTC0 = zero_conc
+                ci0 = zero_conc
+                CI0 = zero_conc
+                CN0 = zero_conc
+                en0 = 0.9
+                wg0 = zero_conc
+                hh0 = 0.9
+            elif jmod4==3:
+                ptc0 = 0.45
+                PTC0 = zero_conc
+                ci0 = 0.45
+                CI0 = 0.45
+                CN0 = 0.1
+                en0 = zero_conc
+                wg0 = zero_conc
+                hh0 = zero_conc
+
+            set_species(f'en{app}', initial_concentration=en0)
+            set_species(f'EN{app}', initial_concentration=en0)
+            set_species(f'ci{app}', initial_concentration=ci0)
+            set_species(f'CI{app}', initial_concentration=CI0)
+            set_species(f'CN{app}', initial_concentration=CN0)
+            set_species(f'hh{app}', initial_concentration=hh0)
+            set_species(f'HH1{app}', initial_concentration=hh0)
+            set_species(f'HH2{app}', initial_concentration=hh0)
+            set_species(f'HH3{app}', initial_concentration=hh0)
+            set_species(f'HH4{app}', initial_concentration=hh0)
+            set_species(f'HH5{app}', initial_concentration=hh0)
+            set_species(f'HH6{app}', initial_concentration=hh0)
+            set_species(f'ptc{app}', initial_concentration=ptc0)
+            set_species(f'PTC1{app}', initial_concentration=PTC0)
+            set_species(f'PTC2{app}', initial_concentration=PTC0)
+            set_species(f'PTC3{app}', initial_concentration=PTC0)
+            set_species(f'PTC4{app}', initial_concentration=PTC0)
+            set_species(f'PTC5{app}', initial_concentration=PTC0)
+            set_species(f'PTC6{app}', initial_concentration=PTC0)
+            set_species(f'wg{app}', initial_concentration=wg0)
+            set_species(f'IWG{app}', initial_concentration=wg0)
+            set_species(f'EWG1{app}', initial_concentration=wg0)
+            set_species(f'EWG2{app}', initial_concentration=wg0)
+            set_species(f'EWG3{app}', initial_concentration=wg0)
+            set_species(f'EWG4{app}', initial_concentration=wg0)
+            set_species(f'EWG5{app}', initial_concentration=wg0)
+            set_species(f'EWG6{app}', initial_concentration=wg0)
+            set_species(f'PH{app}', initial_concentration=zero_conc)
+
+    # this one measures at 600
+    set_parameters(name='tev1', exact=True, initial_value=200)
+    # add this to the saved parameter sets
+    add_parameter_set('row 7 - Close to target pattern')
 
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
