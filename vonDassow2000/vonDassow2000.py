@@ -26,6 +26,9 @@ from datetime import date
 gridr = 2
 gridc = 8
 
+# value for nearly zero concentrations (for stability)
+zero_conc = 1e-8 #
+
 # check if arguments were passed to size the grid
 n = len(sys.argv)
 
@@ -172,21 +175,10 @@ add_function(name='Pseudo bi-molecular reaction with transport', type='irreversi
 
 # STEP 1 set up all cells and their internal species and reactions
 
-# variables for the initial concentrations of wg and en
-# periodicity of the initial condition
-# and the phase of en initial condition relative to wg
-#
-# one of the initial conditions in the paper requires wg_i=1, en_i=1, ci0=0, ptc0=0
-# another requires wg_i=1, en_i=1, ci0=0.15, ptc0=0.15
-wg_i = 1       # value to initialize when not zero
-en_i = 1       # value to initialize when not zero
-wgs = 1       # cell number where wg is set to wg0
-wgper=4       # period for wg becoming wg0
-enphase = 1   # phase between en and wg
-zero_conc = 1e-8 # default initial concentration
+# we will use the first initial condition in row 1 of Table 1
+
 ci0 = zero_conc    # initial for all ci
 ptc0 = zero_conc   # initial for all ptc
-
 
 for i in range(0, gridr):
     for j in range(0, gridc):
@@ -195,17 +187,18 @@ for i in range(0, gridr):
         app='_{},{}'.format(i,j)
         add_compartment(name=compname)
 
-        if (j-wgs) % wgper == 0:
-            wg0 = wg_i
+        if (j-1) % 4 == 0:
+            wg0 = 1
         else:
             wg0 = zero_conc
 
-        if (j-wgs-enphase) % wgper == 0:
-            en0 = en_i
+        if (j-1-1) % 4 == 0:
+            en0 = 1
         else:
             en0 = zero_conc
 
         # add species initial concentrations
+        # for now we set them to the conditions of the first row of Table 1 (crisp conditions)
         add_species(f'en{app}', compartment_name=compname, initial_concentration=en0)
         add_species(f'EN{app}', compartment_name=compname, initial_concentration=en0)
         add_species(f'ci{app}', compartment_name=compname, initial_concentration=ci0)
@@ -624,6 +617,67 @@ for parm in {'PTC_0', 'HH_0'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=1e3)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':1e3})
 set_opt_parameters( parml )
+
+
+# OTHER INITIAL CONDITIONS
+# store the first parameter set
+add_parameter_set('Crisp (row 1)')
+
+# we can only do this if there are more than 3 columns
+if(gridc>3):
+
+    # set up degraded initial condition
+    for i in range(0, gridr):
+        for j in range(0, gridc):
+            # the cell coordinates
+            app='_{},{}'.format(i,j)
+            ci0 = 0.05
+            jmod4 = j % 4
+            if jmod4==0:
+                en0 = 0.25
+                wg0 = 0.2
+            elif jmod4==1:
+                en0 = 0.35
+                wg0 = 0.3
+            elif jmod4==2:
+                en0 = 0.55
+                wg0 = 0.2
+            elif jmod4==3:
+                en0 = 0.35
+                wg0 = 0.1
+
+            set_species(f'en{app}', initial_concentration=en0)
+            set_species(f'EN{app}', initial_concentration=en0)
+            set_species(f'ci{app}', initial_concentration=ci0)
+            set_species(f'CI{app}', initial_concentration=zero_conc)
+            set_species(f'CN{app}', initial_concentration=zero_conc)
+            set_species(f'hh{app}', initial_concentration=zero_conc)
+            set_species(f'HH1{app}', initial_concentration=zero_conc)
+            set_species(f'HH2{app}', initial_concentration=zero_conc)
+            set_species(f'HH3{app}', initial_concentration=zero_conc)
+            set_species(f'HH4{app}', initial_concentration=zero_conc)
+            set_species(f'HH5{app}', initial_concentration=zero_conc)
+            set_species(f'HH6{app}', initial_concentration=zero_conc)
+            set_species(f'ptc{app}', initial_concentration=ptc0)
+            set_species(f'PTC1{app}', initial_concentration=zero_conc)
+            set_species(f'PTC2{app}', initial_concentration=zero_conc)
+            set_species(f'PTC3{app}', initial_concentration=zero_conc)
+            set_species(f'PTC4{app}', initial_concentration=zero_conc)
+            set_species(f'PTC5{app}', initial_concentration=zero_conc)
+            set_species(f'PTC6{app}', initial_concentration=zero_conc)
+            set_species(f'wg{app}', initial_concentration=wg0)
+            set_species(f'IWG{app}', initial_concentration=wg0)
+            set_species(f'EWG1{app}', initial_concentration=wg0)
+            set_species(f'EWG2{app}', initial_concentration=wg0)
+            set_species(f'EWG3{app}', initial_concentration=wg0)
+            set_species(f'EWG4{app}', initial_concentration=wg0)
+            set_species(f'EWG5{app}', initial_concentration=wg0)
+            set_species(f'EWG6{app}', initial_concentration=wg0)
+            set_species(f'PH{app}', initial_concentration=zero_conc)
+
+    # add this to the saved parameter sets
+    add_parameter_set('Degraded (row 2)')
+
 
 cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
