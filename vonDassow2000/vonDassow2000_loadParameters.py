@@ -3,7 +3,7 @@
 # vonDassow2000_loadParameters.py
 # This file takes a von Dassow et al (2000) model of segment
 # polarity network built with vonDassow2000.py and a tsv file
-# with parameters and adds each line as a new parameter set
+# with parameters, and adds each line as a new parameter set
 #
 # Written in Feb 2023 by Pedro Mendes <pmendes@uchc.edu>
 # this code is released under the MIT license
