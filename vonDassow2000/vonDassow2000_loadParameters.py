@@ -6,9 +6,7 @@
 # with parameters and adds each line as a new parameter set
 #
 # Written in Feb 2023 by Pedro Mendes <pmendes@uchc.edu>
-# this code is released under the MIT license, the COPASI model
-# produced by this code is released under the Creative Commons
-# CC0 1.0 license
+# this code is released under the MIT license
 
 import sys
 import csv
