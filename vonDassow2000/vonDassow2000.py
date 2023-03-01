@@ -237,7 +237,6 @@ for i in range(0, gridr):
         add_species(f'EWG4{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=wg0)
-        add_species(f'PH{app}', compartment_name=compname, initial_concentration=zero_conc)
         add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
         # add PTC total within each cell
@@ -375,6 +374,15 @@ for i in range(0, gridr):
         add_reaction(name=f'R29_4{app}', scheme=f'PH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
         add_reaction(name=f'R29_5{app}', scheme=f'PH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
         add_reaction(name=f'R29_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
+
+        # set initial concentrations of remaining species
+        for s in range(1, 6):
+            set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
+            set_species(f'PH{s}{app}', initial_concentration=zero_conc)
+
+        # add a PH total within each cell
+        add_species(f'PH_T{app}', compartment_name=compname, status='assignment', expression=f'[PH1{app}] + [PH2{app}] + [PH3{app}] + [PH4{app}] + [PH5{app}] + [PH6{app}]')
+
 
 # STEP 2 set up intercell interactions
 
@@ -544,7 +552,7 @@ else:
 
 #PLOTS
 # time course plots for each mRNA and protein, keep them inactive so user can activate at will
-for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'PTC_T'}:
+for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'PTC_T', 'PH_T'}:
     pcurves = []
     for i in range(0, gridr):
         for j in range(0, gridc):
@@ -608,10 +616,9 @@ add_scan_item(type='repeat', num_steps=10)
 parml = []
 set_opt_settings({'expression': 'Values[Score]', 'subtask': T.TIME_COURSE, 'problem': {'Maximize': False,
   'Randomize Start Values': True, 'Calculate Statistics': False}, 'method': {'name': PE.RANDOM_SEARCH}})
-# TODO: it would be nice to set the number of iterations for random search to 1
 # add the 48 parameters, min/max are per Table S1, except CI, PTC_0 and HH_0 which are not documented there
 # PTC_0 and HH_0 are documented in Kim KJ (2009) Meth. Mol. Biol. 500:169–200 doi:10.1007/978-1-59745-525-1_6
-# als mentioned in this paper that half-lives and Hill coefficients are varied in linear space
+# it's mentioned in this paper that half-lives and Hill coefficients are varied in linear space
 for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=5, max=100)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':5,'upper':100})
@@ -667,28 +674,14 @@ if(gridc>3):
             set_species(f'CI{app}', initial_concentration=zero_conc)
             set_species(f'CN{app}', initial_concentration=zero_conc)
             set_species(f'hh{app}', initial_concentration=zero_conc)
-            set_species(f'HH1{app}', initial_concentration=zero_conc)
-            set_species(f'HH2{app}', initial_concentration=zero_conc)
-            set_species(f'HH3{app}', initial_concentration=zero_conc)
-            set_species(f'HH4{app}', initial_concentration=zero_conc)
-            set_species(f'HH5{app}', initial_concentration=zero_conc)
-            set_species(f'HH6{app}', initial_concentration=zero_conc)
             set_species(f'ptc{app}', initial_concentration=ptc0)
-            set_species(f'PTC1{app}', initial_concentration=zero_conc)
-            set_species(f'PTC2{app}', initial_concentration=zero_conc)
-            set_species(f'PTC3{app}', initial_concentration=zero_conc)
-            set_species(f'PTC4{app}', initial_concentration=zero_conc)
-            set_species(f'PTC5{app}', initial_concentration=zero_conc)
-            set_species(f'PTC6{app}', initial_concentration=zero_conc)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            set_species(f'EWG1{app}', initial_concentration=wg0)
-            set_species(f'EWG2{app}', initial_concentration=wg0)
-            set_species(f'EWG3{app}', initial_concentration=wg0)
-            set_species(f'EWG4{app}', initial_concentration=wg0)
-            set_species(f'EWG5{app}', initial_concentration=wg0)
-            set_species(f'EWG6{app}', initial_concentration=wg0)
-            set_species(f'PH{app}', initial_concentration=zero_conc)
+            for s in range(1, 6):
+                set_species(f'HH{s}{app}', initial_concentration=zero_conc)
+                set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
+                set_species(f'EWG{s}{app}', initial_concentration=wg0)
+                set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
     # this one measures at 600
     set_parameters(name='tev1', exact=True, initial_value=600)
@@ -717,28 +710,14 @@ if(gridc>3):
             set_species(f'CI{app}', initial_concentration=zero_conc)
             set_species(f'CN{app}', initial_concentration=zero_conc)
             set_species(f'hh{app}', initial_concentration=zero_conc)
-            set_species(f'HH1{app}', initial_concentration=zero_conc)
-            set_species(f'HH2{app}', initial_concentration=zero_conc)
-            set_species(f'HH3{app}', initial_concentration=zero_conc)
-            set_species(f'HH4{app}', initial_concentration=zero_conc)
-            set_species(f'HH5{app}', initial_concentration=zero_conc)
-            set_species(f'HH6{app}', initial_concentration=zero_conc)
             set_species(f'ptc{app}', initial_concentration=ptc0)
-            set_species(f'PTC1{app}', initial_concentration=zero_conc)
-            set_species(f'PTC2{app}', initial_concentration=zero_conc)
-            set_species(f'PTC3{app}', initial_concentration=zero_conc)
-            set_species(f'PTC4{app}', initial_concentration=zero_conc)
-            set_species(f'PTC5{app}', initial_concentration=zero_conc)
-            set_species(f'PTC6{app}', initial_concentration=zero_conc)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            set_species(f'EWG1{app}', initial_concentration=wg0)
-            set_species(f'EWG2{app}', initial_concentration=wg0)
-            set_species(f'EWG3{app}', initial_concentration=wg0)
-            set_species(f'EWG4{app}', initial_concentration=wg0)
-            set_species(f'EWG5{app}', initial_concentration=wg0)
-            set_species(f'EWG6{app}', initial_concentration=wg0)
-            set_species(f'PH{app}', initial_concentration=zero_conc)
+            for s in range(1, 6):
+                set_species(f'HH{s}{app}', initial_concentration=zero_conc)
+                set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
+                set_species(f'EWG{s}{app}', initial_concentration=wg0)
+                set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
     # this one measures at 200
     set_parameters(name='tev1', exact=True, initial_value=200)
@@ -772,28 +751,14 @@ if(gridc>3):
             set_species(f'CI{app}', initial_concentration=zero_conc)
             set_species(f'CN{app}', initial_concentration=zero_conc)
             set_species(f'hh{app}', initial_concentration=zero_conc)
-            set_species(f'HH1{app}', initial_concentration=zero_conc)
-            set_species(f'HH2{app}', initial_concentration=zero_conc)
-            set_species(f'HH3{app}', initial_concentration=zero_conc)
-            set_species(f'HH4{app}', initial_concentration=zero_conc)
-            set_species(f'HH5{app}', initial_concentration=zero_conc)
-            set_species(f'HH6{app}', initial_concentration=zero_conc)
             set_species(f'ptc{app}', initial_concentration=ptc0)
-            set_species(f'PTC1{app}', initial_concentration=zero_conc)
-            set_species(f'PTC2{app}', initial_concentration=zero_conc)
-            set_species(f'PTC3{app}', initial_concentration=zero_conc)
-            set_species(f'PTC4{app}', initial_concentration=zero_conc)
-            set_species(f'PTC5{app}', initial_concentration=zero_conc)
-            set_species(f'PTC6{app}', initial_concentration=zero_conc)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            set_species(f'EWG1{app}', initial_concentration=wg0)
-            set_species(f'EWG2{app}', initial_concentration=wg0)
-            set_species(f'EWG3{app}', initial_concentration=wg0)
-            set_species(f'EWG4{app}', initial_concentration=wg0)
-            set_species(f'EWG5{app}', initial_concentration=wg0)
-            set_species(f'EWG6{app}', initial_concentration=wg0)
-            set_species(f'PH{app}', initial_concentration=zero_conc)
+            for s in range(1, 6):
+                set_species(f'HH{s}{app}', initial_concentration=zero_conc)
+                set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
+                set_species(f'EWG{s}{app}', initial_concentration=wg0)
+                set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
     # this one measures at 600
     set_parameters(name='tev1', exact=True, initial_value=600)
@@ -827,28 +792,14 @@ if(gridc>3):
             set_species(f'CI{app}', initial_concentration=zero_conc)
             set_species(f'CN{app}', initial_concentration=zero_conc)
             set_species(f'hh{app}', initial_concentration=zero_conc)
-            set_species(f'HH1{app}', initial_concentration=zero_conc)
-            set_species(f'HH2{app}', initial_concentration=zero_conc)
-            set_species(f'HH3{app}', initial_concentration=zero_conc)
-            set_species(f'HH4{app}', initial_concentration=zero_conc)
-            set_species(f'HH5{app}', initial_concentration=zero_conc)
-            set_species(f'HH6{app}', initial_concentration=zero_conc)
             set_species(f'ptc{app}', initial_concentration=ptc0)
-            set_species(f'PTC1{app}', initial_concentration=zero_conc)
-            set_species(f'PTC2{app}', initial_concentration=zero_conc)
-            set_species(f'PTC3{app}', initial_concentration=zero_conc)
-            set_species(f'PTC4{app}', initial_concentration=zero_conc)
-            set_species(f'PTC5{app}', initial_concentration=zero_conc)
-            set_species(f'PTC6{app}', initial_concentration=zero_conc)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            set_species(f'EWG1{app}', initial_concentration=wg0)
-            set_species(f'EWG2{app}', initial_concentration=wg0)
-            set_species(f'EWG3{app}', initial_concentration=wg0)
-            set_species(f'EWG4{app}', initial_concentration=wg0)
-            set_species(f'EWG5{app}', initial_concentration=wg0)
-            set_species(f'EWG6{app}', initial_concentration=wg0)
-            set_species(f'PH{app}', initial_concentration=zero_conc)
+            for s in range(1, 6):
+                set_species(f'HH{s}{app}', initial_concentration=zero_conc)
+                set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
+                set_species(f'EWG{s}{app}', initial_concentration=wg0)
+                set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
     # this one measures at 600
     set_parameters(name='tev1', exact=True, initial_value=600)
@@ -882,28 +833,14 @@ if(gridc>3):
             set_species(f'CI{app}', initial_concentration=zero_conc)
             set_species(f'CN{app}', initial_concentration=zero_conc)
             set_species(f'hh{app}', initial_concentration=zero_conc)
-            set_species(f'HH1{app}', initial_concentration=zero_conc)
-            set_species(f'HH2{app}', initial_concentration=zero_conc)
-            set_species(f'HH3{app}', initial_concentration=zero_conc)
-            set_species(f'HH4{app}', initial_concentration=zero_conc)
-            set_species(f'HH5{app}', initial_concentration=zero_conc)
-            set_species(f'HH6{app}', initial_concentration=zero_conc)
             set_species(f'ptc{app}', initial_concentration=ptc0)
-            set_species(f'PTC1{app}', initial_concentration=zero_conc)
-            set_species(f'PTC2{app}', initial_concentration=zero_conc)
-            set_species(f'PTC3{app}', initial_concentration=zero_conc)
-            set_species(f'PTC4{app}', initial_concentration=zero_conc)
-            set_species(f'PTC5{app}', initial_concentration=zero_conc)
-            set_species(f'PTC6{app}', initial_concentration=zero_conc)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            set_species(f'EWG1{app}', initial_concentration=wg0)
-            set_species(f'EWG2{app}', initial_concentration=wg0)
-            set_species(f'EWG3{app}', initial_concentration=wg0)
-            set_species(f'EWG4{app}', initial_concentration=wg0)
-            set_species(f'EWG5{app}', initial_concentration=wg0)
-            set_species(f'EWG6{app}', initial_concentration=wg0)
-            set_species(f'PH{app}', initial_concentration=zero_conc)
+            for s in range(1, 6):
+                set_species(f'HH{s}{app}', initial_concentration=zero_conc)
+                set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
+                set_species(f'EWG{s}{app}', initial_concentration=wg0)
+                set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
     # this one measures at 600
     set_parameters(name='tev1', exact=True, initial_value=600)
@@ -959,28 +896,14 @@ if(gridc>3):
             set_species(f'CI{app}', initial_concentration=CI0)
             set_species(f'CN{app}', initial_concentration=CN0)
             set_species(f'hh{app}', initial_concentration=hh0)
-            set_species(f'HH1{app}', initial_concentration=hh0)
-            set_species(f'HH2{app}', initial_concentration=hh0)
-            set_species(f'HH3{app}', initial_concentration=hh0)
-            set_species(f'HH4{app}', initial_concentration=hh0)
-            set_species(f'HH5{app}', initial_concentration=hh0)
-            set_species(f'HH6{app}', initial_concentration=hh0)
             set_species(f'ptc{app}', initial_concentration=ptc0)
-            set_species(f'PTC1{app}', initial_concentration=PTC0)
-            set_species(f'PTC2{app}', initial_concentration=PTC0)
-            set_species(f'PTC3{app}', initial_concentration=PTC0)
-            set_species(f'PTC4{app}', initial_concentration=PTC0)
-            set_species(f'PTC5{app}', initial_concentration=PTC0)
-            set_species(f'PTC6{app}', initial_concentration=PTC0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            set_species(f'EWG1{app}', initial_concentration=wg0)
-            set_species(f'EWG2{app}', initial_concentration=wg0)
-            set_species(f'EWG3{app}', initial_concentration=wg0)
-            set_species(f'EWG4{app}', initial_concentration=wg0)
-            set_species(f'EWG5{app}', initial_concentration=wg0)
-            set_species(f'EWG6{app}', initial_concentration=wg0)
-            set_species(f'PH{app}', initial_concentration=zero_conc)
+            for s in range(1, 6):
+                set_species(f'HH{s}{app}', initial_concentration=hh0)
+                set_species(f'PTC{s}{app}', initial_concentration=PTC0)
+                set_species(f'EWG{s}{app}', initial_concentration=wg0)
+                set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
     # this one measures at 600
     set_parameters(name='tev1', exact=True, initial_value=200)
