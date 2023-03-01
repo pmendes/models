@@ -23,7 +23,7 @@ from datetime import date
 #%matplotlib inline
 
 # MODEL VERSION
-mversion = 1
+mversion = 2
 
 # DEFAULT GRID SIZE
 gridr = 2
@@ -144,20 +144,28 @@ add_parameter('T0.kappa_PTCHH.HH_0', status='assignment', expression="Values[T0]
 add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', expression="Values[T0] * Values[kappa_PTCHH] * Values[PTC_0]")
 
 # Add kinetic rate laws needed
+# note that I had to use max(1e-13,base)^h anywhere where there are powers to avoid numerical issues
+# caused by very small values of base; it is not clear how these were dealt with in the original paper...
 add_function(name='translation', type='general',
              infix='k*mRNA',
              mapping={ 'k': 'parameter', 'mRNA': 'modifier'})
 
+f1="V*((M1*max(1e-13,(1-((max(1e-13,M2)^h2)/(k2^h2+max(1e-13,M2)^h2))))^h1)/(k1^h1+M1*max(1e-13,(1-((max(1e-13,M2)^h2)/(k2^h2+max(1e-13,M2)^h2))))^h1))"
+#f1="'V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))'"
 add_function(name='transcription inducer-repressor pair', type='general',
-             infix='V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))',
+             infix=f1,
              mapping={ 'V': 'parameter', 'M1': 'modifier', 'M2': 'modifier', 'k1': 'parameter', 'h1': 'parameter', 'k2': 'parameter', 'h2': 'parameter'})
 
+f2="V*((alpha1*((max(1e-13,M1*(1-((max(1e-13,M2)^h2)/(k2^h2+max(1e-13,M2)^h2))))^h1)/(k1^h1+max(1e-13,M1*(1-((max(1e-13,M2)^h2)/(k2^h2+max(1e-13,M2)^h2))))^h1))+alpha3*(max(1e-13,M3)^h3)/(k3^h3+max(1e-13,M3)^h3))/(1+alpha1*((max(1e-13,M1*(1-((max(1e-13,M2)^h2)/(k2^h2+max(1e-13,M2)^h2))))^h1)/(k1^h1+max(1e-13,M1*(1-((max(1e-13,M2)^h2)/(k2^h2+max(1e-13,M2)^h2))))^h1))+alpha3*(max(1e-13,M3)^h3)/(k3^h3+max(1e-13,M3)^h3)))"
+#f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
 add_function(name='transcription inducer-repressor pair + inducer', type='general',
-             infix='V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))',
+             infix=f2,
              mapping={ 'V': 'parameter', 'M1': 'modifier', 'M2': 'modifier', 'M3': 'modifier', 'alpha1': 'parameter', 'alpha3': 'parameter', 'k1': 'parameter', 'h1': 'parameter', 'k2': 'parameter', 'h2': 'parameter', 'k3': 'parameter', 'h3': 'parameter'})
 
+f3="V*S*(max(1e-13,M)^h)/(k^h+max(1e-13,M)^h)"
+#f3="V*S*(M^h)/(k^h+M^h)"
 add_function(name='first order w/ activator', type='irreversible',
-             infix='V*S*(M^h)/(k^h+M^h)',
+             infix=f3,
              mapping={ 'V': 'parameter', 'S': 'substrate', 'M': 'modifier', 'k': 'parameter', 'h': 'parameter'})
 
 add_function(name='Uni-molecular transport', type='irreversible',
@@ -986,4 +994,4 @@ sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
 # save the COPASI model
 save_model(cpsfile, overwrite=True)
 # and an SBML version
-save_model(sbmlfile, type='sbml')
+#save_model(sbmlfile, type='sbml')
