@@ -25,7 +25,7 @@ from datetime import date
 n = len(sys.argv)
 
 # make sure there are at least 2 arguments
-if(n == 2):
+if(n <= 2):
     # invalid number of arguments, complain and keep default
     print("\nUsage: vonDassow2000_loadParameters.py modelfile.cps datafile.tsv [setname]\n")
     exit()
@@ -45,9 +45,10 @@ load_model(modelfile)
 try:
     model_info.get_notes().index("version: 1.")
 except:
-    print("\nThe model loaded is not a compatible model created by vonDassow2000.py.\n")
+    print("\nThe model does not seem to be a compatible model created by vonDassow2000.py\n")
     exit()
 
+# TODO: the strategy below needs to be tested with files that contain some columns missing
 # load the parameter set data file
 index = 0
 with open(datafile) as fd:
