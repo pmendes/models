@@ -548,7 +548,8 @@ if gridc > 3:
     # set event for time 1000
     add_event('Event2', trigger='Time > Values[tev2]', assignments=evassign )
 else:
-    print(f"No scoring function created, need at least 4 columns\n")
+    print(f"This model has less than 4 columns, Score function is useless...\n")
+    add_parameter(name='Score', status='assignment', expression='1')
 
 #PLOTS
 # time course plots for each mRNA and protein, keep them inactive so user can activate at will
@@ -915,6 +916,35 @@ cpsfile = f'vonDassow2000_{gridr}x{gridc}.cps'
 sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
 
 # save the COPASI model
-save_model(cpsfile, overwrite=True)
-# and an SBML version
+#save_model(cpsfile, overwrite=True)
+
+# and an SBML version but this could be done in the GUI...
 #save_model(sbmlfile, type='sbml')
+
+#TODO: load the model into a string. Insert a hacked diagram to match the paper
+
+# get the model into a string
+smodel = save_model_to_string()
+# look for insertion point
+index = smodel.find('</GUI>')
+if( index == -1 ):
+    index = smodel.find('</ListOfPlots>')
+    if( index == -1):
+        print("Could not include a diagram, check source code and model, something is fishy...\n")
+        # we can't add the diagram, just save the model in the easy way
+        save_model(cpsfile, overwrite=True)
+        exit
+    index += 14
+else:
+    index += 6
+#open file
+outfile = open(cpsfile, 'w')
+# save first part of .cps file
+outfile.write(smodel[:index])
+# build the layout into a string
+slayout = "\n  <ListOfLayouts xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <Layout key=\"Layout_1\" name=\"Cell Diagram\">\n      <Dimensions width=\"100\" height=\"100\"/>\n    </Layout>\n  </ListOfLayouts>\n"
+# write out the diagram
+outfile.write(slayout)
+# write out the rest of the cps file
+outfile.write(smodel[index:])
+outfile.close()
