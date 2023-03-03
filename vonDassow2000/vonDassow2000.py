@@ -19,6 +19,7 @@ from basico import *
 import numpy as np
 import time
 from datetime import date
+import re
 #import matplotlib.pyplot as plt
 #%matplotlib inline
 
@@ -565,13 +566,13 @@ for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'P
 rheader = []
 rfooter = []
 # add simple species (those that are one per cell)
-for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'PH', 'EWG_T', 'PTC_T'}:
+for pvar in ['hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'PH', 'EWG_T', 'PTC_T']:
     for i in range(0, gridr):
         for j in range(0, gridc):
             rheader.append(wrap_copasi_string(f'[{pvar}_{i},{j}]'))
             rfooter.append(f'[{pvar}_{i},{j}]')
 # add membrane species, those that have 6 pools per cell
-for pvar in {'EWG', 'HH', 'PH', 'PTC'}:
+for pvar in ['EWG', 'HH', 'PH', 'PTC']:
     for s in range(1, 6):
         for i in range(0, gridr):
             for j in range(0, gridc):
@@ -588,22 +589,22 @@ rheader.append(wrap_copasi_string('Score'))
 rbody.append('Values[Score]')
 rheader.append(wrap_copasi_string('CPUt'))
 rbody.append("CN=Root,Vector=TaskList[Scan],Timer=CPU Time")
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
+for parm in ['H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
+for parm in ['kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
+for parm in ['nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in {'alpha_CIwg','alpha_WGwg'}:
+for parm in ['alpha_CIwg','alpha_WGwg']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH'}:
+for parm in ['r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in {'C_CI', 'PTC_0', 'HH_0'}:
+for parm in ['C_CI', 'PTC_0', 'HH_0']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
@@ -620,22 +621,22 @@ set_opt_settings({'expression': 'Values[Score]', 'subtask': T.TIME_COURSE, 'prob
 # add the 48 parameters, min/max are per Table S1, except CI, PTC_0 and HH_0 which are not documented there
 # PTC_0 and HH_0 are documented in Kim KJ (2009) Meth. Mol. Biol. 500:169–200 doi:10.1007/978-1-59745-525-1_6
 # it's mentioned in this paper that half-lives and Hill coefficients are varied in linear space
-for parm in {'H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH'}:
+for parm in ['H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=5, max=100)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':5,'upper':100})
-for parm in {'kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH'}:
+for parm in ['kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
-for parm in {'nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI'}:
+for parm in ['nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
-for parm in {'alpha_CIwg','alpha_WGwg'}:
+for parm in ['alpha_CIwg','alpha_WGwg']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=10)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
-for parm in {'r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH','C_CI'}:
+for parm in ['r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxferHH','C_CI']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
-for parm in {'PTC_0', 'HH_0'}:
+for parm in ['PTC_0', 'HH_0']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=1e3)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':1e3})
 set_opt_parameters( parml )
@@ -941,10 +942,37 @@ else:
 outfile = open(cpsfile, 'w')
 # save first part of .cps file
 outfile.write(smodel[:index])
-# build the layout into a string
-slayout = "\n  <ListOfLayouts xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <Layout key=\"Layout_1\" name=\"Cell Diagram\">\n      <Dimensions width=\"100\" height=\"100\"/>\n    </Layout>\n  </ListOfLayouts>\n"
-# write out the diagram
-outfile.write(slayout)
+# write out the layout, start with header
+outfile.write("\n  <ListOfLayouts xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <Layout key=\"Layout_1\" name=\"Cell Diagram\">\n      <Dimensions width=\"200\" height=\"200\"/>\n      <ListOfMetabGlyphs>")
+# let's iterate over all cells in the first row
+keynum=2
+for j in range(0, gridc):
+    # for each cell 1, j
+    app='_1,{}'.format(j)
+    # x coordinate for this colum
+    posx = 30 + 45*j
+    # add a column with the desired species
+    ix =0
+    for species in ['en', 'wg', 'ptc', 'ci', 'CI', 'CN', 'hh', 'PH_T']:
+        # y coordinate for this species
+        posy = 30 + 45*ix
+        #search the id of the species
+        sp = f'{species}{app}'
+        patt = re.search(rf"<Metabolite\s+key=\"([a-zA-Z0-9_]+)\"\s+name=\"{sp}\"", smodel)
+        if( patt==None ):
+            print(f'\ncould not find id for {sp} in the model\n')
+            raise
+        metid = patt.group(1)
+        outfile.write(f"\n        <MetaboliteGlyph key=\"Layout_{keynum}\" name=\"{sp}\" metabolite=\"{metid}\">")
+        outfile.write("\n          <BoundingBox>")
+        outfile.write(f"\n            <Position x=\"{posx}\" y=\"{posy}\"/>")
+        outfile.write("\n            <Dimensions width=\"30\" height=\"30\"/>")
+        outfile.write("\n          </BoundingBox>")
+        outfile.write("\n        </MetaboliteGlyph>")
+        keynum += 1
+        ix += 1
+# close out diagram
+outfile.write("\n      </ListOfMetabGlyphs>\n    </Layout>\n  </ListOfLayouts>\n")
 # write out the rest of the cps file
 outfile.write(smodel[index:])
 outfile.close()
