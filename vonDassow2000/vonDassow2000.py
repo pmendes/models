@@ -24,7 +24,7 @@ import re
 #%matplotlib inline
 
 # MODEL VERSION
-mversion = 3
+mversion = 4
 
 # DEFAULT GRID SIZE
 gridr = 2
