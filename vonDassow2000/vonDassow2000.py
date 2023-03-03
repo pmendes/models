@@ -950,8 +950,10 @@ if 1000 > width:
         width = 1000
 outfile.write(f"\n      <Dimensions width=\"{width}\" height=\"1000\"/>")
 outfile.write("\n      <ListOfMetabGlyphs>")
+keynum=2 # to make IDs unique
+spid = []
 # let's iterate over all cells in the first row
-keynum=2
+# add the metabolite glyphs
 for j in range(0, gridc):
     # for each cell 0, j
     app='_0,{}'.format(j)
@@ -970,6 +972,9 @@ for j in range(0, gridc):
             raise
         metid = patt.group(1)
         outfile.write(f"\n        <MetaboliteGlyph key=\"Layout_{keynum}\" name=\"{sp}\" metabolite=\"{metid}\">")
+        # keep the id in a list, we'll need it later
+        if j == 0:
+            spid.append(f"Layout_{keynum}")
         outfile.write("\n          <BoundingBox>")
         outfile.write(f"\n            <Position x=\"{posx}\" y=\"{posy}\"/>")
         outfile.write("\n            <Dimensions width=\"30\" height=\"30\"/>")
@@ -977,8 +982,22 @@ for j in range(0, gridc):
         outfile.write("\n        </MetaboliteGlyph>")
         keynum += 1
         ix += 1
+outfile.write("\n      </ListOfMetabGlyphs>\n      <ListOfTextGlyphs>")
+# add the text glyphs
+ix =0
+for species in ['en', 'wg', 'ptc', 'ci', 'CI', 'CN', 'hh', 'PH']:
+    # y coordinate for this species
+    posy = 30 + 70*ix
+    outfile.write(f"\n        <TextGlyph key=\"Layout_{keynum}\" name=\"TextGlyph\" graphicalObject=\"{spid[ix]}\" text=\"{species}\">")
+    outfile.write("\n          <BoundingBox>")
+    outfile.write(f"\n            <Position x=\"10\" y=\"{posy}\"/>")
+    outfile.write("\n            <Dimensions width=\"30\" height=\"30\"/>")
+    outfile.write("\n          </BoundingBox>")
+    outfile.write("\n        </TextGlyph>")
+    keynum += 1
+    ix += 1
 # close out diagram
-outfile.write("\n      </ListOfMetabGlyphs>\n    </Layout>\n  </ListOfLayouts>")
+outfile.write("\n      </ListOfTextGlyphs>\n    </Layout>\n  </ListOfLayouts>")
 # write out the rest of the cps file
 outfile.write(smodel[index:])
 outfile.close()
