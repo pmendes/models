@@ -23,7 +23,7 @@ from datetime import date
 #%matplotlib inline
 
 # highest version that this file can deal with
-mversion = 3
+mversion = 4
 
 # check arguments
 n = len(sys.argv)
