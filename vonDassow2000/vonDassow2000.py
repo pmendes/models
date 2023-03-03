@@ -470,7 +470,7 @@ for i in range(0, gridr):
         set_species(name=f'EWG_T{app}', compartment_name=compname, status='assignment', expression=esides)
 
 # set up the time course parameters, we need to run to time 1100
-set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 55, 'Duration': 1100.0, }})
+set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 55, 'Duration': 1100.0, 'StepSize': 20 }})
 
 # if we have 4 or more columns, create a pattern scoring function
 # because of symetry we only need to check the first 4 colums of the first row
@@ -943,19 +943,25 @@ outfile = open(cpsfile, 'w')
 # save first part of .cps file
 outfile.write(smodel[:index])
 # write out the layout, start with header
-outfile.write("\n  <ListOfLayouts xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <Layout key=\"Layout_1\" name=\"Cell Diagram\">\n      <Dimensions width=\"200\" height=\"200\"/>\n      <ListOfMetabGlyphs>")
+outfile.write("\n  <ListOfLayouts xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n    <Layout key=\"Layout_1\" name=\"Cell Diagram\">")
+# dimensions: width 70*(gridc+2)
+width = 70*(gridc+2)
+if 1000 > width:
+        width = 1000
+outfile.write(f"\n      <Dimensions width=\"{width}\" height=\"1000\"/>")
+outfile.write("\n      <ListOfMetabGlyphs>")
 # let's iterate over all cells in the first row
 keynum=2
 for j in range(0, gridc):
-    # for each cell 1, j
-    app='_1,{}'.format(j)
+    # for each cell 0, j
+    app='_0,{}'.format(j)
     # x coordinate for this colum
-    posx = 30 + 45*j
+    posx = 70 + 70*j
     # add a column with the desired species
     ix =0
     for species in ['en', 'wg', 'ptc', 'ci', 'CI', 'CN', 'hh', 'PH_T']:
         # y coordinate for this species
-        posy = 30 + 45*ix
+        posy = 30 + 70*ix
         #search the id of the species
         sp = f'{species}{app}'
         patt = re.search(rf"<Metabolite\s+key=\"([a-zA-Z0-9_]+)\"\s+name=\"{sp}\"", smodel)
@@ -972,7 +978,7 @@ for j in range(0, gridc):
         keynum += 1
         ix += 1
 # close out diagram
-outfile.write("\n      </ListOfMetabGlyphs>\n    </Layout>\n  </ListOfLayouts>\n")
+outfile.write("\n      </ListOfMetabGlyphs>\n    </Layout>\n  </ListOfLayouts>")
 # write out the rest of the cps file
 outfile.write(smodel[index:])
 outfile.close()
