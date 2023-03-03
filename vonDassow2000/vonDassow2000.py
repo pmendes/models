@@ -377,7 +377,7 @@ for i in range(0, gridr):
         add_reaction(name=f'R29_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
 
         # set initial concentrations of remaining species
-        for s in range(1, 6):
+        for s in range(1, 7):
             set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
             set_species(f'PH{s}{app}', initial_concentration=zero_conc)
 
@@ -573,7 +573,7 @@ for pvar in ['hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'PH', 'EWG_
             rfooter.append(f'[{pvar}_{i},{j}]')
 # add membrane species, those that have 6 pools per cell
 for pvar in ['EWG', 'HH', 'PH', 'PTC']:
-    for s in range(1, 6):
+    for s in range(1, 7):
         for i in range(0, gridr):
             for j in range(0, gridc):
                 rheader.append(wrap_copasi_string(f'[{pvar}{s}_{i},{j}]'))
@@ -679,7 +679,7 @@ if(gridc>3):
             set_species(f'ptc{app}', initial_concentration=ptc0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            for s in range(1, 6):
+            for s in range(1, 7):
                 set_species(f'HH{s}{app}', initial_concentration=zero_conc)
                 set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
                 set_species(f'EWG{s}{app}', initial_concentration=wg0)
@@ -715,7 +715,7 @@ if(gridc>3):
             set_species(f'ptc{app}', initial_concentration=ptc0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            for s in range(1, 6):
+            for s in range(1, 7):
                 set_species(f'HH{s}{app}', initial_concentration=zero_conc)
                 set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
                 set_species(f'EWG{s}{app}', initial_concentration=wg0)
@@ -756,7 +756,7 @@ if(gridc>3):
             set_species(f'ptc{app}', initial_concentration=ptc0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            for s in range(1, 6):
+            for s in range(1, 7):
                 set_species(f'HH{s}{app}', initial_concentration=zero_conc)
                 set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
                 set_species(f'EWG{s}{app}', initial_concentration=wg0)
@@ -797,7 +797,7 @@ if(gridc>3):
             set_species(f'ptc{app}', initial_concentration=ptc0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            for s in range(1, 6):
+            for s in range(1, 7):
                 set_species(f'HH{s}{app}', initial_concentration=zero_conc)
                 set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
                 set_species(f'EWG{s}{app}', initial_concentration=wg0)
@@ -838,7 +838,7 @@ if(gridc>3):
             set_species(f'ptc{app}', initial_concentration=ptc0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            for s in range(1, 6):
+            for s in range(1, 7):
                 set_species(f'HH{s}{app}', initial_concentration=zero_conc)
                 set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
                 set_species(f'EWG{s}{app}', initial_concentration=wg0)
@@ -901,7 +901,7 @@ if(gridc>3):
             set_species(f'ptc{app}', initial_concentration=ptc0)
             set_species(f'wg{app}', initial_concentration=wg0)
             set_species(f'IWG{app}', initial_concentration=wg0)
-            for s in range(1, 6):
+            for s in range(1, 7):
                 set_species(f'HH{s}{app}', initial_concentration=hh0)
                 set_species(f'PTC{s}{app}', initial_concentration=PTC0)
                 set_species(f'EWG{s}{app}', initial_concentration=wg0)
@@ -956,7 +956,7 @@ for j in range(0, gridc):
     # for each cell 0, j
     app='_0,{}'.format(j)
     # x coordinate for this colum
-    posx = 70 + 50*j
+    posx = 70 + 60*j
     # add a column with the desired species
     ix =0
     for species in ['en', 'wg', 'ptc', 'ci', 'CI', 'CN', 'hh', 'PH_T']:
