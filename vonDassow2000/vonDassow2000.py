@@ -922,8 +922,6 @@ sbmlfile = f'vonDassow2000_{gridr}x{gridc}.xml'
 # and an SBML version but this could be done in the GUI...
 #save_model(sbmlfile, type='sbml')
 
-#TODO: load the model into a string. Insert a hacked diagram to match the paper
-
 # get the model into a string
 smodel = save_model_to_string()
 # look for insertion point
@@ -958,12 +956,12 @@ for j in range(0, gridc):
     # for each cell 0, j
     app='_0,{}'.format(j)
     # x coordinate for this colum
-    posx = 70 + 70*j
+    posx = 70 + 50*j
     # add a column with the desired species
     ix =0
     for species in ['en', 'wg', 'ptc', 'ci', 'CI', 'CN', 'hh', 'PH_T']:
         # y coordinate for this species
-        posy = 30 + 70*ix
+        posy = 30 + 60*ix
         #search the id of the species
         sp = f'{species}{app}'
         patt = re.search(rf"<Metabolite\s+key=\"([a-zA-Z0-9_]+)\"\s+name=\"{sp}\"", smodel)
@@ -987,7 +985,7 @@ outfile.write("\n      </ListOfMetabGlyphs>\n      <ListOfTextGlyphs>")
 ix =0
 for species in ['en', 'wg', 'ptc', 'ci', 'CI', 'CN', 'hh', 'PH']:
     # y coordinate for this species
-    posy = 30 + 70*ix
+    posy = 30 + 60*ix
     outfile.write(f"\n        <TextGlyph key=\"Layout_{keynum}\" name=\"TextGlyph\" graphicalObject=\"{spid[ix]}\" text=\"{species}\">")
     outfile.write("\n          <BoundingBox>")
     outfile.write(f"\n            <Position x=\"10\" y=\"{posy}\"/>")
