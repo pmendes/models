@@ -55,7 +55,7 @@ fversion = int(vrs.group(1))
 # give warnings if version is outside our domain
 if fversion < 1:
     print(f'\n{modelfile} has a strange version number ({fversion}), this may not work well...\n')
-if fversion > 3:
+if fversion > mversion:
     print(f'\n{modelfile} was created with a version more recent that this file ({fversion} > {mversion}), this may not work well...\n')
 
 # load the parameter set data file
