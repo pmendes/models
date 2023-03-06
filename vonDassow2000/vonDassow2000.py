@@ -31,7 +31,7 @@ gridr = 2
 gridc = 8
 
 # value for nearly zero concentrations (for stability)
-zero_conc = 1e-8 #
+zero_conc = 1e-20 #
 
 # check if arguments were passed to size the grid
 n = len(sys.argv)
@@ -65,9 +65,9 @@ if(n==4):
     else:
         altratelaws = False
 
-print(f"\ncreating a {gridr}x{gridc} grid")
+print(f"\ncreating a {gridr}x{gridc} grid\n")
 if altratelaws:
-    print("\nusing alternative rate laws to avoid numerical errors")
+    print("using alternative rate laws to avoid numerical errors\n")
 
 # Example grid 8x2
 #
@@ -155,16 +155,17 @@ add_parameter('T0.kappa_PTCHH.HH_0', status='assignment', expression="Values[T0]
 add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', expression="Values[T0] * Values[kappa_PTCHH] * Values[PTC_0]")
 
 # Add kinetic rate laws needed
-# optionally the user can select alternative rate laws where any base raised to a power is substituted by # max(1e-16, base) this allows avoiding numerical errors that appear when the exponent is fractional and
+# optionally the user can select alternative rate laws where any base raised to a power is substituted by
+# max(1e-100, base) this allows avoiding numerical errors that appear when the exponent is fractional and
 # the base is very close to zero. In COPASI using the original rate laws generates about 3-4% errors
 # when sampling parameters randomly (for Table 1 of the original paper). von Dassow et al. never mention
 # any problems, perhaps their own integrator avoids these problems?
 
 if altratelaws:
-    f1="V*((M1*max(1e-16,(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+M1*max(1e-16,(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))"
-#    f1="V*((M1*max(1e-16,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-16,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
-    f2="V*((alpha1*((max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))+alpha3*(max(1e-16,M3)^h3)/(k3^h3+max(1e-16,M3)^h3))/(1+alpha1*((max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))+alpha3*(max(1e-16,M3)^h3)/(k3^h3+max(1e-16,M3)^h3)))"
-    f3="V*S*(max(1e-16,M)^h)/(k^h+max(1e-16,M)^h)"
+    f1="V*((M1*max(1e-100,(1-((max(1e-100,M2)^h2)/(k2^h2+max(1e-100,M2)^h2))))^h1)/(k1^h1+M1*max(1e-100,(1-((max(1e-100,M2)^h2)/(k2^h2+max(1e-100,M2)^h2))))^h1))"
+#    f1="V*((M1*max(1e-100,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-100,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
+    f2="V*((alpha1*((max(1e-100,M1*(1-((max(1e-100,M2)^h2)/(k2^h2+max(1e-100,M2)^h2))))^h1)/(k1^h1+max(1e-100,M1*(1-((max(1e-100,M2)^h2)/(k2^h2+max(1e-100,M2)^h2))))^h1))+alpha3*(max(1e-100,M3)^h3)/(k3^h3+max(1e-100,M3)^h3))/(1+alpha1*((max(1e-100,M1*(1-((max(1e-100,M2)^h2)/(k2^h2+max(1e-100,M2)^h2))))^h1)/(k1^h1+max(1e-100,M1*(1-((max(1e-100,M2)^h2)/(k2^h2+max(1e-100,M2)^h2))))^h1))+alpha3*(max(1e-100,M3)^h3)/(k3^h3+max(1e-100,M3)^h3)))"
+    f3="V*S*(max(1e-100,M)^h)/(k^h+max(1e-100,M)^h)"
 else:
     f1="V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))"
     f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
@@ -609,10 +610,10 @@ rbody.append("CN=Root,Vector=TaskList[Scan],Timer=CPU Time")
 for parm in ['H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in ['kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH']:
+for parm in ['kappa_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
-for parm in ['nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI']:
+for parm in ['nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_WGen','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI']:
     rheader.append(wrap_copasi_string(parm))
     rbody.append(f'Values[{parm}]')
 for parm in ['alpha_CIwg','alpha_WGwg']:
@@ -641,10 +642,10 @@ set_opt_settings({'expression': 'Values[Score]', 'subtask': T.TIME_COURSE, 'prob
 for parm in ['H_en','H_EN','H_wg','H_IWG','H_EWG','H_ptc','H_PTC','H_ci','H_CI','H_hh','H_HH','H_PH']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=5, max=100)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':5,'upper':100})
-for parm in ['kappa_WGen','nu_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH']:
+for parm in ['kappa_WGen','kappa_CNen','kappa_CNwg','kappa_CIwg','kappa_WGwg','kappa_CNptc','kappa_CIptc','kappa_Bci','kappa_ENci','kappa_ENhh','kappa_CNhh','kappa_PTCCI','kappa_PTCHH']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
-for parm in ['nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI']:
+for parm in ['nu_CNen','nu_CNwg','nu_CIwg','nu_WGwg','nu_WGen','nu_CNptc','nu_CIptc','nu_Bci','nu_ENci','nu_ENhh','nu_CNhh','nu_PTCCI']:
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=False, min=1, max=10)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':10})
 for parm in ['alpha_CIwg','alpha_WGwg']:
