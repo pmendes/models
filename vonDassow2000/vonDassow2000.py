@@ -162,10 +162,10 @@ add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', expression="Values[T0
 # any problems, perhaps their own integrator avoids these problems?
 
 if altratelaws:
-    f1="V*((M1*max(1e-80,,(1-((max(1e-80,,M2)^h2)/(k2^h2+max(1e-80,,M2)^h2))))^h1)/(k1^h1+M1*max(1e-80,,(1-((max(1e-80,,M2)^h2)/(k2^h2+max(1e-80,,M2)^h2))))^h1))"
-#    f1="V*((M1*max(1e-80,,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-80,,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
-    f2="V*((alpha1*((max(1e-80,,M1*(1-((max(1e-80,,M2)^h2)/(k2^h2+max(1e-80,,M2)^h2))))^h1)/(k1^h1+max(1e-80,,M1*(1-((max(1e-80,,M2)^h2)/(k2^h2+max(1e-80,,M2)^h2))))^h1))+alpha3*(max(1e-80,,M3)^h3)/(k3^h3+max(1e-80,,M3)^h3))/(1+alpha1*((max(1e-80,,M1*(1-((max(1e-80,,M2)^h2)/(k2^h2+max(1e-80,,M2)^h2))))^h1)/(k1^h1+max(1e-80,,M1*(1-((max(1e-80,,M2)^h2)/(k2^h2+max(1e-80,,M2)^h2))))^h1))+alpha3*(max(1e-80,,M3)^h3)/(k3^h3+max(1e-80,,M3)^h3)))"
-    f3="V*S*(max(1e-80,,M)^h)/(k^h+max(1e-80,,M)^h)"
+    f1="V*((M1*max(1e-80,(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+M1*max(1e-80,(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))"
+#    f1="V*((M1*max(1e-80,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-80,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
+    f2="V*((alpha1*((max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))+alpha3*(max(1e-80,M3)^h3)/(k3^h3+max(1e-80,M3)^h3))/(1+alpha1*((max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))+alpha3*(max(1e-80,M3)^h3)/(k3^h3+max(1e-80,M3)^h3)))"
+    f3="V*S*(max(1e-80,M)^h)/(k^h+max(1e-80,M)^h)"
 else:
     f1="V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))"
     f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
