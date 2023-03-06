@@ -37,12 +37,12 @@ zero_conc = 1e-8 #
 n = len(sys.argv)
 
 # make sure there none or exactly 2 arguments
-if(n == 2) or (n > 3):
+if(n == 2) or (n > 4):
     # invalid number of arguments, complain and keep default
-    print("\nUsage: vonDassow2000.py rows colums\n")
+    print("\nUsage: vonDassow2000.py rows colums [alt]\n  (alt optional argument is for alternative rate laws)\n")
     exit()
 
-if( n==3 ):
+if( n>=3 ):
     # we got two arguments, set rows and columns
     try:
         gridr = int(sys.argv[1])
@@ -56,8 +56,18 @@ if( n==3 ):
         print("\nInvalid arguments, rows and columns must be positive integers, columns must be even.\n")
         exit()
 
-print(f"\ncreating a {gridr}x{gridc} grid")
+altratelaws = False
 
+if(n==4):
+    # we got three arguments, check for "alt" or error
+    if sys.argv[3] == "alt":
+        altratelaws = True
+    else:
+        altratelaws = False
+
+print(f"\ncreating a {gridr}x{gridc} grid")
+if altratelaws:
+    print("\nusing alternative rate laws to avoid numerical errors")
 
 # Example grid 8x2
 #
@@ -145,26 +155,32 @@ add_parameter('T0.kappa_PTCHH.HH_0', status='assignment', expression="Values[T0]
 add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', expression="Values[T0] * Values[kappa_PTCHH] * Values[PTC_0]")
 
 # Add kinetic rate laws needed
-# note that I had to use max(1e-16,base)^h anywhere where there are powers to avoid numerical issues
-# caused by very small values of base; it is not clear how these were dealt with in the original paper...
+# optionally the user can select alternative rate laws where any base raised to a power is substituted by # max(1e-16, base) this allows avoiding numerical errors that appear when the exponent is fractional and
+# the base is very close to zero. In COPASI using the original rate laws generates about 30% errors
+# when sampling parameters randomly (for Table 1 of the original paper). von Dassow et al. never mention
+# any problems, perhaps their own integrator avoids these problems?
+
+if altratelaws:
+    f1="V*((M1*max(1e-16,(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+M1*max(1e-16,(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))"
+    f2="V*((alpha1*((max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))+alpha3*(max(1e-16,M3)^h3)/(k3^h3+max(1e-16,M3)^h3))/(1+alpha1*((max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))+alpha3*(max(1e-16,M3)^h3)/(k3^h3+max(1e-16,M3)^h3)))"
+    f3="V*S*(max(1e-16,M)^h)/(k^h+max(1e-16,M)^h)"
+else:
+    f1="V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))"
+    f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
+    f3="V*S*(M^h)/(k^h+M^h)"
+
 add_function(name='translation', type='general',
              infix='k*mRNA',
              mapping={ 'k': 'parameter', 'mRNA': 'modifier'})
 
-f1="V*((M1*max(1e-16,(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+M1*max(1e-16,(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))"
-#f1="'V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))'"
 add_function(name='transcription inducer-repressor pair', type='general',
              infix=f1,
              mapping={ 'V': 'parameter', 'M1': 'modifier', 'M2': 'modifier', 'k1': 'parameter', 'h1': 'parameter', 'k2': 'parameter', 'h2': 'parameter'})
 
-f2="V*((alpha1*((max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))+alpha3*(max(1e-16,M3)^h3)/(k3^h3+max(1e-16,M3)^h3))/(1+alpha1*((max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1)/(k1^h1+max(1e-16,M1*(1-((max(1e-16,M2)^h2)/(k2^h2+max(1e-16,M2)^h2))))^h1))+alpha3*(max(1e-16,M3)^h3)/(k3^h3+max(1e-16,M3)^h3)))"
-#f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
 add_function(name='transcription inducer-repressor pair + inducer', type='general',
              infix=f2,
              mapping={ 'V': 'parameter', 'M1': 'modifier', 'M2': 'modifier', 'M3': 'modifier', 'alpha1': 'parameter', 'alpha3': 'parameter', 'k1': 'parameter', 'h1': 'parameter', 'k2': 'parameter', 'h2': 'parameter', 'k3': 'parameter', 'h3': 'parameter'})
 
-f3="V*S*(max(1e-16,M)^h)/(k^h+max(1e-16,M)^h)"
-#f3="V*S*(M^h)/(k^h+M^h)"
 add_function(name='first order w/ activator', type='irreversible',
              infix=f3,
              mapping={ 'V': 'parameter', 'S': 'substrate', 'M': 'modifier', 'k': 'parameter', 'h': 'parameter'})
