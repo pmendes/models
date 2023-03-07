@@ -6,7 +6,7 @@
 # grid size is 2x8. To create other sizes pass two numeric
 # arguments on the command line for rows and colums.
 #
-# Written Dec 2022 - Feb 2023 by Pedro Mendes <pmendes@uchc.edu>
+# Written Dec 2022 - Mar 2023 by Pedro Mendes <pmendes@uchc.edu>
 # this code is released under the MIT license, the COPASI model
 # produced by this code is released under the Creative Commons
 # CC0 1.0 license
@@ -80,7 +80,7 @@ if altratelaws:
 # Comments for the whole model
 model_notes=f'<body xmlns="http://www.w3.org/1999/xhtml"><h1>Segment polarity network model</h1><p>This is an implementation of the  model in von Dassow et al (2000), where a gene network controls segment polarity in a fly embryo. The paper describes an arrangement of several hexagonal cells with interactions between neighbors in a toroidal shape (<i>i.e.</i> the edges of the grid are connected to each other) but it did not explicitly mention the dimensions of the grid used in their simulation. Here we adopt a {gridr}x{gridc} grid.</p><p>The model contains species that reside in the cell membrane (<i>EWG</i>, <i>PTC</i>, <i>HH</i>, and <i>PH</i>). Since the cells are hexagonal, the model partitions these species into 6 different pools, one per side of the hexagon. The model allows for these species to diffuse around the membrane, implemented by transfer reactions between a pool and the two neighboring pools. The sides of the hexagonal cells are labelled 1-6, with 1 at the base, and numbered clockwise.</p><p>Some reactions include components from neighboring cells:<ul> <li>Induction of <i>en</i> by <i>EWG</i> (reaction <i>R01</i>) is from all 6 neighboring cells.</li> <li>The complex <i>PH</i> is composed by <i>PTC</i> in this cell and <i>HH</i> from the neighboring cell (reactions <i>R30a_i</i> and <i>R30b_i</i>).</li> <li><i>EWG</i> is exchanged with the neighboring cells (reactions <i>R26_ij</i> where <i>i</i> and <i>j</i> are the indices of two adjacent sides).</li></ul></p><p>Species and reactions are labelled by their cell index and membrane index. Thus, species <i>CI_1,4</i> is the CI protein located in <i>cell[1,4]</i>; species <i>EWG3_0,5</i> is the protein EWG located in the side 3 of <i>cell[0,5]</i>; reaction <i>R2_0,3</i> is reaction number 2 in <i>cell[0,3]</i>; reaction <i>R30_4_0,2</i> is reaction 30 on side 4 of the membrane of <i>cell[0,2]</i>.</p><h2>Reference</h2><p>von Dassow G, Meir E, Munro EM, Odell GM (2000) <a href="https://doi.org/10.1038/35018085">The segment polarity network is a robust developmental module</a> Nature 406:188–192</p><hr width="70%" /><p>This COPASI file was created by Pedro Mendes with a python script, <i>vonDassow2000.py</i>, using <a href="https://github.com/copasi/basico">BasiCO, a simplified python interface to COPASI</a>.</p><p>version: {mversion}.{gridr}x{gridc}</p><hr width="70%" /><p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>'
 
-# Let's start by creating a single cell Segment Polarity Network
+# Create the Segment Polarity Network model in COPASI format
 new_model(name=f'Segment Polarity Network model on {gridr}x{gridc} grid', time_unit='1', quantity_unit='1', length_unit='1',area_unit='1', volume_unit='1', notes=model_notes)
 
 # Add some METADATA
@@ -628,6 +628,10 @@ for parm in ['C_CI', 'PTC_0', 'HH_0']:
 add_report('Score report', task=T.SCAN, header=rheader, body=rbody);
 assign_report('Score report', task=T.SCAN, filename='scanparams.tsv', append=False, confirm_overwrite=False)
 
+# Parameter ranges for sampling below were adjusted with information in the file 'spg1_01_4cell.net
+# which is part of IngeneueInMathematicaV100.zip obtained from the Internet Archive:
+# https://web.archive.org/web/20100813195616/http://rusty.fhl.washington.edu/ingeneue/mathematica.html
+
 # Setting up a random sampling of the 48 parameters and an optimization to find the
 # minimum of Score by varying the same 48 parameters, assign it to random search
 set_scan_settings(subtask='Time-Course', output_during_subtask=False, continue_on_error=True )
@@ -655,8 +659,8 @@ for parm in ['r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxf
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
 for parm in ['PTC_0', 'HH_0']:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=1e3)
-    parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':1e3})
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e3, max=1e6)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1e3,'upper':1e6})
 set_opt_parameters( parml )
 
 
@@ -664,7 +668,6 @@ set_opt_parameters( parml )
 # first store the original initial conditions (for any topology)
 add_parameter_set('row 1 - Crisp')
 
-#TODO: is this IF really needed???
 # we add the other initial conditions if there are more than 3 columns
 if(gridc>3):
 
