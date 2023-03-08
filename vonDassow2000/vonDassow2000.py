@@ -396,8 +396,8 @@ for i in range(0, gridr):
 
         # set initial concentrations of remaining species
         for s in range(1, 7):
-            set_species(f'PTC{s}{app}', initial_concentration=zero_conc)
-            set_species(f'PH{s}{app}', initial_concentration=zero_conc)
+            set_species(f'PTC{s}{app}', initial_concentration=zero_conc, compartment_name=compname)
+            set_species(f'PH{s}{app}', initial_concentration=zero_conc, compartment_name=compname)
 
         # add a PH total within each cell
         add_species(f'PH_T{app}', compartment_name=compname, status='assignment', expression=f'[PH1{app}] + [PH2{app}] + [PH3{app}] + [PH4{app}] + [PH5{app}] + [PH6{app}]')
