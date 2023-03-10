@@ -256,6 +256,12 @@ for i in range(0, gridr):
         add_species(f'EWG4{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=wg0)
         add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=wg0)
+        add_species(f'PH1{app}', compartment_name=compname, initial_concentration=zero_conc)
+        add_species(f'PH2{app}', compartment_name=compname, initial_concentration=zero_conc)
+        add_species(f'PH3{app}', compartment_name=compname, initial_concentration=zero_conc)
+        add_species(f'PH4{app}', compartment_name=compname, initial_concentration=zero_conc)
+        add_species(f'PH5{app}', compartment_name=compname, initial_concentration=zero_conc)
+        add_species(f'PH6{app}', compartment_name=compname, initial_concentration=zero_conc)
         add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
         # add PTC total within each cell
@@ -393,11 +399,6 @@ for i in range(0, gridr):
         add_reaction(name=f'R29_4{app}', scheme=f'PH4{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
         add_reaction(name=f'R29_5{app}', scheme=f'PH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
         add_reaction(name=f'R29_6{app}', scheme=f'PH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PH'})
-
-        # set initial concentrations of remaining species
-        for s in range(1, 7):
-            set_species(f'PTC{s}{app}', initial_concentration=zero_conc, compartment_name=compname)
-            set_species(f'PH{s}{app}', initial_concentration=zero_conc, compartment_name=compname)
 
         # add a PH total within each cell
         add_species(f'PH_T{app}', compartment_name=compname, status='assignment', expression=f'[PH1{app}] + [PH2{app}] + [PH3{app}] + [PH4{app}] + [PH5{app}] + [PH6{app}]')
