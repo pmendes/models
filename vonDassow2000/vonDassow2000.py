@@ -164,11 +164,12 @@ add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', unit="1", expression=
 # when sampling parameters randomly (for Table 1 of the original paper). von Dassow et al. never mention
 # any problems, perhaps their own integrator avoids these problems?
 
+nsuf=""
 if altratelaws:
     f1="V*((M1*max(1e-30,(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+M1*max(1e-30,(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))"
-#    f1="V*((M1*max(1e-30,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-30,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
     f2="V*((alpha1*((max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))+alpha3*(max(1e-30,M3)^h3)/(k3^h3+max(1e-30,M3)^h3))/(1+alpha1*((max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))+alpha3*(max(1e-30,M3)^h3)/(k3^h3+max(1e-30,M3)^h3)))"
     f3="V*S*(max(1e-30,M)^h)/(k^h+max(1e-30,M)^h)"
+    nsuf=" (guarded)"
 else:
     f1="V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))"
     f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
@@ -178,15 +179,15 @@ add_function(name='translation', type='general',
              infix='k*mRNA',
              mapping={ 'k': 'parameter', 'mRNA': 'modifier'})
 
-add_function(name='transcription inducer-repressor pair', type='general',
+add_function(name=f'transcription inducer-repressor pair{nsuf}', type='general',
              infix=f1,
              mapping={ 'V': 'parameter', 'M1': 'modifier', 'M2': 'modifier', 'k1': 'parameter', 'h1': 'parameter', 'k2': 'parameter', 'h2': 'parameter'})
 
-add_function(name='transcription inducer-repressor pair + inducer', type='general',
+add_function(name=f'transcription inducer-repressor pair + inducer{nsuf}', type='general',
              infix=f2,
              mapping={ 'V': 'parameter', 'M1': 'modifier', 'M2': 'modifier', 'M3': 'modifier', 'alpha1': 'parameter', 'alpha3': 'parameter', 'k1': 'parameter', 'h1': 'parameter', 'k2': 'parameter', 'h2': 'parameter', 'k3': 'parameter', 'h3': 'parameter'})
 
-add_function(name='first order w/ activator', type='irreversible',
+add_function(name=f'first order w/ activator{nsuf}', type='irreversible',
              infix=f3,
              mapping={ 'V': 'parameter', 'S': 'substrate', 'M': 'modifier', 'k': 'parameter', 'h': 'parameter'})
 
@@ -271,7 +272,7 @@ for i in range(0, gridr):
         add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
 
         # REACTIONS
-        add_reaction(name=f'R01{app}', scheme=f'-> en{app}; EWG_T{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EWG_T{app}', 'M2': f'CN{app}', 'V': 'T0/H_en', 'k1': 'kappa_WGen', 'h1': 'nu_WGen', 'k2': 'kappa_CNen', 'h2': 'nu_CNen'})
+        add_reaction(name=f'R01{app}', scheme=f'-> en{app}; EWG_T{app} CN{app}', function=f'transcription inducer-repressor pair{nsuf}', mapping={'M1': f'EWG_T{app}', 'M2': f'CN{app}', 'V': 'T0/H_en', 'k1': 'kappa_WGen', 'h1': 'nu_WGen', 'k2': 'kappa_CNen', 'h2': 'nu_CNen'})
 
         add_reaction(name=f'R02{app}', scheme=f'en{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_en'})
 
@@ -279,7 +280,7 @@ for i in range(0, gridr):
 
         add_reaction(name=f'R04{app}', scheme=f'EN{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_EN'})
 
-        add_reaction(name=f'R05{app}', scheme=f'-> ci{app}; B{app} EN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'B{app}', 'M2': f'EN{app}', 'V': 'T0/H_ci', 'k1': 'kappa_Bci', 'h1': 'nu_Bci', 'k2': 'kappa_ENci', 'h2': 'nu_ENci'})
+        add_reaction(name=f'R05{app}', scheme=f'-> ci{app}; B{app} EN{app}', function=f'transcription inducer-repressor pair{nsuf}', mapping={'M1': f'B{app}', 'M2': f'EN{app}', 'V': 'T0/H_ci', 'k1': 'kappa_Bci', 'h1': 'nu_Bci', 'k2': 'kappa_ENci', 'h2': 'nu_ENci'})
 
         add_reaction(name=f'R06{app}', scheme=f'ci{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_ci'})
 
@@ -287,11 +288,11 @@ for i in range(0, gridr):
 
         add_reaction(name=f'R08{app}', scheme=f'CI{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_CI'})
 
-        add_reaction(name=f'R09{app}', scheme=f'CI{app} -> CN{app}; PTC_T{app}', function='first order w/ activator', mapping={'M': f'PTC_T{app}', 'V': 'T0.C_CI', 'k': 'kappa_PTCCI', 'h': 'nu_PTCCI'})
+        add_reaction(name=f'R09{app}', scheme=f'CI{app} -> CN{app}; PTC_T{app}', function=f'first order w/ activator{nsuf}', mapping={'M': f'PTC_T{app}', 'V': 'T0.C_CI', 'k': 'kappa_PTCCI', 'h': 'nu_PTCCI'})
 
         add_reaction(name=f'R10{app}', scheme=f'CN{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_CI'})
 
-        add_reaction(name=f'R11{app}', scheme=f'-> hh{app}; EN{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'EN{app}', 'M2': f'CN{app}', 'V': 'T0/H_hh', 'k1': 'kappa_ENhh', 'h1': 'nu_ENhh', 'k2': 'kappa_CNhh', 'h2': 'nu_CNhh'})
+        add_reaction(name=f'R11{app}', scheme=f'-> hh{app}; EN{app} CN{app}', function=f'transcription inducer-repressor pair{nsuf}', mapping={'M1': f'EN{app}', 'M2': f'CN{app}', 'V': 'T0/H_hh', 'k1': 'kappa_ENhh', 'h1': 'nu_ENhh', 'k2': 'kappa_CNhh', 'h2': 'nu_CNhh'})
 
         add_reaction(name=f'R12{app}', scheme=f'hh{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_hh'})
 
@@ -309,7 +310,7 @@ for i in range(0, gridr):
         add_reaction(name=f'R14_5{app}', scheme=f'HH5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
         add_reaction(name=f'R14_6{app}', scheme=f'HH6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_HH'})
 
-        add_reaction(name=f'R15{app}', scheme=f'-> ptc{app}; CI{app} CN{app}', function='transcription inducer-repressor pair', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'V': 'T0/H_ptc', 'k1': 'kappa_CIptc', 'h1': 'nu_CIptc', 'k2': 'kappa_CNptc', 'h2': 'nu_CNptc'})
+        add_reaction(name=f'R15{app}', scheme=f'-> ptc{app}; CI{app} CN{app}', function=f'transcription inducer-repressor pair{nsuf}', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'V': 'T0/H_ptc', 'k1': 'kappa_CIptc', 'h1': 'nu_CIptc', 'k2': 'kappa_CNptc', 'h2': 'nu_CNptc'})
 
         add_reaction(name=f'R16{app}', scheme=f'ptc{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_ptc'})
 
@@ -327,7 +328,7 @@ for i in range(0, gridr):
         add_reaction(name=f'R18_5{app}', scheme=f'PTC5{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
         add_reaction(name=f'R18_6{app}', scheme=f'PTC6{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_PTC'})
 
-        add_reaction(name=f'R19{app}', scheme=f'-> wg{app}; CI{app} CN{app} IWG{app}', function='transcription inducer-repressor pair + inducer', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'M3': f'IWG{app}', 'V': 'T0/H_wg', 'alpha1': 'alpha_CIwg', 'alpha3': 'alpha_WGwg',  'k1': 'kappa_CIwg', 'h1': 'nu_CIwg', 'k2': 'kappa_CNwg', 'h2': 'nu_CNwg', 'k3': 'kappa_WGwg', 'h3': 'nu_WGwg' })
+        add_reaction(name=f'R19{app}', scheme=f'-> wg{app}; CI{app} CN{app} IWG{app}', function=f'transcription inducer-repressor pair + inducer{nsuf}', mapping={'M1': f'CI{app}', 'M2': f'CN{app}', 'M3': f'IWG{app}', 'V': 'T0/H_wg', 'alpha1': 'alpha_CIwg', 'alpha3': 'alpha_WGwg',  'k1': 'kappa_CIwg', 'h1': 'nu_CIwg', 'k2': 'kappa_CNwg', 'h2': 'nu_CNwg', 'k3': 'kappa_WGwg', 'h3': 'nu_WGwg' })
 
         add_reaction(name=f'R20{app}', scheme=f'wg{app} ->', function='mass action (irreversible)', mapping={'k1': 'T0/H_wg'})
 
