@@ -159,16 +159,16 @@ add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', unit="1", expression=
 
 # Add kinetic rate laws needed
 # optionally the user can select alternative rate laws where any base raised to a power is substituted by
-# max(1e-30, base) this allows avoiding numerical errors that appear when the exponent is fractional and
+# max(1e-80, base) this allows avoiding numerical errors that appear when the exponent is fractional and
 # the base is very close to zero. In COPASI using the original rate laws generates about 3-4% errors
 # when sampling parameters randomly (for Table 1 of the original paper). von Dassow et al. never mention
 # any problems, perhaps their own integrator avoids these problems?
 
 nsuf=""
 if altratelaws:
-    f1="V*((M1*max(1e-30,(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+M1*max(1e-30,(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))"
-    f2="V*((alpha1*((max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))+alpha3*(max(1e-30,M3)^h3)/(k3^h3+max(1e-30,M3)^h3))/(1+alpha1*((max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))+alpha3*(max(1e-30,M3)^h3)/(k3^h3+max(1e-30,M3)^h3)))"
-    f3="V*S*(max(1e-30,M)^h)/(k^h+max(1e-30,M)^h)"
+    f1="V*((M1*max(1e-80,(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+M1*max(1e-80,(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))"
+    f2="V*((alpha1*((max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))+alpha3*(max(1e-80,M3)^h3)/(k3^h3+max(1e-80,M3)^h3))/(1+alpha1*((max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))+alpha3*(max(1e-80,M3)^h3)/(k3^h3+max(1e-80,M3)^h3)))"
+    f3="V*S*(max(1e-80,M)^h)/(k^h+max(1e-80,M)^h)"
     nsuf=" (guarded)"
 else:
     f1="V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))"
