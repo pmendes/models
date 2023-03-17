@@ -86,6 +86,9 @@ new_model(name=f'Segment Polarity Network model on {gridr}x{gridc} grid', time_u
 # Add some METADATA
 set_miriam_annotation(created=date.today(), creators=[{'first_name': 'Pedro', 'last_name': 'Mendes', 'email': 'pmendes@uchc.edu', 'organization': 'University of Connecticut School of Medicine' }], references=[{'resource': 'DOI', 'id': '10.1038/35018085'}])
 
+set_miriam_annotation(descriptions=[{'id': 'GO:0007367','qualifier': 'is','uri': 'http://identifiers.org/go/GO:0007367','resource': 'Gene Ontology'},{'id': '1830','qualifier': 'has taxon','uri': 'http://identifiers.org/taxonomy/1830','resource': 'Taxonomy'}])
+
+
 # GLOBAL QUANTITIES (mostly constants, some assignments)
 # these are the same for all cells
 add_parameter('T0', initial_value=1.0, unit="1")
@@ -156,16 +159,16 @@ add_parameter('T0.kappa_PTCHH.PTC_0', status='assignment', unit="1", expression=
 
 # Add kinetic rate laws needed
 # optionally the user can select alternative rate laws where any base raised to a power is substituted by
-# max(1e-80, base) this allows avoiding numerical errors that appear when the exponent is fractional and
+# max(1e-30, base) this allows avoiding numerical errors that appear when the exponent is fractional and
 # the base is very close to zero. In COPASI using the original rate laws generates about 3-4% errors
 # when sampling parameters randomly (for Table 1 of the original paper). von Dassow et al. never mention
 # any problems, perhaps their own integrator avoids these problems?
 
 if altratelaws:
-    f1="V*((M1*max(1e-80,(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+M1*max(1e-80,(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))"
-#    f1="V*((M1*max(1e-80,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-80,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
-    f2="V*((alpha1*((max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))+alpha3*(max(1e-80,M3)^h3)/(k3^h3+max(1e-80,M3)^h3))/(1+alpha1*((max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1)/(k1^h1+max(1e-80,M1*(1-((max(1e-80,M2)^h2)/(k2^h2+max(1e-80,M2)^h2))))^h1))+alpha3*(max(1e-80,M3)^h3)/(k3^h3+max(1e-80,M3)^h3)))"
-    f3="V*S*(max(1e-80,M)^h)/(k^h+max(1e-80,M)^h)"
+    f1="V*((M1*max(1e-30,(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+M1*max(1e-30,(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))"
+#    f1="V*((M1*max(1e-30,(1-((M2^h2)/(k2^h2+M2^h2))))^h1)/(k1^h1+M1*max(1e-30,(1-((M2^h2)/(k2^h2+M2^h2))))^h1))"
+    f2="V*((alpha1*((max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))+alpha3*(max(1e-30,M3)^h3)/(k3^h3+max(1e-30,M3)^h3))/(1+alpha1*((max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1)/(k1^h1+max(1e-30,M1*(1-((max(1e-30,M2)^h2)/(k2^h2+max(1e-30,M2)^h2))))^h1))+alpha3*(max(1e-30,M3)^h3)/(k3^h3+max(1e-30,M3)^h3)))"
+    f3="V*S*(max(1e-30,M)^h)/(k^h+max(1e-30,M)^h)"
 else:
     f1="V*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))"
     f2="V*((alpha1 * ((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1 + M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3))/(1+alpha1*((M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1)/(k1^h1+M1*(1-((M2^h2)/(k2^h2+M2^h2)))^h1))+alpha3*(M3^h3)/(k3^h3+M3^h3)))"
@@ -660,8 +663,8 @@ for parm in ['r_ExoWG','r_EndoWG','r_MxferWG','r_LMxferWG','r_LMxferPTC','r_LMxf
     add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e-3, max=1)
     parml.append({'name': f'Values[{parm}].InitialValue','lower':1e-3,'upper':1})
 for parm in ['PTC_0', 'HH_0']:
-    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1e3, max=1e6)
-    parml.append({'name': f'Values[{parm}].InitialValue','lower':1e3,'upper':1e6})
+    add_scan_item(item=f'Values[{parm}].InitialValue', type='random', distribution='uniform', log=True, min=1, max=1e3)
+    parml.append({'name': f'Values[{parm}].InitialValue','lower':1,'upper':1e3})
 set_opt_parameters( parml )
 
 
