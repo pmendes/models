@@ -231,45 +231,112 @@ for i in range(0, gridr):
         else:
             en0 = zero_conc
 
-        # add species initial concentrations
+        # add species, initial concentrations, and annotations
         # for now we set them to the conditions of the first row of Table 1 (crisp conditions)
         add_species(f'en{app}', compartment_name=compname, initial_concentration=en0)
+        set_miriam_annotation(name=f'en{app}', descriptions=[{'id': 'FBgn0000577','qualifier': 'is encoded by','uri': 'http://identifiers.org/flybase/FBgn0000577','resource': 'FlyBase'}])
+
         add_species(f'EN{app}', compartment_name=compname, initial_concentration=en0)
+        set_miriam_annotation(name=f'EN{app}', descriptions=[{'id': 'P02836','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P02836','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005634','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005634','resource': 'Gene Ontology'}])
+
         add_species(f'ci{app}', compartment_name=compname, initial_concentration=ci0)
+        set_miriam_annotation(name=f'ci{app}', descriptions=[{'id': 'FBgn0004859','qualifier': 'is encoded by','uri': 'http://identifiers.org/flybase/FBgn0004859','resource': 'FlyBase'}])
+
         add_species(f'CI{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'CI{app}', descriptions=[{'id': 'P19538','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P19538','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005634','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005634','resource': 'Gene Ontology'}])
+
         add_species(f'CN{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'CN{app}', descriptions=[{'id': 'P19538','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P19538','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005634','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005634','resource': 'Gene Ontology'}])
+
         add_species(f'hh{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'hh{app}', descriptions=[{'id': 'FBgn0004644','qualifier': 'is encoded by','uri': 'http://identifiers.org/flybase/FBgn0004644','resource': 'FlyBase'}])
+
         add_species(f'HH1{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'HH1{app}', descriptions=[{'id': 'Q02936','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'HH2{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'HH2{app}', descriptions=[{'id': 'Q02936','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'HH3{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'HH3{app}', descriptions=[{'id': 'Q02936','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'HH4{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'HH4{app}', descriptions=[{'id': 'Q02936','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'HH5{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'HH5{app}', descriptions=[{'id': 'Q02936','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'HH6{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'HH6{app}', descriptions=[{'id': 'Q02936','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'ptc{app}', compartment_name=compname, initial_concentration=ptc0)
+        set_miriam_annotation(name=f'ptc{app}', descriptions=[{'id': 'FBgn0003892','qualifier': 'is encoded by','uri': 'http://identifiers.org/flybase/FBgn0003892','resource': 'FlyBase'}])
+
         add_species(f'PTC1{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PTC1{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PTC2{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PTC2{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PTC3{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PTC3{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PTC4{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PTC4{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PTC5{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PTC5{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PTC6{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PTC6{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'wg{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'wg{app}', descriptions=[{'id': 'FBgn0284084','qualifier': 'is encoded by','uri': 'http://identifiers.org/flybase/FBgn0284084','resource': 'FlyBase'}])
+
         add_species(f'IWG{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'IWG{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005737','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005737','resource': 'Gene Ontology'}])
+
         add_species(f'EWG1{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'EWG1{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'EWG2{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'EWG2{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'EWG3{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'EWG3{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'EWG4{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'EWG4{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'EWG5{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'EWG5{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'EWG6{app}', compartment_name=compname, initial_concentration=wg0)
+        set_miriam_annotation(name=f'EWG6{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PH1{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PH1{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PH2{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PH2{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PH3{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PH3{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PH4{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PH4{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PH5{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PH5{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'PH6{app}', compartment_name=compname, initial_concentration=zero_conc)
+        set_miriam_annotation(name=f'PH6{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
         add_species(f'B{app}', compartment_name=compname, initial_concentration=0.4, status='fixed')
 
         # add PTC total within each cell
         add_species(f'PTC_T{app}', compartment_name=compname, status='assignment', expression=f'[PTC1{app}] + [PTC2{app}] + [PTC3{app}] + [PTC4{app}] + [PTC5{app}] + [PTC6{app}]')
+        set_miriam_annotation(name=f'PTC_T{app}', descriptions=[{'id': 'P18502','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
 
         # REACTIONS
         add_reaction(name=f'R01{app}', scheme=f'-> en{app}; EWG_T{app} CN{app}', function=f'transcription inducer-repressor pair{nsuf}', mapping={'M1': f'EWG_T{app}', 'M2': f'CN{app}', 'V': 'T0/H_en', 'k1': 'kappa_WGen', 'h1': 'nu_WGen', 'k2': 'kappa_CNen', 'h2': 'nu_CNen'})
@@ -406,6 +473,7 @@ for i in range(0, gridr):
 
         # add a PH total within each cell
         add_species(f'PH_T{app}', compartment_name=compname, status='assignment', expression=f'[PH1{app}] + [PH2{app}] + [PH3{app}] + [PH4{app}] + [PH5{app}] + [PH6{app}]')
+        set_miriam_annotation(name=f'PH_T{app}', descriptions=[{'id': 'P18502','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/P18502','resource': 'UniProt Knowledgebase'},{'id': 'Q02936','qualifier': 'has part','uri': 'http://identifiers.org/uniprot/Q02936','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
 
 
 # STEP 2 set up intercell interactions
@@ -491,6 +559,8 @@ for i in range(0, gridr):
         # create a species EWG_T that is the sum of the EWGi neighboring sides
         esides = e1+e2+e3+e4+e5+e6
         set_species(name=f'EWG_T{app}', compartment_name=compname, status='assignment', expression=esides, unit="1")
+        set_miriam_annotation(name=f'EWG_T{app}', descriptions=[{'id': 'P09615','qualifier': 'is version of','uri': 'http://identifiers.org/uniprot/P09615','resource': 'UniProt Knowledgebase'},{'id': 'GO:0005886','qualifier': 'occurs in','uri': 'http://identifiers.org/go/0005886','resource': 'Gene Ontology'}])
+
 
 # set up the time course parameters, we need to run to time 1100
 set_task_settings('Time-Course', {'scheduled': True, 'problem': {'StepNumber': 55, 'Duration': 1100.0, 'StepSize': 20 }})
