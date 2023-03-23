@@ -653,6 +653,20 @@ for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'P
         for j in range(0, gridc):
             pcurves.append({'name': f'{i},{j}', 'channels': ['Time', f'[{pvar}_{i},{j}]']})
     add_plot( f'{pvar}', tasks='Scan, Time-Course', curves=pcurves, active=False)
+if gridc > 3:
+    # time course plots for mRNA per each of the 4 cells
+    for j in range(0, 3):
+        pcurves = []
+        for pvar in {'hh', 'ci', 'en', 'wg', 'ptc'}:
+            pcurves.append({'name': f'0,{j}', 'channels': ['Time', f'[{pvar}_0,{j}]']})
+        add_plot( f'mRNA 0,{j}', tasks='Time-Course', curves=pcurves, active=False)
+    # time course plots for proteins per each of the 4 cells
+    for j in range(0, 3):
+        pcurves = []
+        for pvar in {'CI', 'CN', 'EN', 'IWG', 'EWG_T', 'PH_T', 'PTC_T'}:
+            pcurves.append({'name': f'0,{j}', 'channels': ['Time', f'[{pvar}_0,{j}]']})
+        add_plot( f'Proteins 0,{j}', tasks='Time-Course', curves=pcurves, active=False)
+
 
 #REPORTS
 # add a report for all steady state concentrations
