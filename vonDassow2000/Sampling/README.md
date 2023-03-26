@@ -25,7 +25,7 @@ This folder contains the results of random sampling the the segment polarity net
 | Degraded | 149 | 750,000 | 1/5,000 | 22 | 749,988 | 1/34,090 |
 |Crisp, plus ubiquitous low-level ci and ptc | 110 | 41,258 | 1/375 | 91 | 41,941 | 1/461 |
 |3-cell band of ci, wg stripe on posterior margin | 69 | 40,338 | 1/585 | 97 | 41,994 | 1/433 |
-|3-cell band of ptc, en stripe on anterior margin | 127 | 36,196 | 1/285 | 102 | 37,994 1/372 |
+|3-cell band of ptc, en stripe on anterior margin | 127 | 36,196 | 1/285 | 102 | 37,994 | 1/372 |
 |3-cell band of ptc, out-of-phase 3-cell band of ci | 16 | 226,084 | 1/14,130 | 168 | 229,996  | 1/1,369 |
 |Close to target pattern | 464 | 21,526 | 1/46 | 556 | 21,992 | 1/39|
 
