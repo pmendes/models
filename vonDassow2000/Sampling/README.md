@@ -13,7 +13,7 @@ This folder contains the results of random sampling the the segment polarity net
 
 ## Processed files for Figure
 - **1-log-hits-spider.tsv** contains the data in _1-crisp-hits.tsv_ for a selected set of columns after applying log base 10 (the columns were re-ordered to have the same order as in Fig 2 of the original paper)
-- **1-log-hits-stats-spider.tsv** contains the parameter values of the mean of all values in _1-log-hits-spider.tsv_ and a row with those mean minus standard deviation, and another row with mean plus standard deviation
+- **1-log-hits-stats-spider.tsv** contains the parameter values of the mean of all values in _1-log-hits-spider.tsv_ and a row with mean minus standard deviation, and another row with mean plus standard deviation
 - **param_radial.plt** gnuplot script to produce a figure equivalent to Fig.2A of the original paper (requires gnuplot version 5.2.0 or above)
 
 ## Results
