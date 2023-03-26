@@ -1,6 +1,6 @@
 # von Dassow et al. (2000) model of segment polarity network - Timecourse 1 results
 
-This folder contains the simulations of timecourse1 for the segment polarity network with [COPASI](https://copasi.org) [Virtual Cell](https://vcell.org/), [Tellurium/libRoadRunner](https://tellurium.analogmachine.org/), and [Amici](https://github.com/AMICI-dev/AMICI). The inital conditions are those of name "Degraded" in von Dassow et al. (2000), and the parameter set is one of those found by random sampling that had a score below 0.2.
+This folder contains the simulations of timecourse1 for the segment polarity network with [COPASI](https://copasi.org), [Virtual Cell](https://vcell.org/), [Tellurium/libRoadRunner](https://tellurium.analogmachine.org/), and [Amici](https://github.com/AMICI-dev/AMICI). The inital conditions are those of name "Degraded" in von Dassow et al. (2000), and the parameter set is one of those found by random sampling that had a score below 0.2.
 
 ## Files
 - **timecourse1.copasi.tsv** simulation by COPASI (used LSODA with absolute tolerance 1e-13 and relative tolerance 1e-8)
