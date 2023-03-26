@@ -18,5 +18,5 @@ Files with the extension **.cps** are COPASI files, extension **.xml** are [SBML
     - **vonDassow2000_1x4.timecourse1.xml** SBML L3V1 file with the model in the equivalent COPASI file (above). This includes the appropriate model parameters and initial conditions for the timecourse1 simulation. Can be used as input to _runTellurium.py_
 
  - **Result folders**
-    - **Sampling** results from the random sampling as described in the Table 2 of the original paper.
+    - **Sampling** results from the random sampling as described in the Table 2 of the original paper, that used _vonDassow2000_1x4_alt.cps_.
     - **timecourse1** results from a time course simulation of a specific parameter set using four different simulators that used either _vonDassow2000_1x4.timecourse1.cps_, _vonDassow2000_1x4.timecourse1.xml_ or _vonDassow2000_1x4.timecourse1.omex_
