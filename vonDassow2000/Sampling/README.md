@@ -17,4 +17,4 @@ This folder contains the results of random sampling the the segment polarity net
 - **param_radial.plt** gnuplot script to produce a figure equivalent to Fig.2A of the original paper (requires gnuplot version 5.2.0 or above)
 
 
-![Graphic representation of 'solutions’ obtained with crisp initial conditions. All 1,015 parameter sets with a  score below 0.2 are displayed. Black lines plot mean and standard deviation. Each spoke represents the log-scale range of one parameter. Half-lives and cooperativity coefficients are omitted, as in Fig. 2A of von Dassow et al (2000).](https://github.com/pmendes/models/tree/main/vonDassow2000/Sampling/Fig2.png)
+![Graphic representation of 'solutions’ obtained with crisp initial conditions. All 1,015 parameter sets with a  score below 0.2 are displayed. Black lines plot mean and standard deviation. Each spoke represents the log-scale range of one parameter. Half-lives and cooperativity coefficients are omitted, as in Fig. 2A of von Dassow et al (2000).](https://github.com/pmendes/models/blob/main/vonDassow2000/Sampling/Fig2.png)
