@@ -17,7 +17,7 @@ This folder contains the results of random sampling the the segment polarity net
 - **param_radial.plt** gnuplot script to produce a figure equivalent to Fig.2A of the original paper (requires gnuplot version 5.2.0 or above)
 
 **Table 2** - Frequency of solutions as a function of initial conditions.
-|   | von Dassow et al. (2000) | | | this work | | |
+| --- | von Dassow et al. (2000) | --- | --- | this work | --- | --- |
 | Initial conditions | Hits | Tries | Hit rate | Hits | Tries | Hit rate |
 | --- | --- | --- | --- | --- | --- | --- |
 | Crisp | 1,192 | 240,000 | 1/201 | 1,015 | 239,272 | 1/236 |
