@@ -3,10 +3,10 @@
 This folder contains the simulations of timecourse1 for the segment polarity network with [COPASI](https://copasi.org). The inital conditions are those of name "Degraded" in von Dassow et al. (2000), and the parameter set is one of those found by random sampling that had a score below 0.2. The time course was run with four different software: COPASI, Virtual Cell, Tellurium, and Amici.
 
 ## Files
-- **timecours1.copasi.tsv** simulation by COPASI (used LSODA with absolute tolerance 1e-13 and relative tolerance 1e-8)
-- **timecours1.vcell.tsv** simulation by Virtual Cell (used Adams-Moulton with fixed step size of 0.1). This was run from the file _vonDassow2000_1x4.timecourse1.omex_ in the folder above.
-- **timecours1.tellurium.tsv** simulation by Tellurium/libRoadRunner (used CVODE non-stiff method (Adams-Moulton, variable step size, variable order) with absolute tolerance 1e-12 relative tolerance 1e-6). This was run with the files _runTellurium.py_ and _vonDassow2000_1x4.timecourse1.xml_ in the folder above.
-- **timecours1.amici.tsv** simulation by Amici (used CVODES stiff method (Gear algorithm) with absolute tolerance 1e-16 relative tolerance 1e-8). This was run in the web service [runBioSimulations](https://run.biosimulations.org/) with the file _vonDassow2000_1x4.timecourse1.omex_ in the folder above.
+- **timecourse1.copasi.tsv** simulation by COPASI (used LSODA with absolute tolerance 1e-13 and relative tolerance 1e-8)
+- **timecourse1.vcell.tsv** simulation by Virtual Cell (used Adams-Moulton with fixed step size of 0.1). This was run from the file _vonDassow2000_1x4.timecourse1.omex_ in the folder above.
+- **timecourse1.tellurium.tsv** simulation by Tellurium/libRoadRunner (used CVODE non-stiff method (Adams-Moulton, variable step size, variable order) with absolute tolerance 1e-12 relative tolerance 1e-6). This was run with the files _runTellurium.py_ and _vonDassow2000_1x4.timecourse1.xml_ in the folder above.
+- **timecourse1.amici.tsv** simulation by Amici (used CVODES stiff method (Gear algorithm) with absolute tolerance 1e-16 relative tolerance 1e-8). This was run in the web service [runBioSimulations](https://run.biosimulations.org/) with the file _vonDassow2000_1x4.timecourse1.omex_ in the folder above.
 - **timecourse1.plt** gnuplot script to produce figures 3 and 4 displayed below
 
 ## Results
