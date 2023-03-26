@@ -2,6 +2,8 @@
 
 This contains implementations of the segment polarity network of [von Dassow et. al (2000)](https://doi.org/10.1038/35018085) in COPASI. Model construction was done with python scripts using [BasiCO](https://github.com/copasi/basico), the scripts are included here.
 
+Files with the extension **.cps** are COPASI files, extension **.xml** are [SBML](https://sbml.org/) files, extension **.omex** are OMEX/COMBINE archive files, extension **.py** are python scripts.
+
  - **Python scrips**
     - **vonDassow2000_1cell.py** python script to construct a COPASI model that contains the segment polarity network in a single cell
     - **vonDassow2000.py** constructs a COPASI model with an array of hexagonal cells of arbitrary dimensions given two arguments on the command line (rows and colums). If arguments are missing it will default to an 2x8 grid. It can use alternative rate laws, given a 3rd command line argument "alt"
@@ -9,5 +11,8 @@ This contains implementations of the segment polarity network of [von Dassow et.
     - **runTellurium.py** script to run the timecourse1 simulation from an SBML file (exported from COPASI) by the Tellurium/libRoadRunner simulator
 
  - **Model files**
-  - COPASI files are those with the extension **.cps**
-  - Files with **.xml** extension are [SBML](https://sbml.org/) L4V2 files
+    - **vonDassow2000_1cell.cps** COPASI file encoding the segment polarity network in a single cell. The species from neighboring cells are here included as fixed species
+    - **vonDassow2000_1x4.timecourse1.cps** COPASI file encoding a 1x4 array of cells encoding the semgment polarity network model with a parameter set that converges to the appropriate segmentation pattern
+    - **vonDassow2000_1x4.timecourse1.omex** OMEX file corresponding to the equivalent COPASI file (above). Contains the appropriate SBML and SED-ML files encoding the simulation
+    - **vonDassow2000_1x4.timecourse1.xml** SBML L3V1 file with the model in the equivalent COPASI file (above). This includes the appropriate model parameters and initial conditions for the timecourse1 simulation. Can be used as input to _runTellurium.py_
+
