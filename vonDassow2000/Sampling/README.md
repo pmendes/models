@@ -20,8 +20,7 @@ This folder contains the results of random sampling the the segment polarity net
 
 |  | von Dassow et al. (2000) |  |  | this work |  |  |
 | --- | --- | --- | --- | --- | --- | --- |
-| Initial conditions | Hits | Tries | Hit rate | Hits | Tries | Hit rate |
-| --- | --- | --- | --- | --- | --- | --- |
+| **Initial conditions** | **Hits** | **Tries** | **Hit rate** | **Hits** | **Tries** | **Hit rate** |
 | Crisp | 1,192 | 240,000 | 1/201 | 1,015 | 239,272 | 1/236 |
 
 
