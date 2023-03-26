@@ -1,6 +1,6 @@
 # von Dassow et al. (2000) model of segment polarity network - Random sampling results
 
-This folder contains the results of random sampling the the segment polarity network with [COPASI](https://copasi.org). These results correspond to Fig. 2 and Table 2 of [von Dassow et. al (2000)](https://doi.org/10.1038/35018085). Results are contained in **.tsv** files, whose filenames are prefixed with the corresponding row of Table 2 (see below). Files contain only smaples for which the score was below 0.2 (full results files exceed GitHub limit and will be uploaded to Zenodo).
+This folder contains the results of random sampling the the segment polarity network with [COPASI](https://copasi.org). These results correspond to Fig. 2 and Table 2 of [von Dassow et. al (2000)](https://doi.org/10.1038/35018085). The random sampling was carried out with file _vonDassow2000_1x4_alt.cps_ in the folder above this one. Results are contained in **.tsv** files, whose filenames are prefixed with the corresponding row of Table 2 (see below). Files contain only smaples for which the score was below 0.2 (full results files exceed GitHub limit and will be uploaded to Zenodo).
 
 **Result files**
 - **1-crisp-hits.tsv** results from random sampling with an initial condition named "Crisp" that have scores below 0.2
