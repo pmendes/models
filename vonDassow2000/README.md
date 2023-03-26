@@ -12,6 +12,7 @@ Files with the extension **.cps** are COPASI files, extension **.xml** are [SBML
 
  - **Model files**
     - **vonDassow2000_1cell.cps** COPASI file encoding the segment polarity network in a single cell. The species from neighboring cells are included but have fixed concentrations
+    - **vonDassow2000_1x4_alt.cps** COPASI file used for sampling parameter sets randomly as in the [original paper's](https://doi.org/10.1038/35018085) Fig. 2 and Table 2.
     - **vonDassow2000_1x4.timecourse1.cps** COPASI file encoding a 1x4 array of cells encoding the semgment polarity network model with a parameter set that converges to the appropriate segmentation pattern
     - **vonDassow2000_1x4.timecourse1.omex** OMEX file corresponding to the equivalent COPASI file (above). Contains the appropriate SBML and SED-ML files encoding the simulation
     - **vonDassow2000_1x4.timecourse1.xml** SBML L3V1 file with the model in the equivalent COPASI file (above). This includes the appropriate model parameters and initial conditions for the timecourse1 simulation. Can be used as input to _runTellurium.py_
