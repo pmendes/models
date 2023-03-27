@@ -577,75 +577,41 @@ if gridc > 3:
     # the times for the two events
     add_parameter('tev1', initial_value=200, unit="1")
     add_parameter('tev2', initial_value=1000, unit="1")
-    # add observables for genes wg, en and hh, time 200
-    add_parameter('t200_wg_0', initial_value=0, unit="1")
-    add_parameter('t200_wg_1', initial_value=0, unit="1")
-    add_parameter('t200_wg_2', initial_value=0, unit="1")
-    add_parameter('t200_wg_3', initial_value=0, unit="1")
-    add_parameter('t200_en_0', initial_value=0, unit="1")
-    add_parameter('t200_en_1', initial_value=0, unit="1")
-    add_parameter('t200_en_2', initial_value=0, unit="1")
-    add_parameter('t200_en_3', initial_value=0, unit="1")
-    add_parameter('t200_hh_0', initial_value=0, unit="1")
-    add_parameter('t200_hh_1', initial_value=0, unit="1")
-    add_parameter('t200_hh_2', initial_value=0, unit="1")
-    add_parameter('t200_hh_3', initial_value=0, unit="1")
-    # add observables for genes wg, en and hh, time 200
-    add_parameter('t1000_wg_0', initial_value=0, unit="1")
-    add_parameter('t1000_wg_1', initial_value=0, unit="1")
-    add_parameter('t1000_wg_2', initial_value=0, unit="1")
-    add_parameter('t1000_wg_3', initial_value=0, unit="1")
-    add_parameter('t1000_en_0', initial_value=0, unit="1")
-    add_parameter('t1000_en_1', initial_value=0, unit="1")
-    add_parameter('t1000_en_2', initial_value=0, unit="1")
-    add_parameter('t1000_en_3', initial_value=0, unit="1")
-    add_parameter('t1000_hh_0', initial_value=0, unit="1")
-    add_parameter('t1000_hh_1', initial_value=0, unit="1")
-    add_parameter('t1000_hh_2', initial_value=0, unit="1")
-    add_parameter('t1000_hh_3', initial_value=0, unit="1")
+    # add observables to measure closeness to pattern
+    add_parameter('s_wg_0', status='assignment', unit="1", expression='0.5 * ( ( [wg_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.2 ) ^ 3)')
+    add_parameter('s_wg_1', status='assignment', unit="1", expression='0.5 * ( 1 - ( ( [wg_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,1] /  0.2 ) ^ 3 ) )')
+    add_parameter('s_wg_2', status='assignment', unit="1", expression='0.5 * ( ( [wg_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,2] / 0.2 ) ^ 3 )')
+    add_parameter('s_wg_3', status='assignment', unit="1", expression='0.5 * ( ( [wg_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,3] / 0.2 ) ^ 3)')
+    add_parameter('s_en_0', status='assignment', unit="1", expression='0.5 * ( ( [en_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,0] / 0.2 ) ^ 3 )')
+    add_parameter('s_en_1', status='assignment', unit="1", expression='0.5 * ( ( [en_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,1] / 0.2 ) ^ 3)')
+    add_parameter('s_en_2', status='assignment', unit="1", expression='0.5 * ( 1 - ( ( [en_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,2] / 0.2 ) ^ 3 ) )')
+    add_parameter('s_en_3', status='assignment', unit="1", expression='0.5 * ( ( [en_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,3] / 0.2 ) ^ 3 )')
+    add_parameter('s_hh_0', status='assignment', unit="1", expression='0.5 * ( ( [hh_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,0] / 0.2 ) ^ 3 )')
+    add_parameter('s_hh_1', status='assignment', unit="1", expression='0.5 * ( ( [hh_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,1] / 0.2 ) ^ 3 )')
+    add_parameter('s_hh_2', status='assignment', unit="1", expression='0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))')
+    add_parameter('s_hh_3', status='assignment', unit="1", expression='0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )')
     # values for T200
-    add_parameter(name='Eq15num200', status='assignment', expression='Values[t200_wg_0] + Values[t200_wg_1] + Values[t200_wg_2] + Values[t200_wg_3] + Values[t200_en_0] + Values[t200_en_1] + Values[t200_en_2] + Values[t200_en_3] + Values[t200_hh_0] + Values[t200_hh_1] + Values[t200_hh_2] + Values[t200_hh_3]', unit="1")
+    add_parameter(name='Eq15num200', status='fixed', initial_value=1 , unit="1")
     # values for T1000
-    add_parameter(name='Eq15num1000', status='assignment', expression='Values[t1000_wg_0] + Values[t1000_wg_1] + Values[t1000_wg_2] + Values[t1000_wg_3] + Values[t1000_en_0] + Values[t1000_en_1] + Values[t1000_en_2] + Values[t1000_en_3] + Values[t1000_hh_0] + Values[t1000_hh_1] + Values[t1000_hh_2] + Values[t1000_hh_3]', unit="1")
+    add_parameter(name='Eq15num1000', status='fixed', initial_value=1 , unit="1")
     # numerator of Eq 15
     add_parameter(name='Eq15num', status='assignment', expression='Values[Eq15num200] + Values[Eq15num1000]', unit="1")
     # Eq 15 as the sum of scores for T200 and T1000
     add_parameter(name='Eq15', status='assignment', expression='Values[Eq15num] / ( 1 + Values[Eq15num] )', unit="1")
     # final score; this should be max(Eq15, Eq16)
     add_parameter(name='Score', status='assignment', expression='Values[Eq15]', unit="1")
+    # a score calculated at any time point (also steady state)
+    add_parameter(name='dScore', status='assignment', expression='( Values[s_wg_0] + Values[s_wg_1] + Values[s_wg_2] + Values[s_wg_3] + Values[s_en_0] + Values[s_en_1] + Values[s_en_2] + Values[s_en_3] + Values[s_hh_0] + Values[s_hh_1] + Values[s_hh_2] + Values[s_hh_3] ) / ( 1 + Values[s_wg_0] + Values[s_wg_1] + Values[s_wg_2] + Values[s_wg_3] + Values[s_en_0] + Values[s_en_1] + Values[s_en_2] + Values[s_en_3] + Values[s_hh_0] + Values[s_hh_1] + Values[s_hh_2] + Values[s_hh_3] )', unit="1")
+
 
     # set an event for time = 200 to capture all observables
     evassign = []
-    evassign.append(('Values[t200_wg_0]', '0.5 * ( ( [wg_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.2 ) ^ 3)') )
-    evassign.append(('Values[t200_wg_1]', '0.5 * ( 1 - ( ( [wg_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,1] /  0.2 ) ^ 3 ) )'))
-    evassign.append(('Values[t200_wg_2]', '0.5 * ( ( [wg_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,2] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t200_wg_3]','0.5 * ( ( [wg_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,3] / 0.2 ) ^ 3)'))
-    evassign.append(('Values[t200_en_0]','0.5 * ( ( [en_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,0] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t200_en_1]','0.5 * ( ( [en_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,1] / 0.2 ) ^ 3)'))
-    evassign.append(('Values[t200_en_2]','0.5 * ( 1 - ( ( [en_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,2] / 0.2 ) ^ 3 ) )'))
-    evassign.append(('Values[t200_en_3]','0.5 * ( ( [en_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,3] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t200_hh_0]','0.5 * ( ( [hh_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,0] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t200_hh_1]','0.5 * ( ( [hh_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,1] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t200_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))'))
-    evassign.append(('Values[t200_hh_3]','0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )'))
-    # add event for time 2000
+    evassign.append(('Values[Eq15num200]', 'Values[s_wg_0] + Values[s_wg_1] + Values[s_wg_2] + Values[s_wg_3] + Values[s_en_0] + Values[s_en_1] + Values[s_en_2] + Values[s_en_3] + Values[s_hh_0] + Values[s_hh_1] + Values[s_hh_2] + Values[s_hh_3]') )
     add_event('Event1', trigger='Time > Values[tev1]', assignments=evassign )
 
     # set an event for time = 1000 to capture all observables
     evassign = []
-    evassign.append(('Values[t1000_wg_0]', '0.5 * ( ( [wg_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,0] / 0.2 ) ^ 3)') )
-    evassign.append(('Values[t1000_wg_1]', '0.5 * ( 1 - ( ( [wg_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,1] /  0.2 ) ^ 3 ) )'))
-    evassign.append(('Values[t1000_wg_2]', '0.5 * ( ( [wg_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,2] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t1000_wg_3]','0.5 * ( ( [wg_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [wg_0,3] / 0.2 ) ^ 3)'))
-    evassign.append(('Values[t1000_en_0]','0.5 * ( ( [en_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,0] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t1000_en_1]','0.5 * ( ( [en_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,1] / 0.2 ) ^ 3)'))
-    evassign.append(('Values[t1000_en_2]','0.5 * ( 1 - ( ( [en_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,2] / 0.2 ) ^ 3 ) )'))
-    evassign.append(('Values[t1000_en_3]','0.5 * ( ( [en_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [en_0,3] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t1000_hh_0]','0.5 * ( ( [hh_0,0] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,0] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t1000_hh_1]','0.5 * ( ( [hh_0,1] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,1] / 0.2 ) ^ 3 )'))
-    evassign.append(('Values[t1000_hh_2]','0.5 * ( 1 - ( ( [hh_0,2] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,2] / 0.2 ) ^ 3 ))'))
-    evassign.append(('Values[t1000_hh_3]','0.5 * ( ( [hh_0,3] / 0.2 ) ^ 3 ) / ( 1 + ( [hh_0,3] / 0.2 ) ^ 3 )'))
-    # set event for time 1000
+    evassign.append(('Values[Eq15num1000]', 'Values[s_wg_0] + Values[s_wg_1] + Values[s_wg_2] + Values[s_wg_3] + Values[s_en_0] + Values[s_en_1] + Values[s_en_2] + Values[s_en_3] + Values[s_hh_0] + Values[s_hh_1] + Values[s_hh_2] + Values[s_hh_3]') )
     add_event('Event2', trigger='Time > Values[tev2]', assignments=evassign )
 else:
     print(f"This model has less than 4 columns, Score function is useless...\n")
@@ -661,16 +627,16 @@ for pvar in {'hh', 'ci', 'en', 'wg', 'ptc', 'IWG', 'EN', 'CI', 'CN', 'EWG_T', 'P
     add_plot( f'{pvar}', tasks='Scan, Time-Course', curves=pcurves, active=False)
 if gridc > 3:
     # time course plots for mRNA per each of the 4 cells
-    for j in range(0, 3):
+    for j in range(0, 4):
         pcurves = []
         for pvar in {'hh', 'ci', 'en', 'wg', 'ptc'}:
-            pcurves.append({'name': f'0,{j}', 'channels': ['Time', f'[{pvar}_0,{j}]']})
+            pcurves.append({'name': f'{pvar}', 'channels': ['Time', f'[{pvar}_0,{j}]']})
         add_plot( f'mRNA 0,{j}', tasks='Time-Course', curves=pcurves, active=False)
     # time course plots for proteins per each of the 4 cells
-    for j in range(0, 3):
+    for j in range(0, 4):
         pcurves = []
         for pvar in {'CI', 'CN', 'EN', 'IWG', 'EWG_T', 'PH_T', 'PTC_T'}:
-            pcurves.append({'name': f'0,{j}', 'channels': ['Time', f'[{pvar}_0,{j}]']})
+            pcurves.append({'name': f'{pvar}', 'channels': ['Time', f'[{pvar}_0,{j}]']})
         add_plot( f'Proteins 0,{j}', tasks='Time-Course', curves=pcurves, active=False)
 
 
