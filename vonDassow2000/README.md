@@ -21,6 +21,7 @@ Files with the extension **.cps** are COPASI files, extension **.xml** are [SBML
 
 
  - **Result folders**
+ Note that some of the primary result files are not included here because they are too large for this repository. They can be found in the Zenodo dataset doi:10.5281/zenodo.7772570.
     - **Sampling** results from the random sampling with COPASI using _vonDassow2000_1x4_alt.cps_, as described in the Table 2 of the original paper
     - **timecourse1** results from a time course simulation of a specific parameter set using four different simulators that used either _vonDassow2000_1x4.timecourse1.cps_, _vonDassow2000_1x4.timecourse1.xml_ or _vonDassow2000_1x4.timecourse1.omex_
     - **Multistability** results from study to detect multistability, through a random parameter sampling and random initial conditions sampling and steady state solution using _vonDassow2000_1x4_alt_ss_multistab.cps_.
