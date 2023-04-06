@@ -5,6 +5,7 @@ As a demonstratation of how the model can be re-use for other purposes, a new CO
 
 ## Result files
 Note that all tsv files here are processed from the full COPASI reoport file (_MultistabilitySampling1.tsv_), which is too large to include in this repository and is available from Zenodo dataset doi:10.5281/zenodo.7772570.
+- **processdata.sh** Bash shell script to create derivative result files below from full COPASI report file (available from Zenodo).
 - **MultistabilitySampling1_allSS.tsv** sampling results by COPASI (steady state resolution of 0.0001). Note that from 5,000 samples only 3,387 have at least one steady state. The others may either contain limit cycles or more complex dynamic behaviours, or the steady state solver did not converge.
 - **MultistabilitySampling1_singleSS.tsv** cleaned up version of _MultistabilitySampling1.tsv_ with only the parameter sets for which a unique steady state was obtained.
 - **MultistabilitySampling1_multipleSS.tsv** cleaned up version of _MultistabilitySampling1.tsv_ with only the parameter sets for which more that one steady state was obtained.
