@@ -74,6 +74,7 @@ sns.histplot(ax=axs[3,3], data=dataset, x="alpha_CIwg", element='step', hue='cla
 
 f2.tight_layout()
 f2.savefig('FigS1.png')
+f2.savefig('FigS1.pdf')
 
 # create an array of distributions
 f3, axs = plt.subplots(4, 4,  figsize=(8.5, 8.5))
@@ -112,6 +113,7 @@ sns.histplot(ax=axs[3,3], data=dataset, x="nu_CIptc", element='step', hue='class
 
 f3.tight_layout()
 f3.savefig('FigS2.png')
+f3.savefig('FigS2.pdf')
 
 # create an array of distributions
 f4, axs = plt.subplots(4, 4,  figsize=(8.5, 8.5))
@@ -150,4 +152,5 @@ sns.histplot(ax=axs[3,3], data=dataset, x="r_MxferWG", element='step', hue='clas
 
 f4.tight_layout()
 f4.savefig('FigS3.png')
+f4.savefig('FigS3.pdf')
 
