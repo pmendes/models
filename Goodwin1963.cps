@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.39 (Build 272) (http://www.copasi.org) at 2023-04-25T14:11:42Z -->
+<!-- generated with COPASI 4.39 (Build 272) (http://www.copasi.org) at 2023-04-25T15:07:01Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="39" versionDevel="272" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -106,7 +106,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </MiriamAnnotation>
     <Comment>
       <body xmlns="http://www.w3.org/1999/xhtml"><h1>Goodwin oscillator</h1>
-<p>This is the formulation of the Goodwin oscillator with two variables. This was first described in his 1963 book <i>Temporal organization in cells; a dynamic theory of cellular control processes</i> and describes the negative feedback regulation of a gene by its dowonstream products. The variable X in the model corresponds to the mRNA, and the variable Y corresponds to the protein. Both X and Y are degraded at constant rates. The model behaves as a harmonic oscillator. The resulting reaction network can be visualized as:</p>
+<p>This is the formulation of the Goodwin oscillator with two variables. It was first described in his 1963 book <i>Temporal organization in cells; a dynamic theory of cellular control processes</i> and describes the negative feedback regulation of a gene by its dowonstream products. The variable X in the model corresponds to the mRNA, and the variable Y corresponds to the protein. Both X and Y are degraded at constant rates. The model behaves as a harmonic oscillator. The resulting reaction network can be visualized as:</p>
 <pre>
  -->  X  -->
  T    |
