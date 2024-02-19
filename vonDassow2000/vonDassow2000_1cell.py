@@ -519,13 +519,13 @@ add_reaction(name='R30a_3', scheme='PTC3 -> PH3', function='Pseudo bi-molecular 
 add_reaction(name='R30a_4', scheme='PTC4 -> PH4', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': 'cell', 'S2': 'HH4_ext', 'Vol2': 'external'})
 add_reaction(name='R30a_5', scheme='PTC5 -> PH5', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': 'cell', 'S2': 'HH5_ext', 'Vol2': 'external'})
 add_reaction(name='R30a_6', scheme='PTC6 -> PH6', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.HH_0', 'Vol1': 'cell', 'S2': 'HH6_ext', 'Vol2': 'external'})
-# R30b_1 converts the HH1_ext - this is only relevant if HH1_ext is made variable, of course
-add_reaction(name='R30b_1', scheme='HH1_ext -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC1', 'Vol2': 'external'})
-add_reaction(name='R30b_2', scheme='HH2_ext -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC2', 'Vol2': 'external'})
-add_reaction(name='R30b_3', scheme='HH3_ext -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC3', 'Vol2': 'external'})
-add_reaction(name='R30b_4', scheme='HH4_ext -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC4', 'Vol2': 'external'})
-add_reaction(name='R30b_5', scheme='HH5_ext -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC5', 'Vol2': 'external'})
-add_reaction(name='R30b_6', scheme='HH6_ext -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC6', 'Vol2': 'external'})
+# R30b_1 is the part of the products
+add_reaction(name='R30b_1', scheme='HH1 -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC1_ext', 'Vol2': 'external'})
+add_reaction(name='R30b_2', scheme='HH2 -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC2_ext', 'Vol2': 'external'})
+add_reaction(name='R30b_3', scheme='HH3 -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC3_ext', 'Vol2': 'external'})
+add_reaction(name='R30b_4', scheme='HH4 -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC4_ext', 'Vol2': 'external'})
+add_reaction(name='R30b_5', scheme='HH5 -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC5_ext', 'Vol2': 'external'})
+add_reaction(name='R30b_6', scheme='HH6 -> ', function='Pseudo bi-molecular reaction with transport', mapping={'k1': 'T0.kappa_PTCHH.PTC_0', 'Vol1': 'cell', 'S2': 'PTC6_ext', 'Vol2': 'external'})
 
 # Reaction 31 is echange of EWGi with EWGi_ext, separated into R31a and R31b
 add_reaction(name='R31a_1', scheme='EWG1 -> EWG1_ext', function='Uni-molecular transport', mapping={'Vol': 'cell', 'k1': 'T0.r_MxferWG'})
