@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-06T03:04:41Z -->
+<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-07T02:49:10Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="42" versionDevel="284" copasiSourcesModified="0">
   <Model key="Model_1" name="Hindmarsh-Rose model of bursting neuron" simulationType="time" timeUnit="ms" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
@@ -37,49 +37,160 @@
     <Comment>
       <body xmlns="http://www.w3.org/1999/xhtml"><h1>Hindmarsh-Rose model of bursting neuron</h1>
 <p>This is an implementation of a 3-variable model of a bursting neuron described in  Hindmarsh JL, Rose RM (1984) A model of neuronal bursting using three coupled first order differential equations. Proceedings of the Royal Society of London. Series B, Biological Sciences 221:87–102 <a href="https://doi.org/10.1098/rspb.1984.0024">doi:10.1098/rspb.1984.0024</a>.</p>
+<p>This model does not have chemical species or reactions. The variables of the model are ODEs that correspond to voltages and currents, thus can be negative. They are defined in the Global Quantities as type <i>ODE</i>.</p>
+    <p>This COPASI simulation adds a series of current pulses by adding two discrete events to the model. You can adjust the following properties of the perturbations: current injected (Pulse intensity), the time of the first pulse (Pulse start), the lengh of the pulse (Pulse length), and the time in between pulses (Pulse lag). Adjustments can be easily done in the time course window by activating the sliders to manipulate the properties of the perturbations. </p>
+
 </body>
     </Comment>
     <ListOfModelValues>
       <ModelValue key="ModelValue_0" name="a" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_1" name="b" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_2" name="c" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_3" name="d" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_4" name="I" simulationType="fixed" addNoise="false">
       </ModelValue>
       <ModelValue key="ModelValue_5" name="r" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_6" name="s" simulationType="fixed" addNoise="false">
       </ModelValue>
       <ModelValue key="ModelValue_7" name="x" simulationType="ode" addNoise="false">
+        <Comment>
+          membrane potential
+        </Comment>
         <Expression>
           &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[y],Reference=Value>-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[a],Reference=Value>*&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x],Reference=Value>^3+&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[b],Reference=Value>*&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x],Reference=Value>^2+&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I],Reference=Value>-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[z],Reference=Value>
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_8" name="y" simulationType="ode" addNoise="false">
+        <Comment>
+          recovery current
+        </Comment>
         <Expression>
           &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[c],Reference=Value>-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[d],Reference=Value>*&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x],Reference=Value>^2-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[y],Reference=Value>
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_9" name="z" simulationType="ode" addNoise="false">
+        <Comment>
+          adaptation current
+        </Comment>
         <Expression>
           &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[r],Reference=Value>*(&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[s],Reference=Value>*(&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x],Reference=Value>-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x1],Reference=Value>)-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[z],Reference=Value>)
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_10" name="x1" simulationType="fixed" addNoise="false">
+      </ModelValue>
+      <ModelValue key="ModelValue_11" name="Pulse start" simulationType="fixed" addNoise="false">
+      </ModelValue>
+      <ModelValue key="ModelValue_12" name="Pulse end" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_10">
+<rdf:Description rdf:about="#ModelValue_12">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
+      <ModelValue key="ModelValue_13" name="Pulse intensity" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_13">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_14" name="Pulse length" simulationType="fixed" addNoise="false">
+      </ModelValue>
+      <ModelValue key="ModelValue_15" name="Pulse lag" simulationType="fixed" addNoise="false">
+      </ModelValue>
+      <ModelValue key="ModelValue_16" name="D" simulationType="assignment" addNoise="false">
+        <Expression>
+          -2*(&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[d],Reference=InitialValue>-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[b],Reference=InitialValue>)/(3*&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[a],Reference=InitialValue>)
+        </Expression>
+      </ModelValue>
     </ListOfModelValues>
+    <ListOfEvents>
+      <Event key="Event_0" name="pulse on" fireAtInitialTime="0" persistentTrigger="0">
+        <TriggerExpression>
+          &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time> > &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start],Reference=Value>
+        </TriggerExpression>
+        <ListOfAssignments>
+          <Assignment target="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I]">
+            <Expression>
+              &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I],Reference=Value>+&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse intensity],Reference=Value>
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse end]">
+            <Expression>
+              &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time>+&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse length],Reference=Value>
+            </Expression>
+          </Assignment>
+        </ListOfAssignments>
+      </Event>
+      <Event key="Event_1" name="pulse off" fireAtInitialTime="0" persistentTrigger="0">
+        <TriggerExpression>
+          &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time> > &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse end],Reference=Value>
+        </TriggerExpression>
+        <ListOfAssignments>
+          <Assignment target="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I]">
+            <Expression>
+              &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I],Reference=InitialValue>
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start]">
+            <Expression>
+              &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time>+&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse lag],Reference=Value>
+            </Expression>
+          </Assignment>
+        </ListOfAssignments>
+      </Event>
+    </ListOfEvents>
     <ListOfModelParameterSets activeSet="ModelParameterSet_1">
       <ModelParameterSet key="ModelParameterSet_1" name="Initial State">
         <MiriamAnnotation>
@@ -104,11 +215,17 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[d]" value="5" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I]" value="0" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[r]" value="0.001" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[s]" value="1" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x]" value="0" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[y]" value="0" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[z]" value="0" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[s]" value="4" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x]" value="-1.6103931697431404" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[y]" value="-11.966830805776794" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[z]" value="-0.010393169743140267" type="ModelValue" simulationType="ode"/>
           <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x1]" value="-1.6000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start]" value="102.82855942978897" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse end]" value="1e+20" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse intensity]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse length]" value="36.412696090079557" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse lag]" value="407.38027780411267" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[D]" value="-1.3333333333333333" type="ModelValue" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
         </ModelParameterGroup>
@@ -119,6 +236,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_7"/>
       <StateTemplateVariable objectReference="ModelValue_8"/>
       <StateTemplateVariable objectReference="ModelValue_9"/>
+      <StateTemplateVariable objectReference="ModelValue_16"/>
       <StateTemplateVariable objectReference="ModelValue_0"/>
       <StateTemplateVariable objectReference="ModelValue_1"/>
       <StateTemplateVariable objectReference="ModelValue_2"/>
@@ -127,9 +245,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_5"/>
       <StateTemplateVariable objectReference="ModelValue_6"/>
       <StateTemplateVariable objectReference="ModelValue_10"/>
+      <StateTemplateVariable objectReference="ModelValue_11"/>
+      <StateTemplateVariable objectReference="ModelValue_12"/>
+      <StateTemplateVariable objectReference="ModelValue_13"/>
+      <StateTemplateVariable objectReference="ModelValue_14"/>
+      <StateTemplateVariable objectReference="ModelValue_15"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0 0 0 1 3 1 5 0 0.001 1 -1.6000000000000001 
+      0 -1.6103931697431404 -11.966830805776794 -0.010393169743140267 -1.3333333333333333 1 3 1 5 0 0.001 4 -1.6000000000000001 102.82855942978897 1e+20 1 36.412696090079557 407.38027780411267 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -145,7 +268,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Newton" type="bool" value="1"/>
         <Parameter name="Use Integration" type="bool" value="1"/>
         <Parameter name="Use Back Integration" type="bool" value="0"/>
-        <Parameter name="Accept Negative Concentrations" type="bool" value="0"/>
+        <Parameter name="Accept Negative Concentrations" type="bool" value="1"/>
         <Parameter name="Iteration Limit" type="unsignedInteger" value="50"/>
         <Parameter name="Maximum duration for forward integration" type="unsignedFloat" value="1000000000"/>
         <Parameter name="Maximum duration for backward integration" type="unsignedFloat" value="1000000"/>
@@ -156,9 +279,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Report reference="Report_12" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
-        <Parameter name="StepSize" type="float" value="0.01"/>
-        <Parameter name="Duration" type="float" value="1"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="30000"/>
+        <Parameter name="StepSize" type="float" value="0.050000000000000003"/>
+        <Parameter name="Duration" type="float" value="1500"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="0"/>
@@ -535,7 +658,74 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Footer>
     </Report>
   </ListOfReports>
+  <ListOfPlots>
+    <PlotSpecification name="Time course" type="Plot2D" active="1" taskTypes="">
+      <Parameter name="log X" type="bool" value="0"/>
+      <Parameter name="log Y" type="bool" value="0"/>
+      <Parameter name="plot engine" type="string" value="QWT"/>
+      <Parameter name="x axis" type="string" value="time"/>
+      <Parameter name="y axis" type="string" value=""/>
+      <Parameter name="z axis" type="string" value=""/>
+      <ListOfPlotItems>
+        <PlotItem name="x" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[x],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="y" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[y],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="z" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[z],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="I" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
+      </ListOfPlotItems>
+    </PlotSpecification>
+  </ListOfPlots>
   <GUI>
+    <ListOfSliders>
+      <Slider key="Slider_3" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse intensity],Reference=InitialValue" objectType="float" objectValue="1" minValue="-5" maxValue="5" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_2" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse lag],Reference=InitialValue" objectType="float" objectValue="407.38" minValue="0.1" maxValue="10000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_1" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse length],Reference=InitialValue" objectType="float" objectValue="36.4127" minValue="0.01" maxValue="200" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_0" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start],Reference=InitialValue" objectType="float" objectValue="102.829" minValue="10" maxValue="5000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_4" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I],Reference=InitialValue" objectType="float" objectValue="0" minValue="0" maxValue="5" tickNumber="1000" tickFactor="100" scaling="linear"/>
+    </ListOfSliders>
   </GUI>
   <ListOfUnitDefinitions>
     <UnitDefinition key="Unit_1" name="meter" symbol="m">
