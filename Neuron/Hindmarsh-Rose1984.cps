@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-07T02:49:10Z -->
+<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-12T19:14:30Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="42" versionDevel="284" copasiSourcesModified="0">
   <Model key="Model_1" name="Hindmarsh-Rose model of bursting neuron" simulationType="time" timeUnit="ms" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
@@ -37,6 +37,8 @@
     <Comment>
       <body xmlns="http://www.w3.org/1999/xhtml"><h1>Hindmarsh-Rose model of bursting neuron</h1>
 <p>This is an implementation of a 3-variable model of a bursting neuron described in  Hindmarsh JL, Rose RM (1984) A model of neuronal bursting using three coupled first order differential equations. Proceedings of the Royal Society of London. Series B, Biological Sciences 221:87–102 <a href="https://doi.org/10.1098/rspb.1984.0024">doi:10.1098/rspb.1984.0024</a>.</p>
+
+<h2>COPASI notes</h2>
 <p>This model does not have chemical species or reactions. The variables of the model are ODEs that correspond to voltages and currents, thus can be negative. They are defined in the Global Quantities as type <i>ODE</i>.</p>
     <p>This COPASI simulation adds a series of current pulses by adding two discrete events to the model. You can adjust the following properties of the perturbations: current injected (Pulse intensity), the time of the first pulse (Pulse start), the lengh of the pulse (Pulse length), and the time in between pulses (Pulse lag). Adjustments can be easily done in the time course window by activating the sliders to manipulate the properties of the perturbations. </p>
 
@@ -45,9 +47,7 @@
     <ListOfModelValues>
       <ModelValue key="ModelValue_0" name="a" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_0">
 </rdf:Description>
 </rdf:RDF>
@@ -55,9 +55,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_1" name="b" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_1">
 </rdf:Description>
 </rdf:RDF>
@@ -65,9 +63,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_2" name="c" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_2">
 </rdf:Description>
 </rdf:RDF>
@@ -75,29 +71,49 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_3" name="d" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_3">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_4" name="I" simulationType="fixed" addNoise="false">
-      </ModelValue>
-      <ModelValue key="ModelValue_5" name="r" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_5" name="r" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_5">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_6" name="s" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_7" name="x" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Comment>
           membrane potential
         </Comment>
@@ -106,6 +122,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_8" name="y" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_8">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Comment>
           recovery current
         </Comment>
@@ -114,6 +138,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_9" name="z" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_9">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Comment>
           adaptation current
         </Comment>
@@ -122,14 +154,28 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_10" name="x1" simulationType="fixed" addNoise="false">
-      </ModelValue>
-      <ModelValue key="ModelValue_11" name="Pulse start" simulationType="fixed" addNoise="false">
-      </ModelValue>
-      <ModelValue key="ModelValue_12" name="Pulse end" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_10">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_11" name="Pulse start" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_11">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_12" name="Pulse end" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_12">
 </rdf:Description>
 </rdf:RDF>
@@ -137,19 +183,41 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_13" name="Pulse intensity" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_13">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_14" name="Pulse length" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_14">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_15" name="Pulse lag" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_15">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_16" name="D" simulationType="assignment" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_16">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
           -2*(&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[d],Reference=InitialValue>-&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[b],Reference=InitialValue>)/(3*&lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[a],Reference=InitialValue>)
         </Expression>
@@ -157,6 +225,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </ListOfModelValues>
     <ListOfEvents>
       <Event key="Event_0" name="pulse on" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time> > &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start],Reference=Value>
         </TriggerExpression>
@@ -174,6 +250,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ListOfAssignments>
       </Event>
       <Event key="Event_1" name="pulse off" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Reference=Time> > &lt;CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse end],Reference=Value>
         </TriggerExpression>
@@ -720,10 +804,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   </ListOfPlots>
   <GUI>
     <ListOfSliders>
-      <Slider key="Slider_3" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse intensity],Reference=InitialValue" objectType="float" objectValue="1" minValue="-5" maxValue="5" tickNumber="1000" tickFactor="100" scaling="linear"/>
-      <Slider key="Slider_2" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse lag],Reference=InitialValue" objectType="float" objectValue="407.38" minValue="0.1" maxValue="10000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
-      <Slider key="Slider_1" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse length],Reference=InitialValue" objectType="float" objectValue="36.4127" minValue="0.01" maxValue="200" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
-      <Slider key="Slider_0" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start],Reference=InitialValue" objectType="float" objectValue="102.829" minValue="10" maxValue="5000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_0" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse intensity],Reference=InitialValue" objectType="float" objectValue="1" minValue="-5" maxValue="5" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_1" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse lag],Reference=InitialValue" objectType="float" objectValue="407.38" minValue="0.1" maxValue="10000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_2" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse length],Reference=InitialValue" objectType="float" objectValue="36.4127" minValue="0.01" maxValue="200" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_3" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[Pulse start],Reference=InitialValue" objectType="float" objectValue="102.829" minValue="10" maxValue="5000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
       <Slider key="Slider_4" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hindmarsh-Rose model of bursting neuron,Vector=Values[I],Reference=InitialValue" objectType="float" objectValue="0" minValue="0" maxValue="5" tickNumber="1000" tickFactor="100" scaling="linear"/>
     </ListOfSliders>
   </GUI>
