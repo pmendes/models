@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-05T15:49:37Z -->
+<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-12T19:14:16Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="42" versionDevel="284" copasiSourcesModified="0">
   <Model key="Model_1" name="Hodgkin-Huxley with forced perturbations" simulationType="time" timeUnit="ms" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221408570000002e+23">
@@ -44,6 +44,22 @@
       <rdf:Bag>
         <rdf:li>
           <rdf:Description>
+            <vCard:EMAIL>m.j.1.schilstra@herts.ac.uk</vCard:EMAIL>
+            <vCard:N>
+              <rdf:Description>
+                <vCard:Family>Schilstra</vCard:Family>
+                <vCard:Given>Maria</vCard:Given>
+              </rdf:Description>
+            </vCard:N>
+            <vCard:ORG>
+              <rdf:Description>
+                <vCard:Orgname>SBML Team - Science and Technology Research Institute - University of Hertfordshire</vCard:Orgname>
+              </rdf:Description>
+            </vCard:ORG>
+          </rdf:Description>
+        </rdf:li>
+        <rdf:li>
+          <rdf:Description>
             <vCard:EMAIL>c.lloyd@auckland.ac.nz</vCard:EMAIL>
             <vCard:N>
               <rdf:Description>
@@ -70,22 +86,6 @@
             <vCard:ORG>
               <rdf:Description>
                 <vCard:Orgname>EMBL-EBI</vCard:Orgname>
-              </rdf:Description>
-            </vCard:ORG>
-          </rdf:Description>
-        </rdf:li>
-        <rdf:li>
-          <rdf:Description>
-            <vCard:EMAIL>m.j.1.schilstra@herts.ac.uk</vCard:EMAIL>
-            <vCard:N>
-              <rdf:Description>
-                <vCard:Family>Schilstra</vCard:Family>
-                <vCard:Given>Maria</vCard:Given>
-              </rdf:Description>
-            </vCard:N>
-            <vCard:ORG>
-              <rdf:Description>
-                <vCard:Orgname>SBML Team - Science and Technology Research Institute - University of Hertfordshire</vCard:Orgname>
               </rdf:Description>
             </vCard:ORG>
           </rdf:Description>
@@ -133,6 +133,8 @@
       <body xmlns="http://www.w3.org/1999/xhtml">
 <h1>Forced perturbations on a Hodgkin-Huxley axon model</h1>    
 <p>This uses the BioModels database implementation of the calssical Hodgkin-Huxley model of the electrical behavior of the squid axon membrane  (A. L. Hodgkin and A. F. Huxley (1952 ) A quantitative description of membrane current and its application to conduction and excitation in nerve. <i>Journal of Physiology</i> 119(4)500-544. PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/12991237">12991237</a>)</p>
+
+<h2>COPASI notes</h2>
 <p>This model does not have chemical species or reactions. The variables of the model are ODEs that correspond to voltages and currents, thus can be negative. They are defined in the Global Quantities as type <i>ODE</i>.</p>
     <p>This COPASI simulation adds a series of current pulses by adding two discrete events to the model. You can adjust the following properties of the perturbations: current injected (Pulse intensity), the time of the first pulse (Pulse start), the lengh of the pulse (Pulse length), and the time in between pulses (Pulse lag). Adjustments can be easily done in the time course window by activating the sliders to manipulate the properties of the perturbations. </p>
 <hr />
@@ -234,6 +236,14 @@
         </Unit>
       </ModelValue>
       <ModelValue key="ModelValue_3" name="I" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
         applied current</p>
@@ -623,18 +633,66 @@
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_27" name="Pulse length" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_27">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_28" name="Pulse intensity" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_28">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_29" name="Pulse end" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_29">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_30" name="Pulse start" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_30">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_31" name="Pulse lag" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_31">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
     </ListOfModelValues>
     <ListOfEvents>
       <Event key="Event_0" name="pulse on" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time> > &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse start],Reference=Value>
         </TriggerExpression>
@@ -652,6 +710,14 @@
         </ListOfAssignments>
       </Event>
       <Event key="Event_1" name="pulse off" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time> > &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse end],Reference=Value>
         </TriggerExpression>
@@ -883,8 +949,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Report reference="Report_12" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="10000"/>
-        <Parameter name="StepSize" type="float" value="0.10000000000000001"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="100000"/>
+        <Parameter name="StepSize" type="float" value="0.01"/>
         <Parameter name="Duration" type="float" value="1000"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="0"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
