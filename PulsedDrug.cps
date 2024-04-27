@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.38 (Build 268) (http://www.copasi.org) at 2022-12-14T14:34:47Z -->
+<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-04-27T01:40:43Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
-<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="38" versionDevel="268" copasiSourcesModified="0">
+<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="42" versionDevel="284" copasiSourcesModified="0">
   <ListOfFunctions>
     <Function key="Function_13" name="Mass action (irreversible)" type="MassAction" reversible="false">
       <MiriamAnnotation>
@@ -46,13 +46,13 @@ Reaction scheme where the products are created from the reactants and the change
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
-  <Model key="Model_0" name="Model with pulsed drug" simulationType="time" timeUnit="s" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
+  <Model key="Model_1" name="Model with pulsed drug" simulationType="time" timeUnit="s" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
    xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-  <rdf:Description rdf:about="#Model_0">
+  <rdf:Description rdf:about="#Model_1">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2021-09-30T13:00:28Z</dcterms:W3CDTF>
@@ -74,6 +74,11 @@ Reaction scheme where the products are created from the reactants and the change
         </vCard:ORG>
       </rdf:Description>
     </dcterms:creator>
+    <dcterms:modified>
+      <rdf:Description>
+        <dcterms:W3CDTF>2024-04-26T21:40:33</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:modified>
   </rdf:Description>
 </rdf:RDF>
 
@@ -116,25 +121,17 @@ Reaction scheme where the products are created from the reactants and the change
 </body>
     </Comment>
     <ListOfCompartments>
-      <Compartment key="Compartment_1" name="compartment" simulationType="fixed" dimensionality="3" addNoise="false">
+      <Compartment key="Compartment_0" name="compartment" simulationType="fixed" dimensionality="3" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Compartment_1">
+<rdf:Description rdf:about="#Compartment_0">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Compartment>
     </ListOfCompartments>
     <ListOfMetabolites>
-      <Metabolite key="Metabolite_101" name="A" simulationType="reactions" compartment="Compartment_1" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_101">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-      </Metabolite>
-      <Metabolite key="Metabolite_100" name="S" simulationType="fixed" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_0" name="A" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Metabolite_0">
@@ -142,27 +139,35 @@ Reaction scheme where the products are created from the reactants and the change
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_99" name="B" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_1" name="S" simulationType="fixed" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_99">
+<rdf:Description rdf:about="#Metabolite_0">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_98" name="P" simulationType="fixed" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_2" name="B" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_3" name="P" simulationType="fixed" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_97" name="drug" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_4" name="drug" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
       </Metabolite>
     </ListOfMetabolites>
     <ListOfModelValues>
-      <ModelValue key="ModelValue_6" name="Next_On" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_0" name="Next_On" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
@@ -173,28 +178,28 @@ Reaction scheme where the products are created from the reactants and the change
           s
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_7" name="Drug_dose" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_1" name="Drug_dose" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_8" name="on_time" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_2" name="on_time" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_8">
+<rdf:Description rdf:about="#ModelValue_2">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_9" name="off_time" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_3" name="off_time" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_9">
+<rdf:Description rdf:about="#ModelValue_3">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_10" name="Next_Off" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_4" name="Next_Off" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
@@ -207,95 +212,95 @@ Reaction scheme where the products are created from the reactants and the change
       </ModelValue>
     </ListOfModelValues>
     <ListOfReactions>
-      <Reaction key="Reaction_200" name="R1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_0" name="R1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_100" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_101" stoichiometry="1"/>
+          <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7284" name="k1" value="4"/>
+          <Constant key="Parameter_7381" name="k1" value="4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7284"/>
+              <SourceParameter reference="Parameter_7381"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_100"/>
+              <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_199" name="R2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_1" name="R2" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_101" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_99" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_97" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7263" name="Km" value="0.05"/>
-          <Constant key="Parameter_6340" name="V" value="5"/>
-          <Constant key="Parameter_5582" name="Ki" value="0.5"/>
+          <Constant key="Parameter_7380" name="Km" value="0.05"/>
+          <Constant key="Parameter_7378" name="V" value="5"/>
+          <Constant key="Parameter_7377" name="Ki" value="0.5"/>
         </ListOfConstants>
         <KineticLaw function="Function_19" unitType="Default" scalingCompartment="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_119">
-              <SourceParameter reference="Metabolite_101"/>
+              <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_118">
-              <SourceParameter reference="Metabolite_97"/>
+              <SourceParameter reference="Metabolite_4"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_117">
-              <SourceParameter reference="Parameter_7263"/>
+              <SourceParameter reference="Parameter_7380"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_116">
-              <SourceParameter reference="Parameter_6340"/>
+              <SourceParameter reference="Parameter_7378"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_115">
-              <SourceParameter reference="Parameter_5582"/>
+              <SourceParameter reference="Parameter_7377"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_198" name="R3" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_2" name="R3" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_99" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_98" stoichiometry="1"/>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6889" name="k1" value="15"/>
+          <Constant key="Parameter_7379" name="k1" value="15"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6889"/>
+              <SourceParameter reference="Parameter_7379"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_99"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
     </ListOfReactions>
     <ListOfEvents>
-      <Event key="Event_2" name="Drug on" fireAtInitialTime="0" persistentTrigger="0">
+      <Event key="Event_0" name="Drug on" fireAtInitialTime="0" persistentTrigger="0">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
@@ -303,19 +308,19 @@ Reaction scheme where the products are created from the reactants and the change
           &lt;CN=Root,Model=Model with pulsed drug,Reference=Time> > &lt;CN=Root,Model=Model with pulsed drug,Vector=Values[Next_On],Reference=Value>
         </TriggerExpression>
         <ListOfAssignments>
-          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment],Vector=Metabolites[drug]" targetKey="Metabolite_97">
+          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment],Vector=Metabolites[drug]">
             <Expression>
               &lt;CN=Root,Model=Model with pulsed drug,Vector=Values[Drug_dose],Reference=Value>
             </Expression>
           </Assignment>
-          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Values[Next_On]" targetKey="ModelValue_6">
+          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Values[Next_On]">
             <Expression>
               &lt;CN=Root,Model=Model with pulsed drug,Vector=Values[Next_On],Reference=Value>+&lt;CN=Root,Model=Model with pulsed drug,Vector=Values[off_time],Reference=Value>+&lt;CN=Root,Model=Model with pulsed drug,Vector=Values[on_time],Reference=Value>
             </Expression>
           </Assignment>
         </ListOfAssignments>
       </Event>
-      <Event key="Event_3" name="Drug_off" fireAtInitialTime="0" persistentTrigger="0">
+      <Event key="Event_1" name="Drug_off" fireAtInitialTime="0" persistentTrigger="0">
         <MiriamAnnotation>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
         </MiriamAnnotation>
@@ -323,12 +328,12 @@ Reaction scheme where the products are created from the reactants and the change
           &lt;CN=Root,Model=Model with pulsed drug,Reference=Time> > &lt;CN=Root,Model=Model with pulsed drug,Vector=Values[Next_Off],Reference=Value>
         </TriggerExpression>
         <ListOfAssignments>
-          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment],Vector=Metabolites[drug]" targetKey="Metabolite_97">
+          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Compartments[compartment],Vector=Metabolites[drug]">
             <Expression>
               0
             </Expression>
           </Assignment>
-          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Values[Next_Off]" targetKey="ModelValue_10">
+          <Assignment target="CN=Root,Model=Model with pulsed drug,Vector=Values[Next_Off]">
             <Expression>
               &lt;CN=Root,Model=Model with pulsed drug,Vector=Values[Next_Off],Reference=Value>+&lt;CN=Root,Model=Model with pulsed drug,Vector=Values[off_time],Reference=Value>+&lt;CN=Root,Model=Model with pulsed drug,Vector=Values[on_time],Reference=Value>
             </Expression>
@@ -336,13 +341,13 @@ Reaction scheme where the products are created from the reactants and the change
         </ListOfAssignments>
       </Event>
     </ListOfEvents>
-    <ListOfModelParameterSets activeSet="ModelParameterSet_0">
-      <ModelParameterSet key="ModelParameterSet_0" name="Initial State">
+    <ListOfModelParameterSets activeSet="ModelParameterSet_1">
+      <ModelParameterSet key="ModelParameterSet_1" name="Initial State">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_0">
+<rdf:Description rdf:about="#ModelParameterSet_1">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -390,26 +395,26 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
-      <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="Metabolite_101"/>
-      <StateTemplateVariable objectReference="Metabolite_99"/>
-      <StateTemplateVariable objectReference="Metabolite_100"/>
-      <StateTemplateVariable objectReference="Metabolite_98"/>
-      <StateTemplateVariable objectReference="Metabolite_97"/>
-      <StateTemplateVariable objectReference="Compartment_1"/>
-      <StateTemplateVariable objectReference="ModelValue_6"/>
-      <StateTemplateVariable objectReference="ModelValue_7"/>
-      <StateTemplateVariable objectReference="ModelValue_8"/>
-      <StateTemplateVariable objectReference="ModelValue_9"/>
-      <StateTemplateVariable objectReference="ModelValue_10"/>
+      <StateTemplateVariable objectReference="Model_1"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
+      <StateTemplateVariable objectReference="Metabolite_2"/>
+      <StateTemplateVariable objectReference="Metabolite_1"/>
+      <StateTemplateVariable objectReference="Metabolite_3"/>
+      <StateTemplateVariable objectReference="Metabolite_4"/>
+      <StateTemplateVariable objectReference="Compartment_0"/>
+      <StateTemplateVariable objectReference="ModelValue_0"/>
+      <StateTemplateVariable objectReference="ModelValue_1"/>
+      <StateTemplateVariable objectReference="ModelValue_2"/>
+      <StateTemplateVariable objectReference="ModelValue_3"/>
+      <StateTemplateVariable objectReference="ModelValue_4"/>
     </StateTemplate>
     <InitialState type="initialState">
       0 1.2044281519999843e+23 1.6059042026666633e+23 6.0221407599999757e+23 0 0 1 3 0.10000000000000001 1 3 4 
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_4" name="Steady-State" type="steadyState" scheduled="false" updateModel="true">
-      <Report reference="Report_23" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_17" name="Steady-State" type="steadyState" scheduled="false" updateModel="true">
+      <Report reference="Report_11" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -427,8 +432,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_15" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_22" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_18" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+      <Report reference="Report_12" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="1000"/>
@@ -449,7 +454,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_16" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_19" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -461,15 +466,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_1" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_20" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_13" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_13" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_21" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_14" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -490,8 +495,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_5" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_22" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
+      <Report reference="Report_15" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -521,10 +526,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_6" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_23" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_16" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_4"/>
+        <Parameter name="Steady-State" type="key" value="Task_17"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -532,8 +537,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Smallbone" type="bool" value="1"/>
       </Method>
     </Task>
-    <Task key="Task_7" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_24" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
+      <Report reference="Report_17" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -547,8 +552,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="10000"/>
       </Method>
     </Task>
-    <Task key="Task_8" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_25" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_18" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -560,8 +565,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Deuflhard Tolerance" type="unsignedFloat" value="0.0001"/>
       </Method>
     </Task>
-    <Task key="Task_0" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_26" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_19" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -584,14 +589,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Delta minimum" type="unsignedFloat" value="9.9999999999999998e-13"/>
       </Method>
     </Task>
-    <Task key="Task_2" name="Moieties" type="moieties" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_27" name="Moieties" type="moieties" scheduled="false" updateModel="false">
+      <Report reference="Report_20" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
       </Method>
     </Task>
-    <Task key="Task_12" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
+    <Task key="Task_28" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -627,15 +632,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_14" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_29" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
+      <Report reference="Report_21" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_4"/>
+        <Parameter name="Steady-State" type="key" value="Task_17"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
     </Task>
-    <Task key="Task_9" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+    <Task key="Task_30" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -662,7 +667,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_23" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_11" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -670,7 +675,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_22" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_12" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -681,7 +686,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_0" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_13" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -689,7 +694,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_1" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_14" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -713,7 +718,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_2" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_15" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -737,7 +742,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Parameter Estimation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_3" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_16" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -749,7 +754,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_17" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -761,7 +766,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_5" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_18" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -773,7 +778,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_6" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_19" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -785,7 +790,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_7" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_20" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -797,7 +802,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_8" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_21" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -856,6 +861,209 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   </ListOfPlots>
   <GUI>
   </GUI>
+  <ListOfLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Layout key="Layout_0" name="reaction diagram">
+      <Dimensions width="571.35968872373701" height="108.70536116847552"/>
+      <ListOfMetabGlyphs>
+        <MetaboliteGlyph key="Layout_2" name="MetabGlyph" metabolite="Metabolite_0">
+          <BoundingBox>
+            <Position x="189.86003857441528" y="79.916194703948349"/>
+            <Dimensions width="28" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_4" name="MetabGlyph" metabolite="Metabolite_1">
+          <BoundingBox>
+            <Position x="0" y="78.858274319082284"/>
+            <Dimensions width="28" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_6" name="MetabGlyph" metabolite="Metabolite_2">
+          <BoundingBox>
+            <Position x="369.72383755305623" y="79.217554196031074"/>
+            <Dimensions width="28" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_8" name="MetabGlyph" metabolite="Metabolite_3">
+          <BoundingBox>
+            <Position x="543.35968872373701" y="80.70536116847552"/>
+            <Dimensions width="28" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+        <MetaboliteGlyph key="Layout_10" name="MetabGlyph" metabolite="Metabolite_4">
+          <BoundingBox>
+            <Position x="249.52377139849614" y="0"/>
+            <Dimensions width="68" height="28"/>
+          </BoundingBox>
+        </MetaboliteGlyph>
+      </ListOfMetabGlyphs>
+      <ListOfReactionGlyphs>
+        <ReactionGlyph key="Layout_12" name="ReactionGlyph" reaction="Reaction_0">
+          <BoundingBox>
+            <Position x="116.24478612024427" y="93.241635564605303"/>
+            <Dimensions width="0" height="0"/>
+          </BoundingBox>
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="106.75178419152351" y="93.188739545361997"/>
+                <End x="125.73778804896503" y="93.29453158384861"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_13" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="substrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="106.75178419152351" y="93.188739545361997"/>
+                    <End x="33" y="92.916143842711477"/>
+                    <BasePoint1 x="87.765780334081981" y="93.082947506875385"/>
+                    <BasePoint2 x="55.636389202680604" y="92.973097665171792"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_14" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="product">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="125.73778804896503" y="93.29453158384861"/>
+                    <End x="184.86003857441528" y="93.75044947825495"/>
+                    <BasePoint1 x="144.72379190640655" y="93.400323622335222"/>
+                    <BasePoint2 x="169.53841620477129" y="93.601834559916739"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+        <ReactionGlyph key="Layout_15" name="ReactionGlyph" reaction="Reaction_1">
+          <BoundingBox>
+            <Position x="284.81783952102126" y="95.335470060638499"/>
+            <Dimensions width="0" height="0"/>
+          </BoundingBox>
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="275.82464957208919" y="95.37040208603436"/>
+                <End x="293.81102946995333" y="95.300538035242639"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_16" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="substrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="275.82464957208919" y="95.37040208603436"/>
+                    <End x="222.86003857441528" y="94.452658323349524"/>
+                    <BasePoint1 x="257.8382696742251" y="95.440266136826082"/>
+                    <BasePoint2 x="235.85255914985416" y="94.963928242785741"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_17" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="product">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="293.81102946995333" y="95.300538035242639"/>
+                    <End x="364.72383755305623" y="93.749337532768863"/>
+                    <BasePoint1 x="311.79740936781741" y="95.230673984450917"/>
+                    <BasePoint2 x="342.75721843490282" y="94.472539745911945"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_18" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="modifier">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="283.85809683788193" y="33"/>
+                    <End x="284.77899706125214" y="85.335545497757082"/>
+                    <BasePoint1 x="284.31854694956701" y="59.167772748878541"/>
+                    <BasePoint2 x="284.74015460148303" y="75.335620934875664"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+        <ReactionGlyph key="Layout_19" name="ReactionGlyph" reaction="Reaction_2">
+          <BoundingBox>
+            <Position x="462.94781410562246" y="94.499790711293826"/>
+            <Dimensions width="0" height="0"/>
+          </BoundingBox>
+          <Curve>
+            <ListOfCurveSegments>
+              <CurveSegment xsi:type="LineSegment">
+                <Start x="454.26602154708843" y="94.42540036267161"/>
+                <End x="471.62960666415648" y="94.574181059916043"/>
+              </CurveSegment>
+            </ListOfCurveSegments>
+          </Curve>
+          <ListOfMetaboliteReferenceGlyphs>
+            <MetaboliteReferenceGlyph key="Layout_20" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="substrate">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="454.26602154708843" y="94.42540036267161"/>
+                    <End x="402.72383755305623" y="93.595944081125282"/>
+                    <BasePoint1 x="436.90243643002037" y="94.276619665427162"/>
+                    <BasePoint2 x="415.47224071227129" y="93.899086698965107"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+            <MetaboliteReferenceGlyph key="Layout_21" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="product">
+              <Curve>
+                <ListOfCurveSegments>
+                  <CurveSegment xsi:type="CubicBezier">
+                    <Start x="471.62960666415648" y="94.574181059916043"/>
+                    <End x="538.35968872373701" y="94.710252616772124"/>
+                    <BasePoint1 x="488.99319178122454" y="94.72296175716049"/>
+                    <BasePoint2 x="518.01733653174779" y="94.753802361277423"/>
+                  </CurveSegment>
+                </ListOfCurveSegments>
+              </Curve>
+            </MetaboliteReferenceGlyph>
+          </ListOfMetaboliteReferenceGlyphs>
+        </ReactionGlyph>
+      </ListOfReactionGlyphs>
+      <ListOfTextGlyphs>
+        <TextGlyph key="Layout_3" name="TextGlyph" graphicalObject="Layout_2" originOfText="Metabolite_0">
+          <BoundingBox>
+            <Position x="189.86003857441528" y="79.916194703948349"/>
+            <Dimensions width="24" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_5" name="TextGlyph" graphicalObject="Layout_4" originOfText="Metabolite_1">
+          <BoundingBox>
+            <Position x="0" y="78.858274319082284"/>
+            <Dimensions width="24" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_7" name="TextGlyph" graphicalObject="Layout_6" originOfText="Metabolite_2">
+          <BoundingBox>
+            <Position x="369.72383755305623" y="79.217554196031074"/>
+            <Dimensions width="24" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_9" name="TextGlyph" graphicalObject="Layout_8" originOfText="Metabolite_3">
+          <BoundingBox>
+            <Position x="543.35968872373701" y="80.70536116847552"/>
+            <Dimensions width="24" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+        <TextGlyph key="Layout_11" name="TextGlyph" graphicalObject="Layout_10" originOfText="Metabolite_4">
+          <BoundingBox>
+            <Position x="249.52377139849614" y="0"/>
+            <Dimensions width="64" height="24"/>
+          </BoundingBox>
+        </TextGlyph>
+      </ListOfTextGlyphs>
+    </Layout>
+  </ListOfLayouts>
   <ListOfUnitDefinitions>
     <UnitDefinition key="Unit_1" name="meter" symbol="m">
       <MiriamAnnotation>
