@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.42 (Build 284) (http://www.copasi.org) at 2024-03-12T19:14:16Z -->
+<!-- generated with COPASI 4.43 (Build 288) (http://www.copasi.org) at 2024-05-15T17:40:21Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
-<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="42" versionDevel="284" copasiSourcesModified="0">
+<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="43" versionDevel="288" copasiSourcesModified="0">
   <Model key="Model_1" name="Hodgkin-Huxley with forced perturbations" simulationType="time" timeUnit="ms" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221408570000002e+23">
     <MiriamAnnotation>
 <rdf:RDF
@@ -180,11 +180,14 @@
     <ListOfModelValues>
       <ModelValue key="ModelValue_0" name="V" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_0">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -199,11 +202,14 @@
       </ModelValue>
       <ModelValue key="ModelValue_1" name="V_neg" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_1">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -235,19 +241,14 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_3" name="I" simulationType="fixed" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_3">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
+      <ModelValue key="ModelValue_3" name="I" simulationType="assignment" addNoise="false">
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
         applied current</p>
         </Comment>
+        <Expression>
+          -&lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I_neg],Reference=Value>
+        </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_4" name="i_Na" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
@@ -271,15 +272,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_5" name="i_K" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_5">
     <CopasiMT:isVersionOf>
       <rdf:Bag>
-        <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0008076" />
+        <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0008076"/>
       </rdf:Bag>
     </CopasiMT:isVersionOf>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -310,12 +314,6 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </Expression>
       </ModelValue>
       <ModelValue key="ModelValue_7" name="m" simulationType="ode" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_7">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
         sodium channel activation coefficient        <br />
@@ -371,11 +369,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_10" name="E_R" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_10">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -400,11 +401,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_12" name="g_Na" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_12">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000257" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000257"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -413,11 +417,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_13" name="g_K" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_13">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000257" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000257"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -426,11 +433,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_14" name="g_L" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_14">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000257" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000257"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -439,11 +449,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_15" name="E_Na" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_15">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -455,11 +468,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_16" name="E_K" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_16">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -471,11 +487,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_17" name="E_L" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_17">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -506,11 +525,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_19" name="V_K" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_19">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -525,11 +547,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_20" name="V_L" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_20">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000259"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Comment>
           <p xmlns="http://www.w3.org/1999/xhtml">
@@ -634,9 +659,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_27" name="Pulse length" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_27">
 </rdf:Description>
 </rdf:RDF>
@@ -644,9 +667,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_28" name="Pulse intensity" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_28">
 </rdf:Description>
 </rdf:RDF>
@@ -654,9 +675,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_29" name="Pulse end" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_29">
 </rdf:Description>
 </rdf:RDF>
@@ -664,9 +683,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_30" name="Pulse start" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_30">
 </rdf:Description>
 </rdf:RDF>
@@ -674,62 +691,46 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_31" name="Pulse lag" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_31">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
+      <ModelValue key="ModelValue_32" name="I_neg" simulationType="fixed" addNoise="false">
+      </ModelValue>
     </ListOfModelValues>
     <ListOfEvents>
       <Event key="Event_0" name="pulse on" fireAtInitialTime="0" persistentTrigger="0">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Event_0">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time> > &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse start],Reference=Value>
         </TriggerExpression>
         <ListOfAssignments>
-          <Assignment target="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I]">
-            <Expression>
-              &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I],Reference=Value>+&lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse intensity],Reference=Value>
-            </Expression>
-          </Assignment>
           <Assignment target="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse end]">
             <Expression>
               &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time>+&lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse length],Reference=Value>
             </Expression>
           </Assignment>
+          <Assignment target="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I_neg]">
+            <Expression>
+              &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I_neg],Reference=Value>+&lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse intensity],Reference=Value>
+            </Expression>
+          </Assignment>
         </ListOfAssignments>
       </Event>
       <Event key="Event_1" name="pulse off" fireAtInitialTime="0" persistentTrigger="0">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Event_1">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time> > &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse end],Reference=Value>
         </TriggerExpression>
         <ListOfAssignments>
-          <Assignment target="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I]">
-            <Expression>
-              &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I],Reference=InitialValue>
-            </Expression>
-          </Assignment>
           <Assignment target="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse start]">
             <Expression>
               &lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time>+&lt;CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse lag],Reference=Value>
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I_neg]">
+            <Expression>
+              0
             </Expression>
           </Assignment>
         </ListOfAssignments>
@@ -757,7 +758,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[V]" value="0" type="ModelValue" simulationType="ode"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[V_neg]" value="0" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[E]" value="-75" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I]" value="0" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[i_Na]" value="1.2200220801069976" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[i_K]" value="-4.3999044272446426" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[i_L]" value="3.1839" type="ModelValue" simulationType="assignment"/>
@@ -781,11 +782,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[beta_h]" value="0.047425873177566781" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[alpha_n]" value="0.05819767068693265" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[beta_n]" value="0.125" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse length]" value="20" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse intensity]" value="-2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse length]" value="2.985588819157992" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse intensity]" value="4.3000000000000043" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse end]" value="1e+20" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse start]" value="200" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse lag]" value="50" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse lag]" value="232.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I_neg]" value="0" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
         </ModelParameterGroup>
@@ -893,6 +895,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_9"/>
       <StateTemplateVariable objectReference="ModelValue_1"/>
       <StateTemplateVariable objectReference="ModelValue_2"/>
+      <StateTemplateVariable objectReference="ModelValue_3"/>
       <StateTemplateVariable objectReference="ModelValue_4"/>
       <StateTemplateVariable objectReference="ModelValue_5"/>
       <StateTemplateVariable objectReference="ModelValue_6"/>
@@ -906,7 +909,6 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_25"/>
       <StateTemplateVariable objectReference="ModelValue_26"/>
       <StateTemplateVariable objectReference="Compartment_0"/>
-      <StateTemplateVariable objectReference="ModelValue_3"/>
       <StateTemplateVariable objectReference="ModelValue_10"/>
       <StateTemplateVariable objectReference="ModelValue_11"/>
       <StateTemplateVariable objectReference="ModelValue_12"/>
@@ -920,9 +922,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_29"/>
       <StateTemplateVariable objectReference="ModelValue_30"/>
       <StateTemplateVariable objectReference="ModelValue_31"/>
+      <StateTemplateVariable objectReference="ModelValue_32"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0 0.052932 0.59611999999999998 0.31768000000000002 0 -75 1.2200220801069976 -4.3999044272446426 3.1839 -115 12 -10.613 0.22356372458463003 4 0.070000000000000007 0.047425873177566781 0.05819767068693265 0.125 1 0 -75 1 120 36 0.29999999999999999 -190 -63 -85.613 20 -2 1e+20 200 50 
+      0 0 0.052932 0.59611999999999998 0.31768000000000002 0 -75 0 1.2200220801069976 -4.3999044272446426 3.1839 -115 12 -10.613 0.22356372458463003 4 0.070000000000000007 0.047425873177566781 0.05819767068693265 0.125 1 -75 1 120 36 0.29999999999999999 -190 -63 -85.613 2.985588819157992 4.3000000000000043 1e+20 200 232.5 0 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -973,7 +976,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
         </ParameterGroup>
-        <Parameter name="Output in subtask" type="bool" value="1"/>
+        <Parameter name="Subtask Output" type="string" value="subTaskDuring"/>
         <Parameter name="Adjust initial conditions" type="bool" value="0"/>
         <Parameter name="Continue on Error" type="bool" value="0"/>
       </Problem>
@@ -1398,15 +1401,39 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ChannelSpec cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I],Reference=Value"/>
           </ListOfChannels>
         </PlotItem>
+        <PlotItem name="V_neg" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[V_neg],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="I_neg" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[I_neg],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
       </ListOfPlotItems>
     </PlotSpecification>
   </ListOfPlots>
   <GUI>
     <ListOfSliders>
       <Slider key="Slider_0" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse end],Reference=InitialValue" objectType="float" objectValue="1e+20" minValue="1e+19" maxValue="1e+21" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
-      <Slider key="Slider_1" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse intensity],Reference=InitialValue" objectType="float" objectValue="-2" minValue="-50" maxValue="50" tickNumber="1000" tickFactor="100" scaling="linear"/>
-      <Slider key="Slider_2" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse lag],Reference=InitialValue" objectType="float" objectValue="50" minValue="0" maxValue="500" tickNumber="1000" tickFactor="100" scaling="linear"/>
-      <Slider key="Slider_3" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse length],Reference=InitialValue" objectType="float" objectValue="20" minValue="2" maxValue="200" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_1" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse intensity],Reference=InitialValue" objectType="float" objectValue="4.3" minValue="-50" maxValue="50" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_2" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse lag],Reference=InitialValue" objectType="float" objectValue="232.5" minValue="0" maxValue="500" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_3" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse length],Reference=InitialValue" objectType="float" objectValue="2.98559" minValue="2" maxValue="200" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
       <Slider key="Slider_4" associatedEntityKey="Task_18" objectCN="CN=Root,Model=Hodgkin-Huxley with forced perturbations,Vector=Values[Pulse start],Reference=InitialValue" objectType="float" objectValue="200" minValue="20" maxValue="2000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
     </ListOfSliders>
   </GUI>
