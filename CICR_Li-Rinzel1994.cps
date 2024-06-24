@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 292) (http://www.copasi.org) at 2024-06-21T02:45:22Z -->
+<!-- generated with COPASI 4.44 (Build 292) (http://www.copasi.org) at 2024-06-24T00:42:47Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="292" copasiSourcesModified="0">
   <ListOfFunctions>
+    <Function key="Function_6" name="Constant flux (irreversible)" type="PreDefined" reversible="false">
+      <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_6">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        v
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_49" name="v" order="0" role="constant"/>
+      </ListOfParameterDescriptions>
+    </Function>
     <Function key="Function_9" name="Hill Cooperativity" type="PreDefined" reversible="false">
       <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -20,30 +34,46 @@
         <ParameterDescription key="FunctionParameter_50" name="h" order="3" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_14" name="Mass action (reversible)" type="MassAction" reversible="true">
+    <Function key="Function_41" name="function_4_R1" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <rdf:Description rdf:about="#Function_14">
-   <CopasiMT:is rdf:resource="urn:miriam:obo.sbo:SBO:0000042" />
-   </rdf:Description>
-   </rdf:RDF>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_41">
+</rdf:Description>
+</rdf:RDF>
       </MiriamAnnotation>
-      <Comment>
-        <body xmlns="http://www.w3.org/1999/xhtml">
-<b>Mass action rate law for reversible reactions</b>
-<p>
-Reaction scheme where the products are created from the reactants and the change of a product quantity is proportional to the product of reactant activities. The reaction scheme does include a reverse process that creates the reactants from the products.
-</p>
-</body>
-      </Comment>
       <Expression>
-        k1*PRODUCT&lt;substrate_i>-k2*PRODUCT&lt;product_j>
+        v*(M1/(M1+k1))^3*(M2/(M2+k2))^3*h^3*(c0-(1+c1)*M2)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_69" name="k1" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_68" name="substrate" order="1" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_78" name="k2" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_79" name="product" order="3" role="product"/>
+        <ParameterDescription key="FunctionParameter_275" name="v" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_274" name="M1" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_273" name="k1" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_272" name="M2" order="3" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_266" name="k2" order="4" role="constant"/>
+        <ParameterDescription key="FunctionParameter_276" name="h" order="5" role="constant"/>
+        <ParameterDescription key="FunctionParameter_277" name="c0" order="6" role="constant"/>
+        <ParameterDescription key="FunctionParameter_278" name="c1" order="7" role="constant"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_42" name="function_4_R2" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_42">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        v*(c0-(1+c1)*M)
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_286" name="v" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_285" name="c0" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_284" name="c1" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_283" name="M" order="3" role="modifier"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
@@ -130,25 +160,12 @@ Reaction scheme where the products are created from the reactants and the change
 
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_1" name="Ca_er" simulationType="reactions" compartment="Compartment_1" addNoise="false">
+      <Metabolite key="Metabolite_1" name="IP3" simulationType="fixed" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_1">
-    <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:29108"/>
-    <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C00076"/>
-  </rdf:Description>
-</rdf:RDF>
-
-        </MiriamAnnotation>
-      </Metabolite>
-      <Metabolite key="Metabolite_2" name="IP3" simulationType="fixed" compartment="Compartment_0" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF
-   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_2">
     <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:16595"/>
     <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C01245"/>
   </rdf:Description>
@@ -156,86 +173,215 @@ Reaction scheme where the products are created from the reactants and the change
 
         </MiriamAnnotation>
       </Metabolite>
+      <Metabolite key="Metabolite_2" name="Ca_er" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+        <Expression>
+          (&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=Value>-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>)/&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=Value>
+        </Expression>
+      </Metabolite>
     </ListOfMetabolites>
     <ListOfModelValues>
       <ModelValue key="ModelValue_0" name="v2" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_1" name="v3" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_2" name="k_er" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
       <ModelValue key="ModelValue_3" name="v1" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_4" name="m_inf" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_4" name="d1" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_5" name="d_act" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_6" name="d_ip3" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_7" name="c0" simulationType="ode" addNoise="false">
         <Expression>
-          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration>/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_IP3],Reference=Value>)*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act],Reference=Value>)
+          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon],Reference=Value>*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in],Reference=Value>-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4],Reference=Value>*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>^2/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl],Reference=Value>^2+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>^2))
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_5" name="d1" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_8" name="d_inh" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_8">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_7" name="d_act" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_9" name="c1" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_9">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_8" name="d_IP3" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_10" name="a" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_10">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_9" name="Q2" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_11" name="h" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_11">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act],Reference=Value>*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d1],Reference=Value>)/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_IP3],Reference=Value>)
+          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a],Reference=Value>*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh],Reference=Value>)*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh],Reference=Value>/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh],Reference=Value>)-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=Value>)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_10" name="d_inh" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_12" name="v4" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_12">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_11" name="tau_h" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_13" name="j_in" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_13">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_14" name="k_pl" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_14">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_15" name="epsilon" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_15">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_16" name="e_j_in" simulationType="assignment" addNoise="false">
         <Expression>
-          1/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a],Reference=Value>*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[Q2],Reference=Value>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>))
+          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon],Reference=Value>*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_12" name="a" simulationType="fixed" addNoise="false">
-      </ModelValue>
-      <ModelValue key="ModelValue_13" name="h_inf" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_17" name="e_v4" simulationType="assignment" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_17">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
-          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[Q2],Reference=Value>/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[Q2],Reference=Value>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>)
-        </Expression>
-      </ModelValue>
-      <ModelValue key="ModelValue_14" name="h" simulationType="ode" addNoise="false">
-        <Expression>
-          (&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h_inf],Reference=Value>-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=Value>)/&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[tau_h],Reference=Value>
-        </Expression>
-      </ModelValue>
-      <ModelValue key="ModelValue_15" name="p.open" simulationType="assignment" addNoise="false">
-        <Expression>
-          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[m_inf],Reference=Value>^3*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=Value>^3
-        </Expression>
-      </ModelValue>
-      <ModelValue key="ModelValue_16" name="k1" simulationType="assignment" addNoise="false">
-        <Expression>
-          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1],Reference=Value>*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[p.open],Reference=Value>
+          &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon],Reference=Value>*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4],Reference=Value>
         </Expression>
       </ModelValue>
     </ListOfModelValues>
     <ListOfReactions>
       <Reaction key="Reaction_0" name="R2" reversible="true" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
-        </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7486" name="k1" value="0"/>
-          <Constant key="Parameter_7485" name="k2" value="0"/>
+          <Constant key="Parameter_7486" name="c1" value="0.185"/>
+          <Constant key="Parameter_7485" name="v" value="0.02"/>
+          <Constant key="Parameter_7491" name="c0" value="2"/>
         </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="ConcentrationPerTime" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER]">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
+            <CallParameter functionParameter="FunctionParameter_286">
               <SourceParameter reference="ModelValue_0"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
-              <SourceParameter reference="Metabolite_1"/>
+            <CallParameter functionParameter="FunctionParameter_285">
+              <SourceParameter reference="ModelValue_7"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
-              <SourceParameter reference="ModelValue_0"/>
+            <CallParameter functionParameter="FunctionParameter_284">
+              <SourceParameter reference="ModelValue_9"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
+            <CallParameter functionParameter="FunctionParameter_283">
               <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
           </ListOfCallParameters>
@@ -245,13 +391,10 @@ Reaction scheme where the products are created from the reactants and the change
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_1" stoichiometry="1"/>
-        </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7491" name="Shalve" value="0"/>
-          <Constant key="Parameter_7487" name="V" value="0"/>
-          <Constant key="Parameter_7489" name="h" value="2"/>
+          <Constant key="Parameter_7487" name="Shalve" value="0.18"/>
+          <Constant key="Parameter_7489" name="V" value="0.6"/>
+          <Constant key="Parameter_7490" name="h" value="2"/>
         </ListOfConstants>
         <KineticLaw function="Function_9" unitType="ConcentrationPerTime" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -265,35 +408,93 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="ModelValue_1"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_50">
-              <SourceParameter reference="Parameter_7489"/>
+              <SourceParameter reference="Parameter_7490"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
       <Reaction key="Reaction_2" name="R1" reversible="true" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
-        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_1" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_8513" name="k2" value="0.4"/>
+          <Constant key="Parameter_7492" name="v" value="40"/>
+          <Constant key="Parameter_7493" name="h" value="0.8"/>
+          <Constant key="Parameter_8514" name="k1" value="0.2"/>
+          <Constant key="Parameter_8515" name="c0" value="2"/>
+          <Constant key="Parameter_8511" name="c1" value="0.185"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_275">
+              <SourceParameter reference="ModelValue_3"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_274">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_273">
+              <SourceParameter reference="ModelValue_6"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_272">
+              <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="ModelValue_5"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_276">
+              <SourceParameter reference="ModelValue_11"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_277">
+              <SourceParameter reference="ModelValue_7"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_278">
+              <SourceParameter reference="ModelValue_9"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_3" name="R5" reversible="false" fast="false" addNoise="false">
         <ListOfProducts>
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7490" name="k1" value="0"/>
-          <Constant key="Parameter_8513" name="k2" value="0"/>
+          <Constant key="Parameter_8512" name="v" value="0.008"/>
         </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="ConcentrationPerTime" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER]">
+        <KineticLaw function="Function_6" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
+            <CallParameter functionParameter="FunctionParameter_49">
               <SourceParameter reference="ModelValue_16"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
-              <SourceParameter reference="Metabolite_1"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
-              <SourceParameter reference="ModelValue_16"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_4" name="R4" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_7496" name="h" value="2"/>
+          <Constant key="Parameter_7494" name="Shalve" value="0.1"/>
+          <Constant key="Parameter_7501" name="V" value="0.018"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_9" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_42">
               <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_43">
+              <SourceParameter reference="ModelValue_14"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_44">
+              <SourceParameter reference="ModelValue_17"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_50">
+              <SourceParameter reference="Parameter_7496"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -318,7 +519,124 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca]" value="0.20000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER],Vector=Metabolites[Ca_er]" value="0" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="0.59999999999999998" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca_er]" value="9.7297297297297298" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2]" value="0.02" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er]" value="0.17999999999999999" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1]" value="40" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d1]" value="0.13" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act]" value="0.40000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0]" value="2" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh]" value="0.40000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1]" value="0.185" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h]" value="0.80000000000000004" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4]" value="1.8" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in]" value="1.2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon]" value="0.01" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in]" value="0.012" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4]" value="0.018000000000000002" type="ModelValue" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=v" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=Shalve" value="0.17999999999999999" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=V" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k2" value="0.40000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=v" value="40" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=h" value="0.80000000000000004" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k1" value="0.20000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5],ParameterGroup=Parameters,Parameter=v" value="0.012" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=V" value="0.018000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_3" name="fig3">
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER]" value="0.185" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca]" value="0.20000000000000001" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="0.40000000000000002" type="Species" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
@@ -326,29 +644,36 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3]" value="0.90000000000000002" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1]" value="6" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[m_inf]" value="0.21091731430673552" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d1]" value="0.13" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act]" value="0.082339999999999997" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_IP3]" value="0.94340000000000002" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[Q2]" value="0.032484889087390202" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3]" value="0.94340000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0]" value="2" type="ModelValue" simulationType="ode"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh]" value="1.0489999999999999" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[tau_h]" value="21.506774137567788" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1]" value="0.185" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h_inf]" value="0.13972903449728835" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h]" value="0.5" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[p.open]" value="0.0011728614472447513" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k1]" value="0.0070371686834685074" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon]" value="0.01" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in]" value="0" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4]" value="0" type="ModelValue" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
           <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=k1" value="0.11" type="ReactionParameter" simulationType="assignment">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=v" value="0.11" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
                 &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
-            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=k2" value="0.11" type="ReactionParameter" simulationType="assignment">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
-                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2],Reference=InitialValue>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
           </ModelParameterGroup>
@@ -366,14 +691,301 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k1" value="0.0070371686834685074" type="ReactionParameter" simulationType="assignment">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k2" value="0.082339999999999997" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
-                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k1],Reference=InitialValue>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
-            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k2" value="0.0070371686834685074" type="ReactionParameter" simulationType="assignment">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=v" value="6" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
-                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k1],Reference=InitialValue>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=h" value="0.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k1" value="0.94340000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5],ParameterGroup=Parameters,Parameter=v" value="0" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=V" value="0" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_4" name="fig5a1">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER]" value="0.185" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca]" value="0.20000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="0.59999999999999998" type="Species" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2]" value="0.02" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er]" value="0.17999999999999999" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1]" value="40" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d1]" value="0.13" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act]" value="0.40000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0]" value="2" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh]" value="0.40000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1]" value="0.185" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h]" value="0.80000000000000004" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4]" value="1.8" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in]" value="0.80000000000000004" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon]" value="0.01" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in]" value="0.0080000000000000002" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4]" value="0.018000000000000002" type="ModelValue" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=v" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=Shalve" value="0.17999999999999999" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=V" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k2" value="0.40000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=v" value="40" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=h" value="0.80000000000000004" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k1" value="0.20000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5],ParameterGroup=Parameters,Parameter=v" value="0.0080000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=V" value="0.018000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_5" name="fig5a2">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER]" value="0.185" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca]" value="0.20000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="0.59999999999999998" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca_er]" value="9.7297297297297298" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2]" value="0.02" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er]" value="0.17999999999999999" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1]" value="40" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d1]" value="0.13" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act]" value="0.40000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0]" value="2" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh]" value="0.40000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1]" value="0.185" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h]" value="0.80000000000000004" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4]" value="1.8" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in]" value="1.2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon]" value="0.01" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in]" value="0.012" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4]" value="0.018000000000000002" type="ModelValue" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=v" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R2],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=Shalve" value="0.17999999999999999" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_er],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=V" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R3],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k2" value="0.40000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_act],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=v" value="40" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=h" value="0.80000000000000004" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=k1" value="0.20000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_ip3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R1],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R5],ParameterGroup=Parameters,Parameter=v" value="0.012" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_j_in],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Reactions[R4],ParameterGroup=Parameters,Parameter=V" value="0.018000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[e_v4],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
           </ModelParameterGroup>
@@ -382,30 +994,32 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </ListOfModelParameterSets>
     <StateTemplate>
       <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="ModelValue_14"/>
-      <StateTemplateVariable objectReference="Metabolite_0"/>
-      <StateTemplateVariable objectReference="Metabolite_1"/>
-      <StateTemplateVariable objectReference="ModelValue_4"/>
-      <StateTemplateVariable objectReference="ModelValue_9"/>
+      <StateTemplateVariable objectReference="ModelValue_7"/>
       <StateTemplateVariable objectReference="ModelValue_11"/>
-      <StateTemplateVariable objectReference="ModelValue_13"/>
-      <StateTemplateVariable objectReference="ModelValue_15"/>
-      <StateTemplateVariable objectReference="ModelValue_16"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
       <StateTemplateVariable objectReference="Metabolite_2"/>
+      <StateTemplateVariable objectReference="ModelValue_16"/>
+      <StateTemplateVariable objectReference="ModelValue_17"/>
+      <StateTemplateVariable objectReference="Metabolite_1"/>
       <StateTemplateVariable objectReference="Compartment_0"/>
       <StateTemplateVariable objectReference="Compartment_1"/>
       <StateTemplateVariable objectReference="ModelValue_0"/>
       <StateTemplateVariable objectReference="ModelValue_1"/>
       <StateTemplateVariable objectReference="ModelValue_2"/>
       <StateTemplateVariable objectReference="ModelValue_3"/>
+      <StateTemplateVariable objectReference="ModelValue_4"/>
       <StateTemplateVariable objectReference="ModelValue_5"/>
-      <StateTemplateVariable objectReference="ModelValue_7"/>
+      <StateTemplateVariable objectReference="ModelValue_6"/>
       <StateTemplateVariable objectReference="ModelValue_8"/>
+      <StateTemplateVariable objectReference="ModelValue_9"/>
       <StateTemplateVariable objectReference="ModelValue_10"/>
       <StateTemplateVariable objectReference="ModelValue_12"/>
+      <StateTemplateVariable objectReference="ModelValue_13"/>
+      <StateTemplateVariable objectReference="ModelValue_14"/>
+      <StateTemplateVariable objectReference="ModelValue_15"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0.5 0.20000000000000001 0 0.21091731430673552 0.032484889087390202 21.506774137567788 0.13972903449728835 0.0011728614472447513 0.0070371686834685074 0.40000000000000002 1 0.185 0.11 0.90000000000000002 0.10000000000000001 6 0.13 0.082339999999999997 0.94340000000000002 1.0489999999999999 0.20000000000000001 
+      0 2 0.80000000000000004 0.20000000000000001 9.7297297297297298 0.012 0.018000000000000002 0.59999999999999998 1 0.185 0.02 0.59999999999999998 0.17999999999999999 40 0.13 0.40000000000000002 0.20000000000000001 0.40000000000000002 0.185 1 1.8 1.2 0.10000000000000001 0.01 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -454,6 +1068,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
+          <ParameterGroup name="ScanItem">
+            <Parameter name="Number of steps" type="unsignedInteger" value="2"/>
+            <Parameter name="Type" type="unsignedInteger" value="4"/>
+            <Parameter name="Object" type="cn" value=""/>
+            <ParameterGroup name="ParameterSet CNs">
+              <Parameter name="0" type="cn" value="CN=Root,Model=CICR model by Li and Rinzel,Vector=ParameterSets[fig5a1]"/>
+              <Parameter name="1" type="cn" value="CN=Root,Model=CICR model by Li and Rinzel,Vector=ParameterSets[fig5a2]"/>
+            </ParameterGroup>
+          </ParameterGroup>
         </ParameterGroup>
         <Parameter name="Subtask Output" type="string" value="subTaskDuring"/>
         <Parameter name="Adjust initial conditions" type="bool" value="0"/>
@@ -812,10 +1435,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Report>
   </ListOfReports>
   <ListOfPlots>
-    <PlotSpecification name="Concentrations, Volumes, and Global Quantity Values" type="Plot2D" active="1" taskTypes="">
+    <PlotSpecification name="Time course" type="Plot2D" active="1" taskTypes="">
       <Parameter name="log X" type="bool" value="0"/>
       <Parameter name="log Y" type="bool" value="0"/>
       <Parameter name="plot engine" type="string" value="QCustomPlot"/>
+      <Parameter name="x axis" type="string" value=""/>
+      <Parameter name="y axis" type="string" value=""/>
+      <Parameter name="z axis" type="string" value=""/>
       <ListOfPlotItems>
         <PlotItem name="[Ca]" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
@@ -829,7 +1455,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
-        <PlotItem name="[Ca_er]" type="Curve2D">
+        <PlotItem name="c0" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
           <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
           <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
@@ -838,58 +1464,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Parameter name="Recording Activity" type="string" value="during"/>
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER],Vector=Metabolites[Ca_er],Reference=Concentration"/>
+            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=Value"/>
           </ListOfChannels>
         </PlotItem>
-        <PlotItem name="Values[m_inf]" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[m_inf],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="Values[Q2]" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[Q2],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="Values[tau_h]" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[tau_h],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="Values[h_inf]" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h_inf],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="Values[h]" type="Curve2D">
+        <PlotItem name="h" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
           <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
           <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
@@ -901,7 +1479,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=Value"/>
           </ListOfChannels>
         </PlotItem>
-        <PlotItem name="Values[p.open]" type="Curve2D">
+        <PlotItem name="[Ca_er]" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
           <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
           <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
@@ -910,19 +1488,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Parameter name="Recording Activity" type="string" value="during"/>
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[p.open],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="Values[k1]" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k1],Reference=Value"/>
+            <ChannelSpec cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca_er],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
       </ListOfPlotItems>
