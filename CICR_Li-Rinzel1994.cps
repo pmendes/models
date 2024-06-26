@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 292) (http://www.copasi.org) at 2024-06-24T00:42:47Z -->
+<!-- generated with COPASI 4.44 (Build 293) (http://www.copasi.org) at 2024-06-25T23:37:33Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
-<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="292" copasiSourcesModified="0">
+<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="293" copasiSourcesModified="0">
   <ListOfFunctions>
     <Function key="Function_6" name="Constant flux (irreversible)" type="PreDefined" reversible="false">
       <MiriamAnnotation>
@@ -34,12 +34,10 @@
         <ParameterDescription key="FunctionParameter_50" name="h" order="3" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_41" name="function_4_R1" type="UserDefined" reversible="unspecified">
+    <Function key="Function_44" name="IP3R_kinetics" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_41">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_44">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -47,22 +45,20 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         v*(M1/(M1+k1))^3*(M2/(M2+k2))^3*h^3*(c0-(1+c1)*M2)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_275" name="v" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_274" name="M1" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_273" name="k1" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_272" name="M2" order="3" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_266" name="k2" order="4" role="constant"/>
-        <ParameterDescription key="FunctionParameter_276" name="h" order="5" role="constant"/>
-        <ParameterDescription key="FunctionParameter_277" name="c0" order="6" role="constant"/>
-        <ParameterDescription key="FunctionParameter_278" name="c1" order="7" role="constant"/>
+        <ParameterDescription key="FunctionParameter_303" name="v" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_302" name="M1" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_301" name="k1" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_300" name="M2" order="3" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_299" name="k2" order="4" role="constant"/>
+        <ParameterDescription key="FunctionParameter_298" name="h" order="5" role="constant"/>
+        <ParameterDescription key="FunctionParameter_297" name="c0" order="6" role="constant"/>
+        <ParameterDescription key="FunctionParameter_296" name="c1" order="7" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_42" name="function_4_R2" type="UserDefined" reversible="unspecified">
+    <Function key="Function_48" name="Ca_leak_kinetics" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_42">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_48">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
@@ -70,14 +66,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         v*(c0-(1+c1)*M)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_286" name="v" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_285" name="c0" order="1" role="constant"/>
-        <ParameterDescription key="FunctionParameter_284" name="c1" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_283" name="M" order="3" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_288" name="v" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_289" name="c0" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_290" name="c1" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_291" name="M" order="3" role="modifier"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
-  <Model key="Model_0" name="CICR model by Li and Rinzel" simulationType="time" timeUnit="1" volumeUnit="1" areaUnit="cm²" lengthUnit="cm" quantityUnit="1" type="deterministic" avogadroConstant="6.0221407599999999e+23">
+  <Model key="Model_0" name="CICR model by Li and Rinzel" simulationType="time" timeUnit="s" volumeUnit="l" areaUnit="cm²" lengthUnit="cm" quantityUnit="µmol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
@@ -117,27 +113,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     </MiriamAnnotation>
     <Comment>
-      <body xmlns="http://www.w3.org/1999/xhtml"><h1>ChI model of calcium oscillations</h1>
+      <body xmlns="http://www.w3.org/1999/xhtml"><h1>Li-Rinzel model of calcium oscillations</h1>
 <p>This is a core model of calcium-induded calcium release developed by <a href="https://doi.org/10.1006/jtbi.1994.1041">Li and Rinzel</a>, a reduced version of an earlier mechanistic model by <a href="https://doi.org/10.1073/pnas.89.20.9895">De Young and Keizer</a>. The reduction, based on time scale separation, follows a formalism similar to that used by Hodgkin and Huxley to develop a model of excitability of the neuronal plasma membrane.</p>
-
-<h2>Implementation notes</h2>
-<p>In this implementation it was decided to use pre-defined rate laws in COPASI. Thus reactions <i>leak</i> and <i>chan</i> are represented with reversible mass action kinetics, where the forward and reverse rate constants are equal (this is only transport, no chemical changes involved). For <i>chan</i> the rate constant is modulated by a function of <i>h</i>, the ratio of activated IP3-regulated calcium channel. Reaction <i>pump</i> is simply represented by irreversible Hill kinetics, which is exactly the rate law used in the paper. This brings the biochemical transformations more explicit. </p>
-<p>The explicit construction of C_ER being a function of C and the total calcium in the original paper, is left here implicit, given that the stoichiometry matrix already implies that mass conservation relationship. Internally, COPASI is able to work out this relation and will not calculate C_ER through solution of its ODE, but rather by the algebraic equation reflecting the mass conservation. (this can be worked out by checking the mass conservation task in Stoichiometry)</p>
-<p>The resulting equations are equivalent to the original model.
-</p>
 
 <p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>
     </Comment>
     <ListOfCompartments>
-      <Compartment key="Compartment_0" name="Cytoplasm" simulationType="fixed" dimensionality="3" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Compartment_0">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-      </Compartment>
-      <Compartment key="Compartment_1" name="ER" simulationType="fixed" dimensionality="3" addNoise="false">
+      <Compartment key="Compartment_1" name="Cytoplasm" simulationType="fixed" dimensionality="3" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Compartment_1">
@@ -145,152 +127,144 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Compartment>
+      <Compartment key="Compartment_0" name="ER" simulationType="fixed" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Compartment_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Compartment>
     </ListOfCompartments>
     <ListOfMetabolites>
-      <Metabolite key="Metabolite_0" name="Ca" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_2" name="Ca" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_0">
-    <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:29108"/>
-    <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C00076"/>
+<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_2">
+    <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:29108" />
+    <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C00076" />
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_1" name="IP3" simulationType="fixed" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_1" name="IP3" simulationType="fixed" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_1">
-    <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:16595"/>
-    <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C01245"/>
+    <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:16595" />
+    <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C01245" />
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_2" name="Ca_er" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_0" name="Ca_er" simulationType="assignment" compartment="Compartment_1" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
           (&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c0],Reference=Value>-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>)/&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[c1],Reference=Value>
         </Expression>
       </Metabolite>
     </ListOfMetabolites>
     <ListOfModelValues>
-      <ModelValue key="ModelValue_0" name="v2" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_17" name="v2" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_0">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_17">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_1" name="v3" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_16" name="v3" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_1">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_16">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_2" name="k_er" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_15" name="k_er" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_2">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_15">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_3" name="v1" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_14" name="v1" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_3">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_14">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_4" name="d1" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_13" name="d1" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_4">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_13">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_5" name="d_act" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_12" name="d_act" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_5">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_12">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_6" name="d_ip3" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_11" name="d_ip3" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_6">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_11">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_7" name="c0" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_10" name="c0" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_10">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
           &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon],Reference=Value>*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in],Reference=Value>-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v4],Reference=Value>*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>^2/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[k_pl],Reference=Value>^2+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>^2))
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_8" name="d_inh" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_9" name="d_inh" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_8">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-      </ModelValue>
-      <ModelValue key="ModelValue_9" name="c1" simulationType="fixed" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_9">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_10" name="a" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_8" name="c1" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_10">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_8">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_11" name="h" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_7" name="a" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_11">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_6" name="h" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_6">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -298,57 +272,53 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[a],Reference=Value>*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh],Reference=Value>)*(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh],Reference=Value>/(&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca],Reference=Concentration>+&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[d_inh],Reference=Value>)-&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[h],Reference=Value>)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_12" name="v4" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_5" name="v4" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_12">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_5">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_13" name="j_in" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_4" name="j_in" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_13">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_4">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_14" name="k_pl" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_3" name="k_pl" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_14">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_3">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_15" name="epsilon" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_2" name="epsilon" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_15">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_2">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </ModelValue>
-      <ModelValue key="ModelValue_16" name="e_j_in" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_1" name="e_j_in" simulationType="assignment" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
           &lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[epsilon],Reference=Value>*&lt;CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[j_in],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_17" name="e_v4" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_0" name="e_v4" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_17">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_0">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -358,143 +328,143 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
     </ListOfModelValues>
     <ListOfReactions>
-      <Reaction key="Reaction_0" name="R2" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_4" name="R2" reversible="true" fast="false" addNoise="false">
         <ListOfProducts>
-          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7486" name="c1" value="0.185"/>
-          <Constant key="Parameter_7485" name="v" value="0.02"/>
-          <Constant key="Parameter_7491" name="c0" value="2"/>
+          <Constant key="Parameter_6752" name="c1" value="0.185"/>
+          <Constant key="Parameter_6749" name="v" value="0.02"/>
+          <Constant key="Parameter_6748" name="c0" value="2"/>
         </ListOfConstants>
-        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
+        <KineticLaw function="Function_48" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_286">
-              <SourceParameter reference="ModelValue_0"/>
+            <CallParameter functionParameter="FunctionParameter_288">
+              <SourceParameter reference="ModelValue_17"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_285">
-              <SourceParameter reference="ModelValue_7"/>
+            <CallParameter functionParameter="FunctionParameter_289">
+              <SourceParameter reference="ModelValue_10"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="ModelValue_9"/>
+            <CallParameter functionParameter="FunctionParameter_290">
+              <SourceParameter reference="ModelValue_8"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_283">
-              <SourceParameter reference="Metabolite_0"/>
+            <CallParameter functionParameter="FunctionParameter_291">
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_1" name="R3" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_3" name="R3" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7487" name="Shalve" value="0.18"/>
-          <Constant key="Parameter_7489" name="V" value="0.6"/>
-          <Constant key="Parameter_7490" name="h" value="2"/>
+          <Constant key="Parameter_6759" name="Shalve" value="0.18"/>
+          <Constant key="Parameter_6747" name="V" value="0.6"/>
+          <Constant key="Parameter_6753" name="h" value="2"/>
         </ListOfConstants>
         <KineticLaw function="Function_9" unitType="ConcentrationPerTime" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_42">
-              <SourceParameter reference="Metabolite_0"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_43">
-              <SourceParameter reference="ModelValue_2"/>
+              <SourceParameter reference="ModelValue_15"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_44">
-              <SourceParameter reference="ModelValue_1"/>
+              <SourceParameter reference="ModelValue_16"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_50">
-              <SourceParameter reference="Parameter_7490"/>
+              <SourceParameter reference="Parameter_6753"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
       <Reaction key="Reaction_2" name="R1" reversible="true" fast="false" addNoise="false">
         <ListOfProducts>
-          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_1" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_8513" name="k2" value="0.4"/>
-          <Constant key="Parameter_7492" name="v" value="40"/>
-          <Constant key="Parameter_7493" name="h" value="0.8"/>
-          <Constant key="Parameter_8514" name="k1" value="0.2"/>
-          <Constant key="Parameter_8515" name="c0" value="2"/>
-          <Constant key="Parameter_8511" name="c1" value="0.185"/>
+          <Constant key="Parameter_7612" name="k2" value="0.4"/>
+          <Constant key="Parameter_7613" name="v" value="40"/>
+          <Constant key="Parameter_6742" name="h" value="0.8"/>
+          <Constant key="Parameter_6744" name="k1" value="0.2"/>
+          <Constant key="Parameter_7609" name="c0" value="2"/>
+          <Constant key="Parameter_6745" name="c1" value="0.185"/>
         </ListOfConstants>
-        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
+        <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_3"/>
+            <CallParameter functionParameter="FunctionParameter_303">
+              <SourceParameter reference="ModelValue_14"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_274">
+            <CallParameter functionParameter="FunctionParameter_302">
               <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_273">
-              <SourceParameter reference="ModelValue_6"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_272">
-              <SourceParameter reference="Metabolite_0"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_266">
-              <SourceParameter reference="ModelValue_5"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_276">
+            <CallParameter functionParameter="FunctionParameter_301">
               <SourceParameter reference="ModelValue_11"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_277">
-              <SourceParameter reference="ModelValue_7"/>
+            <CallParameter functionParameter="FunctionParameter_300">
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_278">
-              <SourceParameter reference="ModelValue_9"/>
+            <CallParameter functionParameter="FunctionParameter_299">
+              <SourceParameter reference="ModelValue_12"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_298">
+              <SourceParameter reference="ModelValue_6"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_297">
+              <SourceParameter reference="ModelValue_10"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_296">
+              <SourceParameter reference="ModelValue_8"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_3" name="R5" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_1" name="R5" reversible="false" fast="false" addNoise="false">
         <ListOfProducts>
-          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_8512" name="v" value="0.008"/>
+          <Constant key="Parameter_4886" name="v" value="0.012"/>
         </ListOfConstants>
         <KineticLaw function="Function_6" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_49">
-              <SourceParameter reference="ModelValue_16"/>
+              <SourceParameter reference="ModelValue_1"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_4" name="R4" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_0" name="R4" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7496" name="h" value="2"/>
-          <Constant key="Parameter_7494" name="Shalve" value="0.1"/>
-          <Constant key="Parameter_7501" name="V" value="0.018"/>
+          <Constant key="Parameter_7300" name="h" value="2"/>
+          <Constant key="Parameter_8509" name="Shalve" value="0.1"/>
+          <Constant key="Parameter_8507" name="V" value="0.018"/>
         </ListOfConstants>
         <KineticLaw function="Function_9" unitType="Default" scalingCompartment="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_42">
-              <SourceParameter reference="Metabolite_0"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_43">
-              <SourceParameter reference="ModelValue_14"/>
+              <SourceParameter reference="ModelValue_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_44">
-              <SourceParameter reference="ModelValue_17"/>
+              <SourceParameter reference="ModelValue_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_50">
-              <SourceParameter reference="Parameter_7496"/>
+              <SourceParameter reference="Parameter_7300"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -518,9 +488,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[ER]" value="0.185" type="Compartment" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca]" value="0.20000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="0.59999999999999998" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca_er]" value="9.7297297297297298" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca]" value="1.204428152e+17" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Compartments[Cytoplasm],Vector=Metabolites[Ca_er]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel,Vector=Values[v2]" value="0.02" type="ModelValue" simulationType="fixed"/>
@@ -627,7 +597,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_3" name="fig3">
+      <ModelParameterSet key="ModelParameterSet_4" name="fig3">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ModelParameterGroup cn="String=Initial Time" type="Group">
           <ModelParameter cn="CN=Root,Model=CICR model by Li and Rinzel" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
@@ -744,10 +720,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_4" name="fig5a1">
+      <ModelParameterSet key="ModelParameterSet_3" name="fig5a1">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_4">
+<rdf:Description rdf:about="#ModelParameterSet_3">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -867,10 +843,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_5" name="fig5a2">
+      <ModelParameterSet key="ModelParameterSet_2" name="fig5a2">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_5">
+<rdf:Description rdf:about="#ModelParameterSet_2">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -994,37 +970,37 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </ListOfModelParameterSets>
     <StateTemplate>
       <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="ModelValue_7"/>
-      <StateTemplateVariable objectReference="ModelValue_11"/>
-      <StateTemplateVariable objectReference="Metabolite_0"/>
-      <StateTemplateVariable objectReference="Metabolite_2"/>
-      <StateTemplateVariable objectReference="ModelValue_16"/>
-      <StateTemplateVariable objectReference="ModelValue_17"/>
-      <StateTemplateVariable objectReference="Metabolite_1"/>
-      <StateTemplateVariable objectReference="Compartment_0"/>
-      <StateTemplateVariable objectReference="Compartment_1"/>
-      <StateTemplateVariable objectReference="ModelValue_0"/>
-      <StateTemplateVariable objectReference="ModelValue_1"/>
-      <StateTemplateVariable objectReference="ModelValue_2"/>
-      <StateTemplateVariable objectReference="ModelValue_3"/>
-      <StateTemplateVariable objectReference="ModelValue_4"/>
-      <StateTemplateVariable objectReference="ModelValue_5"/>
-      <StateTemplateVariable objectReference="ModelValue_6"/>
-      <StateTemplateVariable objectReference="ModelValue_8"/>
-      <StateTemplateVariable objectReference="ModelValue_9"/>
       <StateTemplateVariable objectReference="ModelValue_10"/>
-      <StateTemplateVariable objectReference="ModelValue_12"/>
-      <StateTemplateVariable objectReference="ModelValue_13"/>
-      <StateTemplateVariable objectReference="ModelValue_14"/>
+      <StateTemplateVariable objectReference="ModelValue_6"/>
+      <StateTemplateVariable objectReference="Metabolite_2"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
+      <StateTemplateVariable objectReference="ModelValue_1"/>
+      <StateTemplateVariable objectReference="ModelValue_0"/>
+      <StateTemplateVariable objectReference="Metabolite_1"/>
+      <StateTemplateVariable objectReference="Compartment_1"/>
+      <StateTemplateVariable objectReference="Compartment_0"/>
+      <StateTemplateVariable objectReference="ModelValue_17"/>
+      <StateTemplateVariable objectReference="ModelValue_16"/>
       <StateTemplateVariable objectReference="ModelValue_15"/>
+      <StateTemplateVariable objectReference="ModelValue_14"/>
+      <StateTemplateVariable objectReference="ModelValue_13"/>
+      <StateTemplateVariable objectReference="ModelValue_12"/>
+      <StateTemplateVariable objectReference="ModelValue_11"/>
+      <StateTemplateVariable objectReference="ModelValue_9"/>
+      <StateTemplateVariable objectReference="ModelValue_8"/>
+      <StateTemplateVariable objectReference="ModelValue_7"/>
+      <StateTemplateVariable objectReference="ModelValue_5"/>
+      <StateTemplateVariable objectReference="ModelValue_4"/>
+      <StateTemplateVariable objectReference="ModelValue_3"/>
+      <StateTemplateVariable objectReference="ModelValue_2"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 2 0.80000000000000004 0.20000000000000001 9.7297297297297298 0.012 0.018000000000000002 0.59999999999999998 1 0.185 0.02 0.59999999999999998 0.17999999999999999 40 0.13 0.40000000000000002 0.20000000000000001 0.40000000000000002 0.185 1 1.8 1.2 0.10000000000000001 0.01 
+      0 2 0.80000000000000004 1.204428152e+17 5.8593801989189192e+18 0.012 0.018000000000000002 3.613284456e+17 1 0.185 0.02 0.59999999999999998 0.17999999999999999 40 0.13 0.40000000000000002 0.20000000000000001 0.40000000000000002 0.185 1 1.8 1.2 0.10000000000000001 0.01 
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_13" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_4" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
+      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -1042,8 +1018,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_15" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="1000"/>
@@ -1064,7 +1040,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_11" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_16" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -1085,15 +1061,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_10" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_1" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_9" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_13" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -1114,8 +1090,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_5" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
+      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -1145,10 +1121,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_7" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
+    <Task key="Task_6" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
       <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_13"/>
+        <Parameter name="Steady-State" type="key" value="Task_4"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -1156,8 +1132,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Smallbone" type="bool" value="1"/>
       </Method>
     </Task>
-    <Task key="Task_6" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_7" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
+      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -1171,8 +1147,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="10000"/>
       </Method>
     </Task>
-    <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_8" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -1184,8 +1160,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Deuflhard Tolerance" type="unsignedFloat" value="0.0001"/>
       </Method>
     </Task>
-    <Task key="Task_16" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_2" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -1208,14 +1184,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Delta minimum" type="unsignedFloat" value="9.9999999999999998e-13"/>
       </Method>
     </Task>
-    <Task key="Task_15" name="Moieties" type="moieties" scheduled="false" updateModel="false">
-      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_12" name="Moieties" type="moieties" scheduled="false" updateModel="false">
+      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
       </Method>
     </Task>
-    <Task key="Task_4" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
+    <Task key="Task_0" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -1251,15 +1227,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_3" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_14" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
+      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_13"/>
+        <Parameter name="Steady-State" type="key" value="Task_4"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
     </Task>
-    <Task key="Task_2" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+    <Task key="Task_9" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -1286,7 +1262,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_10" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_0" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1294,7 +1270,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_9" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_1" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1305,7 +1281,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_8" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_2" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1313,7 +1289,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_7" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_3" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1337,7 +1313,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_6" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_4" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1373,7 +1349,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_6" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1385,7 +1361,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_3" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_7" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1397,7 +1373,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_2" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_8" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1409,7 +1385,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_1" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_9" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1421,7 +1397,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_0" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_10" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1510,17 +1486,69 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         m
       </Expression>
     </UnitDefinition>
-    <UnitDefinition key="Unit_15" name="dimensionless" symbol="1">
+    <UnitDefinition key="Unit_5" name="second" symbol="s">
       <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Unit_14">
+<rdf:Description rdf:about="#Unit_4">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
       <Expression>
-        1
+        s
+      </Expression>
+    </UnitDefinition>
+    <UnitDefinition key="Unit_13" name="Avogadro" symbol="Avogadro">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Unit_12">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        Avogadro
+      </Expression>
+    </UnitDefinition>
+    <UnitDefinition key="Unit_17" name="item" symbol="#">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Unit_16">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        #
+      </Expression>
+    </UnitDefinition>
+    <UnitDefinition key="Unit_35" name="liter" symbol="l">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Unit_34">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        0.001*m^3
+      </Expression>
+    </UnitDefinition>
+    <UnitDefinition key="Unit_41" name="mole" symbol="mol">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Unit_40">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        Avogadro*#
       </Expression>
     </UnitDefinition>
   </ListOfUnitDefinitions>
