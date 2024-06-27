@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 293) (http://www.copasi.org) at 2024-06-26T00:52:49Z -->
+<!-- generated with COPASI 4.44 (Build 293) (http://www.copasi.org) at 2024-06-27T01:07:46Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="293" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -20,13 +20,31 @@
         <ParameterDescription key="FunctionParameter_50" name="h" order="3" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_41" name="IP3R_kinetics" type="UserDefined" reversible="unspecified">
+    <Function key="Function_13" name="Mass action (irreversible)" type="MassAction" reversible="false">
       <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Function_41">
-</rdf:Description>
-</rdf:RDF>
+<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <rdf:Description rdf:about="#Function_13">
+   <CopasiMT:is rdf:resource="urn:miriam:obo.sbo:SBO:0000163" />
+   </rdf:Description>
+   </rdf:RDF>
       </MiriamAnnotation>
+      <Comment>
+        <body xmlns="http://www.w3.org/1999/xhtml">
+<b>Mass action rate law for irreversible reactions</b>
+<p>
+Reaction scheme where the products are created from the reactants and the change of a product quantity is proportional to the product of reactant activities. The reaction scheme does not include any reverse process that creates the reactants from the products. The change of a product quantity is proportional to the quantity of one reactant.
+</p>
+</body>
+      </Comment>
+      <Expression>
+        k1*PRODUCT&lt;substrate_i>
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_80" name="k1" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_81" name="substrate" order="1" role="substrate"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_41" name="IP3R_kinetics" type="UserDefined" reversible="unspecified">
       <Expression>
         v*(M1/(M1+k1))^3*(M2/(M2+k2))^3*h^3*(c0-(1+c1)*M2)
       </Expression>
@@ -56,6 +74,30 @@
         <ParameterDescription key="FunctionParameter_285" name="c0" order="1" role="constant"/>
         <ParameterDescription key="FunctionParameter_284" name="c1" order="2" role="constant"/>
         <ParameterDescription key="FunctionParameter_283" name="M" order="3" role="modifier"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_45" name="PLC_delta kinetics" type="UserDefined" reversible="unspecified">
+      <Expression>
+        (Vmax/(1+P/K_delta))*(M^2/(M^2+K_PLC_delta))
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_322" name="Vmax" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_320" name="P" order="1" role="product"/>
+        <ParameterDescription key="FunctionParameter_307" name="K_delta" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_316" name="M" order="3" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_324" name="K_PLC_delta" order="4" role="constant"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_48" name="IP3-3K kinetics" type="UserDefined" reversible="unspecified">
+      <Expression>
+        Vmax*(M^4/(M^4+K_D))*(S/(S+K3))
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_309" name="M" order="0" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_326" name="K_D" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_321" name="S" order="2" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_329" name="K3" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_313" name="Vmax" order="4" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
@@ -108,15 +150,7 @@
 <p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>
     </Comment>
     <ListOfCompartments>
-      <Compartment key="Compartment_0" name="Cytoplasm" simulationType="fixed" dimensionality="3" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Compartment_0">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-      </Compartment>
-      <Compartment key="Compartment_1" name="ER" simulationType="fixed" dimensionality="3" addNoise="false">
+      <Compartment key="Compartment_1" name="Cytoplasm" simulationType="fixed" dimensionality="3" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Compartment_1">
@@ -124,14 +158,22 @@
 </rdf:RDF>
         </MiriamAnnotation>
       </Compartment>
+      <Compartment key="Compartment_0" name="ER" simulationType="fixed" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Compartment_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Compartment>
     </ListOfCompartments>
     <ListOfMetabolites>
-      <Metabolite key="Metabolite_0" name="C" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_2" name="C" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Metabolite_0">
+  <rdf:Description rdf:about="#Metabolite_2">
     <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:29108"/>
     <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C00076"/>
   </rdf:Description>
@@ -139,7 +181,7 @@
 
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_1" name="IP3" simulationType="fixed" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_1" name="IP3" simulationType="reactions" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
@@ -152,7 +194,18 @@
 
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_2" name="C_ER" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_0" name="C_ER" simulationType="assignment" compartment="Compartment_1" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_0">
+    <CopasiMT:is rdf:resource="urn:miriam:chebi:CHEBI:29108"/>
+    <CopasiMT:is rdf:resource="urn:miriam:kegg.compound:C00076"/>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
         <Expression>
           (&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=Value>-&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C],Reference=Concentration>)/&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1],Reference=Value>
         </Expression>
@@ -160,46 +213,94 @@
     </ListOfMetabolites>
     <ListOfModelValues>
       <ModelValue key="ModelValue_12" name="r_L" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_12">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           1/s
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_0" name="v_ER" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_11" name="v_ER" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_11">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l/s
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_1" name="K_ER" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_10" name="K_ER" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_10">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_2" name="r_C" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_9" name="r_C" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_9">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           1/s
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_3" name="d1" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_8" name="d1" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_8">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_4" name="d2" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_7" name="d2" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_5" name="d3" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_6" name="d3" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_6" name="C0" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_5" name="C0" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_7" name="Q2" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_4" name="Q2" simulationType="assignment" addNoise="false">
         <Expression>
           &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d2],Reference=Value>*((&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration>+&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d1],Reference=Value>)/(&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration>+&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d3],Reference=Value>))
         </Expression>
@@ -207,36 +308,92 @@
           umol/l
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_8" name="c1" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_3" name="c1" simulationType="fixed" addNoise="false">
+        <Unit>
+          1
+        </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_9" name="a2" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_2" name="a2" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           1/s
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_10" name="h" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_1" name="h" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
           &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[a2],Reference=Value>*(&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C],Reference=Concentration>+&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[Q2],Reference=Value>)*(&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[Q2],Reference=Value>/(&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C],Reference=Concentration>+&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[Q2],Reference=Value>)-&lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[h],Reference=Value>)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_11" name="d5" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_0" name="d5" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           umol/l
         </Unit>
       </ModelValue>
+      <ModelValue key="ModelValue_13" name="v_delta" simulationType="fixed" addNoise="false">
+        <Unit>
+          umol/l/s
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_14" name="K_delta" simulationType="fixed" addNoise="false">
+        <Unit>
+          umol/l
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_15" name="K_PLC_delta" simulationType="fixed" addNoise="false">
+        <Unit>
+          umol/l
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_16" name="v3K" simulationType="fixed" addNoise="false">
+        <Unit>
+          umol/l/s
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_17" name="K_D" simulationType="fixed" addNoise="false">
+        <Unit>
+          umol/l
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_18" name="K3" simulationType="fixed" addNoise="false">
+        <Unit>
+          umol/l
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_19" name="r5P" simulationType="fixed" addNoise="false">
+        <Unit>
+          1/s
+        </Unit>
+      </ModelValue>
     </ListOfModelValues>
     <ListOfReactions>
-      <Reaction key="Reaction_0" name="leak" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_2" name="leak" reversible="true" fast="false" addNoise="false">
         <ListOfProducts>
-          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7499" name="c1" value="0.185"/>
-          <Constant key="Parameter_7620" name="v" value="0.11"/>
-          <Constant key="Parameter_7497" name="c0" value="2"/>
+          <Constant key="Parameter_7306" name="c1" value="0.185"/>
+          <Constant key="Parameter_7304" name="v" value="0.11"/>
+          <Constant key="Parameter_7305" name="c0" value="2"/>
         </ListOfConstants>
         <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -244,84 +401,166 @@
               <SourceParameter reference="ModelValue_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_285">
-              <SourceParameter reference="ModelValue_6"/>
+              <SourceParameter reference="ModelValue_5"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="ModelValue_8"/>
+              <SourceParameter reference="ModelValue_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_283">
-              <SourceParameter reference="Metabolite_0"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_1" name="SERCA" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_1" name="pump" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7619" name="Shalve" value="0.1"/>
-          <Constant key="Parameter_7502" name="V" value="0.9"/>
-          <Constant key="Parameter_7512" name="h" value="2"/>
+          <Constant key="Parameter_8509" name="Shalve" value="0.1"/>
+          <Constant key="Parameter_8506" name="V" value="0.9"/>
+          <Constant key="Parameter_8510" name="h" value="2"/>
         </ListOfConstants>
         <KineticLaw function="Function_9" unitType="ConcentrationPerTime" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_42">
-              <SourceParameter reference="Metabolite_0"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_43">
-              <SourceParameter reference="ModelValue_1"/>
+              <SourceParameter reference="ModelValue_10"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_44">
-              <SourceParameter reference="ModelValue_0"/>
+              <SourceParameter reference="ModelValue_11"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_50">
-              <SourceParameter reference="Parameter_7512"/>
+              <SourceParameter reference="Parameter_8510"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_2" name="chan" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_0" name="chan" reversible="true" fast="false" addNoise="false">
         <ListOfProducts>
-          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_1" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7328" name="k2" value="0.08234"/>
-          <Constant key="Parameter_8512" name="v" value="6"/>
-          <Constant key="Parameter_8804" name="h" value="0.8"/>
-          <Constant key="Parameter_8844" name="k1" value="0.13"/>
-          <Constant key="Parameter_7480" name="c0" value="2"/>
-          <Constant key="Parameter_7496" name="c1" value="0.185"/>
+          <Constant key="Parameter_7286" name="k2" value="0.08234"/>
+          <Constant key="Parameter_7285" name="v" value="6"/>
+          <Constant key="Parameter_7287" name="h" value="0.8"/>
+          <Constant key="Parameter_7290" name="k1" value="0.13"/>
+          <Constant key="Parameter_7289" name="c0" value="2"/>
+          <Constant key="Parameter_7288" name="c1" value="0.185"/>
         </ListOfConstants>
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="ModelValue_2"/>
+              <SourceParameter reference="ModelValue_9"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_274">
               <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_273">
-              <SourceParameter reference="ModelValue_3"/>
+              <SourceParameter reference="ModelValue_8"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_272">
-              <SourceParameter reference="Metabolite_0"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
-              <SourceParameter reference="ModelValue_11"/>
+              <SourceParameter reference="ModelValue_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_276">
-              <SourceParameter reference="ModelValue_10"/>
+              <SourceParameter reference="ModelValue_1"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_277">
-              <SourceParameter reference="ModelValue_6"/>
+              <SourceParameter reference="ModelValue_5"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_278">
-              <SourceParameter reference="ModelValue_8"/>
+              <SourceParameter reference="ModelValue_3"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_3" name="PLC_delta" reversible="false" fast="false" addNoise="false">
+        <ListOfProducts>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_6689" name="K_delta" value="1.5"/>
+          <Constant key="Parameter_6558" name="Vmax" value="0.02"/>
+          <Constant key="Parameter_6687" name="K_PLC_delta" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_45" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_322">
+              <SourceParameter reference="ModelValue_13"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_320">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_307">
+              <SourceParameter reference="ModelValue_14"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_316">
+              <SourceParameter reference="Metabolite_2"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_324">
+              <SourceParameter reference="ModelValue_15"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_4" name="IP-5P" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6476" name="k1" value="0.04"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="ModelValue_19"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_5" name="IP3-3K" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_6469" name="K3" value="1"/>
+          <Constant key="Parameter_6676" name="Vmax" value="0.02"/>
+          <Constant key="Parameter_4997" name="K_D" value="0.7"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_48" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_309">
+              <SourceParameter reference="Metabolite_2"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_326">
+              <SourceParameter reference="ModelValue_17"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_321">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_329">
+              <SourceParameter reference="ModelValue_18"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_313">
+              <SourceParameter reference="ModelValue_13"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -346,7 +585,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C]" value="1.2044281519999998e+17" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
@@ -363,6 +602,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[a2]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[h]" value="0.80000000000000004" type="ModelValue" simulationType="ode"/>
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d5]" value="0.082339999999999997" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta]" value="0.02" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_delta]" value="1.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_PLC_delta]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v3K]" value="2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_D]" value="0.69999999999999996" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K3]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r5P]" value="0.040000000000000001" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
           <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak]" type="Reaction">
@@ -382,18 +628,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               </InitialExpression>
             </ModelParameter>
           </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[SERCA]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[SERCA],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
                 &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_ER],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
-            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[SERCA],ParameterGroup=Parameters,Parameter=V" value="0.90000000000000002" type="ReactionParameter" simulationType="assignment">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=V" value="0.90000000000000002" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
                 &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_ER],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
-            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[SERCA],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=k2" value="0.082339999999999997" type="ReactionParameter" simulationType="assignment">
@@ -427,37 +673,367 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               </InitialExpression>
             </ModelParameter>
           </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=K_delta" value="1.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=Vmax" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=K_PLC_delta" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_PLC_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP-5P]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP-5P],ParameterGroup=Parameters,Parameter=k1" value="0.040000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r5P],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=K3" value="1" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=Vmax" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=K_D" value="0.69999999999999996" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_D],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_1" name="AM">
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[ER]" value="0.185" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C]" value="1.2044281519999998e+17" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L]" value="0.11" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_ER]" value="0.90000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_ER]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_C]" value="6" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d1]" value="0.13" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d2]" value="1.0489999999999999" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d3]" value="0.94340000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0]" value="2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[Q2]" value="0.49615783335493063" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1]" value="0.185" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[a2]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[h]" value="0.80000000000000004" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d5]" value="0.082339999999999997" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta]" value="0.02" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_delta]" value="1.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_PLC_delta]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v3K]" value="2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_D]" value="0.69999999999999996" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K3]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r5P]" value="0.040000000000000001" type="ModelValue" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak],ParameterGroup=Parameters,Parameter=v" value="0.11" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=Shalve" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_ER],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=V" value="0.90000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_ER],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=k2" value="0.082339999999999997" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d5],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=v" value="6" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_C],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=h" value="0.80000000000000004" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[h],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=k1" value="0.13" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=K_delta" value="1.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=Vmax" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=K_PLC_delta" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_PLC_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP-5P]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP-5P],ParameterGroup=Parameters,Parameter=k1" value="0.040000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r5P],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=K3" value="1" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=Vmax" value="0.02" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=K_D" value="0.69999999999999996" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_D],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_2" name="FM">
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]" value="1" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[ER]" value="0.185" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C]" value="1.2044281519999998e+17" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L]" value="0.11" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_ER]" value="0.90000000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_ER]" value="0.050000000000000003" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_C]" value="6" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d1]" value="0.13" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d2]" value="1.0489999999999999" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d3]" value="0.94340000000000002" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0]" value="2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[Q2]" value="0.49615783335493063" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1]" value="0.185" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[a2]" value="0.20000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[h]" value="0.80000000000000004" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d5]" value="0.082339999999999997" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta]" value="0.050000000000000003" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_delta]" value="1.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_PLC_delta]" value="0.10000000000000001" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v3K]" value="2" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_D]" value="0.69999999999999996" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K3]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r5P]" value="0.050000000000000003" type="ModelValue" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak],ParameterGroup=Parameters,Parameter=v" value="0.11" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[leak],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=Shalve" value="0.050000000000000003" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_ER],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=V" value="0.90000000000000002" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_ER],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[pump],ParameterGroup=Parameters,Parameter=h" value="2" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=k2" value="0.082339999999999997" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d5],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=v" value="6" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_C],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=h" value="0.80000000000000004" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[h],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=k1" value="0.13" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[d1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=c0" value="2" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[chan],ParameterGroup=Parameters,Parameter=c1" value="0.185" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[c1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=K_delta" value="1.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=Vmax" value="0.050000000000000003" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[PLC_delta],ParameterGroup=Parameters,Parameter=K_PLC_delta" value="0.10000000000000001" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_PLC_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP-5P]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP-5P],ParameterGroup=Parameters,Parameter=k1" value="0.050000000000000003" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r5P],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=K3" value="1" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K3],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=Vmax" value="0.050000000000000003" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[v_delta],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Reactions[IP3-3K],ParameterGroup=Parameters,Parameter=K_D" value="0.69999999999999996" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=ChI model of calcium oscillations,Vector=Values[K_D],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
       <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="ModelValue_10"/>
-      <StateTemplateVariable objectReference="Metabolite_0"/>
-      <StateTemplateVariable objectReference="Metabolite_2"/>
-      <StateTemplateVariable objectReference="ModelValue_7"/>
-      <StateTemplateVariable objectReference="Metabolite_1"/>
-      <StateTemplateVariable objectReference="Compartment_0"/>
-      <StateTemplateVariable objectReference="Compartment_1"/>
-      <StateTemplateVariable objectReference="ModelValue_12"/>
-      <StateTemplateVariable objectReference="ModelValue_0"/>
       <StateTemplateVariable objectReference="ModelValue_1"/>
-      <StateTemplateVariable objectReference="ModelValue_2"/>
-      <StateTemplateVariable objectReference="ModelValue_3"/>
+      <StateTemplateVariable objectReference="Metabolite_2"/>
+      <StateTemplateVariable objectReference="Metabolite_1"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
       <StateTemplateVariable objectReference="ModelValue_4"/>
-      <StateTemplateVariable objectReference="ModelValue_5"/>
-      <StateTemplateVariable objectReference="ModelValue_6"/>
-      <StateTemplateVariable objectReference="ModelValue_8"/>
-      <StateTemplateVariable objectReference="ModelValue_9"/>
+      <StateTemplateVariable objectReference="Compartment_1"/>
+      <StateTemplateVariable objectReference="Compartment_0"/>
+      <StateTemplateVariable objectReference="ModelValue_12"/>
       <StateTemplateVariable objectReference="ModelValue_11"/>
+      <StateTemplateVariable objectReference="ModelValue_10"/>
+      <StateTemplateVariable objectReference="ModelValue_9"/>
+      <StateTemplateVariable objectReference="ModelValue_8"/>
+      <StateTemplateVariable objectReference="ModelValue_7"/>
+      <StateTemplateVariable objectReference="ModelValue_6"/>
+      <StateTemplateVariable objectReference="ModelValue_5"/>
+      <StateTemplateVariable objectReference="ModelValue_3"/>
+      <StateTemplateVariable objectReference="ModelValue_2"/>
+      <StateTemplateVariable objectReference="ModelValue_0"/>
+      <StateTemplateVariable objectReference="ModelValue_13"/>
+      <StateTemplateVariable objectReference="ModelValue_14"/>
+      <StateTemplateVariable objectReference="ModelValue_15"/>
+      <StateTemplateVariable objectReference="ModelValue_16"/>
+      <StateTemplateVariable objectReference="ModelValue_17"/>
+      <StateTemplateVariable objectReference="ModelValue_18"/>
+      <StateTemplateVariable objectReference="ModelValue_19"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0.80000000000000004 1.2044281519999998e+17 5.8593801989189192e+18 0.49615783335493063 3.613284456e+17 1 0.185 0.11 0.90000000000000002 0.10000000000000001 6 0.13 1.0489999999999999 0.94340000000000002 2 0.185 0.20000000000000001 0.082339999999999997 
+      0 0.80000000000000004 1.2044281519999998e+17 3.613284456e+17 5.8593801989189192e+18 0.49615783335493063 1 0.185 0.11 0.90000000000000002 0.10000000000000001 6 0.13 1.0489999999999999 0.94340000000000002 2 0.185 0.20000000000000001 0.082339999999999997 0.02 1.5 0.10000000000000001 2 0.69999999999999996 1 0.040000000000000001 
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_11" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_2" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
+      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -475,12 +1051,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_10" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_3" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="1000"/>
-        <Parameter name="StepSize" type="float" value="0.10000000000000001"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="10000"/>
+        <Parameter name="StepSize" type="float" value="0.01"/>
         <Parameter name="Duration" type="float" value="100"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
@@ -497,7 +1073,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_9" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_4" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -532,15 +1108,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_14" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_15" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_0" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_16" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -561,8 +1137,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_5" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
+      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -592,10 +1168,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_7" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
+    <Task key="Task_6" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
       <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_11"/>
+        <Parameter name="Steady-State" type="key" value="Task_2"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -603,8 +1179,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Smallbone" type="bool" value="1"/>
       </Method>
     </Task>
-    <Task key="Task_6" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_7" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
+      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -618,8 +1194,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="10000"/>
       </Method>
     </Task>
-    <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_8" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -631,8 +1207,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Deuflhard Tolerance" type="unsignedFloat" value="0.0001"/>
       </Method>
     </Task>
-    <Task key="Task_13" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_0" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -655,14 +1231,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Delta minimum" type="unsignedFloat" value="9.9999999999999998e-13"/>
       </Method>
     </Task>
-    <Task key="Task_1" name="Moieties" type="moieties" scheduled="false" updateModel="false">
-      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_14" name="Moieties" type="moieties" scheduled="false" updateModel="false">
+      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
       </Method>
     </Task>
-    <Task key="Task_16" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
+    <Task key="Task_9" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -698,15 +1274,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_15" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_10" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
+      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_11"/>
+        <Parameter name="Steady-State" type="key" value="Task_2"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
     </Task>
-    <Task key="Task_4" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+    <Task key="Task_11" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -733,7 +1309,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_10" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_0" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -741,7 +1317,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_9" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_1" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -752,7 +1328,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_8" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_2" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -760,7 +1336,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_7" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_3" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -784,7 +1360,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_6" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_4" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -820,7 +1396,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_6" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -832,7 +1408,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_3" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_7" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -844,7 +1420,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_2" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_8" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -856,7 +1432,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_1" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_9" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -868,7 +1444,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_0" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_10" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -902,7 +1478,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
-        <PlotItem name="c0" type="Curve2D">
+        <PlotItem name="[IP3]|Time" type="Curve2D">
           <Parameter name="Line type" type="unsignedInteger" value="0"/>
           <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
           <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
@@ -911,7 +1487,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Parameter name="Recording Activity" type="string" value="during"/>
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=Value"/>
+            <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
         <PlotItem name="h" type="Curve2D">
@@ -936,6 +1512,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Reference=Time"/>
             <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="c0" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[C0],Reference=Value"/>
           </ListOfChannels>
         </PlotItem>
       </ListOfPlotItems>
