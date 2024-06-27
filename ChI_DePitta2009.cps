@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 293) (http://www.copasi.org) at 2024-06-27T15:32:21Z -->
+<!-- generated with COPASI 4.44 (Build 294) (http://www.copasi.org) at 2024-06-27T19:38:37Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
-<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="293" copasiSourcesModified="0">
+<COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="294" copasiSourcesModified="0">
   <ListOfFunctions>
     <Function key="Function_9" name="Hill Cooperativity" type="PreDefined" reversible="false">
       <MiriamAnnotation>
@@ -46,9 +46,7 @@ Reaction scheme where the products are created from the reactants and the change
     </Function>
     <Function key="Function_41" name="IP3R_kinetics" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Function_41">
 </rdf:Description>
 </rdf:RDF>
@@ -86,9 +84,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Function>
     <Function key="Function_43" name="PLC_delta kinetics" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Function_43">
 </rdf:Description>
 </rdf:RDF>
@@ -106,9 +102,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Function>
     <Function key="Function_44" name="IP3-3K kinetics" type="UserDefined" reversible="unspecified">
       <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Function_44">
 </rdf:Description>
 </rdf:RDF>
@@ -212,7 +206,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_2" name="C_ER" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_2" name="C_ER" simulationType="assignment" compartment="Compartment_1" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_2">
@@ -317,9 +311,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_8" name="Q2" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_8">
 </rdf:Description>
 </rdf:RDF>
@@ -333,9 +325,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_9" name="c1" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_9">
 </rdf:Description>
 </rdf:RDF>
@@ -379,9 +369,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_13" name="v_delta" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_13">
 </rdf:Description>
 </rdf:RDF>
@@ -392,9 +380,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_14" name="K_delta" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_14">
 </rdf:Description>
 </rdf:RDF>
@@ -405,9 +391,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_15" name="K_PLC_delta" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_15">
 </rdf:Description>
 </rdf:RDF>
@@ -418,9 +402,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_16" name="v3K" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_16">
 </rdf:Description>
 </rdf:RDF>
@@ -431,9 +413,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_17" name="K_D" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_17">
 </rdf:Description>
 </rdf:RDF>
@@ -444,9 +424,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_18" name="K3" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_18">
 </rdf:Description>
 </rdf:RDF>
@@ -457,9 +435,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_19" name="r5P" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_19">
 </rdf:Description>
 </rdf:RDF>
@@ -472,9 +448,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <ListOfReactions>
       <Reaction key="Reaction_0" name="leak" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_0">
 </rdf:Description>
 </rdf:RDF>
@@ -486,9 +460,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7495" name="c1" value="0.185"/>
-          <Constant key="Parameter_7494" name="v" value="0.11"/>
-          <Constant key="Parameter_8520" name="c0" value="2"/>
+          <Constant key="Parameter_11777" name="c1" value="0.185"/>
+          <Constant key="Parameter_11812" name="v" value="0.11"/>
+          <Constant key="Parameter_11814" name="c0" value="2"/>
         </ListOfConstants>
         <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -508,21 +482,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </KineticLaw>
       </Reaction>
       <Reaction key="Reaction_1" name="pump" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Reaction_1">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_8519" name="Shalve" value="0.1"/>
-          <Constant key="Parameter_8518" name="V" value="0.9"/>
-          <Constant key="Parameter_8517" name="h" value="2"/>
+          <Constant key="Parameter_11815" name="Shalve" value="0.1"/>
+          <Constant key="Parameter_9207" name="V" value="0.9"/>
+          <Constant key="Parameter_11816" name="h" value="2"/>
         </ListOfConstants>
         <KineticLaw function="Function_9" unitType="ConcentrationPerTime" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -536,16 +502,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="ModelValue_1"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_50">
-              <SourceParameter reference="Parameter_8517"/>
+              <SourceParameter reference="Parameter_11816"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
       <Reaction key="Reaction_2" name="chan" reversible="true" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_2">
 </rdf:Description>
 </rdf:RDF>
@@ -558,12 +522,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7499" name="k2" value="0.08234"/>
-          <Constant key="Parameter_7627" name="v" value="6"/>
-          <Constant key="Parameter_7624" name="h" value="0.8"/>
-          <Constant key="Parameter_7497" name="k1" value="0.13"/>
-          <Constant key="Parameter_7501" name="c0" value="2"/>
-          <Constant key="Parameter_7498" name="c1" value="0.185"/>
+          <Constant key="Parameter_11813" name="k2" value="0.08234"/>
+          <Constant key="Parameter_11820" name="v" value="6"/>
+          <Constant key="Parameter_11819" name="h" value="0.8"/>
+          <Constant key="Parameter_11817" name="k1" value="0.13"/>
+          <Constant key="Parameter_11821" name="c0" value="2"/>
+          <Constant key="Parameter_11818" name="c1" value="0.185"/>
         </ListOfConstants>
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -596,9 +560,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Reaction>
       <Reaction key="Reaction_3" name="PLC_delta" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_3">
 </rdf:Description>
 </rdf:RDF>
@@ -610,9 +572,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7500" name="K_delta" value="1.5"/>
-          <Constant key="Parameter_7628" name="Vmax" value="0.02"/>
-          <Constant key="Parameter_7626" name="K_PLC_delta" value="0.1"/>
+          <Constant key="Parameter_11825" name="K_delta" value="1.5"/>
+          <Constant key="Parameter_11824" name="Vmax" value="0.02"/>
+          <Constant key="Parameter_11822" name="K_PLC_delta" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_43" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -636,9 +598,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Reaction>
       <Reaction key="Reaction_4" name="IP-5P" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_4">
 </rdf:Description>
 </rdf:RDF>
@@ -647,7 +607,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7511" name="k1" value="0.04"/>
+          <Constant key="Parameter_11826" name="k1" value="0.04"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -662,9 +622,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Reaction>
       <Reaction key="Reaction_5" name="IP3-3K" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_5">
 </rdf:Description>
 </rdf:RDF>
@@ -676,9 +634,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7507" name="K3" value="1"/>
-          <Constant key="Parameter_7505" name="Vmax" value="0.02"/>
-          <Constant key="Parameter_7509" name="K_D" value="0.7"/>
+          <Constant key="Parameter_11823" name="K3" value="1"/>
+          <Constant key="Parameter_11830" name="Vmax" value="0.02"/>
+          <Constant key="Parameter_11831" name="K_D" value="0.7"/>
         </ListOfConstants>
         <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm]">
           <ListOfCallParameters>
@@ -721,7 +679,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C]" value="1.2044281519999998e+17" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[ER],Vector=Metabolites[C_ER]" value="1.0839853368e+18" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L]" value="0.11" type="ModelValue" simulationType="fixed"/>
@@ -853,9 +811,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelParameterSet>
       <ModelParameterSet key="ModelParameterSet_3" name="AM">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_3">
 </rdf:Description>
 </rdf:RDF>
@@ -870,7 +826,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C]" value="1.2044281519999998e+17" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[ER],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L]" value="0.11" type="ModelValue" simulationType="fixed"/>
@@ -1002,9 +958,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelParameterSet>
       <ModelParameterSet key="ModelParameterSet_4" name="FM">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_4">
 </rdf:Description>
 </rdf:RDF>
@@ -1019,7 +973,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C]" value="1.2044281519999998e+17" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[IP3]" value="3.613284456e+17" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[ER],Vector=Metabolites[C_ER]" value="5.8593801989189192e+18" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
           <ModelParameter cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Values[r_L]" value="0.11" type="ModelValue" simulationType="fixed"/>
@@ -1179,7 +1133,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_19"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0.80000000000000004 1.2044281519999998e+17 3.613284456e+17 5.8593801989189192e+18 0.49615783335493063 1 0.185 0.11 0.90000000000000002 0.10000000000000001 6 0.13 1.0489999999999999 0.94340000000000002 2 0.185 0.20000000000000001 0.082339999999999997 0.02 1.5 0.10000000000000001 2 0.69999999999999996 1 0.040000000000000001 
+      0 0.80000000000000004 1.2044281519999998e+17 3.613284456e+17 1.0839853368e+18 0.49615783335493063 1 0.185 0.11 0.90000000000000002 0.10000000000000001 6 0.13 1.0489999999999999 0.94340000000000002 2 0.185 0.20000000000000001 0.082339999999999997 0.02 1.5 0.10000000000000001 2 0.69999999999999996 1 0.040000000000000001 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -1639,7 +1593,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Parameter name="Recording Activity" type="string" value="during"/>
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[Cytoplasm],Vector=Metabolites[C_ER],Reference=Concentration"/>
+            <ChannelSpec cn="CN=Root,Model=ChI model of calcium oscillations,Vector=Compartments[ER],Vector=Metabolites[C_ER],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
         <PlotItem name="c0" type="Curve2D">
