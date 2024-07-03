@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 294) (http://www.copasi.org) at 2024-07-02T18:23:38Z -->
+<!-- generated with COPASI 4.44 (Build 294) (http://www.copasi.org) at 2024-07-03T00:44:50Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="294" copasiSourcesModified="0">
-  <Model key="Model_0" name="Generic neuron model" simulationType="time" timeUnit="ms" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
+  <Model key="Model_1" name="Generic neuron model" simulationType="time" timeUnit="ms" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-  <rdf:Description rdf:about="#Model_0">
+  <rdf:Description rdf:about="#Model_1">
     <dcterms:bibliographicCitation>
       <rdf:Description>
         <dcterms:description>Pospischil et al. (2008) Minimal Hodgkin–Huxley type models for different classes of cortical and thalamic neurons. Biological Cybernetics 99:427–441</dcterms:description>
@@ -67,10 +67,10 @@
 </body>
     </Comment>
     <ListOfModelValues>
-      <ModelValue key="ModelValue_0" name="V_K" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_73" name="V_K" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_0">
+<rdf:Description rdf:about="#ModelValue_73">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -78,10 +78,10 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_1" name="V_Na" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_72" name="V_Na" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_1">
+<rdf:Description rdf:about="#ModelValue_72">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -89,10 +89,10 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_2" name="V_L" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_71" name="V_L" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_2">
+<rdf:Description rdf:about="#ModelValue_71">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -100,10 +100,10 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_3" name="V_Ca" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_70" name="V_Ca" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_3">
+<rdf:Description rdf:about="#ModelValue_70">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -111,10 +111,10 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_4" name="V_T" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_69" name="V_T" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_4">
+<rdf:Description rdf:about="#ModelValue_69">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -122,15 +122,21 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_5" name="C_M" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_68" name="C_M" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_68">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           uF/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_6" name="g_K" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_67" name="g_K" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_6">
+<rdf:Description rdf:about="#ModelValue_67">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -138,10 +144,10 @@
           mS/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_7" name="g_M" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_66" name="g_M" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_7">
+<rdf:Description rdf:about="#ModelValue_66">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -149,10 +155,10 @@
           mS/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_8" name="g_Ca" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_65" name="g_Ca" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_8">
+<rdf:Description rdf:about="#ModelValue_65">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -160,10 +166,10 @@
           mS/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_9" name="g_Na" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_64" name="g_Na" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_9">
+<rdf:Description rdf:about="#ModelValue_64">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -171,10 +177,10 @@
           mS/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_10" name="g_L" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_63" name="g_L" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_10">
+<rdf:Description rdf:about="#ModelValue_63">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -182,10 +188,10 @@
           mS/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_11" name="tau_max" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_62" name="tau_max" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_11">
+<rdf:Description rdf:about="#ModelValue_62">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -193,10 +199,10 @@
           ms
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_12" name="I_inj" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_61" name="I_inj" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_12">
+<rdf:Description rdf:about="#ModelValue_61">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -204,7 +210,13 @@
           uA/cm^2
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_13" name="V" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_60" name="V" simulationType="ode" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_60">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Expression>
           (&lt;CN=Root,Model=Generic neuron model,Vector=Values[I_inj],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[g_K],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[n],Reference=Value>^4*(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_K],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[g_Na],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[m],Reference=Value>^3*&lt;CN=Root,Model=Generic neuron model,Vector=Values[h],Reference=Value>*(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_Na],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[g_L],Reference=Value>*(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_L],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[g_M],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[p],Reference=Value>*(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_K],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[g_Ca],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[q],Reference=Value>^2*&lt;CN=Root,Model=Generic neuron model,Vector=Values[s],Reference=Value>*(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_Ca],Reference=Value>))/&lt;CN=Root,Model=Generic neuron model,Vector=Values[C_M],Reference=Value>
         </Expression>
@@ -212,10 +224,10 @@
           mV
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_14" name="alpha_n" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_59" name="alpha_n" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_14">
+<rdf:Description rdf:about="#ModelValue_59">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -223,10 +235,12 @@
           (&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-15)*(-0.032/(exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-15)/5)-1))
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_15" name="alpha_m" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_58" name="alpha_m" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_15">
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_58">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -234,10 +248,10 @@
           (&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-13)*(-0.32/(exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-13)/4)-1))
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_16" name="alpha_h" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_57" name="alpha_h" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_16">
+<rdf:Description rdf:about="#ModelValue_57">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -245,12 +259,10 @@
           0.128*exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-17)/18)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_17" name="p_inf" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_56" name="p_inf" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_17">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_56">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -258,12 +270,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           1/(exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>+35)/10)+1)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_18" name="alpha_q" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_55" name="alpha_q" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_18">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_55">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -271,12 +281,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           0.0055*(-27-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>)/(exp((-27-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>)/3.8)-1)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_19" name="alpha_s" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_54" name="alpha_s" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_19">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_54">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -284,10 +292,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           0.000457*exp((-13-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>)/50)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_20" name="beta_n" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_53" name="beta_n" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_20">
+<rdf:Description rdf:about="#ModelValue_53">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -295,21 +303,23 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           0.5*exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-10)/40)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_21" name="beta_m" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_52" name="beta_m" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_21">
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_52">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <Expression>
-          0.28*exp((&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-40)/5)-1
+          0.28*(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-40)/(exp((&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-40)/5)-1)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_22" name="beta_h" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_51" name="beta_h" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_22">
+<rdf:Description rdf:about="#ModelValue_51">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -317,12 +327,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           4/(exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V_T],Reference=Value>-40)/5)+1)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_23" name="beta_s" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_50" name="beta_s" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_23">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_50">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -330,12 +338,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           0.0065/(exp((-15-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>)/28)+1)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_24" name="beta_q" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_49" name="beta_q" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_24">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_49">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -343,10 +349,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           0.94*exp((-75-&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>)/17)
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_25" name="n" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_48" name="n" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_25">
+<rdf:Description rdf:about="#ModelValue_48">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -354,10 +360,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Generic neuron model,Vector=Values[alpha_n],Reference=Value>*(1-&lt;CN=Root,Model=Generic neuron model,Vector=Values[n],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[beta_n],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[n],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_26" name="m" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_47" name="m" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_26">
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_47">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -365,10 +373,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Generic neuron model,Vector=Values[alpha_m],Reference=Value>*(1-&lt;CN=Root,Model=Generic neuron model,Vector=Values[m],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[beta_m],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[m],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_27" name="h" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_46" name="h" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_27">
+<rdf:Description rdf:about="#ModelValue_46">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -376,12 +384,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Generic neuron model,Vector=Values[alpha_h],Reference=Value>*(1-&lt;CN=Root,Model=Generic neuron model,Vector=Values[h],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[beta_h],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[h],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_28" name="p" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_45" name="p" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_28">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_45">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -389,12 +395,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           (&lt;CN=Root,Model=Generic neuron model,Vector=Values[p_inf],Reference=Value>-&lt;CN=Root,Model=Generic neuron model,Vector=Values[p],Reference=Value>)/&lt;CN=Root,Model=Generic neuron model,Vector=Values[tau_p],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_29" name="q" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_44" name="q" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_29">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_44">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -402,12 +406,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Generic neuron model,Vector=Values[alpha_q],Reference=Value>*(1-&lt;CN=Root,Model=Generic neuron model,Vector=Values[q],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[beta_q],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[q],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_30" name="s" simulationType="ode" addNoise="false">
+      <ModelValue key="ModelValue_43" name="s" simulationType="ode" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_30">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_43">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -415,12 +417,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Generic neuron model,Vector=Values[alpha_s],Reference=Value>*(1-&lt;CN=Root,Model=Generic neuron model,Vector=Values[s],Reference=Value>)-&lt;CN=Root,Model=Generic neuron model,Vector=Values[beta_s],Reference=Value>*&lt;CN=Root,Model=Generic neuron model,Vector=Values[s],Reference=Value>
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_31" name="tau_p" simulationType="assignment" addNoise="false">
+      <ModelValue key="ModelValue_42" name="tau_p" simulationType="assignment" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_31">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_42">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -428,12 +428,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           &lt;CN=Root,Model=Generic neuron model,Vector=Values[tau_max],Reference=Value>/(3.3*exp((&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>+35)/20)+exp(-(&lt;CN=Root,Model=Generic neuron model,Vector=Values[V],Reference=Value>+35)/20))
         </Expression>
       </ModelValue>
-      <ModelValue key="ModelValue_32" name="pulse_start" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_41" name="pulse_start" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_32">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_41">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -441,17 +439,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           ms
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_33" name="pulse_end" simulationType="fixed" addNoise="false">
-        <Unit>
-          ms
-        </Unit>
-      </ModelValue>
-      <ModelValue key="ModelValue_34" name="pulse_lag" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_40" name="pulse_end" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_34">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_40">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -459,17 +450,34 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           ms
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_35" name="pulse_intensity" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_39" name="pulse_lag" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_39">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          ms
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_38" name="pulse_intensity" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_38">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           uA
         </Unit>
       </ModelValue>
-      <ModelValue key="ModelValue_36" name="pulse_length" simulationType="fixed" addNoise="false">
+      <ModelValue key="ModelValue_37" name="pulse_length" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelValue_36">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_37">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -509,18 +517,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ListOfAssignments>
       </Event>
     </ListOfEvents>
-    <ListOfModelParameterSets activeSet="ModelParameterSet_0">
-      <ModelParameterSet key="ModelParameterSet_0" name="Initial State">
+    <ListOfModelParameterSets activeSet="ModelParameterSet_8">
+      <ModelParameterSet key="ModelParameterSet_8" name="Initial State">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_0">
+<rdf:Description rdf:about="#ModelParameterSet_8">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0.10000000000000001" type="Model" simulationType="time"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
         </ModelParameterGroup>
@@ -540,45 +548,37 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[g_L]" value="0.01" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_max]" value="608" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[I_inj]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-18.196732659999999" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.74357395553558303" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="8.0165084148574053" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.039852378045096302" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.84294779123436703" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="0.053714393437659498" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.00050705427243965477" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.24827237131117941" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="-0.81218769787168499" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="1.6058774108663818" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.0030646765938253944" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.033265180130841093" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.7495087835454135" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="1.112889596983754" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.024274775684024658" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.842758912902838" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="0.61706784155555228" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0.14203072514255252" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="75.2764064233006" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-71.422484777388902" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.0022983668646933729" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="0.0077965530019377272" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.76675575380063665" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.025524801576272842" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="2.0464977745800642e-06" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.0014701696575933458" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.93933315867971978" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="15.462542748973913" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="6.3898250923269661e-05" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.00076458057743151911" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.76161242931334339" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.0024408346602080356" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="0.00050396780896343749" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.9999166710832823" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.025524801576272835" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="2.687052097323317e-06" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0.65786754803808833" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="90.57208370923459" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start]" value="500" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_end]" value="2000" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity]" value="74.600000000000023" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity]" value="1" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_length]" value="30" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_3" name="FS">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_3">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
+      <ModelParameterSet key="ModelParameterSet_7" name="FS">
         <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0.10000000000000001" type="Model" simulationType="time"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
         </ModelParameterGroup>
@@ -598,40 +598,37 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[g_L]" value="0.014999999999999999" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_max]" value="1" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[I_inj]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-20.085300491594609" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.68571994983491547" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="7.4196514225874965" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.044260937384930935" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.81629880165274404" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.26027548055951272" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="-0.87126841439980995" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="1.2598153911805754" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.7248660276815585" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="1.1330509246802503" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.033940449968613652" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.81629880165274404" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="0.13457586101973934" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-69.999847003546762" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.0029133183570176861" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="0.01056965479937025" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.70848782530935417" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.029312666075664989" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="2.880497139266984e-06" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.0014289287704627074" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.90651200514540697" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="15.06427701585543" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="8.4928887265952046e-05" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.00079952972051844492" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.70047118386979046" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.0032034717768774741" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="0.0007011450948914452" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.99988014090753163" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.029312666075664986" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="4.1122109808166861e-06" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0.64121848183281871" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="0.15802738699255947" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start]" value="500" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_end]" value="2000" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_length]" value="30" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_4" name="RSA">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_4">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
+      <ModelParameterSet key="ModelParameterSet_6" name="RSA">
         <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0.10000000000000001" type="Model" simulationType="time"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
         </ModelParameterGroup>
@@ -651,25 +648,25 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[g_L]" value="0.020500000000000001" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_max]" value="608" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[I_inj]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-18.271607888761721" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.74126712215497714" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="7.9927939073936063" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.04001849864343255" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.84195399469027832" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="0.053373714851267261" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.00050781415735608995" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.24873754281306301" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="-0.8149792417728442" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="1.591505367911132" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.0030603456187442498" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.033412017258399845" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.74875114066145043" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="1.113541416118796" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.024528294966314649" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.84195399469027832" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="0" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="75.528415928347243" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-71.910681987541821" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.0021177679639737155" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="0.007019440281679285" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.78783633716905699" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.024338216117071085" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="1.8195439396980193e-06" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.0014845946197623323" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.95086790154804823" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="15.599216970044985" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="5.7954257344224138e-05" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.000752895929432276" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.78380109773648854" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.0022222453408539942" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="0.00044978431039494646" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.99992644412077247" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.024338216117071081" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="2.3214304254075944e-06" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0.66350877785683593" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="88.724338492363756" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start]" value="500" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_end]" value="2000" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag]" value="0" type="ModelValue" simulationType="fixed"/>
@@ -680,14 +677,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ModelParameterGroup>
       </ModelParameterSet>
       <ModelParameterSet key="ModelParameterSet_5" name="IB">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_5">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
         <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0.10000000000000001" type="Model" simulationType="time"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
         </ModelParameterGroup>
@@ -707,25 +698,25 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[g_L]" value="0.01" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_max]" value="608" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[I_inj]" value="0" type="ModelValue" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-18.210992841137848" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.74313453645772298" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="8.011991637663904" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.039883962895252083" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.842758912902838" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="0.053649447599948323" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.00050719890677922738" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.24836089731486299" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="-0.81272258224396754" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="1.6031369001770235" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.0030638516970261471" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.03329309580776621" type="ModelValue" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.7495087835454135" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="1.112889596983754" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.024274775684024658" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.842758912902838" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="0.61706784155555228" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0.14203072514255252" type="ModelValue" simulationType="ode"/>
-          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="75.324353889425296" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[V]" value="-71.422484777388902" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_n]" value="0.0022983668646933729" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_m]" value="0.0077965530019377272" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_h]" value="0.76675575380063665" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p_inf]" value="0.025524801576272842" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_q]" value="2.0464977745800642e-06" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[alpha_s]" value="0.0014701696575933458" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_n]" value="0.93933315867971978" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_m]" value="15.462542748973913" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_h]" value="6.3898250923269661e-05" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_s]" value="0.00076458057743151911" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[beta_q]" value="0.76161242931334339" type="ModelValue" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[n]" value="0.0024408346602080356" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[m]" value="0.00050396780896343749" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[h]" value="0.9999166710832823" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[p]" value="0.025524801576272835" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[q]" value="2.687052097323317e-06" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[s]" value="0.65786754803808833" type="ModelValue" simulationType="ode"/>
+          <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[tau_p]" value="90.57208370923459" type="ModelValue" simulationType="assignment"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start]" value="500" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_end]" value="2000" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag]" value="0" type="ModelValue" simulationType="fixed"/>
@@ -737,52 +728,52 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
-      <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="ModelValue_13"/>
-      <StateTemplateVariable objectReference="ModelValue_25"/>
-      <StateTemplateVariable objectReference="ModelValue_26"/>
-      <StateTemplateVariable objectReference="ModelValue_27"/>
-      <StateTemplateVariable objectReference="ModelValue_28"/>
-      <StateTemplateVariable objectReference="ModelValue_29"/>
-      <StateTemplateVariable objectReference="ModelValue_30"/>
-      <StateTemplateVariable objectReference="ModelValue_14"/>
-      <StateTemplateVariable objectReference="ModelValue_15"/>
-      <StateTemplateVariable objectReference="ModelValue_16"/>
-      <StateTemplateVariable objectReference="ModelValue_17"/>
-      <StateTemplateVariable objectReference="ModelValue_18"/>
-      <StateTemplateVariable objectReference="ModelValue_19"/>
-      <StateTemplateVariable objectReference="ModelValue_20"/>
-      <StateTemplateVariable objectReference="ModelValue_21"/>
-      <StateTemplateVariable objectReference="ModelValue_22"/>
-      <StateTemplateVariable objectReference="ModelValue_23"/>
-      <StateTemplateVariable objectReference="ModelValue_24"/>
-      <StateTemplateVariable objectReference="ModelValue_31"/>
-      <StateTemplateVariable objectReference="ModelValue_0"/>
-      <StateTemplateVariable objectReference="ModelValue_1"/>
-      <StateTemplateVariable objectReference="ModelValue_2"/>
-      <StateTemplateVariable objectReference="ModelValue_3"/>
-      <StateTemplateVariable objectReference="ModelValue_4"/>
-      <StateTemplateVariable objectReference="ModelValue_5"/>
-      <StateTemplateVariable objectReference="ModelValue_6"/>
-      <StateTemplateVariable objectReference="ModelValue_7"/>
-      <StateTemplateVariable objectReference="ModelValue_8"/>
-      <StateTemplateVariable objectReference="ModelValue_9"/>
-      <StateTemplateVariable objectReference="ModelValue_10"/>
-      <StateTemplateVariable objectReference="ModelValue_11"/>
-      <StateTemplateVariable objectReference="ModelValue_12"/>
-      <StateTemplateVariable objectReference="ModelValue_32"/>
-      <StateTemplateVariable objectReference="ModelValue_33"/>
-      <StateTemplateVariable objectReference="ModelValue_34"/>
-      <StateTemplateVariable objectReference="ModelValue_35"/>
-      <StateTemplateVariable objectReference="ModelValue_36"/>
+      <StateTemplateVariable objectReference="Model_1"/>
+      <StateTemplateVariable objectReference="ModelValue_60"/>
+      <StateTemplateVariable objectReference="ModelValue_48"/>
+      <StateTemplateVariable objectReference="ModelValue_47"/>
+      <StateTemplateVariable objectReference="ModelValue_46"/>
+      <StateTemplateVariable objectReference="ModelValue_45"/>
+      <StateTemplateVariable objectReference="ModelValue_44"/>
+      <StateTemplateVariable objectReference="ModelValue_43"/>
+      <StateTemplateVariable objectReference="ModelValue_59"/>
+      <StateTemplateVariable objectReference="ModelValue_58"/>
+      <StateTemplateVariable objectReference="ModelValue_57"/>
+      <StateTemplateVariable objectReference="ModelValue_56"/>
+      <StateTemplateVariable objectReference="ModelValue_55"/>
+      <StateTemplateVariable objectReference="ModelValue_54"/>
+      <StateTemplateVariable objectReference="ModelValue_53"/>
+      <StateTemplateVariable objectReference="ModelValue_52"/>
+      <StateTemplateVariable objectReference="ModelValue_51"/>
+      <StateTemplateVariable objectReference="ModelValue_50"/>
+      <StateTemplateVariable objectReference="ModelValue_49"/>
+      <StateTemplateVariable objectReference="ModelValue_42"/>
+      <StateTemplateVariable objectReference="ModelValue_73"/>
+      <StateTemplateVariable objectReference="ModelValue_72"/>
+      <StateTemplateVariable objectReference="ModelValue_71"/>
+      <StateTemplateVariable objectReference="ModelValue_70"/>
+      <StateTemplateVariable objectReference="ModelValue_69"/>
+      <StateTemplateVariable objectReference="ModelValue_68"/>
+      <StateTemplateVariable objectReference="ModelValue_67"/>
+      <StateTemplateVariable objectReference="ModelValue_66"/>
+      <StateTemplateVariable objectReference="ModelValue_65"/>
+      <StateTemplateVariable objectReference="ModelValue_64"/>
+      <StateTemplateVariable objectReference="ModelValue_63"/>
+      <StateTemplateVariable objectReference="ModelValue_62"/>
+      <StateTemplateVariable objectReference="ModelValue_61"/>
+      <StateTemplateVariable objectReference="ModelValue_41"/>
+      <StateTemplateVariable objectReference="ModelValue_40"/>
+      <StateTemplateVariable objectReference="ModelValue_39"/>
+      <StateTemplateVariable objectReference="ModelValue_38"/>
+      <StateTemplateVariable objectReference="ModelValue_37"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0.10000000000000001 -18.196732659999999 0.7495087835454135 1.112889596983754 0.024274775684024658 0.842758912902838 0.61706784155555228 0.14203072514255252 0.74357395553558303 8.0165084148574053 0.039852378045096302 0.84294779123436703 0.053714393437659498 0.00050705427243965477 0.24827237131117941 -0.81218769787168499 1.6058774108663818 0.0030646765938253944 0.033265180130841093 75.2764064233006 -90 50 -70 120 -56.200000000000003 1 5 0.029999999999999999 0.20000000000000001 50 0.01 608 0 500 2000 0 74.600000000000023 30 
+      0 -71.422484777388902 0.0024408346602080356 0.00050396780896343749 0.9999166710832823 0.025524801576272835 2.687052097323317e-06 0.65786754803808833 0.0022983668646933729 0.0077965530019377272 0.76675575380063665 0.025524801576272842 2.0464977745800642e-06 0.0014701696575933458 0.93933315867971978 15.462542748973913 6.3898250923269661e-05 0.00076458057743151911 0.76161242931334339 90.57208370923459 -90 50 -70 120 -56.200000000000003 1 5 0.029999999999999999 0.20000000000000001 50 0.01 608 0 500 2000 0 1 30 
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_13" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_10" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_19" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
+      <Report reference="Report_22" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -790,7 +781,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Enhanced Newton" type="EnhancedNewton">
         <Parameter name="Resolution" type="unsignedFloat" value="1.0000000000000001e-09"/>
         <Parameter name="Derivation Factor" type="unsignedFloat" value="0.001"/>
-        <Parameter name="Use Newton" type="bool" value="1"/>
+        <Parameter name="Use Newton" type="bool" value="0"/>
         <Parameter name="Use Integration" type="bool" value="1"/>
         <Parameter name="Use Back Integration" type="bool" value="0"/>
         <Parameter name="Accept Negative Concentrations" type="bool" value="0"/>
@@ -800,12 +791,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_20" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+      <Report reference="Report_11" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="AutomaticStepSize" type="bool" value="1"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="250000"/>
-        <Parameter name="StepSize" type="float" value="0.01"/>
+        <Parameter name="AutomaticStepSize" type="bool" value="0"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="25000"/>
+        <Parameter name="StepSize" type="float" value="0.10000000000000001"/>
         <Parameter name="Duration" type="float" value="2500"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
@@ -816,13 +807,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Problem>
       <Method name="Deterministic (LSODA)" type="Deterministic(LSODA)">
         <Parameter name="Integrate Reduced Model" type="bool" value="0"/>
-        <Parameter name="Relative Tolerance" type="unsignedFloat" value="9.9999999999999995e-07"/>
+        <Parameter name="Relative Tolerance" type="unsignedFloat" value="1e-10"/>
         <Parameter name="Absolute Tolerance" type="unsignedFloat" value="9.9999999999999998e-13"/>
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="100000"/>
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_11" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_21" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -832,8 +823,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <Parameter name="Object" type="cn" value=""/>
             <ParameterGroup name="ParameterSet CNs">
               <Parameter name="0" type="cn" value="CN=Root,Model=Generic neuron model,Vector=ParameterSets[FS]"/>
-              <Parameter name="1" type="cn" value="CN=Root,Model=Generic neuron model,Vector=ParameterSets[IB2]"/>
-              <Parameter name="2" type="cn" value="CN=Root,Model=Generic neuron model,Vector=ParameterSets[RSA2]"/>
+              <Parameter name="1" type="cn" value="CN=Root,Model=Generic neuron model,Vector=ParameterSets[IB]"/>
+              <Parameter name="2" type="cn" value="CN=Root,Model=Generic neuron model,Vector=ParameterSets[RSA]"/>
             </ParameterGroup>
           </ParameterGroup>
         </ParameterGroup>
@@ -844,15 +835,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_10" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_32" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_12" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_9" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_33" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_13" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -873,8 +864,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_22" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
+      <Report reference="Report_14" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -904,10 +895,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_7" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_23" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_15" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_13"/>
+        <Parameter name="Steady-State" type="key" value="Task_19"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -915,8 +906,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Smallbone" type="bool" value="1"/>
       </Method>
     </Task>
-    <Task key="Task_6" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_24" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
+      <Report reference="Report_16" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -930,8 +921,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="10000"/>
       </Method>
     </Task>
-    <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_25" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_17" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -943,8 +934,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Deuflhard Tolerance" type="unsignedFloat" value="0.0001"/>
       </Method>
     </Task>
-    <Task key="Task_16" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_17" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_18" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -967,14 +958,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Delta minimum" type="unsignedFloat" value="9.9999999999999998e-13"/>
       </Method>
     </Task>
-    <Task key="Task_15" name="Moieties" type="moieties" scheduled="false" updateModel="false">
-      <Report reference="Report_1" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_31" name="Moieties" type="moieties" scheduled="false" updateModel="false">
+      <Report reference="Report_19" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
       </Method>
     </Task>
-    <Task key="Task_4" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
+    <Task key="Task_26" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -1010,15 +1001,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_3" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_27" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
+      <Report reference="Report_20" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_13"/>
+        <Parameter name="Steady-State" type="key" value="Task_19"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
     </Task>
-    <Task key="Task_2" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+    <Task key="Task_28" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -1045,7 +1036,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_10" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_22" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1053,7 +1044,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_9" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_11" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1064,7 +1055,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_8" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_12" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1072,7 +1063,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_7" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_13" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1096,7 +1087,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_6" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_14" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1120,7 +1111,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Parameter Estimation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_5" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_15" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1132,7 +1123,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_16" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1144,7 +1135,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_3" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_17" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1156,7 +1147,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_2" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_18" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1168,7 +1159,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_1" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_19" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1180,7 +1171,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_0" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_20" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -1300,84 +1291,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </PlotItem>
       </ListOfPlotItems>
     </PlotSpecification>
-    <PlotSpecification name="pulses" type="Plot2D" active="0" taskTypes="">
-      <Parameter name="log X" type="bool" value="0"/>
-      <Parameter name="log Y" type="bool" value="0"/>
-      <Parameter name="x axis" type="string" value=""/>
-      <Parameter name="y axis" type="string" value=""/>
-      <Parameter name="z axis" type="string" value=""/>
-      <Parameter name="plot engine" type="string" value="QWT"/>
-      <ListOfPlotItems>
-        <PlotItem name="pulse_end" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_end],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="pulse_intensity" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="pulse_lag" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="pulse_length" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_length],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-        <PlotItem name="pulse_start" type="Curve2D">
-          <Parameter name="Line type" type="unsignedInteger" value="0"/>
-          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
-          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
-          <Parameter name="Color" type="string" value="auto"/>
-          <Parameter name="Recording Activity" type="string" value="during"/>
-          <ListOfChannels>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Reference=Time"/>
-            <ChannelSpec cn="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start],Reference=Value"/>
-          </ListOfChannels>
-        </PlotItem>
-      </ListOfPlotItems>
-    </PlotSpecification>
   </ListOfPlots>
   <GUI>
     <ListOfSliders>
-      <Slider key="Slider_0" associatedEntityKey="Task_11" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity],Reference=InitialValue" objectType="float" objectValue="74.6" minValue="0" maxValue="1000" tickNumber="1000" tickFactor="100" scaling="linear"/>
-      <Slider key="Slider_1" associatedEntityKey="Task_11" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag],Reference=InitialValue" objectType="float" objectValue="0" minValue="0" maxValue="100000" tickNumber="1000" tickFactor="100" scaling="linear"/>
-      <Slider key="Slider_2" associatedEntityKey="Task_11" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_length],Reference=InitialValue" objectType="float" objectValue="30" minValue="0.01" maxValue="1000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
-      <Slider key="Slider_3" associatedEntityKey="Task_11" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start],Reference=InitialValue" objectType="float" objectValue="500" minValue="0.1" maxValue="500" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
-      <Slider key="Slider_4" associatedEntityKey="Task_12" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity],Reference=InitialValue" objectType="float" objectValue="74.6" minValue="-100" maxValue="100" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_20" associatedEntityKey="Task_21" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity],Reference=InitialValue" objectType="float" objectValue="1" minValue="0" maxValue="10" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_19" associatedEntityKey="Task_21" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_lag],Reference=InitialValue" objectType="float" objectValue="0" minValue="0" maxValue="100000" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_18" associatedEntityKey="Task_21" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_length],Reference=InitialValue" objectType="float" objectValue="30" minValue="0.01" maxValue="1000" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_17" associatedEntityKey="Task_21" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_start],Reference=InitialValue" objectType="float" objectValue="500" minValue="0.1" maxValue="500" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
+      <Slider key="Slider_16" associatedEntityKey="Task_20" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_intensity],Reference=InitialValue" objectType="float" objectValue="10" minValue="-10" maxValue="10" tickNumber="1000" tickFactor="100" scaling="linear"/>
+      <Slider key="Slider_11" associatedEntityKey="Task_20" objectCN="CN=Root,Model=Generic neuron model,Vector=Values[pulse_length],Reference=InitialValue" objectType="float" objectValue="102.565" minValue="25.4097" maxValue="2540.97" tickNumber="1000" tickFactor="100" scaling="logarithmic"/>
     </ListOfSliders>
   </GUI>
   <ListOfUnitDefinitions>
