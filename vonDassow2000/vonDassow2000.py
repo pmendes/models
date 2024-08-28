@@ -1020,7 +1020,7 @@ if( index == -1 ):
 else:
     index += 6
 #open file
-outfile = open(cpsfile, 'w')
+outfile = open(cpsfile, 'w', encoding='utf8')
 # save first part of .cps file
 outfile.write(smodel[:index])
 # write out the layout, start with header
