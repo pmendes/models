@@ -1,8 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-17T19:26:10Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-17T20:28:01Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
-  <Model key="Model_1" name="Neurospora Circadian Clock" simulationType="time" timeUnit="s" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
+  <ListOfFunctions>
+    <Function key="Function_8" name="Henri-Michaelis-Menten (irreversible)" type="PreDefined" reversible="false">
+      <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_8">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        V*substrate/(Km+substrate)
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_47" name="substrate" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_46" name="Km" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_45" name="V" order="2" role="constant"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_14" name="Mass action (reversible)" type="MassAction" reversible="true">
+      <MiriamAnnotation>
+<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <rdf:Description rdf:about="#Function_14">
+   <CopasiMT:is rdf:resource="urn:miriam:obo.sbo:SBO:0000042" />
+   </rdf:Description>
+   </rdf:RDF>
+      </MiriamAnnotation>
+      <Comment>
+        <body xmlns="http://www.w3.org/1999/xhtml">
+<b>Mass action rate law for reversible reactions</b>
+<p>
+Reaction scheme where the products are created from the reactants and the change of a product quantity is proportional to the product of reactant activities. The reaction scheme does include a reverse process that creates the reactants from the products.
+</p>
+</body>
+      </Comment>
+      <Expression>
+        k1*PRODUCT&lt;substrate_i>-k2*PRODUCT&lt;product_j>
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_69" name="k1" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_68" name="substrate" order="1" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_78" name="k2" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_79" name="product" order="3" role="product"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_81" name="Goodwin protein synthesis" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_81">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        alpha*mRNA
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_677" name="alpha" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_676" name="mRNA" order="1" role="modifier"/>
+      </ListOfParameterDescriptions>
+    </Function>
+    <Function key="Function_82" name="transcription with repressor" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_82">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        vs*Ki^n/(Ki^n+Repressor^n)
+      </Expression>
+      <ListOfParameterDescriptions>
+        <ParameterDescription key="FunctionParameter_674" name="vs" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_675" name="Ki" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_673" name="n" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_672" name="Repressor" order="3" role="modifier"/>
+      </ListOfParameterDescriptions>
+    </Function>
+  </ListOfFunctions>
+  <Model key="Model_1" name="Neurospora Circadian Clock" simulationType="time" timeUnit="h" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="mol" type="deterministic" avogadroConstant="6.0221407599999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
@@ -45,16 +125,366 @@
         </vCard:ORG>
       </rdf:Description>
     </dcterms:creator>
+    <dcterms:modified>
+      <rdf:Description>
+        <dcterms:W3CDTF>2025-11-17T15:27:57</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:modified>
     <CopasiMT:isVersionOf rdf:resource="urn:miriam:go:GO:0042752"/>
   </rdf:Description>
 </rdf:RDF>
 
     </MiriamAnnotation>
     <Comment>
-      <body xmlns="http://www.w3.org/1999/xhtml"><h1>Model of Neurospora circadian clock</h1>
+      <body xmlns="http://www.w3.org/1999/xhtml"><h1>Minimal Model of Neurospora circadian clock</h1>
 <p>From: Leloup et al. (1999) Limit Cycle Models for Circadian Rhythms Based on Transcriptional Regulation in Drosophila and Neurospora. <a href="https://doi.org/10.1177/074873099129000948">J. Biol. Rhythms 14:433-8</a> </p>
-<p>Model for circadian oscillations in Neurospora. The model is based on the negative feedback exerted by the protein FRQ on the transcription of the <i>frq</i> gene; the rate of gene expression is enhanced by light. The model includes gene transcription in the nucleus, accumulation of the corresponding mRNA in the cytosol with the associated protein synthesis, protein transport into and out of the nucleus, and regulation of gene expression by the nuclear form of the FRQ protein in Neurospora.</p></body>
+<p>Model for circadian oscillations in Neurospora. The model is based on the negative feedback exerted by the protein FRQ on the transcription of the <i>frq</i> gene; the rate of gene expression is enhanced by light. The model includes gene transcription in the nucleus, accumulation of the corresponding mRNA in the cytosol with the associated protein synthesis, protein transport into and out of the nucleus, and regulation of gene expression by the nuclear form of the FRQ protein in Neurospora.</p>
+<p><b>Note</b>: this is equivalent to the model BIOMD0000000299 in the BioModels database. In this version, entirely written from scratch, the model is encoded in the traditional SBML way of having reactions with kinetics (the BioModels version encodes the model directly as species ruled by ODEs without explicit reactions).</p>
+<hr />
+<p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>
     </Comment>
+    <ListOfCompartments>
+      <Compartment key="Compartment_0" name="compartment" simulationType="fixed" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Compartment_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Compartment>
+    </ListOfCompartments>
+    <ListOfMetabolites>
+      <Metabolite key="Metabolite_0" name="M" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_1" name="Fc" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_2" name="Fn" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_3" name="Ft" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Expression>
+          &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Fc],Reference=Concentration>+&lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Fn],Reference=Concentration>
+        </Expression>
+      </Metabolite>
+    </ListOfMetabolites>
+    <ListOfModelValues>
+      <ModelValue key="ModelValue_0" name="vs" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          mol/(l*h)
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_1" name="vm" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          mol/(l*h)
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_2" name="ks" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          1/h
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_3" name="vd" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          mol/(l*h)
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_4" name="k1" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          1/h
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_5" name="k2" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          1/h
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_6" name="Ki" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          mol/l
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_7" name="n" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_8" name="Km" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_8">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          mol/l
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_9" name="Kd" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_9">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Unit>
+          mol/l
+        </Unit>
+      </ModelValue>
+    </ListOfModelValues>
+    <ListOfReactions>
+      <Reaction key="Reaction_0" name="frq transcription" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_0" name="Ki" value="0.1"/>
+          <Constant key="Parameter_1" name="n" value="0.1"/>
+          <Constant key="Parameter_2" name="vs" value="1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_82" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_674">
+              <SourceParameter reference="ModelValue_0"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_675">
+              <SourceParameter reference="ModelValue_6"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_673">
+              <SourceParameter reference="ModelValue_7"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_672">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_1" name="mRNA degradation" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_3" name="Km" value="0.1"/>
+          <Constant key="Parameter_4" name="V" value="1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_8" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_47">
+              <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_46">
+              <SourceParameter reference="ModelValue_8"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_45">
+              <SourceParameter reference="ModelValue_1"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_2" name="FRQ synthesis" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_5" name="alpha" value="1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_81" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_677">
+              <SourceParameter reference="ModelValue_2"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_676">
+              <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_3" name="FRQ degradation" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6" name="V" value="0.1"/>
+          <Constant key="Parameter_7" name="Km" value="1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_8" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_47">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_46">
+              <SourceParameter reference="ModelValue_9"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_45">
+              <SourceParameter reference="ModelValue_3"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_4" name="FRQ nuclear import" reversible="true" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_8" name="k1" value="0.1"/>
+          <Constant key="Parameter_9" name="k2" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_14" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_69">
+              <SourceParameter reference="ModelValue_4"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_68">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_78">
+              <SourceParameter reference="ModelValue_5"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_79">
+              <SourceParameter reference="Metabolite_2"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+    </ListOfReactions>
     <ListOfModelParameterSets activeSet="ModelParameterSet_1">
       <ModelParameterSet key="ModelParameterSet_1" name="Initial State">
         <MiriamAnnotation>
@@ -69,20 +499,110 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[M]" value="602214076000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Fc]" value="602214076000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Fn]" value="602214076000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Ft]" value="1204428152000000" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm]" value="5.0500000000000001e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks]" value="0.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd]" value="1.3999999999999999e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1]" value="0.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki]" value="1.0000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n]" value="4" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km]" value="5.0000000000000003e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd]" value="1.2999999999999999e-10" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=Ki" value="1.0000000000000001e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=n" value="4" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=vs" value="1.6000000000000001e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=Km" value="5.0000000000000003e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=V" value="5.0500000000000001e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis],ParameterGroup=Parameters,Parameter=alpha" value="0.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=V" value="1.3999999999999999e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=Km" value="1.2999999999999999e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import],ParameterGroup=Parameters,Parameter=k1" value="0.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import],ParameterGroup=Parameters,Parameter=k2" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
       <StateTemplateVariable objectReference="Model_1"/>
+      <StateTemplateVariable objectReference="Metabolite_1"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
+      <StateTemplateVariable objectReference="Metabolite_2"/>
+      <StateTemplateVariable objectReference="Metabolite_3"/>
+      <StateTemplateVariable objectReference="Compartment_0"/>
+      <StateTemplateVariable objectReference="ModelValue_0"/>
+      <StateTemplateVariable objectReference="ModelValue_1"/>
+      <StateTemplateVariable objectReference="ModelValue_2"/>
+      <StateTemplateVariable objectReference="ModelValue_3"/>
+      <StateTemplateVariable objectReference="ModelValue_4"/>
+      <StateTemplateVariable objectReference="ModelValue_5"/>
+      <StateTemplateVariable objectReference="ModelValue_6"/>
+      <StateTemplateVariable objectReference="ModelValue_7"/>
+      <StateTemplateVariable objectReference="ModelValue_8"/>
+      <StateTemplateVariable objectReference="ModelValue_9"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 
+      0 602214076000000 602214076000000 602214076000000 1204428152000000 1 1.6000000000000001e-09 5.0500000000000001e-10 0.5 1.3999999999999999e-09 0.5 0.59999999999999998 1.0000000000000001e-09 4 5.0000000000000003e-10 1.2999999999999999e-10 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -109,9 +629,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Report reference="Report_12" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
-        <Parameter name="StepSize" type="float" value="0.01"/>
-        <Parameter name="Duration" type="float" value="1"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="720"/>
+        <Parameter name="StepSize" type="float" value="0.10000000000000001"/>
+        <Parameter name="Duration" type="float" value="72"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="0"/>
@@ -490,6 +1010,66 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Footer>
     </Report>
   </ListOfReports>
+  <ListOfPlots>
+    <PlotSpecification name="Time course" type="Plot2D" active="1" taskTypes="">
+      <Parameter name="log X" type="bool" value="0"/>
+      <Parameter name="log Y" type="bool" value="0"/>
+      <Parameter name="plot engine" type="string" value="QWT"/>
+      <Parameter name="x axis" type="string" value="time (h)"/>
+      <Parameter name="y axis" type="string" value="Conc (M)"/>
+      <Parameter name="z axis" type="string" value=""/>
+      <ListOfPlotItems>
+        <PlotItem name="[M]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[M],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Fc]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Fc],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Fn]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Fn],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+        <PlotItem name="[Ft]" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="1.2"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[compartment],Vector=Metabolites[Ft],Reference=Concentration"/>
+          </ListOfChannels>
+        </PlotItem>
+      </ListOfPlotItems>
+    </PlotSpecification>
+  </ListOfPlots>
   <GUI>
   </GUI>
   <ListOfUnitDefinitions>
@@ -532,6 +1112,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         Avogadro
       </Expression>
     </UnitDefinition>
+    <UnitDefinition key="Unit_15" name="dimensionless" symbol="1">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Unit_14">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        1
+      </Expression>
+    </UnitDefinition>
     <UnitDefinition key="Unit_17" name="item" symbol="#">
       <MiriamAnnotation>
 <rdf:RDF
@@ -569,6 +1162,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </MiriamAnnotation>
       <Expression>
         Avogadro*#
+      </Expression>
+    </UnitDefinition>
+    <UnitDefinition key="Unit_67" name="hour" symbol="h">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Unit_66">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
+      <Expression>
+        3600*s
       </Expression>
     </UnitDefinition>
   </ListOfUnitDefinitions>
