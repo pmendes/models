@@ -25,6 +25,7 @@ Most models contain metadata that links them to their original publications and 
 | PulsedDrug.cps         | model with a drug added in pulses (example with discrete events) |
 | PulsedDrugLadder.cps   | model with a drug added in pulses at increasing concentrations (example with discrete events) |
 | ReversibleMM.cps       | reversible Michaelis-Menten enzyme mechanism (from Haldane's 1930 book) |
+| Selkov-Wolf-Heinrich.cps | Wolf-Heinrich version of the [Sel'kov (1968) model of glycolytic oscillations](https://doi.org/10.1111/j.1432-1033.1968.tb00175.x) |
 
 ## Licence
 Models included here are licensed with [CC-Zero license](http://creativecommons.org/publicdomain/zero/1.0/) unless they were derived from sources that imposed other restrictions. Most were either created by me, some were edited based on other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
