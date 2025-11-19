@@ -9,9 +9,10 @@ Most models contain metadata that links them to their original publications and 
 
 ## Index
 
-| File                  | Format | Description                                       |
-|-----------------------|--------|---------------------------------------------------|
-| 100GeneNetwork.cps    | .cps   | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) |
+| File                   | Format | Description                                       |
+|------------------------|--------|---------------------------------------------------|
+| 100GeneNetwork.cps     | .cps   | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [pubmed](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
+| AllostericKinetics.cps | .cps   | simulates a typical enzyme kinetics experiment of an allosteric enzyme |
 
 ## Licence
 Models included here are licensed with CC-Zero license unless they were derived from sources that imposed other restrictions. Most were either created by me or were edited from other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
