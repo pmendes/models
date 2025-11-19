@@ -9,10 +9,12 @@ Most models contain metadata that links them to their original publications and 
 
 ## Index
 
-| File                   | Format | Description                                       |
-|------------------------|--------|---------------------------------------------------|
-| 100GeneNetwork.cps     | .cps   | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [(pubmed)](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
-| AllostericKinetics.cps | .cps   | simulates a typical enzyme kinetics experiment of an allosteric enzyme |
+| File                   | Description                                               |
+|------------------------|-----------------------------------------------------------|
+| 100GeneNetwork.cps     | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [(pubmed)](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
+| AllostericKinetics.cps | simulates a typical enzyme kinetics experiment of an allosteric enzyme |
+|ChI_DePitta2009.cps     | core model of IP3-dependent calcium oscillations by [De Pittà et al. (2009)](https://doi.org/10.1007/s10867-009-9155-y) |
+
 
 ## Licence
 Models included here are licensed with CC-Zero license unless they were derived from sources that imposed other restrictions. Most were either created by me or were edited from other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
