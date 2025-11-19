@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T20:12:51Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T20:55:19Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -138,7 +138,7 @@ Reaction scheme where the products are created from the reactants and the change
       <body xmlns="http://www.w3.org/1999/xhtml"><h1>Minimal model of Neurospora circadian clock</h1>
 <p>From: Leloup et al. (1999) Limit Cycle Models for Circadian Rhythms Based on Transcriptional Regulation in Drosophila and Neurospora. <a href="https://doi.org/10.1177/074873099129000948">J. Biol. Rhythms 14:433-8</a> </p>
 <p>Model for circadian oscillations in Neurospora. The model is based on the negative feedback exerted by the protein FRQ on the transcription of the <i>frq</i> gene; the rate of gene expression is enhanced by light. The model includes gene transcription in the nucleus, accumulation of the corresponding mRNA in the cytosol with the associated protein synthesis, protein transport into and out of the nucleus, and regulation of gene expression by the nuclear form of the FRQ protein in Neurospora.</p>
-<p>This model also includes events created to detect the oscillation wavelength and to count the number of cycles. It serves as an example of how events are useful to detect oscillations and then be used downstream for sensitivity analysis, optimization and other applications.</p>
+<p>This model also includes events created to detect the oscillation period and to count the number of cycles. It serves as an example of how events are useful to detect oscillations and then be used downstream for sensitivity analysis, optimization and other applications.</p>
 <p><b>Note</b>: there is equivalent model in the BioModels database (BIOMD0000000299), but it is encoded with direct ODEs for the species, without explicit reactions. This version has full reaction kinetics and can be simulated with both ODEs and the Gillespie algorithms.</p>
 <hr />
 <p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>
@@ -206,11 +206,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <ListOfModelValues>
       <ModelValue key="ModelValue_0" name="vs" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#ModelValue_0">
-    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000186" />
+    <CopasiMT:is rdf:resource="urn:miriam:sbo:SBO:0000186"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Unit>
           mol/(l*h)
@@ -320,6 +323,71 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Unit>
           mol/l
         </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_10" name="cycles" simulationType="fixed" addNoise="false">
+        <Unit>
+          #
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_11" name="lastpeak" simulationType="fixed" addNoise="false">
+        <Unit>
+          h
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_12" name="period" simulationType="fixed" addNoise="false">
+        <Unit>
+          h
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_13" name="vs_dark" simulationType="fixed" addNoise="false">
+        <Unit>
+          mol/(h*l)
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_14" name="vs_light" simulationType="fixed" addNoise="false">
+        <Unit>
+          mol/(l*h)
+        </Unit>
+      </ModelValue>
+      <ModelValue key="ModelValue_15" name="night_duration" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_15">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_16" name="sunset_time" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_16">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_17" name="sunrise_time" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_17">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </ModelValue>
+      <ModelValue key="ModelValue_18" name="plot_day" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_18">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </ModelValue>
     </ListOfModelValues>
     <ListOfReactions>
@@ -508,6 +576,74 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </KineticLaw>
       </Reaction>
     </ListOfReactions>
+    <ListOfEvents>
+      <Event key="Event_0" name="detect_peak" fireAtInitialTime="0" persistentTrigger="0">
+        <TriggerExpression>
+          &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn],Reference=Rate> &lt; 0
+        </TriggerExpression>
+        <ListOfAssignments>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles],Reference=Value>+1
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time>-&lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak],Reference=Value>
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time>
+            </Expression>
+          </Assignment>
+        </ListOfAssignments>
+      </Event>
+      <Event key="Event_1" name="sunrise" fireAtInitialTime="0" persistentTrigger="0">
+        <TriggerExpression>
+          &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time> > &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time],Reference=Value>
+        </TriggerExpression>
+        <ListOfAssignments>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_light],Reference=Value>
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time],Reference=Value>+24
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[plot_day]">
+            <Expression>
+              0
+            </Expression>
+          </Assignment>
+        </ListOfAssignments>
+      </Event>
+      <Event key="Event_2" name="sunset" fireAtInitialTime="0" persistentTrigger="0">
+        <TriggerExpression>
+          &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time> > &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time],Reference=Value>
+        </TriggerExpression>
+        <ListOfAssignments>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_dark],Reference=Value>
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time],Reference=Value>+24
+            </Expression>
+          </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[plot_day]">
+            <Expression>
+              -1e-11
+            </Expression>
+          </Assignment>
+        </ListOfAssignments>
+      </Event>
+    </ListOfEvents>
     <ListOfModelParameterSets activeSet="ModelParameterSet_1">
       <ModelParameterSet key="ModelParameterSet_1" name="Initial State">
         <MiriamAnnotation>
@@ -541,6 +677,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n]" value="4" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km]" value="5.0000000000000003e-10" type="ModelValue" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd]" value="1.2999999999999999e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_dark]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_light]" value="2.0000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[night_duration]" value="8" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time]" value="19" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time]" value="7" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[plot_day]" value="-9.9999999999999994e-12" type="ModelValue" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
           <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription]" type="Reaction">
@@ -625,9 +770,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_7"/>
       <StateTemplateVariable objectReference="ModelValue_8"/>
       <StateTemplateVariable objectReference="ModelValue_9"/>
+      <StateTemplateVariable objectReference="ModelValue_10"/>
+      <StateTemplateVariable objectReference="ModelValue_11"/>
+      <StateTemplateVariable objectReference="ModelValue_12"/>
+      <StateTemplateVariable objectReference="ModelValue_13"/>
+      <StateTemplateVariable objectReference="ModelValue_14"/>
+      <StateTemplateVariable objectReference="ModelValue_15"/>
+      <StateTemplateVariable objectReference="ModelValue_16"/>
+      <StateTemplateVariable objectReference="ModelValue_17"/>
+      <StateTemplateVariable objectReference="ModelValue_18"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 2.5895205267999919 2.5895205267999919 2.5895205267999919 5.1790410535999838 4.2999999999999993e-14 1.6000000000000001e-09 5.0500000000000001e-10 0.5 1.3999999999999999e-09 0.5 0.59999999999999998 1.0000000000000001e-09 4 5.0000000000000003e-10 1.2999999999999999e-10 
+      0 2.5895205267999919 2.5895205267999919 2.5895205267999919 5.1790410535999838 4.2999999999999993e-14 1.6000000000000001e-09 5.0500000000000001e-10 0.5 1.3999999999999999e-09 0.5 0.59999999999999998 1.0000000000000001e-09 4 5.0000000000000003e-10 1.2999999999999999e-10 0 0 0 1.6000000000000001e-09 2.0000000000000001e-09 8 19 7 -9.9999999999999994e-12 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -1091,6 +1245,18 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft],Reference=Concentration"/>
           </ListOfChannels>
         </PlotItem>
+        <PlotItem name="daylight" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="4"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[plot_day],Reference=Value"/>
+          </ListOfChannels>
+        </PlotItem>
       </ListOfPlotItems>
     </PlotSpecification>
     <PlotSpecification name="Time course (molecules)" type="Plot2D" active="1" taskTypes="">
@@ -1147,6 +1313,28 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ListOfChannels>
             <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
             <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft],Reference=ParticleNumber"/>
+          </ListOfChannels>
+        </PlotItem>
+      </ListOfPlotItems>
+    </PlotSpecification>
+    <PlotSpecification name="Day-Night" type="Plot2D" active="1" taskTypes="">
+      <Parameter name="log X" type="bool" value="0"/>
+      <Parameter name="log Y" type="bool" value="0"/>
+      <Parameter name="x axis" type="string" value=""/>
+      <Parameter name="y axis" type="string" value=""/>
+      <Parameter name="z axis" type="string" value=""/>
+      <Parameter name="plot engine" type="string" value="QCustomPlot"/>
+      <ListOfPlotItems>
+        <PlotItem name="vs" type="Curve2D">
+          <Parameter name="Line type" type="unsignedInteger" value="0"/>
+          <Parameter name="Line subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Line width" type="unsignedFloat" value="4"/>
+          <Parameter name="Symbol subtype" type="unsignedInteger" value="0"/>
+          <Parameter name="Color" type="string" value="auto"/>
+          <Parameter name="Recording Activity" type="string" value="during"/>
+          <ListOfChannels>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+            <ChannelSpec cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs],Reference=Value"/>
           </ListOfChannels>
         </PlotItem>
       </ListOfPlotItems>
