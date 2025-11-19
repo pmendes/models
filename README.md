@@ -14,8 +14,8 @@ Most models contain metadata that links them to their original publications and 
 | 100GeneNetwork.cps     | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [(pubmed)](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
 | AllostericKinetics.cps | simulates a typical enzyme kinetics experiment of an allosteric enzyme |
 |ChI_DePitta2009.cps     | core model of IP3-dependent calcium oscillations by [De Pittà et al. (2009)](https://doi.org/10.1007/s10867-009-9155-y) |
-| CICR_Li-Rinzel1994.cps | This is a core model of calcium-induded calcium release developed by [Li and Rinzel](https://doi.org/10.1006/jtbi.1994.1041)|
-
+| CICR_Li-Rinzel1994.cps | core model of calcium-induded calcium release by [Li and Rinzel](https://doi.org/10.1006/jtbi.1994.1041)|
+| Frank1953homochirality.cps | [Frank's model of homochirality](https://doi.org/10.1016/0006-3002(53)90082-1)
 
 ## Licence
 Models included here are licensed with CC-Zero license unless they were derived from sources that imposed other restrictions. Most were either created by me, some were edited based on other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
