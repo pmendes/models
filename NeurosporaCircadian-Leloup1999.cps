@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T16:21:44Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T20:12:51Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -135,10 +135,11 @@ Reaction scheme where the products are created from the reactants and the change
 
     </MiriamAnnotation>
     <Comment>
-      <body xmlns="http://www.w3.org/1999/xhtml"><h1>Minimal Model of Neurospora circadian clock</h1>
+      <body xmlns="http://www.w3.org/1999/xhtml"><h1>Minimal model of Neurospora circadian clock</h1>
 <p>From: Leloup et al. (1999) Limit Cycle Models for Circadian Rhythms Based on Transcriptional Regulation in Drosophila and Neurospora. <a href="https://doi.org/10.1177/074873099129000948">J. Biol. Rhythms 14:433-8</a> </p>
 <p>Model for circadian oscillations in Neurospora. The model is based on the negative feedback exerted by the protein FRQ on the transcription of the <i>frq</i> gene; the rate of gene expression is enhanced by light. The model includes gene transcription in the nucleus, accumulation of the corresponding mRNA in the cytosol with the associated protein synthesis, protein transport into and out of the nucleus, and regulation of gene expression by the nuclear form of the FRQ protein in Neurospora.</p>
-<p><b>Note</b>: this is equivalent to the model BIOMD0000000299 in the BioModels database. In this version, entirely written from scratch, the model is encoded in the traditional SBML way of having reactions with kinetics (the BioModels version encodes the model directly as species ruled by ODEs without explicit reactions).</p>
+<p>This model also includes events created to detect the oscillation wavelength and to count the number of cycles. It serves as an example of how events are useful to detect oscillations and then be used downstream for sensitivity analysis, optimization and other applications.</p>
+<p><b>Note</b>: there is equivalent model in the BioModels database (BIOMD0000000299), but it is encoded with direct ODEs for the species, without explicit reactions. This version has full reaction kinetics and can be simulated with both ODEs and the Gillespie algorithms.</p>
 <hr />
 <p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>
     </Comment>
