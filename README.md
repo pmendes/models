@@ -17,6 +17,9 @@ Most models contain metadata that links them to their original publications and 
 | CICR_Li-Rinzel1994.cps | core model of calcium-induded calcium release by [Li and Rinzel](https://doi.org/10.1006/jtbi.1994.1041)|
 | Frank1953homochirality.cps | [Frank's model of homochirality](https://doi.org/10.1016/0006-3002(53)90082-1) (1953) |
 | Goodwin1963.cps        | the Goodwin oscillator, from [*Temporal organization in cells*](https://doi.org/10.5962/bhl.title.6268) |
-| IrreversibleReactionChain.cps | A model of a simple irreversible linear chain of reactions |
+| IrreversibleReactionChain.cps | model of a simple irreversible linear chain of reactions |
+| Lotka.cps              | the Lotka-Volterra model of oscillating reactions and population dynamics |
+| Mendes97TiBS_SignalCascade.cps | model of signalling enzyme cascade controlling metabolism, from [*Biochemistry by numbers*](https://pubmed.ncbi.nlm.nih.gov/9301339/) |
+
 ## Licence
 Models included here are licensed with CC-Zero license unless they were derived from sources that imposed other restrictions. Most were either created by me, some were edited based on other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
