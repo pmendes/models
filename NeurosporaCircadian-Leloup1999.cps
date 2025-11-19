@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T15:51:14Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T16:05:00Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -363,7 +363,7 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_1" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
           <Constant key="Parameter_0" name="Ki" value="0.1"/>
@@ -382,7 +382,7 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="ModelValue_7"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_672">
-              <SourceParameter reference="Metabolite_1"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -495,13 +495,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]" value="5.9999999999999997e-14" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]" value="4.3e-14" type="Compartment" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M]" value="36.132844560000017" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc]" value="36.132844560000017" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn]" value="36.132844560000017" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft]" value="72.265689120000033" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M]" value="2.5895205268000008" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc]" value="2.5895205268000008" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn]" value="2.5895205268000008" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft]" value="5.1790410536000016" type="Species" simulationType="assignment"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
           <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
@@ -598,7 +598,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <StateTemplateVariable objectReference="ModelValue_9"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 36.132844560000017 36.132844560000017 36.132844560000017 72.265689120000033 5.9999999999999997e-14 1.6000000000000001e-09 5.0500000000000001e-10 0.5 1.3999999999999999e-09 0.5 0.59999999999999998 1.0000000000000001e-09 4 5.0000000000000003e-10 1.2999999999999999e-10 
+      0 2.5895205268000008 2.5895205268000008 2.5895205268000008 5.1790410536000016 4.3e-14 1.6000000000000001e-09 5.0500000000000001e-10 0.5 1.3999999999999999e-09 0.5 0.59999999999999998 1.0000000000000001e-09 4 5.0000000000000003e-10 1.2999999999999999e-10 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -625,9 +625,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="720"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="7200"/>
         <Parameter name="StepSize" type="float" value="0.10000000000000001"/>
-        <Parameter name="Duration" type="float" value="72"/>
+        <Parameter name="Duration" type="float" value="720"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
         <Parameter name="OutputStartTime" type="float" value="0"/>
         <Parameter name="Output Event" type="bool" value="0"/>
