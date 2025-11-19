@@ -11,7 +11,7 @@ Most models contain metadata that links them to their original publications and 
 
 | File                   | Format | Description                                       |
 |------------------------|--------|---------------------------------------------------|
-| 100GeneNetwork.cps     | .cps   | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [pubmed](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
+| 100GeneNetwork.cps     | .cps   | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [(pubmed)](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
 | AllostericKinetics.cps | .cps   | simulates a typical enzyme kinetics experiment of an allosteric enzyme |
 
 ## Licence
