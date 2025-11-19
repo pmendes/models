@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T16:05:00Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-19T16:12:20Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -19,30 +19,28 @@
         <ParameterDescription key="FunctionParameter_45" name="V" order="2" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_14" name="Mass action (reversible)" type="MassAction" reversible="true">
+    <Function key="Function_13" name="Mass action (irreversible)" type="MassAction" reversible="false">
       <MiriamAnnotation>
 <rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <rdf:Description rdf:about="#Function_14">
-   <CopasiMT:is rdf:resource="urn:miriam:obo.sbo:SBO:0000042" />
+   <rdf:Description rdf:about="#Function_13">
+   <CopasiMT:is rdf:resource="urn:miriam:obo.sbo:SBO:0000163" />
    </rdf:Description>
    </rdf:RDF>
       </MiriamAnnotation>
       <Comment>
         <body xmlns="http://www.w3.org/1999/xhtml">
-<b>Mass action rate law for reversible reactions</b>
+<b>Mass action rate law for irreversible reactions</b>
 <p>
-Reaction scheme where the products are created from the reactants and the change of a product quantity is proportional to the product of reactant activities. The reaction scheme does include a reverse process that creates the reactants from the products.
+Reaction scheme where the products are created from the reactants and the change of a product quantity is proportional to the product of reactant activities. The reaction scheme does not include any reverse process that creates the reactants from the products. The change of a product quantity is proportional to the quantity of one reactant.
 </p>
 </body>
       </Comment>
       <Expression>
-        k1*PRODUCT&lt;substrate_i>-k2*PRODUCT&lt;product_j>
+        k1*PRODUCT&lt;substrate_i>
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_69" name="k1" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_68" name="substrate" order="1" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_78" name="k2" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_79" name="product" order="3" role="product"/>
+        <ParameterDescription key="FunctionParameter_80" name="k1" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_81" name="substrate" order="1" role="substrate"/>
       </ListOfParameterDescriptions>
     </Function>
     <Function key="Function_81" name="Goodwin protein synthesis" type="UserDefined" reversible="unspecified">
@@ -452,7 +450,7 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_4" name="FRQ nuclear import" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_5" name="FRQ nuclear import" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
@@ -460,21 +458,35 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_8" name="k1" value="0.1"/>
-          <Constant key="Parameter_9" name="k2" value="0.1"/>
+          <Constant key="Parameter_9" name="k1" value="1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]">
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="ModelValue_4"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
+            <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_6" name="FRQ nuclear export" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_8" name="k1" value="1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="ModelValue_5"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
+            <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
           </ListOfCallParameters>
@@ -570,7 +582,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1],Reference=InitialValue>
               </InitialExpression>
             </ModelParameter>
-            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import],ParameterGroup=Parameters,Parameter=k2" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export],ParameterGroup=Parameters,Parameter=k1" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
               <InitialExpression>
                 &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2],Reference=InitialValue>
               </InitialExpression>
@@ -622,7 +636,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Method>
     </Task>
     <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_19" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="7200"/>
@@ -635,12 +649,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Values" type="bool" value="0"/>
         <Parameter name="Values" type="string" value=""/>
       </Problem>
-      <Method name="Deterministic (LSODA)" type="Deterministic(LSODA)">
-        <Parameter name="Integrate Reduced Model" type="bool" value="0"/>
-        <Parameter name="Relative Tolerance" type="unsignedFloat" value="9.9999999999999995e-07"/>
-        <Parameter name="Absolute Tolerance" type="unsignedFloat" value="9.9999999999999998e-13"/>
-        <Parameter name="Max Internal Steps" type="unsignedInteger" value="100000"/>
-        <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
+      <Method name="Stochastic (Direct method)" type="Stochastic">
+        <Parameter name="Max Internal Steps" type="integer" value="1000000"/>
+        <Parameter name="Use Random Seed" type="bool" value="0"/>
+        <Parameter name="Random Seed" type="unsignedInteger" value="1"/>
       </Method>
     </Task>
     <Task key="Task_11" name="Scan" type="scan" scheduled="false" updateModel="false">
@@ -1004,6 +1016,42 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="String=&#x0a;"/>
         <Object cn="CN=Root,Vector=TaskList[Linear Noise Approximation],Object=Result"/>
       </Footer>
+    </Report>
+    <Report key="Report_21" name="Time, Particle Numbers, Volumes, and Global Quantity Values" taskType="timeCourse" separator="&#x09;" precision="6">
+      <Comment>
+        A table of time, variable species particle numbers, variable compartment volumes, and variable global quantity values.
+      </Comment>
+      <Table printTitle="1">
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft],Reference=ParticleNumber"/>
+      </Table>
+    </Report>
+    <Report key="Report_20" name="Time, Particle Numbers, Volumes, and Global Quantity Values 1" taskType="timeCourse" separator="&#x09;" precision="6">
+      <Comment>
+        A table of time, variable species particle numbers, variable compartment volumes, and variable global quantity values.
+      </Comment>
+      <Table printTitle="1">
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft],Reference=ParticleNumber"/>
+      </Table>
+    </Report>
+    <Report key="Report_19" name="Time, Particle Numbers, Volumes, and Global Quantity Values 2" taskType="timeCourse" separator="&#x09;" precision="6">
+      <Comment>
+        A table of time, variable species particle numbers, variable compartment volumes, and variable global quantity values.
+      </Comment>
+      <Table printTitle="1">
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Reference=Time"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn],Reference=ParticleNumber"/>
+        <Object cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft],Reference=ParticleNumber"/>
+      </Table>
     </Report>
   </ListOfReports>
   <ListOfPlots>
