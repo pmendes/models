@@ -23,4 +23,4 @@ Most models contain metadata that links them to their original publications and 
 | MichaelisMenten.cps    |simulates a typical enzyme kinetics experiment of a classic Michaelis-Menten enzyme |
 | NeurosporaCircadian-Leloup1999.cps | minimal model of Neurospora circadian clock by [Leloup et al (1999)](https://pubmed.ncbi.nlm.nih.gov/10643740/) |
 ## Licence
-Models included here are licensed with CC-Zero license unless they were derived from sources that imposed other restrictions. Most were either created by me, some were edited based on other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
+Models included here are licensed with [CC-Zero license](http://creativecommons.org/publicdomain/zero/1.0/) unless they were derived from sources that imposed other restrictions. Most were either created by me, some were edited based on other public sources (such as [Biomodels](https://www.ebi.ac.uk/biomodels/))
