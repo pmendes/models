@@ -9,8 +9,11 @@ Most models contain metadata that links them to their original publications and 
 
 ## Index
 
-| File                   | Description                                               |
+| File / Folder          | Description                                               |
 |------------------------|-----------------------------------------------------------|
+| **Neuron**             | folder with electrophysiological models of neurons        |
+| **optimization_benchmarks** | folder with models encoding optimization function benchmarks, useful to test COPASI's optimization algorithms |
+| **vonDassow2000** | folder with a model and code for a segment polarity network model of [von Dassow et al. (2000)](https://doi.org/10.1038/35018085) as published in [Mendes (2023)](https://doi.org/10.3389/fcell.2023.1201673) |
 | 100GeneNetwork.cps     | an artificial 100-gene network from the [AGN suite](http://www.comp-sys-bio.org/AGN/) [(pubmed)](https://pubmed.ncbi.nlm.nih.gov/14534181/) |
 | AllostericKinetics.cps | simulates a typical enzyme kinetics experiment of an allosteric enzyme |
 |ChI_DePitta2009.cps     | core model of IP3-dependent calcium oscillations by [De Pittà et al. (2009)](https://doi.org/10.1007/s10867-009-9155-y) |
