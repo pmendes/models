@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-20T16:04:58Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-20T16:24:59Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -129,6 +129,11 @@ Reaction scheme where the products are created from the reactants and the change
         <dcterms:W3CDTF>2025-11-19T10:51:08</dcterms:W3CDTF>
       </rdf:Description>
     </dcterms:modified>
+    <dcterms:modified>
+      <rdf:Description>
+        <dcterms:W3CDTF>2025-11-20T11:24:54</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:modified>
     <CopasiMT:isVersionOf rdf:resource="urn:miriam:go:GO:0042752"/>
   </rdf:Description>
 </rdf:RDF>
@@ -138,7 +143,13 @@ Reaction scheme where the products are created from the reactants and the change
       <body xmlns="http://www.w3.org/1999/xhtml"><h1>Minimal model of Neurospora circadian clock</h1>
 <p>From: Leloup et al. (1999) Limit Cycle Models for Circadian Rhythms Based on Transcriptional Regulation in Drosophila and Neurospora. <a href="https://doi.org/10.1177/074873099129000948">J. Biol. Rhythms 14:433-8</a> </p>
 <p>Model for circadian oscillations in Neurospora. The model is based on the negative feedback exerted by the protein FRQ on the transcription of the <i>frq</i> gene; the rate of gene expression is enhanced by light. The model includes gene transcription in the nucleus, accumulation of the corresponding mRNA in the cytosol with the associated protein synthesis, protein transport into and out of the nucleus, and regulation of gene expression by the nuclear form of the FRQ protein in Neurospora.</p>
-<p>This model also includes events created to detect the oscillation period and to count the number of cycles. It serves as an example of how events are useful to detect oscillations and then be used downstream for sensitivity analysis, optimization and other applications.</p>
+
+<hr/>
+
+<p>This model serves as an example of using <b>events</b> to detect oscillations and then analyze them with sensitivity analysis, and optimization. The event named "detect_peak" is used to detect a peak in the concentration of Fn, and this allows calculating the period of oscillation, and count the number of cycles.
+</p>
+<p>Two other events are used to simulate transitions between dark and light periods. The event "sunrise" marks the start of a light period and the event "sunset" marks the start of a dark period. In each case the parameter <i>vs</i> is changed accordingly to what is described in Leloup. et al. These two events are only active when the control parameter "dark" is set to 0,  when it is set to 1 the simulation is fully in darkness.</p>
+<hr/>
 <p><b>Note</b>: there is equivalent model in the BioModels database (BIOMD0000000299), but it is encoded with direct ODEs for the species, without explicit reactions. This version has full reaction kinetics and can be simulated with both ODEs and the Gillespie algorithms.</p>
 <hr />
 <p style="font-size:small"><b>CC0 1.0 Universal</b>: To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p></body>
