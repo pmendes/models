@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-26T16:07:44Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-11-26T20:59:15Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -335,9 +335,7 @@ Reaction scheme where the products are created from the reactants and the change
       </ModelValue>
       <ModelValue key="ModelValue_10" name="cycles" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_10">
 </rdf:Description>
 </rdf:RDF>
@@ -348,9 +346,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_11" name="lastpeak" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_11">
 </rdf:Description>
 </rdf:RDF>
@@ -361,9 +357,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_12" name="period" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_12">
 </rdf:Description>
 </rdf:RDF>
@@ -374,9 +368,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_13" name="vs_dark" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_13">
 </rdf:Description>
 </rdf:RDF>
@@ -387,9 +379,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_14" name="vs_light" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_14">
 </rdf:Description>
 </rdf:RDF>
@@ -399,15 +389,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </Unit>
       </ModelValue>
       <ModelValue key="ModelValue_15" name="dark" simulationType="fixed" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelValue_15">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <Unit>
           1
         </Unit>
       </ModelValue>
       <ModelValue key="ModelValue_16" name="sunset_time" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_16">
 </rdf:Description>
 </rdf:RDF>
@@ -418,9 +412,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelValue>
       <ModelValue key="ModelValue_17" name="sunrise_time" simulationType="fixed" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelValue_17">
 </rdf:Description>
 </rdf:RDF>
@@ -606,15 +598,16 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </ListOfReactions>
     <ListOfEvents>
       <Event key="Event_0" name="detect_peak" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn],Reference=Rate> &lt; 0
         </TriggerExpression>
         <ListOfAssignments>
-          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]">
-            <Expression>
-              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles],Reference=Value>+1
-            </Expression>
-          </Assignment>
           <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period]">
             <Expression>
               &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time>-&lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak],Reference=Value>
@@ -625,9 +618,20 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time>
             </Expression>
           </Assignment>
+          <Assignment target="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]">
+            <Expression>
+              &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles],Reference=Value>+1
+            </Expression>
+          </Assignment>
         </ListOfAssignments>
       </Event>
       <Event key="Event_1" name="sunrise" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time> > &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time],Reference=Value> &amp;&amp; &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[dark],Reference=Value> &lt; 0.5
         </TriggerExpression>
@@ -645,6 +649,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ListOfAssignments>
       </Event>
       <Event key="Event_2" name="sunset" fireAtInitialTime="0" persistentTrigger="0">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Event_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <TriggerExpression>
           &lt;CN=Root,Model=Neurospora Circadian Clock,Reference=Time> > &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time],Reference=Value> &amp;&amp; &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[dark],Reference=Value> &lt; 0.5
         </TriggerExpression>
@@ -867,6 +877,316 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_4" name="Scatter search 1">
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]" value="4.2999999999999993e-14" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft]" value="5.1790410535999838" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm]" value="4.0267064585745857e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks]" value="0.82861916020724702" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd]" value="1.3999999999999999e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1]" value="0.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki]" value="1.7207752851955506e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n]" value="4" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km]" value="5.0000000000000003e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd]" value="1.2999999999999999e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_dark]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_light]" value="2.0000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[dark]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time]" value="19" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time]" value="7" type="ModelValue" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=Ki" value="1.7207752851955506e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=n" value="4" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=vs" value="1.6000000000000001e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=Km" value="5.0000000000000003e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=V" value="4.0267064585745857e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis],ParameterGroup=Parameters,Parameter=alpha" value="0.82861916020724702" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=V" value="1.3999999999999999e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=Km" value="1.2999999999999999e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import],ParameterGroup=Parameters,Parameter=k1" value="0.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export],ParameterGroup=Parameters,Parameter=k1" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_2" name="genetic algorithm 2">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]" value="4.2999999999999993e-14" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft]" value="5.1790410535999838" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm]" value="1.1220268503130334e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks]" value="0.39795699495133896" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd]" value="1.3999999999999999e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1]" value="0.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki]" value="3.3928925146407319e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n]" value="4" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km]" value="5.0000000000000003e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd]" value="1.2999999999999999e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_dark]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_light]" value="2.0000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[dark]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time]" value="19" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time]" value="7" type="ModelValue" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=Ki" value="3.3928925146407319e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=n" value="4" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=vs" value="1.6000000000000001e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=Km" value="5.0000000000000003e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=V" value="1.1220268503130334e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis],ParameterGroup=Parameters,Parameter=alpha" value="0.39795699495133896" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=V" value="1.3999999999999999e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=Km" value="1.2999999999999999e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import],ParameterGroup=Parameters,Parameter=k1" value="0.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export],ParameterGroup=Parameters,Parameter=k1" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_5" name="particle swarm 3">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell]" value="4.2999999999999993e-14" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[M]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fc]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Fn]" value="2.5895205267999919" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Compartments[cell],Vector=Metabolites[Ft]" value="5.1790410535999838" type="Species" simulationType="assignment"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm]" value="3.8856997344524112e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks]" value="0.91480752563997025" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd]" value="1.3999999999999999e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1]" value="0.5" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2]" value="0.59999999999999998" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki]" value="2.4664323684161875e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n]" value="4" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km]" value="5.0000000000000003e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd]" value="1.2999999999999999e-10" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[lastpeak]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period]" value="0" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_dark]" value="1.6000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs_light]" value="2.0000000000000001e-09" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[dark]" value="1" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunset_time]" value="19" type="ModelValue" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[sunrise_time]" value="7" type="ModelValue" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=Ki" value="2.4664323684161875e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=n" value="4" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[n],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[frq transcription],ParameterGroup=Parameters,Parameter=vs" value="1.6000000000000001e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vs],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=Km" value="5.0000000000000003e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Km],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[mRNA degradation],ParameterGroup=Parameters,Parameter=V" value="3.8856997344524112e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ synthesis],ParameterGroup=Parameters,Parameter=alpha" value="0.91480752563997025" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=V" value="1.3999999999999999e-09" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ degradation],ParameterGroup=Parameters,Parameter=Km" value="1.2999999999999999e-10" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Kd],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear import],ParameterGroup=Parameters,Parameter=k1" value="0.5" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k1],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Neurospora Circadian Clock,Vector=Reactions[FRQ nuclear export],ParameterGroup=Parameters,Parameter=k1" value="0.59999999999999998" type="ReactionParameter" simulationType="assignment">
+              <InitialExpression>
+                &lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[k2],Reference=InitialValue>
+              </InitialExpression>
+            </ModelParameter>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
       <StateTemplateVariable objectReference="Model_0"/>
@@ -921,12 +1241,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
       <Report reference="Report_9" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="AutomaticStepSize" type="bool" value="1"/>
-        <Parameter name="StepNumber" type="unsignedInteger" value="1334"/>
-        <Parameter name="StepSize" type="float" value="0.17991004497800001"/>
-        <Parameter name="Duration" type="float" value="240"/>
+        <Parameter name="AutomaticStepSize" type="bool" value="0"/>
+        <Parameter name="StepNumber" type="unsignedInteger" value="2746"/>
+        <Parameter name="StepSize" type="float" value="0.174863387978"/>
+        <Parameter name="Duration" type="float" value="480"/>
         <Parameter name="TimeSeriesRequested" type="bool" value="1"/>
-        <Parameter name="OutputStartTime" type="float" value="0"/>
+        <Parameter name="OutputStartTime" type="float" value="100"/>
         <Parameter name="Output Event" type="bool" value="0"/>
         <Parameter name="Start in Steady State" type="bool" value="0"/>
         <Parameter name="Use Values" type="bool" value="0"/>
@@ -959,7 +1279,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_9" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+    <Task key="Task_9" name="Optimization" type="optimization" scheduled="false" updateModel="true">
       <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Time-Course]"/>
@@ -967,40 +1287,46 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           (&lt;CN=Root,Model=Neurospora Circadian Clock,Vector=Values[period],Reference=Value>-24)^2
         </ParameterText>
         <Parameter name="Maximize" type="bool" value="0"/>
-        <Parameter name="Randomize Start Values" type="bool" value="0"/>
-        <Parameter name="Calculate Statistics" type="bool" value="1"/>
+        <Parameter name="Randomize Start Values" type="bool" value="1"/>
+        <Parameter name="Calculate Statistics" type="bool" value="0"/>
         <ParameterGroup name="OptimizationItemList">
-          <ParameterGroup name="OptimizationItem">
-            <Parameter name="ObjectCN" type="cn" value="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vd],Reference=InitialValue"/>
-            <Parameter name="LowerBound" type="cn" value="1e-12"/>
-            <Parameter name="UpperBound" type="cn" value="1e-7"/>
-            <Parameter name="StartValue" type="float" value="1.5259098464958556e-09"/>
-          </ParameterGroup>
           <ParameterGroup name="OptimizationItem">
             <Parameter name="ObjectCN" type="cn" value="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[vm],Reference=InitialValue"/>
             <Parameter name="LowerBound" type="cn" value="1e-11"/>
             <Parameter name="UpperBound" type="cn" value="1e-7"/>
-            <Parameter name="StartValue" type="float" value="4.3566626506807651e-10"/>
+            <Parameter name="StartValue" type="float" value="3.8856997344499999e-10"/>
+          </ParameterGroup>
+          <ParameterGroup name="OptimizationItem">
+            <Parameter name="ObjectCN" type="cn" value="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[Ki],Reference=InitialValue"/>
+            <Parameter name="LowerBound" type="cn" value="1e-11"/>
+            <Parameter name="UpperBound" type="cn" value="1e-7"/>
+            <Parameter name="StartValue" type="float" value="2.4664323684161875e-09"/>
+          </ParameterGroup>
+          <ParameterGroup name="OptimizationItem">
+            <Parameter name="ObjectCN" type="cn" value="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[ks],Reference=InitialValue"/>
+            <Parameter name="LowerBound" type="cn" value="1e-02"/>
+            <Parameter name="UpperBound" type="cn" value="100"/>
+            <Parameter name="StartValue" type="float" value="0.91480752563997025"/>
           </ParameterGroup>
         </ParameterGroup>
         <ParameterGroup name="OptimizationConstraintList">
           <ParameterGroup name="OptimizationItem">
             <Parameter name="ObjectCN" type="cn" value="CN=Root,Model=Neurospora Circadian Clock,Vector=Values[cycles],Reference=Value"/>
-            <Parameter name="LowerBound" type="cn" value="3"/>
+            <Parameter name="LowerBound" type="cn" value="10"/>
             <Parameter name="UpperBound" type="cn" value="inf"/>
             <Parameter name="StartValue" type="float" value="28"/>
           </ParameterGroup>
         </ParameterGroup>
         <Parameter name="DisplayPoplations" type="bool" value="0"/>
       </Problem>
-      <Method name="Genetic Algorithm" type="GeneticAlgorithm">
+      <Method name="Particle Swarm" type="ParticleSwarm">
         <Parameter name="Log Verbosity" type="unsignedInteger" value="0"/>
-        <Parameter name="Number of Generations" type="unsignedInteger" value="200"/>
-        <Parameter name="Population Size" type="unsignedInteger" value="20"/>
+        <Parameter name="Iteration Limit" type="unsignedInteger" value="200"/>
+        <Parameter name="Swarm Size" type="unsignedInteger" value="30"/>
+        <Parameter name="Std. Deviation" type="unsignedFloat" value="9.9999999999999995e-07"/>
         <Parameter name="Random Number Generator" type="unsignedInteger" value="1"/>
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
-        <Parameter name="Mutation Variance" type="float" value="0.10000000000000001"/>
-        <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
+        <Parameter name="Stop after # Stalled Iterations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
     <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
@@ -1026,12 +1352,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Parameter name="Threshold" type="unsignedInteger" value="5"/>
         </ParameterGroup>
       </Problem>
-      <Method name="Evolutionary Programming" type="EvolutionaryProgram">
+      <Method name="Evolution Strategy (SRES)" type="EvolutionaryStrategySR">
         <Parameter name="Log Verbosity" type="unsignedInteger" value="0"/>
         <Parameter name="Number of Generations" type="unsignedInteger" value="200"/>
         <Parameter name="Population Size" type="unsignedInteger" value="20"/>
         <Parameter name="Random Number Generator" type="unsignedInteger" value="1"/>
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
+        <Parameter name="Pf" type="float" value="0.47499999999999998"/>
         <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
